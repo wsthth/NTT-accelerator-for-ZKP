@@ -1,0 +1,40 @@
+# Vivado generated files
+*.cache
+*.runs
+*.logs
+*.jou
+*.ip_user_files
+*.hw
+*.sim
+*.ipdefs
+*.coe
+*.mif
+*.data
+
+# Vivado project files
+*.xpr
+*.xdc
+*.bd
+*.hwh
+
+# Simulation
+*.vcd
+*.wdb
+*.wcfg
+
+# OS generated
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Log files
+*.log
+hs_err_*.log
+
+# SDK
+*.bsp
+*.sdk
+
+# Vitis
+vitis*
+vitis_*
