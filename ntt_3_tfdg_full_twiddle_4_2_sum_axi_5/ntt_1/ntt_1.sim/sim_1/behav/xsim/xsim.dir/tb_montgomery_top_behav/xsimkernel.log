@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_montgomery_top_behav/xsimk.exe -simmode gui -wdb tb_montgomery_top_behav.wdb -simrunnum 0 -socket 56095
+Design successfully loaded
+Design Loading Memory Usage: 6960 KB (Peak: 6960 KB)
+Design Loading CPU Usage: 0 ms

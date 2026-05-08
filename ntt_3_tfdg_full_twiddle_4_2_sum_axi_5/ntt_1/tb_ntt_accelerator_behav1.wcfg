@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_ntt_accelerator_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_ntt_accelerator" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="9531fs"></ZoomEndTime>
+      <Cursor1Time time="411523000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="170"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/tb_ntt_accelerator/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/radix_mode" type="array">
+      <obj_property name="ElementShortName">radix_mode[1:0]</obj_property>
+      <obj_property name="ObjectShortName">radix_mode[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/width_384_mode" type="logic">
+      <obj_property name="ElementShortName">width_384_mode</obj_property>
+      <obj_property name="ObjectShortName">width_384_mode</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/parallelism" type="array">
+      <obj_property name="ElementShortName">parallelism[2:0]</obj_property>
+      <obj_property name="ObjectShortName">parallelism[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/result_valid" type="logic">
+      <obj_property name="ElementShortName">result_valid</obj_property>
+      <obj_property name="ObjectShortName">result_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/data_in_flat" type="array">
+      <obj_property name="ElementShortName">data_in_flat[2047:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in_flat[2047:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/twiddle_factors_flat" type="array">
+      <obj_property name="ElementShortName">twiddle_factors_flat[1023:0]</obj_property>
+      <obj_property name="ObjectShortName">twiddle_factors_flat[1023:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/data_out_flat" type="array">
+      <obj_property name="ElementShortName">data_out_flat[2047:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out_flat[2047:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/modulus" type="array">
+      <obj_property name="ElementShortName">modulus[127:0]</obj_property>
+      <obj_property name="ObjectShortName">modulus[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/N_prime" type="array">
+      <obj_property name="ElementShortName">N_prime[127:0]</obj_property>
+      <obj_property name="ObjectShortName">N_prime[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/R2_mod_N" type="array">
+      <obj_property name="ElementShortName">R2_mod_N[127:0]</obj_property>
+      <obj_property name="ObjectShortName">R2_mod_N[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/MAX_WIDTH" type="array">
+      <obj_property name="ElementShortName">MAX_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MAX_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/MAX_RADIX" type="array">
+      <obj_property name="ElementShortName">MAX_RADIX[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MAX_RADIX[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/NUM_CORES" type="array">
+      <obj_property name="ElementShortName">NUM_CORES[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_CORES[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/CLK_PERIOD" type="array">
+      <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[0:15][127:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[0:15][127:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/twiddle_in" type="array">
+      <obj_property name="ElementShortName">twiddle_in[0:7][127:0]</obj_property>
+      <obj_property name="ObjectShortName">twiddle_in[0:7][127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/x0_out" type="array">
+      <obj_property name="ElementShortName">x0_out[0:3][127:0]</obj_property>
+      <obj_property name="ObjectShortName">x0_out[0:3][127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/x1_out" type="array">
+      <obj_property name="ElementShortName">x1_out[0:3][127:0]</obj_property>
+      <obj_property name="ObjectShortName">x1_out[0:3][127:0]</obj_property>
+   </wvobject>
+</wave_config>

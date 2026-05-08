@@ -1,0 +1,62 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+======================================================================
+Montgomery Pipeline Testbench - Multiple Tests
+======================================================================
+Testing Montgomery Modular Reduction with BN254 curve parameters
+TOTAL_BITS =         256, SEG_BITS =          64, SEG_CNT =           4
+Number of test cases:           6
+======================================================================
+
+======================================================================
+[Test 1/6] Starting
+======================================================================
+A_MONT = 0x04cda1728934ce7f2e06dd410c76ab667d9dd5aa5242e785f1cdd808dbea2eec
+B_MONT = 0x24db36a1a5c2b40b810f3e6473acf452df26a211fc84d6fa0fef05b7da276c7e
+T      = 0x00b107a3a0c3af73ef0b6bc22956e42e5a20809bb025fdced181f58775503276c20873e5f857f6c741bc131ab4a7db89c6523449280c53bdb8b924792702a828...
+EXPECT = 0x07cae7e16f3bff0918a549684a296b08ae1bcd93b09437ef7bbdfdf7d8dfa44d
+[Test 1] PASS - Result: 0x07cae7e16f3bff0918a549684a296b08ae1bcd93b09437ef7bbdfdf7d8dfa44d
+
+======================================================================
+[Test 2/6] Starting
+======================================================================
+A_MONT = 0x16db3787c008bbc00870a59497036f7f43e71fc1218341741c7bc7cc0ceb3313
+B_MONT = 0x087a1d2b7448c77d0c5a8c4e7241aa9a40f3f294768bdd2611e3d89374ff16f6
+T      = 0x00c1c0cf6b3053366c04cc5be157a618a4b05dc32dbba48398976daccbcd6a4bf7692fac951ce65ecc6b353dff255768a7b9b946411649b0e73854861c53b642...
+EXPECT = 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+[Test 2] PASS - Result: 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+
+======================================================================
+[Test 3/6] Starting
+======================================================================
+A_MONT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+B_MONT = 0x1c14ef83340fbe5eccdd46def0f28c5814f1d651eb8e167ba6ba871b8b1e1b3a
+T      = 0x03c4a2a3a406daf0d6b3dc9e5c0c5951c26be97dc4cf3eb20b055c5a3c2baf0cf77ad4f763b8590e953a3b5650a8744917865171acfac3b6183b39fec61b3a84...
+EXPECT = 0x144f5eefad21e1caeb72fed7908ecc05828f943f7ce3b411956604fb4d5ee20d
+[Test 3] PASS - Result: 0x144f5eefad21e1caeb72fed7908ecc05828f943f7ce3b411956604fb4d5ee20d
+
+======================================================================
+[Test 4/6] Starting
+======================================================================
+A_MONT = 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+B_MONT = 0x0e0a77c19a07df2f666ea36f7879462c0a78eb28f5c70b3dd35d438dc58f0d9d
+T      = 0x024271b425180b667185b3099f5cda7ea0d4b25055789a9e8c3e378507830c99a0f0266aa90e2b5a60acc849f013e78cc9fb7ad2eb0439d707b57a220d893847...
+EXPECT = 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+[Test 4] PASS - Result: 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+
+======================================================================
+[Test 5/6] Starting
+======================================================================
+A_MONT = 0x1113fb2134cd327c8aa264fdee21d2b468f1b0420a3691034cf1d531fb21b7c6
+B_MONT = 0x204445a7929f30262a789fc08ff92c05ff77ca08d45bb7ce346bc4e118035620
+T      = 0x02270d586bec768def8046a9e4828aea583a4a5a1a47aba6e45b095a0ac8ca8a91d83499c00a2f5bae85793b8b785fc7abfc2b372359b0089c12a8426f457cc0...
+EXPECT = 0x1b872d1a794b66632eab713c3d5b739a525d9960bf9d095b9aad64de16297001
+[Test 5] PASS - Result: 0x1b872d1a794b66632eab713c3d5b739a525d9960bf9d095b9aad64de16297001
+
+======================================================================
+[Test 6/6] Starting
+======================================================================
+A_MONT = 0x0e0a77c19a07df2f666ea36f7879462c0a78eb28f5c70b3dd35d438dc58f0d9d
+B_MONT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+T      = 0x01e25151d2036d786b59ee4f2e062ca8e135f4bee2679f590582ae2d1e15d7867bbd6a7bb1dc2c874a9d1dab28543a248bc328b8d67d61db0c1d9cff630d9d42...
+EXPECT = 0x2259d6b14729c0fa51e1a24

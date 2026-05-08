@@ -1,0 +1,10 @@
+#include "xil_printf.h"
+
+int main() {
+    int cnt = 0;
+    while (1) {
+        xil_printf("Hello %d\n", cnt++);
+        for (volatile int i = 0; i < 1000000; i++);
+    }
+    return 0;
+}

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_segmented_256bit_butterfly_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_segmented_256bit_butterfly" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="182807000fs"></ZoomStartTime>
+      <ZoomEndTime time="1070807001fs"></ZoomEndTime>
+      <Cursor1Time time="582307000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="160"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="26" />
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/add_mode" type="logic">
+      <obj_property name="ElementShortName">add_mode</obj_property>
+      <obj_property name="ObjectShortName">add_mode</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/busy" type="logic">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/x0" type="array">
+      <obj_property name="ElementShortName">x0[255:0]</obj_property>
+      <obj_property name="ObjectShortName">x0[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/x1" type="array">
+      <obj_property name="ElementShortName">x1[255:0]</obj_property>
+      <obj_property name="ObjectShortName">x1[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/w" type="array">
+      <obj_property name="ElementShortName">w[255:0]</obj_property>
+      <obj_property name="ObjectShortName">w[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/modulus" type="array">
+      <obj_property name="ElementShortName">modulus[255:0]</obj_property>
+      <obj_property name="ObjectShortName">modulus[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/result" type="array">
+      <obj_property name="ElementShortName">result[255:0]</obj_property>
+      <obj_property name="ObjectShortName">result[255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/result_valid" type="logic">
+      <obj_property name="ElementShortName">result_valid</obj_property>
+      <obj_property name="ObjectShortName">result_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/N_prime" type="array">
+      <obj_property name="ElementShortName">N_prime[255:0]</obj_property>
+      <obj_property name="ObjectShortName">N_prime[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/TOTAL_WIDTH" type="array">
+      <obj_property name="ElementShortName">TOTAL_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TOTAL_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/SEG_WIDTH" type="array">
+      <obj_property name="ElementShortName">SEG_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SEG_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/CLK_PERIOD" type="array">
+      <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/dut/u_montgomery/t" type="array">
+      <obj_property name="ElementShortName">t[511:0]</obj_property>
+      <obj_property name="ObjectShortName">t[511:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/dut/u_montgomery/mont_result" type="array">
+      <obj_property name="ElementShortName">mont_result[255:0]</obj_property>
+      <obj_property name="ObjectShortName">mont_result[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/dut/full_product" type="array">
+      <obj_property name="ElementShortName">full_product[511:0]</obj_property>
+      <obj_property name="ObjectShortName">full_product[511:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/dut/full_product" type="array">
+      <obj_property name="ElementShortName">full_product[511:0]</obj_property>
+      <obj_property name="ObjectShortName">full_product[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/dut/u_montgomery/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/dut/u_montgomery/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/dut/u_montgomery/mont_result" type="array">
+      <obj_property name="ElementShortName">mont_result[255:0]</obj_property>
+      <obj_property name="ObjectShortName">mont_result[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/dut/u_montgomery/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/dut/state" type="array">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_segmented_256bit_butterfly/dut/mod_add_sub_result" type="array">
+      <obj_property name="ElementShortName">mod_add_sub_result[255:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_add_sub_result[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

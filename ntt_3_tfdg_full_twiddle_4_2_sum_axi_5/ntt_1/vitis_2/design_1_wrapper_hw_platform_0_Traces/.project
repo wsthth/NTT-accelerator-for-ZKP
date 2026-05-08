@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>design_1_wrapper_hw_platform_0_Traces</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.linuxtools.tmf.project.nature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>Traces/Run_四月-30_14-17/PS_Trace_四月-30_14-17/PS_Trace_四月-30_14-17_</name>
+			<type>1</type>
+			<location>F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0_Traces/Traces/.bookmarks</location>
+		</link>
+		<link>
+			<name>Traces/Run_四月-30_14-20/PS_Trace_四月-30_14-20/PS_Trace_四月-30_14-20_</name>
+			<type>1</type>
+			<location>F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0_Traces/Traces/.bookmarks</location>
+		</link>
+	</linkedResources>
+</projectDescription>

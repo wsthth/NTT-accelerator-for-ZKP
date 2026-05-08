@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="winograd_pre_transform_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="winograd_pre_transform_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="352200001fs"></ZoomEndTime>
+      <Cursor1Time time="313000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="172"></NameColumnWidth>
+      <ValueColumnWidth column_width="75"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/winograd_pre_transform_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/winograd_pre_transform_tb/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/winograd_pre_transform_tb/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/winograd_pre_transform_tb/radix_mode" type="array">
+      <obj_property name="ElementShortName">radix_mode[1:0]</obj_property>
+      <obj_property name="ObjectShortName">radix_mode[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/winograd_pre_transform_tb/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[0:15][7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[0:15][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/winograd_pre_transform_tb/twiddle_in" type="array">
+      <obj_property name="ElementShortName">twiddle_in[0:7][7:0]</obj_property>
+      <obj_property name="ObjectShortName">twiddle_in[0:7][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/winograd_pre_transform_tb/modulus" type="array">
+      <obj_property name="ElementShortName">modulus[7:0]</obj_property>
+      <obj_property name="ObjectShortName">modulus[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/winograd_pre_transform_tb/x0_out" type="array">
+      <obj_property name="ElementShortName">x0_out[0:7][7:0]</obj_property>
+      <obj_property name="ObjectShortName">x0_out[0:7][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/winograd_pre_transform_tb/x1_out" type="array">
+      <obj_property name="ElementShortName">x1_out[0:7][7:0]</obj_property>
+      <obj_property name="ObjectShortName">x1_out[0:7][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/winograd_pre_transform_tb/w_out" type="array">
+      <obj_property name="ElementShortName">w_out[0:7][7:0]</obj_property>
+      <obj_property name="ObjectShortName">w_out[0:7][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/winograd_pre_transform_tb/conj_coeff_out" type="array">
+      <obj_property name="ElementShortName">conj_coeff_out[0:7][7:0]</obj_property>
+      <obj_property name="ObjectShortName">conj_coeff_out[0:7][7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/winograd_pre_transform_tb/valid_out" type="logic">
+      <obj_property name="ElementShortName">valid_out</obj_property>
+      <obj_property name="ObjectShortName">valid_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/winograd_pre_transform_tb/MAX_WIDTH" type="array">
+      <obj_property name="ElementShortName">MAX_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MAX_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/winograd_pre_transform_tb/MAX_RADIX" type="array">
+      <obj_property name="ElementShortName">MAX_RADIX[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MAX_RADIX[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/winograd_pre_transform_tb/NUM_CORES" type="array">
+      <obj_property name="ElementShortName">NUM_CORES[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_CORES[31:0]</obj_property>
+   </wvobject>
+</wave_config>

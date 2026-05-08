@@ -4171,3 +4171,6 @@ unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (aH
 // WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1197 ms. Increasing delay to 3591 ms.
 // WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2219 ms. Increasing delay to 6657 ms.
 // WARNING: HEventQueue.dispatchEvent() is taking  1460 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2589 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 688 MB. GUI used memory: 88 MB. Current time: 5/8/26, 8:17:50 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  1029 ms.

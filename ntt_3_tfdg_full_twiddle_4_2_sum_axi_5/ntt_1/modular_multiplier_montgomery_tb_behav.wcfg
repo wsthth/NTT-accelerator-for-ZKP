@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="modular_multiplier_montgomery_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="modular_multiplier_montgomery_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="512500000fs"></ZoomStartTime>
+      <ZoomEndTime time="1383000001fs"></ZoomEndTime>
+      <Cursor1Time time="1025000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="172"></NameColumnWidth>
+      <ValueColumnWidth column_width="95"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="44" />
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/a" type="array">
+      <obj_property name="ElementShortName">a[255:0]</obj_property>
+      <obj_property name="ObjectShortName">a[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/a_mont" type="array">
+      <obj_property name="ElementShortName">a_mont[255:0]</obj_property>
+      <obj_property name="ObjectShortName">a_mont[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/b" type="array">
+      <obj_property name="ElementShortName">b[255:0]</obj_property>
+      <obj_property name="ObjectShortName">b[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/b_mont" type="array">
+      <obj_property name="ElementShortName">b_mont[255:0]</obj_property>
+      <obj_property name="ObjectShortName">b_mont[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/N" type="array">
+      <obj_property name="ElementShortName">N[255:0]</obj_property>
+      <obj_property name="ObjectShortName">N[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/Np" type="array">
+      <obj_property name="ElementShortName">Np[255:0]</obj_property>
+      <obj_property name="ObjectShortName">Np[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/R2_mod_N" type="array">
+      <obj_property name="ElementShortName">R2_mod_N[255:0]</obj_property>
+      <obj_property name="ObjectShortName">R2_mod_N[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/result" type="array">
+      <obj_property name="ElementShortName">result[255:0]</obj_property>
+      <obj_property name="ObjectShortName">result[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/busy" type="logic">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/state" type="array">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mont_done" type="logic">
+      <obj_property name="ElementShortName">mont_done</obj_property>
+      <obj_property name="ObjectShortName">mont_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/a_mont" type="array">
+      <obj_property name="ElementShortName">a_mont[255:0]</obj_property>
+      <obj_property name="ObjectShortName">a_mont[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/b_mont" type="array">
+      <obj_property name="ElementShortName">b_mont[255:0]</obj_property>
+      <obj_property name="ObjectShortName">b_mont[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/temp_result" type="array">
+      <obj_property name="ElementShortName">temp_result[255:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_result[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mont_result" type="array">
+      <obj_property name="ElementShortName">mont_result[255:0]</obj_property>
+      <obj_property name="ObjectShortName">mont_result[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/a_reg" type="array">
+      <obj_property name="ElementShortName">a_reg[255:0]</obj_property>
+      <obj_property name="ObjectShortName">a_reg[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/b_reg" type="array">
+      <obj_property name="ElementShortName">b_reg[255:0]</obj_property>
+      <obj_property name="ObjectShortName">b_reg[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/product_wire" type="array">
+      <obj_property name="ElementShortName">product_wire[511:0]</obj_property>
+      <obj_property name="ObjectShortName">product_wire[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/reduction_inst/mont_result" type="array">
+      <obj_property name="ElementShortName">mont_result[255:0]</obj_property>
+      <obj_property name="ObjectShortName">mont_result[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/state" type="array">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/state" type="array">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/a_mont" type="array">
+      <obj_property name="ElementShortName">a_mont[255:0]</obj_property>
+      <obj_property name="ObjectShortName">a_mont[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/b_mont" type="array">
+      <obj_property name="ElementShortName">b_mont[255:0]</obj_property>
+      <obj_property name="ObjectShortName">b_mont[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/reduction_inst/t" type="array">
+      <obj_property name="ElementShortName">t[511:0]</obj_property>
+      <obj_property name="ObjectShortName">t[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/product_512" type="array">
+      <obj_property name="ElementShortName">product_512[511:0]</obj_property>
+      <obj_property name="ObjectShortName">product_512[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/reduction_inst/t" type="array">
+      <obj_property name="ElementShortName">t[511:0]</obj_property>
+      <obj_property name="ObjectShortName">t[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/reduction_inst/mont_result" type="array">
+      <obj_property name="ElementShortName">mont_result[255:0]</obj_property>
+      <obj_property name="ObjectShortName">mont_result[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/reduction_inst/mont_result" type="array">
+      <obj_property name="ElementShortName">mont_result[255:0]</obj_property>
+      <obj_property name="ObjectShortName">mont_result[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/result_mont" type="array">
+      <obj_property name="ElementShortName">result_mont[255:0]</obj_property>
+      <obj_property name="ObjectShortName">result_mont[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/reduction_inst/t" type="array">
+      <obj_property name="ElementShortName">t[511:0]</obj_property>
+      <obj_property name="ObjectShortName">t[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/product_512" type="array">
+      <obj_property name="ElementShortName">product_512[511:0]</obj_property>
+      <obj_property name="ObjectShortName">product_512[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/reduction_inst/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/reduction_inst/t" type="array">
+      <obj_property name="ElementShortName">t[511:0]</obj_property>
+      <obj_property name="ObjectShortName">t[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/reduction_inst/mont_result" type="array">
+      <obj_property name="ElementShortName">mont_result[255:0]</obj_property>
+      <obj_property name="ObjectShortName">mont_result[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/reduction_inst/stage5_sum" type="array">
+      <obj_property name="ElementShortName">stage5_sum[512:0]</obj_property>
+      <obj_property name="ObjectShortName">stage5_sum[512:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/reduction_inst/stage4_valid" type="logic">
+      <obj_property name="ElementShortName">stage4_valid</obj_property>
+      <obj_property name="ObjectShortName">stage4_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/reduction_inst/stage5_valid" type="logic">
+      <obj_property name="ElementShortName">stage5_valid</obj_property>
+      <obj_property name="ObjectShortName">stage5_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/reduction_inst/t" type="array">
+      <obj_property name="ElementShortName">t[511:0]</obj_property>
+      <obj_property name="ObjectShortName">t[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/modular_multiplier_montgomery_tb/dut/mul_inst/reduction_inst/mont_result" type="array">
+      <obj_property name="ElementShortName">mont_result[255:0]</obj_property>
+      <obj_property name="ObjectShortName">mont_result[255:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,1425 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Apr 27 10:31:32 2026
+# Process ID: 1312
+# Current directory: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent35208 F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_1\ntt_1\ntt_1.xpr
+# Log file: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/vivado.log
+# Journal file: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_axi_accelerator_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/XILINX/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 863.270 ; gain = 212.141
+update_compile_order -fileset sources_1
+launch_sdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/vitis -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/vitis/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/vitis -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/vitis/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -scan_for_includes F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v
+update_compile_order -fileset sim_1
+set_property top tb_ntt_axi [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ntt_axi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_ntt_axi_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ipshared/c7a9/hdl/ntt_axi_accelerator_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/sub_pe/seg_multiplier_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_multiplier_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segmented_256bit_full_butterfly
+INFO: [VRFC 10-2458] undeclared symbol montgomery_valid, assumed default net type wire [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:247]
+WARNING: [VRFC 10-3380] identifier 'state' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:83]
+WARNING: [VRFC 10-3380] identifier 'state' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:116]
+WARNING: [VRFC 10-3380] identifier 'montgomery_result' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:130]
+WARNING: [VRFC 10-3380] identifier 'montgomery_result' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:138]
+WARNING: [VRFC 10-3380] identifier 'montgomery_result' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:140]
+WARNING: [VRFC 10-3380] identifier 'montgomery_result' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:141]
+WARNING: [VRFC 10-3380] identifier 'montgomery_done' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:201]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/reconfigurable_3d_pe_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reconfigurable_3d_pe_top
+WARNING: [VRFC 10-986] literal value truncated to fit in 4 bits [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/reconfigurable_3d_pe_top.sv:74]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_post_transform.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module winograd_post_transform
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module winograd_pre_transform
+WARNING: [VRFC 10-3824] variable 'idx1' must explicitly be declared as automatic or static [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv:143]
+WARNING: [VRFC 10-3824] variable 'idx2' must explicitly be declared as automatic or static [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv:144]
+WARNING: [VRFC 10-3824] variable 'idx1' must explicitly be declared as automatic or static [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv:155]
+WARNING: [VRFC 10-3824] variable 'idx2' must explicitly be declared as automatic or static [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv:156]
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ipshared/c7a9/hdl/ntt_axi_accelerator_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ip/design_1_ntt_axi_accelerator_0_0/sim/design_1_ntt_axi_accelerator_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_ntt_axi_accelerator_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_processing_system7_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/sim/design_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1
+INFO: [VRFC 10-311] analyzing module design_1_ps7_0_axi_periph_0
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_UYSKKA
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ntt_axi
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj tb_ntt_axi_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ip/design_1_rst_ps7_0_50M_0/sim/design_1_rst_ps7_0_50M_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_1_rst_ps7_0_50M_0'
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1075.586 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '9' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L generic_baseblocks_v2_1_0 -L fifo_generator_v13_2_4 -L axi_data_fifo_v2_1_18 -L axi_register_slice_v2_1_19 -L axi_protocol_converter_v2_1_19 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L generic_baseblocks_v2_1_0 -L fifo_generator_v13_2_4 -L axi_data_fifo_v2_1_18 -L axi_register_slice_v2_1_19 -L axi_protocol_converter_v2_1_19 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 128 differs from formal bit length 64 for port 'WR_DATA_STRB' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_gp.v:208]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 6 for port 'm_axi_bid' [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:5496]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 6 for port 'm_axi_rid' [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:5514]
+WARNING: [VRFC 10-3091] actual bit length 128 differs from formal bit length 64 for port 'WR_DATA_STRB' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_gp.v:292]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'WR_BYTES' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_hp.v:80]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'RD_BYTES' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_hp.v:89]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 6 for port 'm_axi_bid' [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10203]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 6 for port 'm_axi_rid' [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10221]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'm_axi_rdata' [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10222]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'WR_BYTES' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_hp.v:165]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'RD_BYTES' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_hp.v:174]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'WR_BYTES' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_hp.v:251]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'RD_BYTES' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_hp.v:260]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'WR_BYTES' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_hp.v:337]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'RD_BYTES' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_hp.v:346]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 3 for port 'm_axi_bid' [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7107]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 3 for port 'm_axi_rid' [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7125]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'm_axi_rdata' [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7126]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'sys_rst_n' is not permitted [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:50]
+ERROR: [VRFC 10-3595] non-net variable cannot be connected to inout port 'FIXED_IO_ps_porb' [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:50]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'sys_rst_n' is not permitted [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:51]
+ERROR: [VRFC 10-3595] non-net variable cannot be connected to inout port 'FIXED_IO_ps_srstb' [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:51]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:9413]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:9630]
+WARNING: [VRFC 10-3283] element index 64 into 'wrp_strb' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:6084]
+WARNING: [VRFC 10-3283] element index 128 into 'wrp_strb' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10844]
+WARNING: [VRFC 10-3283] element index 128 into 'wrp_strb' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7722]
+WARNING: [VRFC 10-3705] select index 4 into 'wr_fifo_rd_ptr' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7935]
+WARNING: [VRFC 10-3705] select index 4 into 'ar_cnt' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8074]
+WARNING: [VRFC 10-3705] select index 4 into 'wr_rresp_cnt' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8171]
+WARNING: [VRFC 10-3705] select index 4 into 'rd_fifo_wr_ptr' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8190]
+WARNING: [VRFC 10-3705] select index 4 into 'rd_cnt' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8331]
+WARNING: [VRFC 10-3705] select index 4 into 'rresp_time_cnt' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8336]
+WARNING: [VRFC 10-3705] select index 4 into 'rd_fifo_rd_ptr' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8341]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1075.586 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-99] Step results log file:'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 1075.586 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ntt_axi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_ntt_axi_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ipshared/c7a9/hdl/ntt_axi_accelerator_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ip/design_1_ntt_axi_accelerator_0_0/sim/design_1_ntt_axi_accelerator_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_ntt_axi_accelerator_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_processing_system7_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/sim/design_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1
+INFO: [VRFC 10-311] analyzing module design_1_ps7_0_axi_periph_0
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_UYSKKA
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ntt_axi
+"xvhdl --incr --relax -prj tb_ntt_axi_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L generic_baseblocks_v2_1_0 -L fifo_generator_v13_2_4 -L axi_data_fifo_v2_1_18 -L axi_register_slice_v2_1_19 -L axi_protocol_converter_v2_1_19 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L generic_baseblocks_v2_1_0 -L fifo_generator_v13_2_4 -L axi_data_fifo_v2_1_18 -L axi_register_slice_v2_1_19 -L axi_protocol_converter_v2_1_19 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 128 differs from formal bit length 64 for port 'WR_DATA_STRB' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_gp.v:208]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 6 for port 'm_axi_bid' [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:5496]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 6 for port 'm_axi_rid' [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:5514]
+WARNING: [VRFC 10-3091] actual bit length 128 differs from formal bit length 64 for port 'WR_DATA_STRB' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_gp.v:292]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'WR_BYTES' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_hp.v:80]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'RD_BYTES' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_hp.v:89]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 6 for port 'm_axi_bid' [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10203]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 6 for port 'm_axi_rid' [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10221]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'm_axi_rdata' [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10222]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'WR_BYTES' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_hp.v:165]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'RD_BYTES' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_hp.v:174]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'WR_BYTES' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_hp.v:251]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'RD_BYTES' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_hp.v:260]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'WR_BYTES' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_hp.v:337]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'RD_BYTES' [/proj/xbuilds/2019.1_0524_1430/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_7_axi_hp.v:346]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 3 for port 'm_axi_bid' [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7107]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 3 for port 'm_axi_rid' [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7125]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'm_axi_rdata' [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7126]
+WARNING: [VRFC 10-3027] 'ocm_wr_strb_port0' was previously declared with a different range [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:3759]
+WARNING: [VRFC 10-3283] element index 64 into 'wrp_strb' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:6084]
+WARNING: [VRFC 10-3283] element index 128 into 'wrp_strb' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10844]
+WARNING: [VRFC 10-3283] element index 128 into 'wrp_strb' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7722]
+WARNING: [VRFC 10-3705] select index 4 into 'wr_fifo_rd_ptr' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7935]
+WARNING: [VRFC 10-3705] select index 4 into 'ar_cnt' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8074]
+WARNING: [VRFC 10-3705] select index 4 into 'wr_rresp_cnt' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8171]
+WARNING: [VRFC 10-3705] select index 4 into 'rd_fifo_wr_ptr' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8190]
+WARNING: [VRFC 10-3705] select index 4 into 'rd_cnt' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8331]
+WARNING: [VRFC 10-3705] select index 4 into 'rresp_time_cnt' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8336]
+WARNING: [VRFC 10-3705] select index 4 into 'rd_fifo_rd_ptr' is out of bounds [/wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8341]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/reconfigurable_3d_pe_top.sv" Line 5. Module reconfigurable_3d_pe_top(NUM_CORES=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv" Line 6. Module winograd_pre_transform(MAX_WIDTH=128) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.ip_user_files/bd/design_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_post_transform.sv" Line 5. Module winograd_post_transform(MAX_WIDTH=128) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package ieee.std_logic_arith
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package xilinx_vip.axi_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling package std.std
+Compiling module xil_defaultlib.ntt_axi_accelerator_v1_0_S00_AXI...
+Compiling module xil_defaultlib.winograd_pre_transform(MAX_WIDTH...
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(TOTAL_BITS=1...
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly(...
+Compiling module xil_defaultlib.winograd_post_transform(MAX_WIDT...
+Compiling module xil_defaultlib.reconfigurable_3d_pe_top(NUM_COR...
+Compiling module xil_defaultlib.ntt_axi_accelerator_v1_0(NUM_COR...
+Compiling module xil_defaultlib.design_1_ntt_axi_accelerator_0_0
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_ge...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_ge...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_ar...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_ar...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_fm...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_ar...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_ar...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_ar...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_ar...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_ss...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_in...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_sp...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_dd...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_oc...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_oc...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_re...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_re...
+Compiling module xilinx_vip.axi_vip_axi4pc(WDATA_WIDTH=32,RD...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_PROTOCOL=1,C_AX...
+Compiling module axi_vip_v1_1_5.axi_vip_v1_1_5_top(C_AXI_PROTOCO...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_ax...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_ax...
+Compiling module xilinx_vip.axi_vip_axi4pc(WDATA_WIDTH=32,RD...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_PROTOCOL=1,C_AX...
+Compiling module axi_vip_v1_1_5.axi_vip_v1_1_5_top(C_AXI_PROTOCO...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_ax...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_ax...
+Compiling module xilinx_vip.axi_vip_axi4pc(PROTOCOL=1,RID_WI...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_PROTOCOL=1,C_AX...
+Compiling module axi_vip_v1_1_5.axi_vip_v1_1_5_top(C_AXI_PROTOCO...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_in...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_af...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_af...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_af...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_af...
+Compiling module xilinx_vip.axi_vip_axi4pc(PROTOCOL=1,RID_WI...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_PROTOCOL=1,C_AX...
+Compiling module axi_vip_v1_1_5.axi_vip_v1_1_5_top(C_AXI_PROTOCO...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7_ax...
+Compiling module processing_system7_vip_v1_0_7.processing_system7_vip_v1_0_7(C_...
+Compiling module xil_defaultlib.design_1_processing_system7_0_0
+Compiling module axi_infrastructure_v1_1_0.axi_infrastructure_v1_1_0_axi2ve...
+Compiling module axi_register_slice_v2_1_19.axi_register_slice_v2_1_19_axic_...
+Compiling module axi_register_slice_v2_1_19.axi_register_slice_v2_1_19_axic_...
+Compiling module axi_register_slice_v2_1_19.axi_register_slice_v2_1_19_axic_...
+Compiling module axi_register_slice_v2_1_19.axi_register_slice_v2_1_19_axic_...
+Compiling module axi_infrastructure_v1_1_0.axi_infrastructure_v1_1_0_vector...
+Compiling module axi_register_slice_v2_1_19.axi_register_slice_v2_1_19_axi_r...
+Compiling module axi_protocol_converter_v2_1_19.axi_protocol_converter_v2_1_19_b...
+Compiling module axi_protocol_converter_v2_1_19.axi_protocol_converter_v2_1_19_b...
+Compiling module axi_protocol_converter_v2_1_19.axi_protocol_converter_v2_1_19_b...
+Compiling module axi_protocol_converter_v2_1_19.axi_protocol_converter_v2_1_19_b...
+Compiling module axi_protocol_converter_v2_1_19.axi_protocol_converter_v2_1_19_b...
+Compiling module axi_protocol_converter_v2_1_19.axi_protocol_converter_v2_1_19_b...
+Compiling module axi_protocol_converter_v2_1_19.axi_protocol_converter_v2_1_19_b...
+Compiling module axi_protocol_converter_v2_1_19.axi_protocol_converter_v2_1_19_b...
+Compiling module axi_protocol_converter_v2_1_19.axi_protocol_converter_v2_1_19_b...
+Compiling module axi_protocol_converter_v2_1_19.axi_protocol_converter_v2_1_19_b...
+Compiling module axi_protocol_converter_v2_1_19.axi_protocol_converter_v2_1_19_b...
+Compiling module axi_protocol_converter_v2_1_19.axi_protocol_converter_v2_1_19_b...
+Compiling module axi_protocol_converter_v2_1_19.axi_protocol_converter_v2_1_19_b...
+Compiling module axi_infrastructure_v1_1_0.axi_infrastructure_v1_1_0_axi2ve...
+Compiling module axi_register_slice_v2_1_19.axi_register_slice_v2_1_19_axic_...
+Compiling module axi_register_slice_v2_1_19.axi_register_slice_v2_1_19_axic_...
+Compiling module axi_register_slice_v2_1_19.axi_register_slice_v2_1_19_axic_...
+Compiling module axi_register_slice_v2_1_19.axi_register_slice_v2_1_19_axic_...
+Compiling module axi_infrastructure_v1_1_0.axi_infrastructure_v1_1_0_vector...
+Compiling module axi_register_slice_v2_1_19.axi_register_slice_v2_1_19_axi_r...
+Compiling module axi_protocol_converter_v2_1_19.axi_protocol_converter_v2_1_19_b...
+Compiling module axi_protocol_converter_v2_1_19.axi_protocol_converter_v2_1_19_a...
+Compiling module xil_defaultlib.design_1_auto_pc_0
+Compiling module xil_defaultlib.s00_couplers_imp_UYSKKA
+Compiling module xil_defaultlib.design_1_ps7_0_axi_periph_0
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture fdre_v of entity unisim.FDRE [\FDRE(init='1')\]
+Compiling architecture fdr_v of entity unisim.FDR [fdr_default]
+Compiling architecture implementation of entity lib_cdc_v1_0_2.cdc_sync [\cdc_sync(c_vector_width=2,c_mtb...]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E(init="1111111111111111")...]
+Compiling architecture srl16_v of entity unisim.SRL16 [\SRL16(init="1111111111111111")(...]
+Compiling architecture imp of entity proc_sys_reset_v5_0_13.lpf [\lpf(c_ext_rst_width=4,c_aux_rst...]
+Compiling architecture imp of entity proc_sys_reset_v5_0_13.upcnt_n [\upcnt_n(c_size=6)\]
+Compiling architecture imp of entity proc_sys_reset_v5_0_13.sequence_psr [sequence_psr_default]
+Compiling architecture imp of entity proc_sys_reset_v5_0_13.proc_sys_reset [\proc_sys_reset(c_family="zynq",...]
+Compiling architecture design_1_rst_ps7_0_50m_0_arch of entity xil_defaultlib.design_1_rst_ps7_0_50M_0 [design_1_rst_ps7_0_50m_0_default]
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.tb_ntt_axi
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_ntt_axi_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim/xsim.dir/tb_ntt_axi_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Apr 27 10:58:21 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:39 . Memory (MB): peak = 1075.586 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '40' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_ntt_axi_behav -key {Behavioral:sim_1:Functional:tb_ntt_axi} -tclbatch {tb_ntt_axi.tcl} -protoinst "protoinst_files/design_1.protoinst" -view {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_montgomery_top_behav.wcfg} -view {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/mod_exp_tb_behav.wcfg} -view {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_parallel_recurrence_unit_behav.wcfg} -view {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_accelerator_behav.wcfg} -view {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_accelerator_behav1.wcfg} -view {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_accelerator_behav2.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb_ntt_axi/u_top/design_1_i//ntt_axi_accelerator_0/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb_ntt_axi/u_top/design_1_i//processing_system7_0/M_AXI_GP0
+INFO: [Wavedata 42-564]   Found protocol instance at /tb_ntt_axi/u_top/design_1_i//ps7_0_axi_periph/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb_ntt_axi/u_top/design_1_i//ps7_0_axi_periph/S00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb_ntt_axi/u_top/design_1_i//ps7_0_axi_periph/s00_couplers/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb_ntt_axi/u_top/design_1_i//ps7_0_axi_periph/s00_couplers/S_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb_ntt_axi/u_top/design_1_i//ps7_0_axi_periph/s00_couplers/auto_pc/M_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb_ntt_axi/u_top/design_1_i//ps7_0_axi_periph/s00_couplers/auto_pc/S_AXI
+Time resolution is 1 ps
+open_wave_config F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_montgomery_top_behav.wcfg
+WARNING: Simulation object /tb_montgomery_top/clk was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/rst_n was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/start was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/done was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/test_pass was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/CLK_PERIOD was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/mont_valid was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/A_MONT was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/B_MONT was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/stage5_sum was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/stage4_valid was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/stage5_valid was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/N_reg was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/mont_result was not found in the design.
+open_wave_config F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/mod_exp_tb_behav.wcfg
+WARNING: Simulation object /mod_exp_tb/clk was not found in the design.
+WARNING: Simulation object /mod_exp_tb/reset_n was not found in the design.
+WARNING: Simulation object /mod_exp_tb/start was not found in the design.
+WARNING: Simulation object /mod_exp_tb/done was not found in the design.
+WARNING: Simulation object /mod_exp_tb/base was not found in the design.
+WARNING: Simulation object /mod_exp_tb/exponent was not found in the design.
+WARNING: Simulation object /mod_exp_tb/modulus was not found in the design.
+WARNING: Simulation object /mod_exp_tb/Np was not found in the design.
+WARNING: Simulation object /mod_exp_tb/R2_mod_N was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/state was not found in the design.
+WARNING: Simulation object /mod_exp_tb/result was not found in the design.
+WARNING: Simulation object /mod_exp_tb/DATA_WIDTH was not found in the design.
+WARNING: Simulation object /mod_exp_tb/EXP_WIDTH was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/start was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/reset_n was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/clk was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/base was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/exponent was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/modulus was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/Np was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/R2_mod_N was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/result was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/done was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/state was not found in the design.
+open_wave_config F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_parallel_recurrence_unit_behav.wcfg
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/reset_n was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/start was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/base_value was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/step_value was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/Np was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_0 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_1 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_2 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_3 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/state was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/current_values was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/counter was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/step_powers was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_a was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_b was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_start was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_result was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/a was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/b was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/mont_start was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/mont_done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/result was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/start was not found in the design.
+open_wave_config F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_accelerator_behav.wcfg
+WARNING: Simulation object /tb_ntt_accelerator/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/rst_n was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/radix_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/width_384_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/parallelism was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/start was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/done was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/result_valid was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_in_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/twiddle_factors_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/N_prime was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/\core_array[0].u_core /clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/\core_array[0].u_core /x0 was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/\core_array[0].u_core /x1 was not found in the design.
+open_wave_config F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_accelerator_behav1.wcfg
+WARNING: Simulation object /tb_ntt_accelerator/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/rst_n was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/radix_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/width_384_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/parallelism was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/start was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/done was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/result_valid was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_in_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/twiddle_factors_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/N_prime was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_RADIX was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/NUM_CORES was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/CLK_PERIOD was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/data_in was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/twiddle_in was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/x0_out was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/x1_out was not found in the design.
+open_wave_config F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_accelerator_behav2.wcfg
+WARNING: Simulation object /tb_ntt_accelerator/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/rst_n was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/radix_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/width_384_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/parallelism was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/start was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/done was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/result_valid was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_in_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/twiddle_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/N_prime was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_RADIX was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/NUM_CORES was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/CLK_PERIOD was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/PIPELINE_WAIT_CYCLE was not found in the design.
+source tb_ntt_axi.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.M_AXI_GP0.master
+[0] : *ZYNQ_VIP_INFO : M_AXI_GP0 : Port is ENABLED.
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.M_AXI_GP1.master
+[0] : *ZYNQ_VIP_INFO : M_AXI_GP1 : Port is DISABLED.
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.S_AXI_GP0.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_GP0 : Port is DISABLED.
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.S_AXI_GP1.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_GP1 : Port is DISABLED.
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.S_AXI_HP0.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_HP0 : Port is DISABLED.
+                   0 BEFORE checking line ...... x
+                   0 AFTER checking line ...... x
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.S_AXI_HP1.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_HP1 : Port is DISABLED.
+                   0 BEFORE checking line ...... x
+                   0 AFTER checking line ...... x
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.S_AXI_HP2.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_HP2 : Port is DISABLED.
+                   0 BEFORE checking line ...... x
+                   0 AFTER checking line ...... x
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.S_AXI_HP3.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_HP3 : Port is DISABLED.
+                   0 BEFORE checking line ...... x
+                   0 AFTER checking line ...... x
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.S_AXI_ACP.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_ACP : Port is DISABLED.
+                   0 else checking line ......0
+ERROR: 230 ns tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.M_AXI_GP0.master.IF  : XILINX_RESET_PULSE_WIDTH: Holding AXI ARESETN asserted for 16 cycles of the slowest AXI clock is generally a sufficient reset pulse width for Xilinx IP. --UG1037. To downgrade, use <hierarchy_path to VIP>.IF.set_xilinx_reset_check_to_warn(), or filter using clr_xilinx_reset_check().
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 1075.586 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 1075.586 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_ntt_axi_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:01:01 . Memory (MB): peak = 1075.586 ; gain = 0.000
+create_wave_config
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_awaddr}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_awprot}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_awvalid}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_awready}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_wdata}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_wstrb}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_wvalid}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_wready}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_bresp}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_bvalid}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_bready}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_araddr}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_arprot}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_arvalid}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_arready}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_rdata}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_rresp}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_rvalid}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_rready}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_aclk}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/s00_axi_aresetn}} {{/tb_ntt_axi/u_top/design_1_i/ntt_axi_accelerator_0/S00_AXI}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+WARNING: [Simulator 45-29] Cannot open source file /wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv: file does not exist.
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1131.805 ; gain = 0.000
+run all
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.M_AXI_GP0.master
+[0] : *ZYNQ_VIP_INFO : M_AXI_GP0 : Port is ENABLED.
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.M_AXI_GP1.master
+[0] : *ZYNQ_VIP_INFO : M_AXI_GP1 : Port is DISABLED.
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.S_AXI_GP0.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_GP0 : Port is DISABLED.
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.S_AXI_GP1.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_GP1 : Port is DISABLED.
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.S_AXI_HP0.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_HP0 : Port is DISABLED.
+                   0 BEFORE checking line ...... x
+                   0 AFTER checking line ...... x
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.S_AXI_HP1.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_HP1 : Port is DISABLED.
+                   0 BEFORE checking line ...... x
+                   0 AFTER checking line ...... x
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.S_AXI_HP2.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_HP2 : Port is DISABLED.
+                   0 BEFORE checking line ...... x
+                   0 AFTER checking line ...... x
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.S_AXI_HP3.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_HP3 : Port is DISABLED.
+                   0 BEFORE checking line ...... x
+                   0 AFTER checking line ...... x
+XilinxAXIVIP: Found at Path: tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.S_AXI_ACP.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_ACP : Port is DISABLED.
+                   0 else checking line ......0
+ERROR: 230 ns tb_ntt_axi.u_top.design_1_i.processing_system7_0.inst.M_AXI_GP0.master.IF  : XILINX_RESET_PULSE_WIDTH: Holding AXI ARESETN asserted for 16 cycles of the slowest AXI clock is generally a sufficient reset pulse width for Xilinx IP. --UG1037. To downgrade, use <hierarchy_path to VIP>.IF.set_xilinx_reset_check_to_warn(), or filter using clr_xilinx_reset_check().
+WARNING: [Simulator 45-29] Cannot open source file /wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/xilinx_vip/hdl/axi_vip_axi4pc.sv: file does not exist.
+run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1131.805 ; gain = 0.000
+relaunch_sim
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks
+Executing Axi4 End Of Simulation checks
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ntt_axi_accelerator_0'...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ntt_axi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_ntt_axi_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ip/ntt_axi_accelerator_0_4/hdl/ntt_axi_accelerator_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/seg_multiplier_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_multiplier_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segmented_256bit_full_butterfly
+INFO: [VRFC 10-2458] undeclared symbol montgomery_valid, assumed default net type wire [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:247]
+WARNING: [VRFC 10-3380] identifier 'state' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:83]
+WARNING: [VRFC 10-3380] identifier 'state' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:116]
+WARNING: [VRFC 10-3380] identifier 'montgomery_result' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:130]
+WARNING: [VRFC 10-3380] identifier 'montgomery_result' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:138]
+WARNING: [VRFC 10-3380] identifier 'montgomery_result' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:140]
+WARNING: [VRFC 10-3380] identifier 'montgomery_result' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:141]
+WARNING: [VRFC 10-3380] identifier 'montgomery_done' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:201]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/reconfigurable_3d_pe_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reconfigurable_3d_pe_top
+WARNING: [VRFC 10-986] literal value truncated to fit in 4 bits [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/reconfigurable_3d_pe_top.sv:74]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_post_transform.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module winograd_post_transform
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module winograd_pre_transform
+WARNING: [VRFC 10-3824] variable 'idx1' must explicitly be declared as automatic or static [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv:143]
+WARNING: [VRFC 10-3824] variable 'idx2' must explicitly be declared as automatic or static [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv:144]
+WARNING: [VRFC 10-3824] variable 'idx1' must explicitly be declared as automatic or static [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv:155]
+WARNING: [VRFC 10-3824] variable 'idx2' must explicitly be declared as automatic or static [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv:156]
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ip/ntt_axi_accelerator_0_4/hdl/ntt_axi_accelerator_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ip/ntt_axi_accelerator_0_4/sim/ntt_axi_accelerator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ntt_axi
+ERROR: [VRFC 10-1280] procedural assignment to a non-register s00_axi_awaddr is not permitted, left-hand side should be reg/integer/time/genvar [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:70]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register s00_axi_awvalid is not permitted, left-hand side should be reg/integer/time/genvar [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:71]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register s00_axi_wdata is not permitted, left-hand side should be reg/integer/time/genvar [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:73]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register s00_axi_wstrb is not permitted, left-hand side should be reg/integer/time/genvar [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:74]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register s00_axi_wvalid is not permitted, left-hand side should be reg/integer/time/genvar [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:75]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register s00_axi_bready is not permitted, left-hand side should be reg/integer/time/genvar [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:77]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register s00_axi_awvalid is not permitted, left-hand side should be reg/integer/time/genvar [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:83]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register s00_axi_wvalid is not permitted, left-hand side should be reg/integer/time/genvar [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:84]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register s00_axi_araddr is not permitted, left-hand side should be reg/integer/time/genvar [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:95]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register s00_axi_arvalid is not permitted, left-hand side should be reg/integer/time/genvar [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:96]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register s00_axi_rready is not permitted, left-hand side should be reg/integer/time/genvar [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:98]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register s00_axi_arvalid is not permitted, left-hand side should be reg/integer/time/genvar [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:104]
+ERROR: [VRFC 10-2865] module 'tb_ntt_axi' ignored due to previous errors [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:3]
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1131.805 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-99] Step results log file:'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1131.805 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ntt_axi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_ntt_axi_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ip/ntt_axi_accelerator_0_4/hdl/ntt_axi_accelerator_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/seg_multiplier_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_multiplier_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segmented_256bit_full_butterfly
+INFO: [VRFC 10-2458] undeclared symbol montgomery_valid, assumed default net type wire [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:247]
+WARNING: [VRFC 10-3380] identifier 'state' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:83]
+WARNING: [VRFC 10-3380] identifier 'state' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:116]
+WARNING: [VRFC 10-3380] identifier 'montgomery_result' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:130]
+WARNING: [VRFC 10-3380] identifier 'montgomery_result' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:138]
+WARNING: [VRFC 10-3380] identifier 'montgomery_result' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:140]
+WARNING: [VRFC 10-3380] identifier 'montgomery_result' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:141]
+WARNING: [VRFC 10-3380] identifier 'montgomery_done' is used before its declaration [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/sub_pe/segmented_256bit_full_butterfly.v:201]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/reconfigurable_3d_pe_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reconfigurable_3d_pe_top
+WARNING: [VRFC 10-986] literal value truncated to fit in 4 bits [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/reconfigurable_3d_pe_top.sv:74]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_post_transform.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module winograd_post_transform
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module winograd_pre_transform
+WARNING: [VRFC 10-3824] variable 'idx1' must explicitly be declared as automatic or static [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv:143]
+WARNING: [VRFC 10-3824] variable 'idx2' must explicitly be declared as automatic or static [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv:144]
+WARNING: [VRFC 10-3824] variable 'idx1' must explicitly be declared as automatic or static [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv:155]
+WARNING: [VRFC 10-3824] variable 'idx2' must explicitly be declared as automatic or static [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv:156]
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ip/ntt_axi_accelerator_0_4/hdl/ntt_axi_accelerator_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ip/ntt_axi_accelerator_0_4/sim/ntt_axi_accelerator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ntt_axi
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 's00_axi_awaddr' [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:67]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 's00_axi_araddr' [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:83]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/reconfigurable_3d_pe_top.sv" Line 5. Module reconfigurable_3d_pe_top(NUM_CORES=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv" Line 6. Module winograd_pre_transform(MAX_WIDTH=128) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_post_transform.sv" Line 5. Module winograd_post_transform(MAX_WIDTH=128) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ntt_axi_accelerator_v1_0_S00_AXI...
+Compiling module xil_defaultlib.winograd_pre_transform(MAX_WIDTH...
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(TOTAL_BITS=1...
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly(...
+Compiling module xil_defaultlib.winograd_post_transform(MAX_WIDT...
+Compiling module xil_defaultlib.reconfigurable_3d_pe_top(NUM_COR...
+Compiling module xil_defaultlib.ntt_axi_accelerator_v1_0(NUM_COR...
+Compiling module xil_defaultlib.ntt_axi_accelerator_0
+Compiling module xil_defaultlib.tb_ntt_axi
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_ntt_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+写操作完成，地址=0x00000000，数据=0x12345678，响应=0x00
+读操作完成，地址=0x00000000，数据=0x12345678，响应=0x00
+仿真完成！
+$stop called at time : 105 ns : File "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" Line 126
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1131.805 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ntt_axi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_ntt_axi_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 's00_axi_awaddr' [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:67]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 's00_axi_araddr' [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:83]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+写操作完成，地址=0x00000000，数据=0x12345678，响应=0x00
+读操作完成，地址=0x00000000，数据=0x12345678，响应=0x00
+仿真完成！
+$stop called at time : 105 ns : File "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" Line 126
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1131.805 ; gain = 0.000
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ACLK}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARESETN}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWADDR}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWPROT}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWVALID}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWREADY}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WDATA}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WSTRB}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WVALID}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WREADY}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BRESP}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BVALID}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BREADY}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARADDR}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARPROT}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARVALID}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARREADY}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RDATA}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RRESP}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RVALID}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RREADY}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg0_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg2_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg3_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg4_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg5_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg6_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg7_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg8_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg9_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg10_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg11_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg12_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg13_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg14_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/status_in_i}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_awaddr}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_awready}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_wready}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_bresp}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_bvalid}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_araddr}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_arready}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rdata}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rresp}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rvalid}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg_wren}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg_rden}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/reg_data_out}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/byte_index}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/aw_en}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/wr_index}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/rd_index}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/C_S_AXI_DATA_WIDTH}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/C_S_AXI_ADDR_WIDTH}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/ADDR_LSB}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/OPT_MEM_ADDR_BITS}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/REG_COUNT}} 
+run all
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+写操作完成，地址=0x00000000，数据=0x12345678，响应=0x00
+读操作完成，地址=0x00000000，数据=0x12345678，响应=0x00
+仿真完成！
+$stop called at time : 105 ns : File "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" Line 126
+run all
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ntt_axi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_ntt_axi_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ip/ntt_axi_accelerator_0_4/hdl/ntt_axi_accelerator_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ip/ntt_axi_accelerator_0_4/sim/ntt_axi_accelerator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ntt_axi
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 's00_axi_awaddr' [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:70]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 's00_axi_araddr' [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:86]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/reconfigurable_3d_pe_top.sv" Line 5. Module reconfigurable_3d_pe_top(NUM_CORES=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv" Line 6. Module winograd_pre_transform(MAX_WIDTH=128) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_post_transform.sv" Line 5. Module winograd_post_transform(MAX_WIDTH=128) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ntt_axi_accelerator_v1_0_S00_AXI...
+Compiling module xil_defaultlib.winograd_pre_transform(MAX_WIDTH...
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(TOTAL_BITS=1...
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly(...
+Compiling module xil_defaultlib.winograd_post_transform(MAX_WIDT...
+Compiling module xil_defaultlib.reconfigurable_3d_pe_top(NUM_COR...
+Compiling module xil_defaultlib.ntt_axi_accelerator_v1_0(NUM_COR...
+Compiling module xil_defaultlib.ntt_axi_accelerator_0
+Compiling module xil_defaultlib.tb_ntt_axi
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_ntt_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+写操作完成，地址=0x00000000，数据=0x12345678，响应=0x00
+读操作完成，地址=0x00000000，数据=0x12345678，响应=0x00
+仿真完成！
+$stop called at time : 105 ns : File "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" Line 131
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1524.281 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+写操作完成，地址=0x00000000，数据=0x12345678，响应=0x00
+读操作完成，地址=0x00000000，数据=0x12345678，响应=0x00
+仿真完成！
+$stop called at time : 105 ns : File "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" Line 131
+run all
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1524.281 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ntt_axi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_ntt_axi_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ip/ntt_axi_accelerator_0_4/hdl/ntt_axi_accelerator_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ip/ntt_axi_accelerator_0_4/sim/ntt_axi_accelerator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ntt_axi
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 's00_axi_awaddr' [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:47]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 's00_axi_araddr' [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:61]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/reconfigurable_3d_pe_top.sv" Line 5. Module reconfigurable_3d_pe_top(NUM_CORES=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv" Line 6. Module winograd_pre_transform(MAX_WIDTH=128) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_post_transform.sv" Line 5. Module winograd_post_transform(MAX_WIDTH=128) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ntt_axi_accelerator_v1_0_S00_AXI...
+Compiling module xil_defaultlib.winograd_pre_transform(MAX_WIDTH...
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(TOTAL_BITS=1...
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly(...
+Compiling module xil_defaultlib.winograd_post_transform(MAX_WIDT...
+Compiling module xil_defaultlib.reconfigurable_3d_pe_top(NUM_COR...
+Compiling module xil_defaultlib.ntt_axi_accelerator_v1_0(NUM_COR...
+Compiling module xil_defaultlib.ntt_axi_accelerator_0
+Compiling module xil_defaultlib.tb_ntt_axi
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_ntt_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=====================================
+        AXI Lite Test Started        
+=====================================
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1524.281 ; gain = 0.000
+run all
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+=====================================
+        AXI Lite Test Started        
+=====================================
+run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 1524.281 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ntt_axi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_ntt_axi_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ip/ntt_axi_accelerator_0_4/hdl/ntt_axi_accelerator_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ip/ntt_axi_accelerator_0_4/sim/ntt_axi_accelerator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ntt_axi
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 's00_axi_awaddr' [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:52]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 's00_axi_araddr' [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:65]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/reconfigurable_3d_pe_top.sv" Line 5. Module reconfigurable_3d_pe_top(NUM_CORES=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv" Line 6. Module winograd_pre_transform(MAX_WIDTH=128) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_post_transform.sv" Line 5. Module winograd_post_transform(MAX_WIDTH=128) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ntt_axi_accelerator_v1_0_S00_AXI...
+Compiling module xil_defaultlib.winograd_pre_transform(MAX_WIDTH...
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(TOTAL_BITS=1...
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly(...
+Compiling module xil_defaultlib.winograd_post_transform(MAX_WIDT...
+Compiling module xil_defaultlib.reconfigurable_3d_pe_top(NUM_COR...
+Compiling module xil_defaultlib.ntt_axi_accelerator_v1_0(NUM_COR...
+Compiling module xil_defaultlib.ntt_axi_accelerator_0
+Compiling module xil_defaultlib.tb_ntt_axi
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_ntt_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=====================================
+        AXI Lite Test Started        
+=====================================
+WRITE OK: ADDR=0x00000000, DATA=0x12345678, RESP=00
+READ  OK: ADDR=0x00000000, DATA=0x12345678, RESP=00
+=====================================
+      Simulation Completed!          
+=====================================
+$stop called at time : 105 ns : File "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" Line 102
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1524.281 ; gain = 0.000
+run all
+update_compile_order -fileset sim_1
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ntt_axi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_ntt_axi_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ntt_axi
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ntt_axi_accelerator_v1_0_S00_AXI...
+Compiling module xil_defaultlib.tb_ntt_axi
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_ntt_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=====================================
+        AXI Lite Test Started        
+=====================================
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1524.281 ; gain = 0.000
+update_compile_order -fileset sim_1
+run all
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1524.281 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ntt_axi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_ntt_axi_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ip/ntt_axi_accelerator_0_4/hdl/ntt_axi_accelerator_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ip/ntt_axi_accelerator_0_4/sim/ntt_axi_accelerator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ntt_axi_accelerator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_ntt_axi
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 's00_axi_awaddr' [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:57]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 's00_axi_araddr' [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:75]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/reconfigurable_3d_pe_top.sv" Line 5. Module reconfigurable_3d_pe_top(NUM_CORES=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_pre_transform.sv" Line 6. Module winograd_pre_transform(MAX_WIDTH=128) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/montgomery_mutiply_moduli/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(TOTAL_BITS=128,SEG_CNT=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/ntt_ip/ip/src/PE/Reconfigurable Butterfly Unit/winograd_post_transform.sv" Line 5. Module winograd_post_transform(MAX_WIDTH=128) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ntt_axi_accelerator_v1_0_S00_AXI...
+Compiling module xil_defaultlib.winograd_pre_transform(MAX_WIDTH...
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(TOTAL_BITS=1...
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly(...
+Compiling module xil_defaultlib.winograd_post_transform(MAX_WIDT...
+Compiling module xil_defaultlib.reconfigurable_3d_pe_top(NUM_COR...
+Compiling module xil_defaultlib.ntt_axi_accelerator_v1_0(NUM_COR...
+Compiling module xil_defaultlib.ntt_axi_accelerator_0
+Compiling module xil_defaultlib.tb_ntt_axi
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_ntt_axi_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=====================================
+        AXI Lite Test Started        
+=====================================
+WRITE OK: ADDR=0x00000000, DATA=0x12345678, RESP=00
+READ  OK: ADDR=0x00000000, DATA=0x12345678, RESP=00
+=====================================
+      Simulation Completed!          
+=====================================
+$stop called at time : 105 ns : File "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" Line 117
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1524.281 ; gain = 0.000
+run all
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1524.281 ; gain = 0.000
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ACLK}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARESETN}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWADDR}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWPROT}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWVALID}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWREADY}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WDATA}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WSTRB}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WVALID}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WREADY}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BRESP}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BVALID}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BREADY}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARADDR}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARPROT}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARVALID}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARREADY}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RDATA}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RRESP}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RVALID}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RREADY}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg0_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg2_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg3_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg4_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg5_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg6_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg7_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg8_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg9_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg10_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg11_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg12_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg13_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg14_o}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/status_in_i}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_awaddr}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_awready}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_wready}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_bresp}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_bvalid}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_araddr}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_arready}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rdata}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rresp}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rvalid}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg_wren}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg_rden}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/reg_data_out}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/byte_index}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/aw_en}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/wr_index}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/rd_index}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/C_S_AXI_DATA_WIDTH}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/C_S_AXI_ADDR_WIDTH}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/ADDR_LSB}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/OPT_MEM_ADDR_BITS}} {{/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/REG_COUNT}} 
+run all
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+=====================================
+        AXI Lite Test Started        
+=====================================
+WRITE OK: ADDR=0x00000000, DATA=0x12345678, RESP=00
+READ  OK: ADDR=0x00000000, DATA=0x12345678, RESP=00
+=====================================
+      Simulation Completed!          
+=====================================
+$stop called at time : 105 ns : File "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" Line 117
+run all
+save_wave_config {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_axi_behav.wcfg}
+add_files -fileset sim_1 -norecurse F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_axi_behav.wcfg
+set_property xsim.view {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_montgomery_top_behav.wcfg F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/mod_exp_tb_behav.wcfg F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_parallel_recurrence_unit_behav.wcfg F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_accelerator_behav.wcfg F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_accelerator_behav1.wcfg F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_accelerator_behav2.wcfg F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_axi_behav.wcfg} [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+create_bd_design "design_2"
+Wrote  : <F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_1\ntt_1\ntt_1.srcs\sources_1\bd\design_2\design_2.bd> 
+update_compile_order -fileset sources_1
+open_bd_design {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:user:ntt_axi_accelerator:1.0 - ntt_axi_accelerator_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_1> from BD file <F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.srcs/sources_1/bd/design_1/design_1.bd>
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/vitis -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/vitis/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/vitis -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/vitis/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_ntt_axi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_ntt_axi_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ntt_axi_behav xil_defaultlib.tb_ntt_axi xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 's00_axi_awaddr' [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:57]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 's00_axi_araddr' [F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v:75]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_ntt_axi_behav -key {Behavioral:sim_1:Functional:tb_ntt_axi} -tclbatch {tb_ntt_axi.tcl} -protoinst "protoinst_files/design_1.protoinst" -view {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_montgomery_top_behav.wcfg} -view {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/mod_exp_tb_behav.wcfg} -view {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_parallel_recurrence_unit_behav.wcfg} -view {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_accelerator_behav.wcfg} -view {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_accelerator_behav1.wcfg} -view {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_accelerator_behav2.wcfg} -view {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_axi_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+open_wave_config F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_montgomery_top_behav.wcfg
+WARNING: Simulation object /tb_montgomery_top/clk was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/rst_n was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/start was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/done was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/test_pass was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/CLK_PERIOD was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/mont_valid was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/A_MONT was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/B_MONT was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/stage5_sum was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/stage4_valid was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/stage5_valid was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/N_reg was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/mont_result was not found in the design.
+open_wave_config F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/mod_exp_tb_behav.wcfg
+WARNING: Simulation object /mod_exp_tb/clk was not found in the design.
+WARNING: Simulation object /mod_exp_tb/reset_n was not found in the design.
+WARNING: Simulation object /mod_exp_tb/start was not found in the design.
+WARNING: Simulation object /mod_exp_tb/done was not found in the design.
+WARNING: Simulation object /mod_exp_tb/base was not found in the design.
+WARNING: Simulation object /mod_exp_tb/exponent was not found in the design.
+WARNING: Simulation object /mod_exp_tb/modulus was not found in the design.
+WARNING: Simulation object /mod_exp_tb/Np was not found in the design.
+WARNING: Simulation object /mod_exp_tb/R2_mod_N was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/state was not found in the design.
+WARNING: Simulation object /mod_exp_tb/result was not found in the design.
+WARNING: Simulation object /mod_exp_tb/DATA_WIDTH was not found in the design.
+WARNING: Simulation object /mod_exp_tb/EXP_WIDTH was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/start was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/reset_n was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/clk was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/base was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/exponent was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/modulus was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/Np was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/R2_mod_N was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/result was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/done was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/state was not found in the design.
+open_wave_config F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_parallel_recurrence_unit_behav.wcfg
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/reset_n was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/start was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/base_value was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/step_value was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/Np was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_0 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_1 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_2 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_3 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/state was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/current_values was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/counter was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/step_powers was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_a was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_b was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_start was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_result was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/a was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/b was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/mont_start was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/mont_done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/result was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/start was not found in the design.
+open_wave_config F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_accelerator_behav.wcfg
+WARNING: Simulation object /tb_ntt_accelerator/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/rst_n was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/radix_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/width_384_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/parallelism was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/start was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/done was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/result_valid was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_in_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/twiddle_factors_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/N_prime was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/\core_array[0].u_core /clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/\core_array[0].u_core /x0 was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/\core_array[0].u_core /x1 was not found in the design.
+open_wave_config F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_accelerator_behav1.wcfg
+WARNING: Simulation object /tb_ntt_accelerator/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/rst_n was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/radix_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/width_384_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/parallelism was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/start was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/done was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/result_valid was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_in_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/twiddle_factors_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/N_prime was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_RADIX was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/NUM_CORES was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/CLK_PERIOD was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/data_in was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/twiddle_in was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/x0_out was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/x1_out was not found in the design.
+open_wave_config F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_accelerator_behav2.wcfg
+WARNING: Simulation object /tb_ntt_accelerator/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/rst_n was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/radix_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/width_384_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/parallelism was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/start was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/done was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/result_valid was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_in_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/twiddle_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/N_prime was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_RADIX was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/NUM_CORES was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/CLK_PERIOD was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/PIPELINE_WAIT_CYCLE was not found in the design.
+open_wave_config F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/ntt_1/tb_ntt_axi_behav.wcfg
+source tb_ntt_axi.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+=====================================
+        AXI Lite Test Started        
+=====================================
+WRITE OK: ADDR=0x00000000, DATA=0x12345678, RESP=00
+READ  OK: ADDR=0x00000000, DATA=0x12345678, RESP=00
+=====================================
+      Simulation Completed!          
+=====================================
+$stop called at time : 105 ns : File "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_1/sour/sim/tb_ntt_axi.v" Line 117
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1524.281 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_ntt_axi_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 1524.281 ; gain = 0.000
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 1524.281 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 28 22:00:56 2026...

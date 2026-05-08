@@ -1,0 +1,104 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Apr 30 12:17:11 2026
+# Process ID: 36624
+# Current directory: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent38216 F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\ntt_1.xpr
+# Log file: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vivado.log
+# Journal file: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.xpr
+update_compile_order -fileset sources_1
+set_property part xc7z020iclg484-1L [current_project]
+reset_run synth_3
+reset_run design_1_ntt_axi_accelerator_0_0_synth_1
+reset_run design_1_processing_system7_0_0_synth_1
+reset_run design_1_rst_ps7_0_50M_0_synth_1
+reset_run design_1_auto_pc_0_synth_1
+launch_runs impl_4 -to_step write_bitstream -jobs 4
+wait_on_run impl_4
+file copy -force F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/impl_4/design_1_wrapper.sysdef F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_2/ntt_1/vitis_2/design_1_wrapper.hdf
+
+file copy -force F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/impl_4/design_1_wrapper.sysdef F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+
+file copy -force F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/impl_4/design_1_wrapper.sysdef F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+
+launch_sdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2 -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+file copy -force F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/impl_4/design_1_wrapper.sysdef F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+
+file copy -force F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/impl_4/design_1_wrapper.sysdef F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+
+file copy -force F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/impl_4/design_1_wrapper.sysdef F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+
+launch_sdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2 -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+open_run impl_4
+delete_runs "synth_1"
+delete_runs "synth_2"
+file copy -force F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/impl_4/design_1_wrapper.sysdef F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+
+launch_sdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2 -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+get_runs -filter {STEPS.IMPLEMENTATION.IS_ACTIVE == 1}
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {NTT_accelerator_0 ntt_axi_accelerator_0 design_1_ps7_0_axi_periph_0 design_1_rst_ps7_0_50M_0 design_1_processing_system7_0_0 design_1_ntt_axi_accelerator_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {NTT_accelerator_0 ntt_axi_accelerator_0 design_1_ps7_0_axi_periph_0 design_1_rst_ps7_0_50M_0 design_1_processing_system7_0_0 design_1_ntt_axi_accelerator_0_0}] -no_script -sync -force -quiet
+reset_run synth_3
+launch_runs impl_4 -to_step write_bitstream -jobs 4
+wait_on_run impl_4
+report_ip_status -name ip_status 
+file copy -force F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/impl_4/design_1_wrapper.sysdef F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+
+launch_sdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2 -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+startgroup
+set_property -dict [list CONFIG.PCW_UART0_PERIPHERAL_ENABLE {1} CONFIG.PCW_UART1_PERIPHERAL_ENABLE {1}] [get_bd_cells processing_system7_0]
+endgroup
+save_bd_design
+reset_run synth_3
+reset_run design_1_processing_system7_0_0_synth_1
+launch_runs impl_4 -to_step write_bitstream -jobs 4
+wait_on_run impl_4
+set_property location {2 661 -430} [get_bd_cells ntt_axi_accelerator_0]
+undo
+set_property location {2 648 -74} [get_bd_cells ntt_axi_accelerator_0]
+set_property location {2 632 -234} [get_bd_cells ntt_axi_accelerator_0]
+save_bd_design
+file copy -force F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/impl_4/design_1_wrapper.sysdef F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+
+startgroup
+set_property -dict [list CONFIG.PCW_UIPARAM_DDR_PARTNO {MT41K256M16 RE-125} CONFIG.PCW_UART0_PERIPHERAL_ENABLE {1} CONFIG.PCW_UART0_UART0_IO {MIO 14 .. 15}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+endgroup
+save_bd_design
+validate_bd_design
+regenerate_bd_layout
+validate_bd_design -force
+make_wrapper -files [get_files F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.srcs/sources_1/bd/design_1/design_1.bd] -top
+reset_run synth_3
+reset_run design_1_processing_system7_0_0_synth_1
+launch_runs impl_4 -to_step write_bitstream -jobs 4
+wait_on_run impl_4
+report_ip_status -name ip_status 
+file copy -force F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/impl_4/design_1_wrapper.sysdef F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+
+launch_sdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2 -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+launch_sdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2 -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+launch_sdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2 -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+launch_sdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2 -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf
+launch_sdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_3 -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_3/design_1_wrapper.hdf
+launch_sdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_3 -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_3/design_1_wrapper.hdf
+file copy -force F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/impl_4/design_1_wrapper.sysdef F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_4/design_1_wrapper.hdf
+
+launch_sdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_4 -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_4/design_1_wrapper.hdf
+startgroup
+set_property -dict [list CONFIG.PCW_UART1_PERIPHERAL_ENABLE {1} CONFIG.PCW_UART1_UART1_IO {MIO 12 .. 13}] [get_bd_cells processing_system7_0]
+endgroup
+save_bd_design
+reset_run synth_3
+reset_run design_1_processing_system7_0_0_synth_1
+launch_runs impl_4 -to_step write_bitstream -jobs 4
+wait_on_run impl_4
+file copy -force F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/impl_4/design_1_wrapper.sysdef F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_4/design_1_wrapper.hdf
+

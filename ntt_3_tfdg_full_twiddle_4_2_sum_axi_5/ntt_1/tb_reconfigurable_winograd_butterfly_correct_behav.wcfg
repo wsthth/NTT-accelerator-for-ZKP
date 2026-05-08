@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_reconfigurable_winograd_butterfly_correct_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_reconfigurable_winograd_butterfly_correct" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="81150000001fs"></ZoomEndTime>
+      <Cursor1Time time="8000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="219"></NameColumnWidth>
+      <ValueColumnWidth column_width="166"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="46" />
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/radix_cfg" type="array">
+      <obj_property name="ElementShortName">radix_cfg[3:0]</obj_property>
+      <obj_property name="ObjectShortName">radix_cfg[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/width_cfg" type="array">
+      <obj_property name="ElementShortName">width_cfg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">width_cfg[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/x_in" type="array">
+      <obj_property name="ElementShortName">x_in[0:3][127:0]</obj_property>
+      <obj_property name="ObjectShortName">x_in[0:3][127:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/twiddle_base" type="array">
+      <obj_property name="ElementShortName">twiddle_base[127:0]</obj_property>
+      <obj_property name="ObjectShortName">twiddle_base[127:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/modulus" type="array">
+      <obj_property name="ElementShortName">modulus[127:0]</obj_property>
+      <obj_property name="ObjectShortName">modulus[127:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/N_prime" type="array">
+      <obj_property name="ElementShortName">N_prime[127:0]</obj_property>
+      <obj_property name="ObjectShortName">N_prime[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/R2_mod_N" type="array">
+      <obj_property name="ElementShortName">R2_mod_N[127:0]</obj_property>
+      <obj_property name="ObjectShortName">R2_mod_N[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/x_out_flat_wire" type="array">
+      <obj_property name="ElementShortName">x_out_flat_wire[511:0]</obj_property>
+      <obj_property name="ObjectShortName">x_out_flat_wire[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/valid" type="logic">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/test_num" type="array">
+      <obj_property name="ElementShortName">test_num[31:0]</obj_property>
+      <obj_property name="ObjectShortName">test_num[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/pass_count" type="array">
+      <obj_property name="ElementShortName">pass_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pass_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/fail_count" type="array">
+      <obj_property name="ElementShortName">fail_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fail_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/test_pass" type="logic">
+      <obj_property name="ElementShortName">test_pass</obj_property>
+      <obj_property name="ObjectShortName">test_pass</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/expected" type="array">
+      <obj_property name="ElementShortName">expected[0:3][127:0]</obj_property>
+      <obj_property name="ObjectShortName">expected[0:3][127:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/x_out_array" type="array">
+      <obj_property name="ElementShortName">x_out_array[0:3][127:0]</obj_property>
+      <obj_property name="ObjectShortName">x_out_array[0:3][127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/accum_loop_idx" type="array">
+      <obj_property name="ElementShortName">accum_loop_idx[31:0]</obj_property>
+      <obj_property name="ObjectShortName">accum_loop_idx[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/DATA_WIDTH" type="array">
+      <obj_property name="ElementShortName">DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/MAX_RADIX" type="array">
+      <obj_property name="ElementShortName">MAX_RADIX[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MAX_RADIX[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/MULT_ARRAY_SIZE" type="array">
+      <obj_property name="ElementShortName">MULT_ARRAY_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MULT_ARRAY_SIZE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/EXP_WIDTH" type="array">
+      <obj_property name="ElementShortName">EXP_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EXP_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/state" type="array">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/wntt_coeff" type="array">
+      <obj_property name="ElementShortName">wntt_coeff[0:3][0:3][127:0]</obj_property>
+      <obj_property name="ObjectShortName">wntt_coeff[0:3][0:3][127:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/twiddle_power_result" type="array">
+      <obj_property name="ElementShortName">twiddle_power_result[127:0]</obj_property>
+      <obj_property name="ObjectShortName">twiddle_power_result[127:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/twiddle_power_base" type="array">
+      <obj_property name="ElementShortName">twiddle_power_base[127:0]</obj_property>
+      <obj_property name="ObjectShortName">twiddle_power_base[127:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/twiddle_power_exp" type="array">
+      <obj_property name="ElementShortName">twiddle_power_exp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">twiddle_power_exp[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/twiddle_power_done" type="logic">
+      <obj_property name="ElementShortName">twiddle_power_done</obj_property>
+      <obj_property name="ObjectShortName">twiddle_power_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/u_mod_exp/mod_mult_inst/a" type="array">
+      <obj_property name="ElementShortName">a[127:0]</obj_property>
+      <obj_property name="ObjectShortName">a[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/u_mod_exp/mod_mult_inst/b" type="array">
+      <obj_property name="ElementShortName">b[127:0]</obj_property>
+      <obj_property name="ObjectShortName">b[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/u_mod_exp/mod_mult_inst/result" type="array">
+      <obj_property name="ElementShortName">result[127:0]</obj_property>
+      <obj_property name="ObjectShortName">result[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/u_mod_exp/state" type="array">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/u_mod_exp/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/accumulator" type="array">
+      <obj_property name="ElementShortName">accumulator[0:3][127:0]</obj_property>
+      <obj_property name="ObjectShortName">accumulator[0:3][127:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/product_array" type="array">
+      <obj_property name="ElementShortName">product_array[0:3][127:0]</obj_property>
+      <obj_property name="ObjectShortName">product_array[0:3][127:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/multiplicand_array" type="array">
+      <obj_property name="ElementShortName">multiplicand_array[0:3][127:0]</obj_property>
+      <obj_property name="ObjectShortName">multiplicand_array[0:3][127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/mult_done" type="array">
+      <obj_property name="ElementShortName">mult_done[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mult_done[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/multiplier_array" type="array">
+      <obj_property name="ElementShortName">multiplier_array[0:3][127:0]</obj_property>
+      <obj_property name="ObjectShortName">multiplier_array[0:3][127:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/multiplicand_array" type="array">
+      <obj_property name="ElementShortName">multiplicand_array[0:3][127:0]</obj_property>
+      <obj_property name="ObjectShortName">multiplicand_array[0:3][127:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/accum_idx" type="array">
+      <obj_property name="ElementShortName">accum_idx[0:3][3:0]</obj_property>
+      <obj_property name="ObjectShortName">accum_idx[0:3][3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_reconfigurable_winograd_butterfly_correct/uut/state" type="array">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+</wave_config>

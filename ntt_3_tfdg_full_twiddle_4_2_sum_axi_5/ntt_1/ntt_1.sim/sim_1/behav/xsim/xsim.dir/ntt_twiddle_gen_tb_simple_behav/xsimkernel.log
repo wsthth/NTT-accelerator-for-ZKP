@@ -1,0 +1,7 @@
+Running: xsim.dir/ntt_twiddle_gen_tb_simple_behav/xsimk.exe -simmode gui -wdb ntt_twiddle_gen_tb_simple_behav.wdb -simrunnum 0 -socket 56404
+Design successfully loaded
+Design Loading Memory Usage: 7116 KB (Peak: 7116 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 12748 KB (Peak: 12748 KB)
+Simulation CPU Usage: 1686 ms

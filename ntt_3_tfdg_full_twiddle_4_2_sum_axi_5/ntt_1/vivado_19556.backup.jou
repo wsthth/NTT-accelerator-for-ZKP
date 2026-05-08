@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat May  2 18:28:30 2026
+# Process ID: 19556
+# Current directory: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24092 F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_5\ntt_1\ntt_1.xpr
+# Log file: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/vivado.log
+# Journal file: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.xpr
+update_compile_order -fileset sources_1

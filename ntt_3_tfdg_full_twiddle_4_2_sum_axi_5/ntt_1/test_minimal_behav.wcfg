@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_minmal_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_minmal" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="369000000fs"></ZoomStartTime>
+      <ZoomEndTime time="435700001fs"></ZoomEndTime>
+      <Cursor1Time time="500000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="173"></NameColumnWidth>
+      <ValueColumnWidth column_width="263"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="29" />
+   <wvobject fp_name="/test_minmal/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/reset_n" type="logic">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/start_gen" type="logic">
+      <obj_property name="ElementShortName">start_gen</obj_property>
+      <obj_property name="ObjectShortName">start_gen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/gen_done" type="logic">
+      <obj_property name="ElementShortName">gen_done</obj_property>
+      <obj_property name="ObjectShortName">gen_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/stage" type="array">
+      <obj_property name="ElementShortName">stage[7:0]</obj_property>
+      <obj_property name="ObjectShortName">stage[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/modulus" type="array">
+      <obj_property name="ElementShortName">modulus[15:0]</obj_property>
+      <obj_property name="ObjectShortName">modulus[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/start_gen" type="logic">
+      <obj_property name="ElementShortName">start_gen</obj_property>
+      <obj_property name="ObjectShortName">start_gen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/state" type="array">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/parallel_unit/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/mod_mult_inst/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/mod_mult_start" type="logic">
+      <obj_property name="ElementShortName">mod_mult_start</obj_property>
+      <obj_property name="ObjectShortName">mod_mult_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/mod_mult_done" type="logic">
+      <obj_property name="ElementShortName">mod_mult_done</obj_property>
+      <obj_property name="ObjectShortName">mod_mult_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/counter" type="array">
+      <obj_property name="ElementShortName">counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/current_modulus_32" type="array">
+      <obj_property name="ElementShortName">current_modulus_32[31:0]</obj_property>
+      <obj_property name="ObjectShortName">current_modulus_32[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/current_modulus_16" type="array">
+      <obj_property name="ElementShortName">current_modulus_16[15:0]</obj_property>
+      <obj_property name="ObjectShortName">current_modulus_16[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/current_N" type="array">
+      <obj_property name="ElementShortName">current_N[15:0]</obj_property>
+      <obj_property name="ObjectShortName">current_N[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/N" type="array">
+      <obj_property name="ElementShortName">N[15:0]</obj_property>
+      <obj_property name="ObjectShortName">N[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/mod_mult_a_real" type="array">
+      <obj_property name="ElementShortName">mod_mult_a_real[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_mult_a_real[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/mod_mult_a_imag" type="array">
+      <obj_property name="ElementShortName">mod_mult_a_imag[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_mult_a_imag[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/mod_mult_b_real" type="array">
+      <obj_property name="ElementShortName">mod_mult_b_real[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_mult_b_real[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/mod_mult_b_imag" type="array">
+      <obj_property name="ElementShortName">mod_mult_b_imag[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_mult_b_imag[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/parallel_done" type="logic">
+      <obj_property name="ElementShortName">parallel_done</obj_property>
+      <obj_property name="ObjectShortName">parallel_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/twiddle_real" type="array">
+      <obj_property name="ElementShortName">twiddle_real[31:0]</obj_property>
+      <obj_property name="ObjectShortName">twiddle_real[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/twiddle_imag" type="array">
+      <obj_property name="ElementShortName">twiddle_imag[31:0]</obj_property>
+      <obj_property name="ObjectShortName">twiddle_imag[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/parallel_unit/base_real" type="array">
+      <obj_property name="ElementShortName">base_real[31:0]</obj_property>
+      <obj_property name="ObjectShortName">base_real[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/parallel_unit/base_imag" type="array">
+      <obj_property name="ElementShortName">base_imag[31:0]</obj_property>
+      <obj_property name="ObjectShortName">base_imag[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/parallel_unit/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/parallel_unit/twiddle_imag_packed" type="array">
+      <obj_property name="ElementShortName">twiddle_imag_packed[127:0]</obj_property>
+      <obj_property name="ObjectShortName">twiddle_imag_packed[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_minmal/dut/parallel_unit/twiddle_real_packed" type="array">
+      <obj_property name="ElementShortName">twiddle_real_packed[127:0]</obj_property>
+      <obj_property name="ObjectShortName">twiddle_real_packed[127:0]</obj_property>
+   </wvobject>
+</wave_config>

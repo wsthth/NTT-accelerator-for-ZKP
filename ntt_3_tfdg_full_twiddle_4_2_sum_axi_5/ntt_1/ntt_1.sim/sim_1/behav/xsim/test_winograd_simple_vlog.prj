@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../sour/PE/Reconfigurable Butterfly Unit/winograd_post_transform.sv" \
+"../../../../../sour/PE/Reconfigurable Butterfly Unit/winograd_post_transform_tb_1.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

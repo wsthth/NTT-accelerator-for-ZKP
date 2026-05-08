@@ -1,0 +1,518 @@
+$date
+   Tue Jan 20 10:25:19 2026
+$end
+$version
+  2019.1
+$end
+$timescale
+  1ps
+$end
+$scope module winograd_pre_transform_tb $end
+$var reg 1 ! clk $end
+$var reg 1 " rst_n $end
+$var reg 1 # start $end
+$var reg 2 $ radix_mode [1:0] $end
+$var reg 8 % modulus [7:0] $end
+$var wire 1 & valid_out $end
+$var parameter 32 ' MAX_WIDTH [31:0] $end
+$var parameter 32 ( MAX_RADIX [31:0] $end
+$var parameter 32 ) NUM_CORES [31:0] $end
+$scope module dut $end
+$var wire 1 * clk $end
+$var wire 1 + rst_n $end
+$var wire 1 , start $end
+$var wire 2 - radix_mode [1:0] $end
+$var wire 8 . modulus [7:0] $end
+$var reg 1 / valid_out $end
+$var reg 3 0 state [2:0] $end
+$var parameter 32 1 MAX_WIDTH [31:0] $end
+$var parameter 32 2 MAX_RADIX [31:0] $end
+$var parameter 32 3 NUM_CORES [31:0] $end
+$var parameter 3 4 IDLE [2:0] $end
+$var parameter 3 5 CALC_GROUPS [2:0] $end
+$var parameter 3 6 APPLY_TRANSFORM [2:0] $end
+$var parameter 3 7 OUTPUT_READY [2:0] $end
+$scope begin Block103_1 $end
+$var integer 32 8 i $end
+$upscope $end
+$scope begin Block142_2 $end
+$var integer 32 9 g $end
+$scope begin Block142_3 $end
+$var integer 32 : idx1 $end
+$var integer 32 ; idx2 $end
+$upscope $end
+$upscope $end
+$scope begin Block154_4 $end
+$var integer 32 < g $end
+$scope begin Block154_5 $end
+$var integer 32 = idx1 $end
+$var integer 32 > idx2 $end
+$upscope $end
+$upscope $end
+$scope begin Block170_6 $end
+$var integer 32 ? i $end
+$upscope $end
+$scope function mod_add $end
+$var reg 8 @ mod_add [7:0] $end
+$var reg 8 A a [7:0] $end
+$var reg 8 B b [7:0] $end
+$var reg 8 C mod [7:0] $end
+$var reg 9 D sum [8:0] $end
+$upscope $end
+$scope function mod_sub $end
+$var reg 8 @ mod_sub [7:0] $end
+$var reg 8 A a [7:0] $end
+$var reg 8 B b [7:0] $end
+$var reg 8 C mod [7:0] $end
+$var reg 8 E diff [7:0] $end
+$upscope $end
+$scope function calculate_conjugate $end
+$var reg 8 @ calculate_conjugate [7:0] $end
+$var reg 8 A w [7:0] $end
+$var reg 8 B modulus [7:0] $end
+$upscope $end
+$scope function modular_inverse $end
+$var reg 8 @ modular_inverse [7:0] $end
+$var reg 8 A a [7:0] $end
+$var reg 8 B modulus [7:0] $end
+$var reg 8 C result [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin Block158_12 $end
+$var integer 32 F i $end
+$upscope $end
+$scope task init_inputs $end
+$scope begin Block60_8 $end
+$var integer 32 G i $end
+$upscope $end
+$scope begin Block65_9 $end
+$var integer 32 H i $end
+$upscope $end
+$upscope $end
+$scope task print_outputs $end
+$var integer 32 I test_num $end
+$scope begin Block78_10 $end
+$var integer 32 J i $end
+$upscope $end
+$upscope $end
+$scope task run_test $end
+$var reg 2 K mode [1:0] $end
+$var reg 32 L mode_name $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+b0 $
+b10001 %
+0&
+b1000 '
+b10000 (
+b1000 )
+0*
+0+
+0,
+b0 -
+b10001 .
+0/
+b0 0
+b1000 1
+b10000 2
+b1000 3
+b0 4
+b1 5
+b10 6
+b11 7
+b1000 8
+bx 9
+bx :
+bx ;
+bx <
+bx =
+bx >
+bx ?
+b0 @
+b0 A
+b0 B
+b0 C
+b0 D
+b0 E
+bx F
+b10000 G
+b1000 H
+bx I
+bx J
+bx K
+b0 L
+$end
+#5000
+1!
+1*
+b1000 8
+#10000
+0!
+1"
+0*
+1+
+#15000
+1!
+1*
+#20000
+0!
+b0 $
+0*
+b0 K
+#25000
+1!
+1#
+1*
+1,
+b1 0
+#30000
+0!
+0*
+#35000
+1!
+0#
+1*
+0,
+b10 0
+#40000
+0!
+0*
+#45000
+1!
+1&
+1*
+1/
+b11 0
+b1000 ?
+#50000
+0!
+0*
+#55000
+1!
+0&
+1*
+0/
+b0 0
+b1 I
+b1000 J
+#60000
+0!
+0*
+#65000
+1!
+1*
+#70000
+0!
+0*
+#75000
+1!
+b1 $
+1*
+b1 -
+b1 K
+#80000
+0!
+0*
+#85000
+1!
+1#
+1*
+1,
+b1 0
+#90000
+0!
+0*
+#95000
+1!
+0#
+1*
+0,
+b10 0
+#100000
+0!
+0*
+#105000
+1!
+1&
+1*
+1/
+b11 0
+b1000 ?
+#110000
+0!
+0*
+#115000
+1!
+0&
+1*
+0/
+b0 0
+b10 I
+b1000 J
+#120000
+0!
+0*
+#125000
+1!
+1*
+#130000
+0!
+0*
+#135000
+1!
+b10 $
+1*
+b10 -
+b10 K
+#140000
+0!
+0*
+#145000
+1!
+1#
+1*
+1,
+b1 0
+#150000
+0!
+0*
+#155000
+1!
+0#
+1*
+0,
+b10 0
+b100 9
+b11 :
+b100 ;
+#160000
+0!
+0*
+#165000
+1!
+1&
+1*
+1/
+b11 0
+b1000 ?
+#170000
+0!
+0*
+#175000
+1!
+0&
+1*
+0/
+b0 0
+b11 I
+b1000 J
+#180000
+0!
+0*
+#185000
+1!
+1*
+#190000
+0!
+0*
+#195000
+1!
+b11 $
+1*
+b11 -
+b11 K
+#200000
+0!
+0*
+#205000
+1!
+1#
+1*
+1,
+b1 0
+#210000
+0!
+0*
+#215000
+1!
+0#
+1*
+0,
+b10 0
+b1000 <
+b111 =
+b1000 >
+#220000
+0!
+0*
+#225000
+1!
+1&
+1*
+1/
+b11 0
+b1000 ?
+#230000
+0!
+0*
+#235000
+1!
+0&
+1*
+0/
+b0 0
+b100 I
+b1000 J
+#240000
+0!
+0*
+#245000
+1!
+1*
+#250000
+0!
+0*
+#255000
+1!
+1*
+#260000
+0!
+0*
+#265000
+1!
+1*
+#270000
+0!
+0*
+#275000
+1!
+1*
+#280000
+0!
+0*
+#285000
+1!
+1*
+#290000
+0!
+0*
+#295000
+1!
+1*
+#300000
+0!
+0*
+#305000
+1!
+1*
+#310000
+0!
+0*
+#315000
+1!
+1*
+#320000
+0!
+0*
+#325000
+1!
+1*
+#330000
+0!
+0*
+#335000
+1!
+1*
+#340000
+0!
+0*
+#345000
+1!
+1*
+#350000
+0!
+0*
+#355000
+1!
+0"
+1*
+0+
+b1000 8
+#360000
+0!
+0*
+#365000
+1!
+1"
+1*
+1+
+#370000
+0!
+0*
+#375000
+1!
+1*
+b1000 F
+#380000
+0!
+0*
+#385000
+1!
+1*
+#390000
+0!
+0*
+#395000
+1!
+1*
+#400000
+0!
+0*
+#405000
+1!
+1*
+#410000
+0!
+0*
+#415000
+1!
+1*
+#420000
+0!
+0*
+#425000
+1!
+1*
+#430000
+0!
+0*
+#435000
+1!
+1*
+#440000
+0!
+0*
+#445000
+1!
+1*
+#450000
+0!
+0*
+#455000
+1!
+1*
+#460000
+0!
+0*
+#465000
+1!
+1*
+#470000
+0!
+0*
