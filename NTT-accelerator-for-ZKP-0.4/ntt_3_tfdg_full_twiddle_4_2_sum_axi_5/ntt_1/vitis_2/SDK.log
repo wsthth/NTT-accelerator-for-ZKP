@@ -1,0 +1,500 @@
+14:15:00 INFO  : Registering command handlers for SDK TCF services
+14:15:01 INFO  : Launching XSCT server: xsct.bat -interactive F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\temp_xsdb_launch_script.tcl
+14:15:04 INFO  : XSCT server has started successfully.
+14:15:04 INFO  : Successfully done setting XSCT server connection channel  
+14:15:05 INFO  : Successfully done setting SDK workspace  
+14:15:05 INFO  : Processing command line option -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf.
+14:16:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:16:40 INFO  : 'fpga -state' command is executed.
+14:16:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:16:44 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:16:44 INFO  : 'jtag frequency' command is executed.
+14:16:44 INFO  : Sourcing of 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:16:44 INFO  : Context for 'APU' is selected.
+14:16:44 INFO  : Hardware design information is loaded from 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf'.
+14:16:44 INFO  : 'configparams force-mem-access 1' command is executed.
+14:16:44 INFO  : Context for 'APU' is selected.
+14:16:44 INFO  : 'stop' command is executed.
+14:16:44 INFO  : 'ps7_init' command is executed.
+14:16:44 INFO  : 'ps7_post_config' command is executed.
+14:16:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:16:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:16:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:16:44 INFO  : The application 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:16:44 INFO  : 'configparams force-mem-access 0' command is executed.
+14:16:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:16:45 INFO  : Memory regions updated for context APU
+14:16:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:16:45 INFO  : 'con' command is executed.
+14:16:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+14:16:45 INFO  : Launch script is exported to file 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_ntt.elf_on_local.tcl'
+14:17:03 INFO  : Disconnected from the channel tcfchan#1.
+14:17:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:17:04 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:17:04 INFO  : 'jtag frequency' command is executed.
+14:17:04 INFO  : Sourcing of 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:17:04 INFO  : Context for 'APU' is selected.
+14:17:04 INFO  : System reset is completed.
+14:17:07 INFO  : 'after 3000' command is executed.
+14:17:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:17:11 INFO  : FPGA configured successfully with bitstream "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:17:11 INFO  : Context for 'APU' is selected.
+14:17:12 INFO  : Hardware design information is loaded from 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf'.
+14:17:12 INFO  : 'configparams force-mem-access 1' command is executed.
+14:17:12 INFO  : Context for 'APU' is selected.
+14:17:12 INFO  : 'ps7_init' command is executed.
+14:17:12 INFO  : 'ps7_post_config' command is executed.
+14:17:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:17:12 INFO  : The application 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:17:12 INFO  : 'configparams force-mem-access 0' command is executed.
+14:17:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:17:12 INFO  : Memory regions updated for context APU
+14:17:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:17:13 INFO  : 'con' command is executed.
+14:17:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+14:17:13 INFO  : Launch script is exported to file 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_ntt.elf_on_local.tcl'
+14:17:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:17:48 INFO  : 'fpga -state' command is executed.
+14:17:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:17:48 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:17:48 INFO  : 'jtag frequency' command is executed.
+14:17:48 INFO  : Sourcing of 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:17:48 INFO  : Context for 'APU' is selected.
+14:17:48 INFO  : Hardware design information is loaded from 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf'.
+14:17:48 INFO  : 'configparams force-mem-access 1' command is executed.
+14:17:48 INFO  : Context for 'APU' is selected.
+14:17:48 INFO  : 'stop' command is executed.
+14:17:48 INFO  : 'ps7_init' command is executed.
+14:17:49 INFO  : 'ps7_post_config' command is executed.
+14:17:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:17:49 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:17:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:17:49 INFO  : The application 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:17:49 INFO  : 'configparams force-mem-access 0' command is executed.
+14:17:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:17:49 INFO  : Memory regions updated for context APU
+14:17:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:17:49 INFO  : 'con' command is executed.
+14:17:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+14:17:49 INFO  : Launch script is exported to file 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\.sdk\launch_scripts\performance_analysis\performance_analysis_using_debug_ntt.elf_on_local.tcl'
+14:17:50 INFO  : Apm configuration has been updated and stored to 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\design_1_wrapper_hw_platform_0\apmconfigs\apm_default.json' for the project 'design_1_wrapper_hw_platform_0'
+14:17:51 INFO  : Performance data for 'PS' will be exported to the file 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\design_1_wrapper_hw_platform_0_Traces\Traces\Run_四月-30_14-17\PS_Trace_四月-30_14-17\trace'
+14:17:51 INFO  : Created tracing project 'design_1_wrapper_hw_platform_0_Traces'
+14:17:51 INFO  : Added tracing folder 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\design_1_wrapper_hw_platform_0_Traces\Traces\Run_四月-30_14-17\PS_Trace_四月-30_14-17' into  'design_1_wrapper_hw_platform_0_Traces'
+14:17:51 INFO  : Attempting to open tracing file 'PS_Trace_四月-30_14-17'
+14:18:23 INFO  : Performance data for 'PS' has been exported to the file 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\design_1_wrapper_hw_platform_0_Traces\Traces\Run_四月-30_14-17\PS_Trace_四月-30_14-17\trace'
+14:18:23 INFO  : Disconnected from the channel tcfchan#2.
+14:18:23 WARN  : channel "tcfchan#2" closed
+14:18:46 INFO  : Registering command handlers for SDK TCF services
+14:18:46 INFO  : Launching XSCT server: xsct.bat -interactive F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\temp_xsdb_launch_script.tcl
+14:18:49 INFO  : XSCT server has started successfully.
+14:18:49 INFO  : Successfully done setting XSCT server connection channel  
+14:18:50 INFO  : Successfully done setting SDK workspace  
+14:18:50 INFO  : Processing command line option -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf.
+14:18:50 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+14:19:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:19:59 INFO  : 'fpga -state' command is executed.
+14:19:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:19:59 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:19:59 INFO  : 'jtag frequency' command is executed.
+14:19:59 INFO  : Sourcing of 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:19:59 INFO  : Context for 'APU' is selected.
+14:19:59 INFO  : Hardware design information is loaded from 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf'.
+14:19:59 INFO  : 'configparams force-mem-access 1' command is executed.
+14:19:59 INFO  : Context for 'APU' is selected.
+14:19:59 INFO  : 'stop' command is executed.
+14:20:00 INFO  : 'ps7_init' command is executed.
+14:20:00 INFO  : 'ps7_post_config' command is executed.
+14:20:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:20:00 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:20:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:20:00 INFO  : The application 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:20:00 INFO  : 'configparams force-mem-access 0' command is executed.
+14:20:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:20:00 INFO  : Memory regions updated for context APU
+14:20:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:20:00 INFO  : 'con' command is executed.
+14:20:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+14:20:00 INFO  : Launch script is exported to file 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\.sdk\launch_scripts\performance_analysis\performance_analysis_using_debug_ntt.elf_on_local.tcl'
+14:20:01 INFO  : Performance data for 'PS' will be exported to the file 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\design_1_wrapper_hw_platform_0_Traces\Traces\Run_四月-30_14-20\PS_Trace_四月-30_14-20\trace'
+14:20:01 INFO  : Added tracing folder 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\design_1_wrapper_hw_platform_0_Traces\Traces\Run_四月-30_14-20\PS_Trace_四月-30_14-20' into  'design_1_wrapper_hw_platform_0_Traces'
+14:20:01 INFO  : Attempting to open tracing file 'PS_Trace_四月-30_14-20'
+14:21:25 INFO  : Performance data for 'PS' has been exported to the file 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\design_1_wrapper_hw_platform_0_Traces\Traces\Run_四月-30_14-20\PS_Trace_四月-30_14-20\trace'
+14:21:25 INFO  : Disconnected from the channel tcfchan#1.
+14:21:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:21:26 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:21:26 INFO  : 'jtag frequency' command is executed.
+14:21:26 INFO  : Sourcing of 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:21:26 INFO  : Context for 'APU' is selected.
+14:21:26 INFO  : System reset is completed.
+14:21:29 INFO  : 'after 3000' command is executed.
+14:21:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:21:32 INFO  : FPGA configured successfully with bitstream "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:21:33 INFO  : Context for 'APU' is selected.
+14:21:34 INFO  : Hardware design information is loaded from 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf'.
+14:21:34 INFO  : 'configparams force-mem-access 1' command is executed.
+14:21:34 INFO  : Context for 'APU' is selected.
+14:21:34 INFO  : 'ps7_init' command is executed.
+14:21:34 INFO  : 'ps7_post_config' command is executed.
+14:21:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:21:34 INFO  : The application 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:21:34 INFO  : 'configparams force-mem-access 0' command is executed.
+14:21:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:21:34 INFO  : Memory regions updated for context APU
+14:21:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:21:35 INFO  : 'con' command is executed.
+14:21:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+14:21:35 INFO  : Launch script is exported to file 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_ntt.elf_on_local.tcl'
+14:22:31 INFO  : Disconnected from the channel tcfchan#2.
+14:22:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:22:32 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:22:32 INFO  : 'jtag frequency' command is executed.
+14:22:32 INFO  : Sourcing of 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:22:32 INFO  : Context for 'APU' is selected.
+14:22:32 INFO  : System reset is completed.
+14:22:35 INFO  : 'after 3000' command is executed.
+14:22:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:22:39 INFO  : FPGA configured successfully with bitstream "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:22:39 INFO  : Context for 'APU' is selected.
+14:22:41 INFO  : Hardware design information is loaded from 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf'.
+14:22:41 INFO  : 'configparams force-mem-access 1' command is executed.
+14:22:41 INFO  : Context for 'APU' is selected.
+14:22:41 INFO  : 'ps7_init' command is executed.
+14:22:41 INFO  : 'ps7_post_config' command is executed.
+14:22:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:22:42 INFO  : The application 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:22:42 INFO  : 'configparams force-mem-access 0' command is executed.
+14:22:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:22:42 INFO  : Memory regions updated for context APU
+14:22:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:22:42 INFO  : 'con' command is executed.
+14:22:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+14:22:42 INFO  : Launch script is exported to file 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_ntt.elf_on_local.tcl'
+14:24:32 INFO  : Disconnected from the channel tcfchan#3.
+14:24:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:24:33 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:24:33 INFO  : 'jtag frequency' command is executed.
+14:24:33 INFO  : Sourcing of 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:24:33 INFO  : Context for 'APU' is selected.
+14:24:33 INFO  : System reset is completed.
+14:24:36 INFO  : 'after 3000' command is executed.
+14:24:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:24:40 INFO  : FPGA configured successfully with bitstream "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:24:40 INFO  : Context for 'APU' is selected.
+14:24:41 INFO  : Hardware design information is loaded from 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf'.
+14:24:41 INFO  : 'configparams force-mem-access 1' command is executed.
+14:24:41 INFO  : Context for 'APU' is selected.
+14:24:41 INFO  : 'ps7_init' command is executed.
+14:24:41 INFO  : 'ps7_post_config' command is executed.
+14:24:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:24:41 INFO  : The application 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:24:41 INFO  : 'configparams force-mem-access 0' command is executed.
+14:24:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:24:41 INFO  : Memory regions updated for context APU
+14:24:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:24:42 INFO  : 'con' command is executed.
+14:24:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+14:24:42 INFO  : Launch script is exported to file 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_ntt.elf_on_local.tcl'
+14:28:45 INFO  : Registering command handlers for SDK TCF services
+14:28:46 INFO  : Launching XSCT server: xsct.bat -interactive F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\temp_xsdb_launch_script.tcl
+14:28:49 INFO  : XSCT server has started successfully.
+14:28:49 INFO  : Successfully done setting XSCT server connection channel  
+14:28:50 INFO  : Successfully done setting SDK workspace  
+14:28:50 INFO  : Processing command line option -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf.
+14:28:50 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+14:30:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:31:00 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:31:00 INFO  : 'jtag frequency' command is executed.
+14:31:00 INFO  : Sourcing of 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:31:00 INFO  : Context for 'APU' is selected.
+14:31:00 INFO  : System reset is completed.
+14:31:03 INFO  : 'after 3000' command is executed.
+14:31:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:31:07 INFO  : FPGA configured successfully with bitstream "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:31:07 INFO  : Context for 'APU' is selected.
+14:31:07 INFO  : Hardware design information is loaded from 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf'.
+14:31:07 INFO  : 'configparams force-mem-access 1' command is executed.
+14:31:07 INFO  : Context for 'APU' is selected.
+14:31:07 INFO  : 'ps7_init' command is executed.
+14:31:07 INFO  : 'ps7_post_config' command is executed.
+14:31:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:31:07 INFO  : The application 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:31:07 INFO  : 'configparams force-mem-access 0' command is executed.
+14:31:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:31:07 INFO  : Memory regions updated for context APU
+14:31:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:31:07 INFO  : 'con' command is executed.
+14:31:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+14:31:07 INFO  : Launch script is exported to file 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_ntt.elf_on_local.tcl'
+14:31:50 INFO  : Disconnected from the channel tcfchan#1.
+14:31:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:31:51 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:31:51 INFO  : 'jtag frequency' command is executed.
+14:31:51 INFO  : Sourcing of 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:31:51 INFO  : Context for 'APU' is selected.
+14:31:51 INFO  : System reset is completed.
+14:31:54 INFO  : 'after 3000' command is executed.
+14:31:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:31:57 INFO  : FPGA configured successfully with bitstream "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:31:58 INFO  : Context for 'APU' is selected.
+14:31:59 INFO  : Hardware design information is loaded from 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf'.
+14:31:59 INFO  : 'configparams force-mem-access 1' command is executed.
+14:31:59 INFO  : Context for 'APU' is selected.
+14:31:59 INFO  : 'ps7_init' command is executed.
+14:31:59 INFO  : 'ps7_post_config' command is executed.
+14:31:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:31:59 INFO  : The application 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:31:59 INFO  : 'configparams force-mem-access 0' command is executed.
+14:31:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:32:00 INFO  : Memory regions updated for context APU
+14:32:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:32:00 INFO  : 'con' command is executed.
+14:32:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+14:32:00 INFO  : Launch script is exported to file 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_ntt.elf_on_local.tcl'
+14:36:31 INFO  : Disconnected from the channel tcfchan#2.
+14:37:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:37:16 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:37:16 INFO  : 'jtag frequency' command is executed.
+14:37:16 INFO  : Sourcing of 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:37:16 INFO  : Context for 'APU' is selected.
+14:37:16 INFO  : System reset is completed.
+14:37:19 INFO  : 'after 3000' command is executed.
+14:37:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:37:23 INFO  : FPGA configured successfully with bitstream "F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:37:23 INFO  : Context for 'APU' is selected.
+14:37:24 INFO  : Hardware design information is loaded from 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf'.
+14:37:24 INFO  : 'configparams force-mem-access 1' command is executed.
+14:37:24 INFO  : Context for 'APU' is selected.
+14:37:25 INFO  : 'ps7_init' command is executed.
+14:37:25 INFO  : 'ps7_post_config' command is executed.
+14:37:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:37:25 INFO  : The application 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:37:25 INFO  : 'configparams force-mem-access 0' command is executed.
+14:37:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+dow F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/ntt/Debug/ntt.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:37:25 INFO  : Memory regions updated for context APU
+14:37:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:37:25 INFO  : 'con' command is executed.
+14:37:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+con
+----------------End of Script----------------
+
+14:37:25 INFO  : Launch script is exported to file 'F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_ntt.elf_on_local.tcl'
+14:37:56 INFO  : Disconnected from the channel tcfchan#3.
+14:38:17 INFO  : Registering command handlers for SDK TCF services
+14:38:18 INFO  : Launching XSCT server: xsct.bat -interactive F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_3\ntt_1\vitis_2\temp_xsdb_launch_script.tcl
+14:38:20 INFO  : XSCT server has started successfully.
+14:38:21 INFO  : Successfully done setting XSCT server connection channel  
+14:38:21 INFO  : Successfully done setting SDK workspace  
+14:38:21 INFO  : Processing command line option -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/vitis_2/design_1_wrapper.hdf.
+14:38:21 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.

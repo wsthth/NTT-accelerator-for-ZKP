@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_ntt_axi_accelerator_0_0_synth_1" LaunchDir="F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/design_1_ntt_axi_accelerator_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_processing_system7_0_0_synth_1" LaunchDir="F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/design_1_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_rst_ps7_0_50M_0_synth_1" LaunchDir="F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/design_1_rst_ps7_0_50M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_pc_0_synth_1" LaunchDir="F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/design_1_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_3" LaunchDir="F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/synth_3" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="design_1_ntt_axi_accelerator_0_0_synth_1"/>
+		<Parent Id="design_1_processing_system7_0_0_synth_1"/>
+		<Parent Id="design_1_rst_ps7_0_50M_0_synth_1"/>
+		<Parent Id="design_1_auto_pc_0_synth_1"/>
+	</Run>
+	<Run Id="impl_4" LaunchDir="F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1/ntt_1.runs/impl_4" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_3"/>
+		<Parent Id="design_1_ntt_axi_accelerator_0_0_synth_1"/>
+		<Parent Id="design_1_processing_system7_0_0_synth_1"/>
+		<Parent Id="design_1_rst_ps7_0_50M_0_synth_1"/>
+		<Parent Id="design_1_auto_pc_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

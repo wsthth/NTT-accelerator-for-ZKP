@@ -1,0 +1,176 @@
+# -*- coding: gbk -*-
+import gmpy2
+from gmpy2 import mpz
+from typing import List
+
+# ===================== 1. 蒙哥马利上下文（带常数调试） =====================
+class MontgomeryContext:
+    """
+    蒙哥马利乘法上下文（适配256/384bit，64bit分段）
+    :param mod: 模数（NIST P-256/P-384素数）
+    :param total_bits: 总位宽（256/384）
+    :param seg_bits: 分段位宽（固定64bit）
+    """
+    def __init__(self, mod: mpz, total_bits: int, seg_bits: int = 64):
+        self.mod = mod if mod > 0 else -mod  # 强制模数为正
+        self.total_bits = total_bits
+        self.seg_bits = seg_bits
+        self.seg_cnt = total_bits // seg_bits  # 256→4段，384→6段（整除）
+        self.seg_mask = (mpz(1) << seg_bits) - 1  # 64bit无符号掩码
+
+        # 核心常数（严格按蒙哥马利定义，R=2^64）
+        self.R = mpz(1) << seg_bits  # R=2^64
+        self.R_inv = pow(self.R, -1, self.mod)  # R?? mod M（关键：蒙哥马利的核心逆元）
+        self.M_inv_mod_R = pow(self.mod, -1, self.R)  # M?? mod R
+        self.M_prime = (self.R - self.M_inv_mod_R) % self.R  # M' = -M?? mod R（非负）
+
+        # ========== 调试：打印核心常数 ==========
+        print(f"\n[调试-上下文] {total_bits}bit 核心常数：")
+        print(f"  模数M: {self.mod}")
+        print(f"  R=2^{seg_bits}: {self.R}")
+        print(f"  R_inv (R?? mod M): {self.R_inv}")
+        print(f"  M_inv_mod_R (M?? mod R): {self.M_inv_mod_R}")
+        print(f"  M_prime (-M?? mod R): {self.M_prime}")
+
+        # 合法性校验
+        if not gmpy2.is_prime(self.mod):
+            raise ValueError(f"模数{self.mod}非素数（蒙哥马利要求模数为素数）！")
+        if self.total_bits % self.seg_bits != 0:
+            raise ValueError(f"总位宽{total_bits}需是{seg_bits}的整数倍！")
+        if gmpy2.gcd(self.R, self.mod) != 1:
+            raise ValueError(f"R={self.R}与M={self.mod}不互质（蒙哥马利必要条件）！")
+
+# ===================== 2. 工具函数（大端序拆分+调试） =====================
+# def split_bigint_bigendian(x: mpz, ctx: MontgomeryContext) -> List[mpz]:
+def split_bigint_littleendian(x: mpz, ctx: MontgomeryContext) -> List[mpz]:
+    """大端序拆分（高位在前，蒙哥马利分段约简标准）"""
+    x = x % ctx.mod  # 归一化到[0, M)
+    segs = []
+    for i in range(ctx.seg_cnt):
+        # shift = (ctx.seg_cnt - 1 - i) * ctx.seg_bits  # 大端序偏移
+        shift = i * ctx.seg_bits  # 小端序偏移：第0段→最低64bit，第1段→次低64bit...
+        seg = (x >> shift) & ctx.seg_mask
+        segs.append(seg)
+    
+    # ========== 调试：打印拆分结果 ==========
+    # print(f"[调试-拆分] 数{x} → 大端序分段({ctx.seg_cnt}段)：{segs}")
+    print(f"[调试-拆分] 数{x} → 小端序分段({ctx.seg_cnt}段)：{segs}")
+    
+    return segs
+
+# ===================== 3. 核心：分段蒙哥马利乘法（严格对齐数学定义+逐段调试） =====================
+def montgomery_multiply(A: mpz, B: mpz, ctx: MontgomeryContext) -> mpz:
+    """
+    分段蒙哥马利乘法（输出 = A×B×R?? mod M，严格对齐数学定义）
+    :param A: 原始输入A（<M）
+    :param B: 原始输入B（<M）
+    :param ctx: 蒙哥马利上下文
+    :return: A×B×R?? mod M
+    """
+    # 步骤1：输入归一化（确保A,B ∈ [0,M)）
+    A = A % ctx.mod
+    B = B % ctx.mod
+    print(f"\n[调试-输入] 归一化后 A={A}, B={B}")
+
+    # 步骤2：大端序拆分B（逐段处理）
+    # B_segs = split_bigint_bigendian(B, ctx)
+    # 步骤2：小端序拆分B（蒙哥马利的强制要求，替换原大端序拆分）
+    B_segs = split_bigint_littleendian(B, ctx)
+
+    # 步骤3：初始化累加器T=0（蒙哥马利核心累加器）
+    T = mpz(0)
+    print(f"[调试-约简] 初始累加器 T={T}")
+
+    # 步骤4：逐段约简（核心！蒙哥马利分段逻辑）
+    for idx, B_j in enumerate(B_segs):
+        print(f"\n[调试-约简] 第{idx}段（B_j={B_j}）：")
+        
+        # 4.1 累加当前分段部分积：T = T + A × B_j
+        T_prev = T
+        T += A * B_j
+        T = T % ctx.mod  # 新增：累加后立即归一化，避免T过大
+        print(f"  1. 累加：T_prev={T_prev} + A×B_j={A}×{B_j}={A*B_j} → T={T}")
+        
+        # 4.2 计算约简因子m：m = (T的最低64bit × M') mod R
+        T0 = T & ctx.seg_mask  # T的最低64bit（T0）
+        m = (T0 * ctx.M_prime) & ctx.seg_mask
+        print(f"  2. 约简因子：T0={T0}, m={T0}×{ctx.M_prime} mod {ctx.R} → m={m}")
+        
+        # 4.3 约简：T = (T + m×M) / R （无符号整除，等价右移64bit）
+        T += m * ctx.mod
+        print(f"  3. 补M：T={T - m*ctx.mod} + m×M={m}×{ctx.mod} → T={T}")
+        T = T // ctx.R  # 无符号除法（避免Python有符号右移问题）
+        print(f"  4. 约简：T ÷ R={ctx.R} → T={T}")
+        
+        # 4.4 归一化：确保T < M
+        if T >= ctx.mod:
+            T -= ctx.mod
+            print(f"  5. 归一化：T≥M → T={T + ctx.mod} - M={ctx.mod} → T={T}")
+        else:
+            print(f"  5. 归一化：T<M → 无需处理（T={T}）")
+
+    # 步骤5：最终归一化（确保结果 ∈ [0,M)）
+    T = T % ctx.mod
+    print(f"\n[调试-约简] 最终累加器 T={T}（归一化后）")
+
+    # 最终输出：T = A×B×R?? mod M（严格符合蒙哥马利定义）
+    return T
+
+# ===================== 4. 正确验证函数（对比蒙哥马利理论值） =====================
+def verify_montgomery(A: mpz, B: mpz, ctx: MontgomeryContext, desc: str):
+    """
+    正确验证蒙哥马利乘法：
+    蒙哥马利结果应等于 (A×B×R??) mod M（而非直接的A×B mod M）
+    """
+    # 理论值：A×B×R?? mod M（蒙哥马利乘法的标准答案）
+    # theory_res = (A * B) % ctx.mod  # 先算A×B mod M
+    # theory_res = (theory_res * ctx.R_inv) % ctx.mod  # 再乘R?? mod M
+    
+    # 修复：分步计算，避免768bit超大数直接相乘
+    A_mod = A % ctx.mod
+    B_mod = B % ctx.mod
+    AB_mod = (A_mod * B_mod) % ctx.mod  # 先算(A×B) mod M，再乘R_inv
+    theory_res = (AB_mod * ctx.R_inv) % ctx.mod  # 而非(A*B)*R_inv mod M
+
+
+
+    # 蒙哥马利分段乘法结果
+    mont_res = montgomery_multiply(A, B, ctx)
+
+    # 输出验证结果（清晰标注对比逻辑）
+    print(f"\n===== {desc} 验证结果 =====")
+    print(f"输入A: {A}")
+    print(f"输入B: {B}")
+    print(f"理论值（A×B×R?? mod M）: {theory_res}")
+    print(f"蒙哥马利分段约简结果: {mont_res}")
+    print(f"验证结论: {'? PASS（符合蒙哥马利定义）' if mont_res == theory_res else '? FAIL（偏离数学定义）'}")
+    return mont_res == theory_res
+
+# ===================== 5. 主函数（256/384bit测试） =====================
+if __name__ == "__main__":
+    # ---------------------- 测试1：小模数验证（手动验算，确保逻辑正确） ----------------------
+    print("===== 小模数验证（M=101, R=256）=====")
+    M_SMALL = mpz(101)  # 小模数，可手动验算
+    ctx_small = MontgomeryContext(M_SMALL, 8, 8)  # 8bit总位宽，8bit分段
+    A_SMALL = mpz(10)
+    B_SMALL = mpz(20)
+    # 手动验算理论值：(10×20)×256?? mod 101 = 200×92 mod 101 = 18400 mod 101 = 18
+    verify_montgomery(A_SMALL, B_SMALL, ctx_small, "小模数(M=101)")
+
+    # ---------------------- 测试2：256bit（NIST P-256） ----------------------
+    print("\n===== 256bit 验证（NIST P-256）=====")
+    M_256 = mpz("115792089210356248762697446949407573530086143415290314195533631308867097853951")
+    ctx_256 = MontgomeryContext(M_256, 256)
+    A_256 = mpz(123456789)  # 小值，易验证
+    B_256 = mpz(987654321)
+    verify_montgomery(A_256, B_256, ctx_256, "256bit(NIST P-256)")
+
+    # ---------------------- 测试3：384bit（NIST P-384） ----------------------
+    print("\n===== 384bit 验证（NIST P-384）=====")
+    M_384 = mpz("39402006196394479212279040100143613805079739270465446667948293404245721771496870329047266088258938001861606973112319")
+    ctx_384 = MontgomeryContext(M_384, 384)
+    A_384 = mpz(123456789)
+    B_384 = mpz(987654321)
+    # A_384 = M_384 - 1000
+    # B_384 = M_384 - 2000
+    verify_montgomery(A_384, B_384, ctx_384, "384bit(NIST P-384)")

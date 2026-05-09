@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_streaming.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_montgomery_streaming

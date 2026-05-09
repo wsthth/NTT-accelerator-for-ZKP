@@ -1,0 +1,1290 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri May  8 16:29:52 2026
+# Process ID: 36780
+# Current directory: F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent38056 F:\experiment\python\trae\ntt_axi\ntt_3_tfdg_full_twiddle_4_2_sum_axi_5\ntt_1\ntt_1.xpr
+# Log file: F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/vivado.log
+# Journal file: F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.xpr
+INFO: [Project 1-313] Project file moved from 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_axi_accelerator_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/XILINX/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 864.457 ; gain = 228.668
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -scan_for_includes F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_top.v
+update_compile_order -fileset sim_1
+set_property top tb_montgomery_top [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_montgomery_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_montgomery_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/twiddle_dyn_gen_NTT/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_montgomery_top
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'expected_result' is not permitted [F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_top.v:37]
+ERROR: [VRFC 10-2865] module 'tb_montgomery_top' ignored due to previous errors [F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_top.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 991.625 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_montgomery_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_montgomery_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/twiddle_dyn_gen_NTT/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_montgomery_top
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'expected_result' is not permitted [F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_top.v:37]
+ERROR: [VRFC 10-2865] module 'tb_montgomery_top' ignored due to previous errors [F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_top.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_montgomery_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_montgomery_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/twiddle_dyn_gen_NTT/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_montgomery_top
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'expected_result' is not permitted [F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_top.v:37]
+ERROR: [VRFC 10-2865] module 'tb_montgomery_top' ignored due to previous errors [F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_top.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_montgomery_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_montgomery_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/twiddle_dyn_gen_NTT/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_montgomery_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_montgomery_top_behav xil_defaultlib.tb_montgomery_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_montgomery_top_behav xil_defaultlib.tb_montgomery_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/twiddle_dyn_gen_NTT/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(SEG_CNT=4) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.montgomery_pipeline(SEG_CNT=4)
+Compiling module xil_defaultlib.montgomery_top_default
+Compiling module xil_defaultlib.tb_montgomery_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_montgomery_top_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim/xsim.dir/tb_montgomery_top_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri May  8 16:39:05 2026...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_montgomery_top_behav -key {Behavioral:sim_1:Functional:tb_montgomery_top} -tclbatch {tb_montgomery_top.tcl} -protoinst "protoinst_files/design_1.protoinst" -view {F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_montgomery_top_behav.wcfg} -view {F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/mod_exp_tb_behav.wcfg} -view {F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_parallel_recurrence_unit_behav.wcfg} -view {F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav.wcfg} -view {F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav1.wcfg} -view {F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav2.wcfg} -view {F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_axi_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+open_wave_config F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_montgomery_top_behav.wcfg
+WARNING: Simulation object /tb_montgomery_top/test_pass was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/CLK_PERIOD was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/mont_valid was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/A_MONT was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/B_MONT was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/stage5_sum was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/stage4_valid was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/stage5_valid was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/N_reg was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/mont_result was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/mod_exp_tb_behav.wcfg
+WARNING: Simulation object /mod_exp_tb/clk was not found in the design.
+WARNING: Simulation object /mod_exp_tb/reset_n was not found in the design.
+WARNING: Simulation object /mod_exp_tb/start was not found in the design.
+WARNING: Simulation object /mod_exp_tb/done was not found in the design.
+WARNING: Simulation object /mod_exp_tb/base was not found in the design.
+WARNING: Simulation object /mod_exp_tb/exponent was not found in the design.
+WARNING: Simulation object /mod_exp_tb/modulus was not found in the design.
+WARNING: Simulation object /mod_exp_tb/Np was not found in the design.
+WARNING: Simulation object /mod_exp_tb/R2_mod_N was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/state was not found in the design.
+WARNING: Simulation object /mod_exp_tb/result was not found in the design.
+WARNING: Simulation object /mod_exp_tb/DATA_WIDTH was not found in the design.
+WARNING: Simulation object /mod_exp_tb/EXP_WIDTH was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/start was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/reset_n was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/clk was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/base was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/exponent was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/modulus was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/Np was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/R2_mod_N was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/result was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/done was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/state was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_parallel_recurrence_unit_behav.wcfg
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/reset_n was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/start was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/base_value was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/step_value was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/Np was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_0 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_1 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_2 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_3 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/state was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/current_values was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/counter was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/step_powers was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_a was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_b was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_start was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_result was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/a was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/b was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/mont_start was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/mont_done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/result was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/start was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav.wcfg
+WARNING: Simulation object /tb_ntt_accelerator/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/rst_n was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/radix_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/width_384_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/parallelism was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/start was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/done was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/result_valid was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_in_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/twiddle_factors_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/N_prime was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/\core_array[0].u_core /clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/\core_array[0].u_core /x0 was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/\core_array[0].u_core /x1 was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav1.wcfg
+WARNING: Simulation object /tb_ntt_accelerator/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/rst_n was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/radix_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/width_384_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/parallelism was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/start was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/done was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/result_valid was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_in_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/twiddle_factors_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/N_prime was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_RADIX was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/NUM_CORES was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/CLK_PERIOD was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/data_in was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/twiddle_in was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/x0_out was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/x1_out was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav2.wcfg
+WARNING: Simulation object /tb_ntt_accelerator/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/rst_n was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/radix_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/width_384_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/parallelism was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/start was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/done was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/result_valid was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_in_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/twiddle_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/N_prime was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_RADIX was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/NUM_CORES was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/CLK_PERIOD was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/PIPELINE_WAIT_CYCLE was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_axi_behav.wcfg
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ACLK was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARESETN was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWADDR was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWPROT was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWVALID was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWREADY was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WDATA was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WSTRB was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WVALID was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WREADY was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BRESP was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BVALID was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BREADY was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARADDR was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARPROT was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARVALID was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARREADY was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RDATA was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RRESP was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RVALID was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RREADY was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg0_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg2_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg3_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg4_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg5_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg6_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg7_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg8_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg9_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg10_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg11_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg12_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg13_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg14_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/status_in_i was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_awaddr was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_awready was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_wready was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_bresp was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_bvalid was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_araddr was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_arready was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rdata was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rresp was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rvalid was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg_wren was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg_rden was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/reg_data_out was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/byte_index was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/aw_en was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/wr_index was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/rd_index was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/C_S_AXI_DATA_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/C_S_AXI_ADDR_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/ADDR_LSB was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/OPT_MEM_ADDR_BITS was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/REG_COUNT was not found in the design.
+source tb_montgomery_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+======================================================================
+Montgomery Pipeline Testbench
+======================================================================
+Testing Montgomery Modular Reduction with BN254 curve parameters
+TOTAL_BITS =         256, SEG_BITS =          64, SEG_CNT =           4
+======================================================================
+
+[Test] Starting Montgomery reduction test
+------------------------------------------------------
+N       = 0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47
+N_prime = 0xf57a22b791888c6bd8afcbd01833da809ede7d651eca6ac987d20782e4866389
+A_MONT  = 0x16db3787c008bbc00870a59497036f7f43e71fc1218341741c7bc7cc0ceb3313
+B_MONT  = 0x087a1d2b7448c77d0c5a8c4e7241aa9a40f3f294768bdd2611e3d89374ff16f6
+T_512   = 0x00c1c0cf6b3053366c04cc5be157a618a4b05dc32dbba48398976daccbcd6a4bf7692fac951ce65ecc6b353dff255768a7b9b946411649b0e73854861c53b642...
+EXPECTED= 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+------------------------------------------------------
+[TOP] 检测到启动信号
+[TOP] 启动蒙哥马利计算
+[TOP] t = 0x00c1c0cf6b3053366c04cc5be157a618a4b05dc32dbba48398976daccbcd6a4bf7692fac951ce65ecc6b353dff255768a7b9b946411649b0e73854861c53b642... (512位)
+[TOP] N = 0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47
+[TOP] N_prime = 0xf57a22b791888c6bd8afcbd01833da809ede7d651eca6ac987d20782e4866389
+[TOP] 蒙哥马利计算完成
+[TOP] 计算结果: 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+[TOP] ? 验证通过!
+
+======================================================================
+Simulation Results
+======================================================================
+Pipeline Output (mont_result): 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+Expected Result:              0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+========================================
+[PASS] Result matches expected value!
+========================================
+
+======================================================================
+Test Complete
+======================================================================
+$finish called at time : 375 ns : File "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_top.v" Line 103
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1020.094 ; gain = 20.418
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_montgomery_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1020.094 ; gain = 20.418
+create_wave_config
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb_montgomery_top/clk}} {{/tb_montgomery_top/rst_n}} {{/tb_montgomery_top/start}} {{/tb_montgomery_top/done}} {{/tb_montgomery_top/mont_result}} {{/tb_montgomery_top/mont_valid}} {{/tb_montgomery_top/mont_done}} {{/tb_montgomery_top/cycle_count}} {{/tb_montgomery_top/test_passed}} {{/tb_montgomery_top/expected_result}} {{/tb_montgomery_top/result_check}} {{/tb_montgomery_top/timeout_counter}} {{/tb_montgomery_top/debug_stage1_m}} {{/tb_montgomery_top/debug_t_reg}} {{/tb_montgomery_top/debug_file}} {{/tb_montgomery_top/TOTAL_BITS}} {{/tb_montgomery_top/SEG_BITS}} {{/tb_montgomery_top/SEG_CNT}} 
+add_wave: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1052.199 ; gain = 32.105
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_montgomery_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_montgomery_top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_montgomery_top_behav xil_defaultlib.tb_montgomery_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_montgomery_top_behav xil_defaultlib.tb_montgomery_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+======================================================================
+Montgomery Pipeline Testbench
+======================================================================
+Testing Montgomery Modular Reduction with BN254 curve parameters
+TOTAL_BITS =         256, SEG_BITS =          64, SEG_CNT =           4
+======================================================================
+
+[Test] Starting Montgomery reduction test
+------------------------------------------------------
+N       = 0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47
+N_prime = 0xf57a22b791888c6bd8afcbd01833da809ede7d651eca6ac987d20782e4866389
+A_MONT  = 0x16db3787c008bbc00870a59497036f7f43e71fc1218341741c7bc7cc0ceb3313
+B_MONT  = 0x087a1d2b7448c77d0c5a8c4e7241aa9a40f3f294768bdd2611e3d89374ff16f6
+T_512   = 0x00c1c0cf6b3053366c04cc5be157a618a4b05dc32dbba48398976daccbcd6a4bf7692fac951ce65ecc6b353dff255768a7b9b946411649b0e73854861c53b642...
+EXPECTED= 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+------------------------------------------------------
+[TOP] 检测到启动信号
+[TOP] 启动蒙哥马利计算
+[TOP] t = 0x00c1c0cf6b3053366c04cc5be157a618a4b05dc32dbba48398976daccbcd6a4bf7692fac951ce65ecc6b353dff255768a7b9b946411649b0e73854861c53b642... (512位)
+[TOP] N = 0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47
+[TOP] N_prime = 0xf57a22b791888c6bd8afcbd01833da809ede7d651eca6ac987d20782e4866389
+[TOP] 蒙哥马利计算完成
+[TOP] 计算结果: 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+[TOP] ? 验证通过!
+
+======================================================================
+Simulation Results
+======================================================================
+Pipeline Output (mont_result): 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+Expected Result:              0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+========================================
+[PASS] Result matches expected value!
+========================================
+
+======================================================================
+Test Complete
+======================================================================
+$finish called at time : 375 ns : File "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_top.v" Line 103
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 1112.852 ; gain = 2.340
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_montgomery_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_montgomery_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/twiddle_dyn_gen_NTT/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_montgomery_top
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_montgomery_top_behav xil_defaultlib.tb_montgomery_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_montgomery_top_behav xil_defaultlib.tb_montgomery_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/twiddle_dyn_gen_NTT/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(SEG_CNT=4) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.montgomery_pipeline(SEG_CNT=4)
+Compiling module xil_defaultlib.montgomery_top_default
+Compiling module xil_defaultlib.tb_montgomery_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_montgomery_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+======================================================================
+Montgomery Pipeline Testbench
+======================================================================
+Testing Montgomery Modular Reduction with BN254 curve parameters
+TOTAL_BITS =         256, SEG_BITS =          64, SEG_CNT =           4
+======================================================================
+
+[Test] Starting Montgomery reduction test
+------------------------------------------------------
+N       = 0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47
+N_prime = 0xf57a22b791888c6bd8afcbd01833da809ede7d651eca6ac987d20782e4866389
+A_MONT  = 0x16db3787c008bbc00870a59497036f7f43e71fc1218341741c7bc7cc0ceb3313
+B_MONT  = 0x087a1d2b7448c77d0c5a8c4e7241aa9a40f3f294768bdd2611e3d89374ff16f6
+T_512   = 0x00c1c0cf6b3053366c04cc5be157a618a4b05dc32dbba48398976daccbcd6a4bf7692fac951ce65ecc6b353dff255768a7b9b946411649b0e73854861c53b642...
+EXPECTED= 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+------------------------------------------------------
+[TOP] 检测到启动信号
+[TOP] 启动蒙哥马利计算
+[TOP] t = 0x00c1c0cf6b3053366c04cc5be157a618a4b05dc32dbba48398976daccbcd6a4bf7692fac951ce65ecc6b353dff255768a7b9b946411649b0e73854861c53b642... (512位)
+[TOP] N = 0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47
+[TOP] N_prime = 0xf57a22b791888c6bd8afcbd01833da809ede7d651eca6ac987d20782e4866389
+[TOP] 蒙哥马利计算完成
+[TOP] 计算结果: 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+[TOP] ? 验证通过!
+
+======================================================================
+Simulation Results
+======================================================================
+Pipeline Output (mont_result): 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+Expected Result:              0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+========================================
+[PASS] Result matches expected value!
+========================================
+
+======================================================================
+Test Complete
+======================================================================
+$finish called at time : 375 ns : File "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_top.v" Line 103
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 1118.652 ; gain = 0.000
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top tb_montgomery_top [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_montgomery_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_montgomery_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/twiddle_dyn_gen_NTT/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_montgomery_top
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_montgomery_top_behav xil_defaultlib.tb_montgomery_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_montgomery_top_behav xil_defaultlib.tb_montgomery_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/twiddle_dyn_gen_NTT/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(SEG_CNT=4) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.montgomery_pipeline(SEG_CNT=4)
+Compiling module xil_defaultlib.tb_montgomery_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_montgomery_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_montgomery_top_behav -key {Behavioral:sim_1:Functional:tb_montgomery_top} -tclbatch {tb_montgomery_top.tcl} -protoinst "protoinst_files/design_1.protoinst" -view {F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_montgomery_top_behav.wcfg} -view {F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/mod_exp_tb_behav.wcfg} -view {F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_parallel_recurrence_unit_behav.wcfg} -view {F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav.wcfg} -view {F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav1.wcfg} -view {F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav2.wcfg} -view {F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_axi_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+open_wave_config F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_montgomery_top_behav.wcfg
+WARNING: Simulation object /tb_montgomery_top/test_pass was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/CLK_PERIOD was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/mont_valid was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/A_MONT was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/B_MONT was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/stage5_sum was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/stage4_valid was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/stage5_valid was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/N_reg was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/mont_result was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/mod_exp_tb_behav.wcfg
+WARNING: Simulation object /mod_exp_tb/clk was not found in the design.
+WARNING: Simulation object /mod_exp_tb/reset_n was not found in the design.
+WARNING: Simulation object /mod_exp_tb/start was not found in the design.
+WARNING: Simulation object /mod_exp_tb/done was not found in the design.
+WARNING: Simulation object /mod_exp_tb/base was not found in the design.
+WARNING: Simulation object /mod_exp_tb/exponent was not found in the design.
+WARNING: Simulation object /mod_exp_tb/modulus was not found in the design.
+WARNING: Simulation object /mod_exp_tb/Np was not found in the design.
+WARNING: Simulation object /mod_exp_tb/R2_mod_N was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/state was not found in the design.
+WARNING: Simulation object /mod_exp_tb/result was not found in the design.
+WARNING: Simulation object /mod_exp_tb/DATA_WIDTH was not found in the design.
+WARNING: Simulation object /mod_exp_tb/EXP_WIDTH was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/start was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/reset_n was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/clk was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/base was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/exponent was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/modulus was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/Np was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/R2_mod_N was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/result was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/done was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/state was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_parallel_recurrence_unit_behav.wcfg
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/reset_n was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/start was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/base_value was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/step_value was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/Np was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_0 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_1 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_2 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_3 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/state was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/current_values was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/counter was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/step_powers was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_a was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_b was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_start was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_result was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/a was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/b was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/mont_start was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/mont_done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/result was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/start was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav.wcfg
+WARNING: Simulation object /tb_ntt_accelerator/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/rst_n was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/radix_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/width_384_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/parallelism was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/start was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/done was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/result_valid was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_in_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/twiddle_factors_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/N_prime was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/\core_array[0].u_core /clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/\core_array[0].u_core /x0 was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/\core_array[0].u_core /x1 was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav1.wcfg
+WARNING: Simulation object /tb_ntt_accelerator/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/rst_n was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/radix_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/width_384_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/parallelism was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/start was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/done was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/result_valid was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_in_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/twiddle_factors_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/N_prime was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_RADIX was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/NUM_CORES was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/CLK_PERIOD was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/data_in was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/twiddle_in was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/x0_out was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/x1_out was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav2.wcfg
+WARNING: Simulation object /tb_ntt_accelerator/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/rst_n was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/radix_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/width_384_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/parallelism was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/start was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/done was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/result_valid was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_in_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/twiddle_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/N_prime was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_RADIX was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/NUM_CORES was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/CLK_PERIOD was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/PIPELINE_WAIT_CYCLE was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_axi_behav.wcfg
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ACLK was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARESETN was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWADDR was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWPROT was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWVALID was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWREADY was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WDATA was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WSTRB was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WVALID was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WREADY was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BRESP was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BVALID was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BREADY was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARADDR was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARPROT was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARVALID was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARREADY was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RDATA was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RRESP was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RVALID was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RREADY was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg0_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg2_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg3_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg4_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg5_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg6_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg7_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg8_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg9_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg10_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg11_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg12_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg13_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg14_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/status_in_i was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_awaddr was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_awready was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_wready was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_bresp was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_bvalid was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_araddr was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_arready was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rdata was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rresp was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rvalid was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg_wren was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg_rden was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/reg_data_out was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/byte_index was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/aw_en was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/wr_index was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/rd_index was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/C_S_AXI_DATA_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/C_S_AXI_ADDR_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/ADDR_LSB was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/OPT_MEM_ADDR_BITS was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/REG_COUNT was not found in the design.
+source tb_montgomery_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+======================================================================
+Montgomery Pipeline Testbench - Multiple Tests
+======================================================================
+Testing Montgomery Modular Reduction with BN254 curve parameters
+TOTAL_BITS =         256, SEG_BITS =          64, SEG_CNT =           4
+Number of test cases:           6
+======================================================================
+
+======================================================================
+[Test 1/6] Starting
+======================================================================
+A_MONT = 0x04cda1728934ce7f2e06dd410c76ab667d9dd5aa5242e785f1cdd808dbea2eec
+B_MONT = 0x24db36a1a5c2b40b810f3e6473acf452df26a211fc84d6fa0fef05b7da276c7e
+T      = 0x00b107a3a0c3af73ef0b6bc22956e42e5a20809bb025fdced181f58775503276c20873e5f857f6c741bc131ab4a7db89c6523449280c53bdb8b924792702a828...
+EXPECT = 0x07cae7e16f3bff0918a549684a296b08ae1bcd93b09437ef7bbdfdf7d8dfa44d
+[Test 1] PASS - Result: 0x07cae7e16f3bff0918a549684a296b08ae1bcd93b09437ef7bbdfdf7d8dfa44d
+
+======================================================================
+[Test 2/6] Starting
+======================================================================
+A_MONT = 0x16db3787c008bbc00870a59497036f7f43e71fc1218341741c7bc7cc0ceb3313
+B_MONT = 0x087a1d2b7448c77d0c5a8c4e7241aa9a40f3f294768bdd2611e3d89374ff16f6
+T      = 0x00c1c0cf6b3053366c04cc5be157a618a4b05dc32dbba48398976daccbcd6a4bf7692fac951ce65ecc6b353dff255768a7b9b946411649b0e73854861c53b642...
+EXPECT = 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+[Test 2] PASS - Result: 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+
+======================================================================
+[Test 3/6] Starting
+======================================================================
+A_MONT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+B_MONT = 0x1c14ef83340fbe5eccdd46def0f28c5814f1d651eb8e167ba6ba871b8b1e1b3a
+T      = 0x03c4a2a3a406daf0d6b3dc9e5c0c5951c26be97dc4cf3eb20b055c5a3c2baf0cf77ad4f763b8590e953a3b5650a8744917865171acfac3b6183b39fec61b3a84...
+EXPECT = 0x144f5eefad21e1caeb72fed7908ecc05828f943f7ce3b411956604fb4d5ee20d
+[Test 3] PASS - Result: 0x144f5eefad21e1caeb72fed7908ecc05828f943f7ce3b411956604fb4d5ee20d
+
+======================================================================
+[Test 4/6] Starting
+======================================================================
+A_MONT = 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+B_MONT = 0x0e0a77c19a07df2f666ea36f7879462c0a78eb28f5c70b3dd35d438dc58f0d9d
+T      = 0x024271b425180b667185b3099f5cda7ea0d4b25055789a9e8c3e378507830c99a0f0266aa90e2b5a60acc849f013e78cc9fb7ad2eb0439d707b57a220d893847...
+EXPECT = 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+[Test 4] PASS - Result: 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+
+======================================================================
+[Test 5/6] Starting
+======================================================================
+A_MONT = 0x1113fb2134cd327c8aa264fdee21d2b468f1b0420a3691034cf1d531fb21b7c6
+B_MONT = 0x204445a7929f30262a789fc08ff92c05ff77ca08d45bb7ce346bc4e118035620
+T      = 0x02270d586bec768def8046a9e4828aea583a4a5a1a47aba6e45b095a0ac8ca8a91d83499c00a2f5bae85793b8b785fc7abfc2b372359b0089c12a8426f457cc0...
+EXPECT = 0x1b872d1a794b66632eab713c3d5b739a525d9960bf9d095b9aad64de16297001
+[Test 5] PASS - Result: 0x1b872d1a794b66632eab713c3d5b739a525d9960bf9d095b9aad64de16297001
+
+======================================================================
+[Test 6/6] Starting
+======================================================================
+A_MONT = 0x0e0a77c19a07df2f666ea36f7879462c0a78eb28f5c70b3dd35d438dc58f0d9d
+B_MONT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+T      = 0x01e25151d2036d786b59ee4f2e062ca8e135f4bee2679f590582ae2d1e15d7867bbd6a7bb1dc2c874a9d1dab28543a248bc328b8d67d61db0c1d9cff630d9d42...
+EXPECT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+[Test 6] PASS - Result: 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1149.727 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_montgomery_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 1149.727 ; gain = 0.000
+current_wave_config {tb_ntt_axi_behav.wcfg}
+tb_ntt_axi_behav.wcfg
+add_wave {{/tb_montgomery_top/clk}} {{/tb_montgomery_top/rst_n}} {{/tb_montgomery_top/start}} {{/tb_montgomery_top/N}} {{/tb_montgomery_top/N_prime}} {{/tb_montgomery_top/t}} {{/tb_montgomery_top/mont_result}} {{/tb_montgomery_top/valid_out}} {{/tb_montgomery_top/done}} {{/tb_montgomery_top/cycle_count}} {{/tb_montgomery_top/test_passed}} {{/tb_montgomery_top/result_check}} {{/tb_montgomery_top/test_index}} {{/tb_montgomery_top/tests_passed}} {{/tb_montgomery_top/tests_failed}} {{/tb_montgomery_top/current_expected}} {{/tb_montgomery_top/timeout_counter}} {{/tb_montgomery_top/TOTAL_BITS}} {{/tb_montgomery_top/SEG_BITS}} {{/tb_montgomery_top/SEG_CNT}} {{/tb_montgomery_top/PIPELINE_STAGES}} {{/tb_montgomery_top/TEST_N}} {{/tb_montgomery_top/TEST_N_PRIME}} {{/tb_montgomery_top/A_MONT_1}} {{/tb_montgomery_top/B_MONT_1}} {{/tb_montgomery_top/T_1}} {{/tb_montgomery_top/EXP_1}} {{/tb_montgomery_top/A_MONT_2}} {{/tb_montgomery_top/B_MONT_2}} {{/tb_montgomery_top/T_2}} {{/tb_montgomery_top/EXP_2}} {{/tb_montgomery_top/A_MONT_3}} {{/tb_montgomery_top/B_MONT_3}} {{/tb_montgomery_top/T_3}} {{/tb_montgomery_top/EXP_3}} {{/tb_montgomery_top/A_MONT_4}} {{/tb_montgomery_top/B_MONT_4}} {{/tb_montgomery_top/T_4}} {{/tb_montgomery_top/EXP_4}} {{/tb_montgomery_top/A_MONT_5}} {{/tb_montgomery_top/B_MONT_5}} {{/tb_montgomery_top/T_5}} {{/tb_montgomery_top/EXP_5}} {{/tb_montgomery_top/A_MONT_6}} {{/tb_montgomery_top/B_MONT_6}} {{/tb_montgomery_top/T_6}} {{/tb_montgomery_top/EXP_6}} {{/tb_montgomery_top/NUM_TESTS}} 
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_montgomery_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_montgomery_top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_montgomery_top_behav xil_defaultlib.tb_montgomery_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_montgomery_top_behav xil_defaultlib.tb_montgomery_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+======================================================================
+Montgomery Pipeline Testbench - Multiple Tests
+======================================================================
+Testing Montgomery Modular Reduction with BN254 curve parameters
+TOTAL_BITS =         256, SEG_BITS =          64, SEG_CNT =           4
+Number of test cases:           6
+======================================================================
+
+======================================================================
+[Test 1/6] Starting
+======================================================================
+A_MONT = 0x04cda1728934ce7f2e06dd410c76ab667d9dd5aa5242e785f1cdd808dbea2eec
+B_MONT = 0x24db36a1a5c2b40b810f3e6473acf452df26a211fc84d6fa0fef05b7da276c7e
+T      = 0x00b107a3a0c3af73ef0b6bc22956e42e5a20809bb025fdced181f58775503276c20873e5f857f6c741bc131ab4a7db89c6523449280c53bdb8b924792702a828...
+EXPECT = 0x07cae7e16f3bff0918a549684a296b08ae1bcd93b09437ef7bbdfdf7d8dfa44d
+[Test 1] PASS - Result: 0x07cae7e16f3bff0918a549684a296b08ae1bcd93b09437ef7bbdfdf7d8dfa44d
+
+======================================================================
+[Test 2/6] Starting
+======================================================================
+A_MONT = 0x16db3787c008bbc00870a59497036f7f43e71fc1218341741c7bc7cc0ceb3313
+B_MONT = 0x087a1d2b7448c77d0c5a8c4e7241aa9a40f3f294768bdd2611e3d89374ff16f6
+T      = 0x00c1c0cf6b3053366c04cc5be157a618a4b05dc32dbba48398976daccbcd6a4bf7692fac951ce65ecc6b353dff255768a7b9b946411649b0e73854861c53b642...
+EXPECT = 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+[Test 2] PASS - Result: 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+
+======================================================================
+[Test 3/6] Starting
+======================================================================
+A_MONT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+B_MONT = 0x1c14ef83340fbe5eccdd46def0f28c5814f1d651eb8e167ba6ba871b8b1e1b3a
+T      = 0x03c4a2a3a406daf0d6b3dc9e5c0c5951c26be97dc4cf3eb20b055c5a3c2baf0cf77ad4f763b8590e953a3b5650a8744917865171acfac3b6183b39fec61b3a84...
+EXPECT = 0x144f5eefad21e1caeb72fed7908ecc05828f943f7ce3b411956604fb4d5ee20d
+[Test 3] PASS - Result: 0x144f5eefad21e1caeb72fed7908ecc05828f943f7ce3b411956604fb4d5ee20d
+
+======================================================================
+[Test 4/6] Starting
+======================================================================
+A_MONT = 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+B_MONT = 0x0e0a77c19a07df2f666ea36f7879462c0a78eb28f5c70b3dd35d438dc58f0d9d
+T      = 0x024271b425180b667185b3099f5cda7ea0d4b25055789a9e8c3e378507830c99a0f0266aa90e2b5a60acc849f013e78cc9fb7ad2eb0439d707b57a220d893847...
+EXPECT = 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+[Test 4] PASS - Result: 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+
+======================================================================
+[Test 5/6] Starting
+======================================================================
+A_MONT = 0x1113fb2134cd327c8aa264fdee21d2b468f1b0420a3691034cf1d531fb21b7c6
+B_MONT = 0x204445a7929f30262a789fc08ff92c05ff77ca08d45bb7ce346bc4e118035620
+T      = 0x02270d586bec768def8046a9e4828aea583a4a5a1a47aba6e45b095a0ac8ca8a91d83499c00a2f5bae85793b8b785fc7abfc2b372359b0089c12a8426f457cc0...
+EXPECT = 0x1b872d1a794b66632eab713c3d5b739a525d9960bf9d095b9aad64de16297001
+[Test 5] PASS - Result: 0x1b872d1a794b66632eab713c3d5b739a525d9960bf9d095b9aad64de16297001
+
+======================================================================
+[Test 6/6] Starting
+======================================================================
+A_MONT = 0x0e0a77c19a07df2f666ea36f7879462c0a78eb28f5c70b3dd35d438dc58f0d9d
+B_MONT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+T      = 0x01e25151d2036d786b59ee4f2e062ca8e135f4bee2679f590582ae2d1e15d7867bbd6a7bb1dc2c874a9d1dab28543a248bc328b8d67d61db0c1d9cff630d9d42...
+EXPECT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+[Test 6] PASS - Result: 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1513.543 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_montgomery_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_montgomery_top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_montgomery_top_behav xil_defaultlib.tb_montgomery_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_montgomery_top_behav xil_defaultlib.tb_montgomery_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+======================================================================
+Montgomery Pipeline Testbench - Multiple Tests
+======================================================================
+Testing Montgomery Modular Reduction with BN254 curve parameters
+TOTAL_BITS =         256, SEG_BITS =          64, SEG_CNT =           4
+Number of test cases:           6
+======================================================================
+
+======================================================================
+[Test 1/6] Starting
+======================================================================
+A_MONT = 0x04cda1728934ce7f2e06dd410c76ab667d9dd5aa5242e785f1cdd808dbea2eec
+B_MONT = 0x24db36a1a5c2b40b810f3e6473acf452df26a211fc84d6fa0fef05b7da276c7e
+T      = 0x00b107a3a0c3af73ef0b6bc22956e42e5a20809bb025fdced181f58775503276c20873e5f857f6c741bc131ab4a7db89c6523449280c53bdb8b924792702a828...
+EXPECT = 0x07cae7e16f3bff0918a549684a296b08ae1bcd93b09437ef7bbdfdf7d8dfa44d
+[Test 1] PASS - Result: 0x07cae7e16f3bff0918a549684a296b08ae1bcd93b09437ef7bbdfdf7d8dfa44d
+
+======================================================================
+[Test 2/6] Starting
+======================================================================
+A_MONT = 0x16db3787c008bbc00870a59497036f7f43e71fc1218341741c7bc7cc0ceb3313
+B_MONT = 0x087a1d2b7448c77d0c5a8c4e7241aa9a40f3f294768bdd2611e3d89374ff16f6
+T      = 0x00c1c0cf6b3053366c04cc5be157a618a4b05dc32dbba48398976daccbcd6a4bf7692fac951ce65ecc6b353dff255768a7b9b946411649b0e73854861c53b642...
+EXPECT = 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+[Test 2] PASS - Result: 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+
+======================================================================
+[Test 3/6] Starting
+======================================================================
+A_MONT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+B_MONT = 0x1c14ef83340fbe5eccdd46def0f28c5814f1d651eb8e167ba6ba871b8b1e1b3a
+T      = 0x03c4a2a3a406daf0d6b3dc9e5c0c5951c26be97dc4cf3eb20b055c5a3c2baf0cf77ad4f763b8590e953a3b5650a8744917865171acfac3b6183b39fec61b3a84...
+EXPECT = 0x144f5eefad21e1caeb72fed7908ecc05828f943f7ce3b411956604fb4d5ee20d
+[Test 3] PASS - Result: 0x144f5eefad21e1caeb72fed7908ecc05828f943f7ce3b411956604fb4d5ee20d
+
+======================================================================
+[Test 4/6] Starting
+======================================================================
+A_MONT = 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+B_MONT = 0x0e0a77c19a07df2f666ea36f7879462c0a78eb28f5c70b3dd35d438dc58f0d9d
+T      = 0x024271b425180b667185b3099f5cda7ea0d4b25055789a9e8c3e378507830c99a0f0266aa90e2b5a60acc849f013e78cc9fb7ad2eb0439d707b57a220d893847...
+EXPECT = 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+[Test 4] PASS - Result: 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+
+======================================================================
+[Test 5/6] Starting
+======================================================================
+A_MONT = 0x1113fb2134cd327c8aa264fdee21d2b468f1b0420a3691034cf1d531fb21b7c6
+B_MONT = 0x204445a7929f30262a789fc08ff92c05ff77ca08d45bb7ce346bc4e118035620
+T      = 0x02270d586bec768def8046a9e4828aea583a4a5a1a47aba6e45b095a0ac8ca8a91d83499c00a2f5bae85793b8b785fc7abfc2b372359b0089c12a8426f457cc0...
+EXPECT = 0x1b872d1a794b66632eab713c3d5b739a525d9960bf9d095b9aad64de16297001
+[Test 5] PASS - Result: 0x1b872d1a794b66632eab713c3d5b739a525d9960bf9d095b9aad64de16297001
+
+======================================================================
+[Test 6/6] Starting
+======================================================================
+A_MONT = 0x0e0a77c19a07df2f666ea36f7879462c0a78eb28f5c70b3dd35d438dc58f0d9d
+B_MONT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+T      = 0x01e25151d2036d786b59ee4f2e062ca8e135f4bee2679f590582ae2d1e15d7867bbd6a7bb1dc2c874a9d1dab28543a248bc328b8d67d61db0c1d9cff630d9d42...
+EXPECT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+[Test 6] PASS - Result: 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1513.543 ; gain = 0.000
+create_wave_config
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/tb_montgomery_top/u_montgomery/clk}} {{/tb_montgomery_top/u_montgomery/rst_n}} {{/tb_montgomery_top/u_montgomery/start}} {{/tb_montgomery_top/u_montgomery/N}} {{/tb_montgomery_top/u_montgomery/N_prime}} {{/tb_montgomery_top/u_montgomery/t}} {{/tb_montgomery_top/u_montgomery/mont_result}} {{/tb_montgomery_top/u_montgomery/valid_out}} {{/tb_montgomery_top/u_montgomery/done}} {{/tb_montgomery_top/u_montgomery/valid_pipeline}} {{/tb_montgomery_top/u_montgomery/t_reg}} {{/tb_montgomery_top/u_montgomery/N_reg}} {{/tb_montgomery_top/u_montgomery/N_prime_reg}} {{/tb_montgomery_top/u_montgomery/stage1_t_low}} {{/tb_montgomery_top/u_montgomery/stage1_m}} {{/tb_montgomery_top/u_montgomery/stage1_valid}} {{/tb_montgomery_top/u_montgomery/stage2_m_seg}} {{/tb_montgomery_top/u_montgomery/stage2_N_seg}} {{/tb_montgomery_top/u_montgomery/stage2_valid}} {{/tb_montgomery_top/u_montgomery/stage3_products}} {{/tb_montgomery_top/u_montgomery/stage3_m_reg}} {{/tb_montgomery_top/u_montgomery/stage3_valid}} {{/tb_montgomery_top/u_montgomery/stage4_mN}} {{/tb_montgomery_top/u_montgomery/stage4_valid}} {{/tb_montgomery_top/u_montgomery/stage5_sum}} {{/tb_montgomery_top/u_montgomery/stage5_valid}} {{/tb_montgomery_top/u_montgomery/i}} {{/tb_montgomery_top/u_montgomery/j}} {{/tb_montgomery_top/u_montgomery/accum}} {{/tb_montgomery_top/u_montgomery/pos_temp}} {{/tb_montgomery_top/u_montgomery/prod_low}} {{/tb_montgomery_top/u_montgomery/prod_high}} {{/tb_montgomery_top/u_montgomery/temp_sum}} {{/tb_montgomery_top/u_montgomery/TOTAL_BITS}} {{/tb_montgomery_top/u_montgomery/SEG_BITS}} {{/tb_montgomery_top/u_montgomery/SEG_CNT}} {{/tb_montgomery_top/u_montgomery/PIPELINE_STAGES}} 
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_montgomery_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_montgomery_top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_montgomery_top_behav xil_defaultlib.tb_montgomery_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_montgomery_top_behav xil_defaultlib.tb_montgomery_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+======================================================================
+Montgomery Pipeline Testbench - Multiple Tests
+======================================================================
+Testing Montgomery Modular Reduction with BN254 curve parameters
+TOTAL_BITS =         256, SEG_BITS =          64, SEG_CNT =           4
+Number of test cases:           6
+======================================================================
+
+======================================================================
+[Test 1/6] Starting
+======================================================================
+A_MONT = 0x04cda1728934ce7f2e06dd410c76ab667d9dd5aa5242e785f1cdd808dbea2eec
+B_MONT = 0x24db36a1a5c2b40b810f3e6473acf452df26a211fc84d6fa0fef05b7da276c7e
+T      = 0x00b107a3a0c3af73ef0b6bc22956e42e5a20809bb025fdced181f58775503276c20873e5f857f6c741bc131ab4a7db89c6523449280c53bdb8b924792702a828...
+EXPECT = 0x07cae7e16f3bff0918a549684a296b08ae1bcd93b09437ef7bbdfdf7d8dfa44d
+[Test 1] PASS - Result: 0x07cae7e16f3bff0918a549684a296b08ae1bcd93b09437ef7bbdfdf7d8dfa44d
+
+======================================================================
+[Test 2/6] Starting
+======================================================================
+A_MONT = 0x16db3787c008bbc00870a59497036f7f43e71fc1218341741c7bc7cc0ceb3313
+B_MONT = 0x087a1d2b7448c77d0c5a8c4e7241aa9a40f3f294768bdd2611e3d89374ff16f6
+T      = 0x00c1c0cf6b3053366c04cc5be157a618a4b05dc32dbba48398976daccbcd6a4bf7692fac951ce65ecc6b353dff255768a7b9b946411649b0e73854861c53b642...
+EXPECT = 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+[Test 2] PASS - Result: 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+
+======================================================================
+[Test 3/6] Starting
+======================================================================
+A_MONT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+B_MONT = 0x1c14ef83340fbe5eccdd46def0f28c5814f1d651eb8e167ba6ba871b8b1e1b3a
+T      = 0x03c4a2a3a406daf0d6b3dc9e5c0c5951c26be97dc4cf3eb20b055c5a3c2baf0cf77ad4f763b8590e953a3b5650a8744917865171acfac3b6183b39fec61b3a84...
+EXPECT = 0x144f5eefad21e1caeb72fed7908ecc05828f943f7ce3b411956604fb4d5ee20d
+[Test 3] PASS - Result: 0x144f5eefad21e1caeb72fed7908ecc05828f943f7ce3b411956604fb4d5ee20d
+
+======================================================================
+[Test 4/6] Starting
+======================================================================
+A_MONT = 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+B_MONT = 0x0e0a77c19a07df2f666ea36f7879462c0a78eb28f5c70b3dd35d438dc58f0d9d
+T      = 0x024271b425180b667185b3099f5cda7ea0d4b25055789a9e8c3e378507830c99a0f0266aa90e2b5a60acc849f013e78cc9fb7ad2eb0439d707b57a220d893847...
+EXPECT = 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+[Test 4] PASS - Result: 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+
+======================================================================
+[Test 5/6] Starting
+======================================================================
+A_MONT = 0x1113fb2134cd327c8aa264fdee21d2b468f1b0420a3691034cf1d531fb21b7c6
+B_MONT = 0x204445a7929f30262a789fc08ff92c05ff77ca08d45bb7ce346bc4e118035620
+T      = 0x02270d586bec768def8046a9e4828aea583a4a5a1a47aba6e45b095a0ac8ca8a91d83499c00a2f5bae85793b8b785fc7abfc2b372359b0089c12a8426f457cc0...
+EXPECT = 0x1b872d1a794b66632eab713c3d5b739a525d9960bf9d095b9aad64de16297001
+[Test 5] PASS - Result: 0x1b872d1a794b66632eab713c3d5b739a525d9960bf9d095b9aad64de16297001
+
+======================================================================
+[Test 6/6] Starting
+======================================================================
+A_MONT = 0x0e0a77c19a07df2f666ea36f7879462c0a78eb28f5c70b3dd35d438dc58f0d9d
+B_MONT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+T      = 0x01e25151d2036d786b59ee4f2e062ca8e135f4bee2679f590582ae2d1e15d7867bbd6a7bb1dc2c874a9d1dab28543a248bc328b8d67d61db0c1d9cff630d9d42...
+EXPECT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+[Test 6] PASS - Result: 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1513.543 ; gain = 0.000
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/tb_montgomery_top/result_check}} 
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/tb_montgomery_top/clk}} {{/tb_montgomery_top/rst_n}} {{/tb_montgomery_top/start}} {{/tb_montgomery_top/N}} {{/tb_montgomery_top/N_prime}} {{/tb_montgomery_top/t}} {{/tb_montgomery_top/mont_result}} {{/tb_montgomery_top/valid_out}} {{/tb_montgomery_top/done}} {{/tb_montgomery_top/cycle_count}} {{/tb_montgomery_top/test_passed}} {{/tb_montgomery_top/result_check}} {{/tb_montgomery_top/test_index}} {{/tb_montgomery_top/tests_passed}} {{/tb_montgomery_top/tests_failed}} {{/tb_montgomery_top/current_expected}} {{/tb_montgomery_top/timeout_counter}} {{/tb_montgomery_top/TOTAL_BITS}} {{/tb_montgomery_top/SEG_BITS}} {{/tb_montgomery_top/SEG_CNT}} {{/tb_montgomery_top/PIPELINE_STAGES}} {{/tb_montgomery_top/TEST_N}} {{/tb_montgomery_top/TEST_N_PRIME}} {{/tb_montgomery_top/A_MONT_1}} {{/tb_montgomery_top/B_MONT_1}} {{/tb_montgomery_top/T_1}} {{/tb_montgomery_top/EXP_1}} {{/tb_montgomery_top/A_MONT_2}} {{/tb_montgomery_top/B_MONT_2}} {{/tb_montgomery_top/T_2}} {{/tb_montgomery_top/EXP_2}} {{/tb_montgomery_top/A_MONT_3}} {{/tb_montgomery_top/B_MONT_3}} {{/tb_montgomery_top/T_3}} {{/tb_montgomery_top/EXP_3}} {{/tb_montgomery_top/A_MONT_4}} {{/tb_montgomery_top/B_MONT_4}} {{/tb_montgomery_top/T_4}} {{/tb_montgomery_top/EXP_4}} {{/tb_montgomery_top/A_MONT_5}} {{/tb_montgomery_top/B_MONT_5}} {{/tb_montgomery_top/T_5}} {{/tb_montgomery_top/EXP_5}} {{/tb_montgomery_top/A_MONT_6}} {{/tb_montgomery_top/B_MONT_6}} {{/tb_montgomery_top/T_6}} {{/tb_montgomery_top/EXP_6}} {{/tb_montgomery_top/NUM_TESTS}} 
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_montgomery_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_montgomery_top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_montgomery_top_behav xil_defaultlib.tb_montgomery_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_montgomery_top_behav xil_defaultlib.tb_montgomery_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+======================================================================
+Montgomery Pipeline Testbench - Multiple Tests
+======================================================================
+Testing Montgomery Modular Reduction with BN254 curve parameters
+TOTAL_BITS =         256, SEG_BITS =          64, SEG_CNT =           4
+Number of test cases:           6
+======================================================================
+
+======================================================================
+[Test 1/6] Starting
+======================================================================
+A_MONT = 0x04cda1728934ce7f2e06dd410c76ab667d9dd5aa5242e785f1cdd808dbea2eec
+B_MONT = 0x24db36a1a5c2b40b810f3e6473acf452df26a211fc84d6fa0fef05b7da276c7e
+T      = 0x00b107a3a0c3af73ef0b6bc22956e42e5a20809bb025fdced181f58775503276c20873e5f857f6c741bc131ab4a7db89c6523449280c53bdb8b924792702a828...
+EXPECT = 0x07cae7e16f3bff0918a549684a296b08ae1bcd93b09437ef7bbdfdf7d8dfa44d
+[Test 1] PASS - Result: 0x07cae7e16f3bff0918a549684a296b08ae1bcd93b09437ef7bbdfdf7d8dfa44d
+
+======================================================================
+[Test 2/6] Starting
+======================================================================
+A_MONT = 0x16db3787c008bbc00870a59497036f7f43e71fc1218341741c7bc7cc0ceb3313
+B_MONT = 0x087a1d2b7448c77d0c5a8c4e7241aa9a40f3f294768bdd2611e3d89374ff16f6
+T      = 0x00c1c0cf6b3053366c04cc5be157a618a4b05dc32dbba48398976daccbcd6a4bf7692fac951ce65ecc6b353dff255768a7b9b946411649b0e73854861c53b642...
+EXPECT = 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+[Test 2] PASS - Result: 0x04e9d49a4b94c32028fce7d8baa58b0b51fc666ce74426c75ce1f21c8cdd75c5
+
+======================================================================
+[Test 3/6] Starting
+======================================================================
+A_MONT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+B_MONT = 0x1c14ef83340fbe5eccdd46def0f28c5814f1d651eb8e167ba6ba871b8b1e1b3a
+T      = 0x03c4a2a3a406daf0d6b3dc9e5c0c5951c26be97dc4cf3eb20b055c5a3c2baf0cf77ad4f763b8590e953a3b5650a8744917865171acfac3b6183b39fec61b3a84...
+EXPECT = 0x144f5eefad21e1caeb72fed7908ecc05828f943f7ce3b411956604fb4d5ee20d
+[Test 3] PASS - Result: 0x144f5eefad21e1caeb72fed7908ecc05828f943f7ce3b411956604fb4d5ee20d
+
+======================================================================
+[Test 4/6] Starting
+======================================================================
+A_MONT = 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+B_MONT = 0x0e0a77c19a07df2f666ea36f7879462c0a78eb28f5c70b3dd35d438dc58f0d9d
+T      = 0x024271b425180b667185b3099f5cda7ea0d4b25055789a9e8c3e378507830c99a0f0266aa90e2b5a60acc849f013e78cc9fb7ad2eb0439d707b57a220d893847...
+EXPECT = 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+[Test 4] PASS - Result: 0x2932762311e1f619998cc1461349922842ef987a46efc14b5bf044e46678ea33
+
+======================================================================
+[Test 5/6] Starting
+======================================================================
+A_MONT = 0x1113fb2134cd327c8aa264fdee21d2b468f1b0420a3691034cf1d531fb21b7c6
+B_MONT = 0x204445a7929f30262a789fc08ff92c05ff77ca08d45bb7ce346bc4e118035620
+T      = 0x02270d586bec768def8046a9e4828aea583a4a5a1a47aba6e45b095a0ac8ca8a91d83499c00a2f5bae85793b8b785fc7abfc2b372359b0089c12a8426f457cc0...
+EXPECT = 0x1b872d1a794b66632eab713c3d5b739a525d9960bf9d095b9aad64de16297001
+[Test 5] PASS - Result: 0x1b872d1a794b66632eab713c3d5b739a525d9960bf9d095b9aad64de16297001
+
+======================================================================
+[Test 6/6] Starting
+======================================================================
+A_MONT = 0x0e0a77c19a07df2f666ea36f7879462c0a78eb28f5c70b3dd35d438dc58f0d9d
+B_MONT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+T      = 0x01e25151d2036d786b59ee4f2e062ca8e135f4bee2679f590582ae2d1e15d7867bbd6a7bb1dc2c874a9d1dab28543a248bc328b8d67d61db0c1d9cff630d9d42...
+EXPECT = 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+[Test 6] PASS - Result: 0x2259d6b14729c0fa51e1a247090812318d087f6872aabf4f68c3488912edefaa
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1513.543 ; gain = 0.000

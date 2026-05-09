@@ -1,0 +1,10 @@
+11:15:49 **** Incremental Build of configuration Debug for project ntt_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+11:15:59 **** Incremental Build of configuration Debug for project ntt_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

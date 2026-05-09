@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 // ============================================================================
-// Testbench for Montgomery Pipeline Module
+// Testbench for Montgomery Pipeline Module (Streaming Version)
 // Multiple Test Cases for Vivado Simulation
 // ============================================================================
 module tb_montgomery_top;
@@ -8,18 +8,17 @@ module tb_montgomery_top;
 localparam TOTAL_BITS = 256;
 localparam SEG_BITS = 64;
 localparam SEG_CNT = TOTAL_BITS / SEG_BITS;
-localparam PIPELINE_STAGES = 4;
+localparam PIPELINE_STAGES = 6;
 
 reg clk;
 reg rst_n;
-reg start;
 reg [TOTAL_BITS-1:0] N;
 reg [TOTAL_BITS-1:0] N_prime;
 reg [2*TOTAL_BITS-1:0] t;
-
+reg in_valid;
+wire in_ready;
 wire [TOTAL_BITS-1:0] mont_result;
-wire valid_out;
-wire done;
+wire out_valid;
 
 reg [31:0] cycle_count;
 reg test_passed;
@@ -33,13 +32,13 @@ montgomery_pipeline #(
 ) u_montgomery (
     .clk(clk),
     .rst_n(rst_n),
-    .start(start),
     .N(N),
     .N_prime(N_prime),
     .t(t),
+    .in_valid(in_valid),
+    .in_ready(in_ready),
     .mont_result(mont_result),
-    .valid_out(valid_out),
-    .done(done)
+    .out_valid(out_valid)
 );
 
 // ============================================================================
@@ -90,87 +89,110 @@ reg [31:0] test_index;
 reg [31:0] tests_passed;
 reg [31:0] tests_failed;
 reg [TOTAL_BITS-1:0] current_expected;
+reg [TOTAL_BITS-1:0] result_queue [0:NUM_TESTS-1];
+reg [TOTAL_BITS-1:0] expected_queue [0:NUM_TESTS-1];
+reg [2*TOTAL_BITS-1:0] t_queue [0:NUM_TESTS-1];
+reg [31:0] result_count;
+reg [31:0] input_count;
 
 always #5 clk = ~clk;
 
-task run_test;
-    input [31:0] test_num;
-    input [TOTAL_BITS-1:0] a_mont;
-    input [TOTAL_BITS-1:0] b_mont;
+// ============================================================================
+// Input Task for Streaming Pipeline
+// ============================================================================
+task send_input;
     input [2*TOTAL_BITS-1:0] test_t;
-    input [TOTAL_BITS-1:0] expected;
     begin
-        current_expected = expected;
-        
-        $display("\n======================================================================");
-        $display("[Test %0d/%0d] Starting", test_num, NUM_TESTS);
-        $display("======================================================================");
-        $display("A_MONT = 0x%h", a_mont);
-        $display("B_MONT = 0x%h", b_mont);
-        $display("T      = 0x%h...", test_t);
-        $display("EXPECT = 0x%h", expected);
-
+        wait(in_ready == 1);
+        @(posedge clk);
         N = TEST_N;
         N_prime = TEST_N_PRIME;
         t = test_t;
-        
-        #20;
-        start = 1;
-        #10;
-        start = 0;
-
-        wait(done == 1);
-        #50;
-
-        result_check = mont_result;
-        
-        if (result_check == expected) begin
-            $display("[Test %0d] PASS - Result: 0x%h", test_num, mont_result);
-            tests_passed = tests_passed + 1;
-        end else begin
-            $display("[Test %0d] FAIL", test_num);
-            $display("  Expected: 0x%h", expected);
-            $display("  Got:      0x%h", mont_result);
-            tests_failed = tests_failed + 1;
-        end
-        
-        #50;
+        in_valid = 1;
+        @(posedge clk);
+        in_valid = 0;
     end
 endtask
 
+// ============================================================================
+// Main Test Process
+// ============================================================================
 initial begin
     $display("======================================================================");
-    $display("Montgomery Pipeline Testbench - Multiple Tests");
+    $display("Montgomery Pipeline Testbench - Streaming Version");
     $display("======================================================================");
     $display("Testing Montgomery Modular Reduction with BN254 curve parameters");
     $display("TOTAL_BITS = %d, SEG_BITS = %d, SEG_CNT = %d", TOTAL_BITS, SEG_BITS, SEG_CNT);
+    $display("PIPELINE_STAGES = %d", PIPELINE_STAGES);
     $display("Number of test cases: %d", NUM_TESTS);
     $display("======================================================================");
 
     clk = 0;
     rst_n = 0;
-    start = 0;
     N = 0;
     N_prime = 0;
     t = 0;
+    in_valid = 0;
     cycle_count = 0;
     test_passed = 1;
     result_check = 0;
     test_index = 0;
     tests_passed = 0;
     tests_failed = 0;
-    current_expected = 0;
+    result_count = 0;
+    input_count = 0;
 
     #20;
     rst_n = 1;
     #20;
 
-    run_test(1, A_MONT_1, B_MONT_1, T_1, EXP_1);
-    run_test(2, A_MONT_2, B_MONT_2, T_2, EXP_2);
-    run_test(3, A_MONT_3, B_MONT_3, T_3, EXP_3);
-    run_test(4, A_MONT_4, B_MONT_4, T_4, EXP_4);
-    run_test(5, A_MONT_5, B_MONT_5, T_5, EXP_5);
-    run_test(6, A_MONT_6, B_MONT_6, T_6, EXP_6);
+    result_queue[0] = EXP_1;
+    result_queue[1] = EXP_2;
+    result_queue[2] = EXP_3;
+    result_queue[3] = EXP_4;
+    result_queue[4] = EXP_5;
+    result_queue[5] = EXP_6;
+
+    t_queue[0] = T_1;
+    t_queue[1] = T_2;
+    t_queue[2] = T_3;
+    t_queue[3] = T_4;
+    t_queue[4] = T_5;
+    t_queue[5] = T_6;
+
+    $display("\n[Pipeline] Sending test inputs...");
+    $display("======================================================================");
+
+    for (test_index = 0; test_index < NUM_TESTS; test_index = test_index + 1) begin
+        $display("[Test %0d/%0d] Input sent - T = 0x%h...", 
+                 test_index+1, NUM_TESTS, t_queue[test_index]);
+        send_input(t_queue[test_index]);
+        input_count = input_count + 1;
+    end
+
+    $display("\n[Pipeline] Waiting for results...");
+    $display("======================================================================");
+
+    for (test_index = 0; test_index < NUM_TESTS; test_index = test_index + 1) begin
+        wait(out_valid == 1);
+        @(posedge clk);
+        result_check = mont_result;
+        current_expected = result_queue[test_index];
+
+        $display("\n[Result %0d/%0d]", test_index+1, NUM_TESTS);
+        $display("Expected: 0x%h", current_expected);
+        $display("Got:      0x%h", result_check);
+
+        if (result_check == current_expected) begin
+            $display("[Test %0d] PASS", test_index+1);
+            tests_passed = tests_passed + 1;
+        end else begin
+            $display("[Test %0d] FAIL", test_index+1);
+            tests_failed = tests_failed + 1;
+        end
+        result_count = result_count + 1;
+        @(posedge clk);
+    end
 
     $display("\n======================================================================");
     $display("Test Summary");
@@ -178,7 +200,7 @@ initial begin
     $display("Total Tests: %0d", NUM_TESTS);
     $display("Passed:     %0d", tests_passed);
     $display("Failed:     %0d", tests_failed);
-    
+
     if (tests_failed == 0) begin
         $display("========================================");
         $display("[ALL TESTS PASSED]");
@@ -188,7 +210,7 @@ initial begin
         $display("[SOME TESTS FAILED]");
         $display("========================================");
     end
-    
+
     $display("======================================================================");
 
     #100;
@@ -211,7 +233,7 @@ initial begin
             $display("[ERROR] Simulation timeout!");
             $finish;
         end
-        if (done) begin
+        if (out_valid) begin
             timeout_counter = 0;
         end
     end

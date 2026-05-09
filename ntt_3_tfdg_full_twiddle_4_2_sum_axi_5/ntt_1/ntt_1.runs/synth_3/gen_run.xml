@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_3" LaunchPart="xc7z020iclg484-1L" LaunchTime="1777710124">
-  <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
-  <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="design_1_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="design_1_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="design_1_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="design_1_wrapper.dcp"/>
+<GenRun Id="synth_3" LaunchPart="xc7z020iclg484-1L" LaunchTime="1778298337">
+  <File Type="PA-TCL" Name="montgomery_pipeline.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="montgomery_pipeline_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="montgomery_pipeline_reports.tcl"/>
+  <File Type="RDS-RDS" Name="montgomery_pipeline.vds"/>
+  <File Type="RDS-UTIL" Name="montgomery_pipeline_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="montgomery_pipeline_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="montgomery_pipeline.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="montgomery_pipeline_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="montgomery_pipeline_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../sour/montgomery_pipeline.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../sour/twiddle_dyn_gen_NTT/montgomery_pipeline.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -71,14 +75,6 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../sour/PE/sub_pe/butterfly_subcore_256bit .v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../sour/montgomery_pipeline.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -328,7 +324,9 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="design_1_wrapper"/>
+      <Option Name="TopModule" Val="montgomery_pipeline"/>
+      <Option Name="TopLib" Val="xil_defaultlib"/>
+      <Option Name="TopRTLFile" Val="$PPRDIR/../sour/montgomery_pipeline.v"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

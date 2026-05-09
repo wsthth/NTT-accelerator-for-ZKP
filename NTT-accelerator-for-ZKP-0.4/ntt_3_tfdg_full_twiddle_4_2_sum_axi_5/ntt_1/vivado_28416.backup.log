@@ -1,0 +1,118 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat May  2 15:11:54 2026
+# Process ID: 28416
+# Current directory: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent36052 F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_5\ntt_1\ntt_1.xpr
+# Log file: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/vivado.log
+# Journal file: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.xpr
+INFO: [Project 1-313] Project file moved from 'F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_3/ntt_1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_axi_accelerator_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/XILINX/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 828.926 ; gain = 179.512
+update_compile_order -fileset sources_1
+open_bd_design {F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:user:ntt_axi_accelerator:1.0 - ntt_axi_accelerator_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Successfully read diagram <design_1> from BD file <F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/design_1.bd>
+make_wrapper -files [get_files F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/design_1.bd] -top
+regenerate_bd_layout
+validate_bd_design -force
+save_bd_design
+Wrote  : <F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_5\ntt_1\ntt_1.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_3
+launch_runs impl_4 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ntt_axi_accelerator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 7a5acba1489b623e; cache size = 96.471 MB.
+[Sat May  2 15:24:38 2026] Launched synth_3...
+Run output will be captured here: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/synth_3/runme.log
+[Sat May  2 15:24:38 2026] Launched impl_4...
+Run output will be captured here: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/impl_4/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1154.590 ; gain = 152.820
+file copy -force F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/impl_4/design_1_wrapper.sysdef F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/vitis_4/design_1_wrapper.hdf
+
+launch_sdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/vitis_4 -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/vitis_4/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/vitis_4 -hwspec F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/vitis_4/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+regenerate_bd_layout
+validate_bd_design -force
+save_bd_design
+Wrote  : <F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_5\ntt_1\ntt_1.srcs\sources_1\bd\design_1\design_1.bd> 
+reset_run synth_3
+launch_runs impl_4 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ntt_axi_accelerator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 7a5acba1489b623e; cache size = 96.471 MB.
+[Sat May  2 15:56:04 2026] Launched synth_3...
+Run output will be captured here: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/synth_3/runme.log
+[Sat May  2 15:56:04 2026] Launched impl_4...
+Run output will be captured here: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/impl_4/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1205.082 ; gain = 32.668
+file copy -force F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/impl_4/design_1_wrapper.sysdef F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/vitis_4/design_1_wrapper.hdf
+
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+regenerate_bd_layout
+validate_bd_design -force
+save_bd_design
+Wrote  : <F:\experiment\NTT\1\sum\ntt_3_tfdg_full_twiddle_4_2_sum_axi_5\ntt_1\ntt_1.srcs\sources_1\bd\design_1\design_1.bd> 
+reset_run synth_3
+launch_runs impl_4 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ntt_axi_accelerator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 7a5acba1489b623e; cache size = 96.471 MB.
+[Sat May  2 16:22:07 2026] Launched design_1_processing_system7_0_0_synth_1, synth_3...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/design_1_processing_system7_0_0_synth_1/runme.log
+synth_3: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/synth_3/runme.log
+[Sat May  2 16:22:07 2026] Launched impl_4...
+Run output will be captured here: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/impl_4/runme.log
+launch_runs: Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 1304.625 ; gain = 42.480
+file copy -force F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/impl_4/design_1_wrapper.sysdef F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/vitis_4/design_1_wrapper.hdf
+
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat May  2 16:46:13 2026...

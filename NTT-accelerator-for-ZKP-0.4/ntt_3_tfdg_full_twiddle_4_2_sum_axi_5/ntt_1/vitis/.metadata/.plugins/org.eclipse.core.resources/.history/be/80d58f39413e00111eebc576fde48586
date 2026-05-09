@@ -1,0 +1,56 @@
+#include "xil_io.h"
+#include "xstatus.h"
+#include "xparameters.h"
+#include "xil_printf.h"
+#include "xuartps.h"
+
+// 加速器基地址（你原本的定义，完全保留）
+#define NTT_ACCELERATOR_BASEADDR XPAR_NTT_AXI_ACCELERATOR_0_S00_AXI_BASEADDR
+
+// 串口实例
+XuartPs Uart_PS;
+
+int main(void)
+{
+    XStatus status;
+    XuartPs_Config *Uart_Config;
+
+    // ====================== 第一步：【强制初始化串口】======================
+    // 1. 查找UART硬件配置
+    Uart_Config = XuartPs_LookupConfig(XPAR_PS7_UART_1_DEVICE_ID);
+    // 2. 初始化串口驱动
+    XuartPs_CfgInitialize(&Uart_PS, Uart_Config, Uart_Config->BaseAddress);
+    // 3. 使能串口收发
+    XuartPs_SetOperatingMode(&Uart_PS, XUARTPS_OPERATING_MODE_NORMAL);
+    XuartPs_SetBaudRate(&Uart_PS, 115200);
+
+    // 初始化完成，第一句打印测试
+    xil_printf("\r\n========== 串口初始化成功！ ==========\r\n");
+    xil_printf("NTT AXI Accelerator Test Start...\r\n");
+
+    // ====================== 第二步：原本的加速器自测试 ======================
+    status = NTT_AXI_ACCELERATOR_Reg_SelfTest((void *)NTT_ACCELERATOR_BASEADDR);
+    if (status != XST_SUCCESS) {
+        xil_printf("Self Test Failed! \r\n");
+        return XST_FAILURE;
+    }
+    xil_printf("Self Test Passed! \r\n");
+
+    // ====================== 第三步：原本的寄存器读写测试 ======================
+    u32 write_data = 0x12345678;
+    NTT_AXI_ACCELERATOR_mWriteReg(NTT_ACCELERATOR_BASEADDR, NTT_AXI_ACCELERATOR_S00_AXI_SLV_REG0_OFFSET, write_data);
+    u32 read_data = NTT_AXI_ACCELERATOR_mReadReg(NTT_ACCELERATOR_BASEADDR, NTT_AXI_ACCELERATOR_S00_AXI_SLV_REG0_OFFSET);
+
+    xil_printf("REG0 Write/Read Test:\r\n");
+    xil_printf("Write Data = 0x%08X\r\n", write_data);
+    xil_printf("Read Data  = 0x%08X\r\n", read_data);
+
+    if(read_data == write_data){
+        xil_printf("REG0 读写校验成功！AXI总线通信正常！\r\n");
+    }else{
+        xil_printf("REG0 读写校验失败！\r\n");
+    }
+
+    while(1); // 程序死循环，防止跑完程序闪退
+    return XST_SUCCESS;
+}

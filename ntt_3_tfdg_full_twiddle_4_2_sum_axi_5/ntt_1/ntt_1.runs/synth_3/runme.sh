@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/synth_3'
+HD_PWD='F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/synth_3'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+EAStep vivado -log montgomery_pipeline.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source montgomery_pipeline.tcl

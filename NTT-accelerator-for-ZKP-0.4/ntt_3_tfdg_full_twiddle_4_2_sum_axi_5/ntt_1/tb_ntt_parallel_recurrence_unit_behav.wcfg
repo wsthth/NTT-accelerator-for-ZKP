@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_ntt_parallel_recurrence_unit_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_ntt_parallel_recurrence_unit" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1141666666fs"></ZoomStartTime>
+      <ZoomEndTime time="36161666667fs"></ZoomEndTime>
+      <Cursor1Time time="4661667000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="172"></NameColumnWidth>
+      <ValueColumnWidth column_width="85"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="29" />
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/reset_n" type="logic">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/base_value" type="array">
+      <obj_property name="ElementShortName">base_value[255:0]</obj_property>
+      <obj_property name="ObjectShortName">base_value[255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/step_value" type="array">
+      <obj_property name="ElementShortName">step_value[255:0]</obj_property>
+      <obj_property name="ObjectShortName">step_value[255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/modulus" type="array">
+      <obj_property name="ElementShortName">modulus[255:0]</obj_property>
+      <obj_property name="ObjectShortName">modulus[255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/Np" type="array">
+      <obj_property name="ElementShortName">Np[255:0]</obj_property>
+      <obj_property name="ObjectShortName">Np[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/R2_mod_N" type="array">
+      <obj_property name="ElementShortName">R2_mod_N[255:0]</obj_property>
+      <obj_property name="ObjectShortName">R2_mod_N[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/twiddle_0" type="array">
+      <obj_property name="ElementShortName">twiddle_0[255:0]</obj_property>
+      <obj_property name="ObjectShortName">twiddle_0[255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/twiddle_1" type="array">
+      <obj_property name="ElementShortName">twiddle_1[255:0]</obj_property>
+      <obj_property name="ObjectShortName">twiddle_1[255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/twiddle_2" type="array">
+      <obj_property name="ElementShortName">twiddle_2[255:0]</obj_property>
+      <obj_property name="ObjectShortName">twiddle_2[255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/twiddle_3" type="array">
+      <obj_property name="ElementShortName">twiddle_3[255:0]</obj_property>
+      <obj_property name="ObjectShortName">twiddle_3[255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/dut/state" type="array">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/dut/current_values" type="array">
+      <obj_property name="ElementShortName">current_values[0:3][255:0]</obj_property>
+      <obj_property name="ObjectShortName">current_values[0:3][255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/dut/counter" type="array">
+      <obj_property name="ElementShortName">counter[3:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/dut/step_powers" type="array">
+      <obj_property name="ElementShortName">step_powers[0:3][255:0]</obj_property>
+      <obj_property name="ObjectShortName">step_powers[0:3][255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/dut/mod_mult_a" type="array">
+      <obj_property name="ElementShortName">mod_mult_a[255:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_mult_a[255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/dut/mod_mult_b" type="array">
+      <obj_property name="ElementShortName">mod_mult_b[255:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_mult_b[255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/dut/mod_mult_start" type="logic">
+      <obj_property name="ElementShortName">mod_mult_start</obj_property>
+      <obj_property name="ObjectShortName">mod_mult_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/dut/mod_mult_done" type="logic">
+      <obj_property name="ElementShortName">mod_mult_done</obj_property>
+      <obj_property name="ObjectShortName">mod_mult_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/dut/mod_mult_result" type="array">
+      <obj_property name="ElementShortName">mod_mult_result[255:0]</obj_property>
+      <obj_property name="ObjectShortName">mod_mult_result[255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/dut/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/a" type="array">
+      <obj_property name="ElementShortName">a[255:0]</obj_property>
+      <obj_property name="ObjectShortName">a[255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/b" type="array">
+      <obj_property name="ElementShortName">b[255:0]</obj_property>
+      <obj_property name="ObjectShortName">b[255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/mont_start" type="logic">
+      <obj_property name="ElementShortName">mont_start</obj_property>
+      <obj_property name="ObjectShortName">mont_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/mont_done" type="logic">
+      <obj_property name="ElementShortName">mont_done</obj_property>
+      <obj_property name="ObjectShortName">mont_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/result" type="array">
+      <obj_property name="ElementShortName">result[255:0]</obj_property>
+      <obj_property name="ObjectShortName">result[255:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+</wave_config>

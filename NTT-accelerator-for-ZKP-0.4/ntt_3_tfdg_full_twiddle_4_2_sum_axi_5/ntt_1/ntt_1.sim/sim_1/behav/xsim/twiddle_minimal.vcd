@@ -1,0 +1,1025 @@
+$date
+   Mon Dec 29 22:09:21 2025
+$end
+$version
+  2019.1
+$end
+$timescale
+  1ps
+$end
+$scope module test_minimal $end
+$var reg 1 ! clk $end
+$var reg 1 " reset_n $end
+$var wire 32 # tw_real [31:0] $end
+$var wire 32 $ tw_imag [31:0] $end
+$var wire 1 % gen_done $end
+$var wire 1 & gen_valid $end
+$var wire 16 ' gen_cycles [15:0] $end
+$var wire 8 ( gen_latency [7:0] $end
+$var wire 1 ) parallel_active $end
+$var wire 1 * error $end
+$var reg 1 + start_gen $end
+$var reg 1 , mode $end
+$var reg 2 - precision [1:0] $end
+$var reg 16 . modulus [15:0] $end
+$var reg 16 / N [15:0] $end
+$var reg 8 0 stage [7:0] $end
+$var reg 8 1 index [7:0] $end
+$var parameter 32 2 DATA_WIDTH [31:0] $end
+$var parameter 32 3 MODULUS_WIDTH [31:0] $end
+$var parameter 32 4 CLK_PERIOD [31:0] $end
+$scope module dut $end
+$var wire 1 5 clk $end
+$var wire 1 6 reset_n $end
+$var wire 1 7 start_gen $end
+$var wire 1 8 mode $end
+$var wire 2 9 precision [1:0] $end
+$var wire 16 : modulus [15:0] $end
+$var wire 16 ; N [15:0] $end
+$var wire 8 < stage [7:0] $end
+$var wire 8 = index [7:0] $end
+$var reg 32 > twiddle_real [31:0] $end
+$var reg 32 ? twiddle_imag [31:0] $end
+$var reg 1 @ gen_done $end
+$var reg 1 A gen_valid $end
+$var reg 16 B gen_cycles [15:0] $end
+$var reg 8 C gen_latency [7:0] $end
+$var wire 1 ) parallel_active $end
+$var wire 1 * error $end
+$var reg 4 D state [3:0] $end
+$var reg 32 E counter [31:0] $end
+$var reg 32 F current_modulus_32 [31:0] $end
+$var reg 16 G current_modulus_16 [15:0] $end
+$var reg 16 H current_N [15:0] $end
+$var reg 8 I current_stage [7:0] $end
+$var reg 8 J current_index [7:0] $end
+$var reg 32 K base_real [31:0] $end
+$var reg 32 L base_imag [31:0] $end
+$var reg 32 M omega_real [31:0] $end
+$var reg 32 N omega_imag [31:0] $end
+$var wire 128 O parallel_real_packed [127:0] $end
+$var wire 128 P parallel_imag_packed [127:0] $end
+$var reg 1 Q parallel_start $end
+$var wire 1 R parallel_done $end
+$var integer 32 S j $end
+$var wire 32 T mod_mult_result_real [31:0] $end
+$var wire 32 U mod_mult_result_imag [31:0] $end
+$var wire 1 V mod_mult_done $end
+$var reg 1 W mod_mult_start $end
+$var reg 32 X mod_mult_a_real [31:0] $end
+$var reg 32 Y mod_mult_a_imag [31:0] $end
+$var reg 32 Z mod_mult_b_real [31:0] $end
+$var reg 32 [ mod_mult_b_imag [31:0] $end
+$var reg 32 \ mod_mult_modulus [31:0] $end
+$var parameter 32 ] DATA_WIDTH [31:0] $end
+$var parameter 32 ^ MODULUS_WIDTH [31:0] $end
+$var parameter 32 _ MAX_MODULUS [31:0] $end
+$var parameter 32 ` PARALLEL_LEVEL [31:0] $end
+$var parameter 32 a PIPELINE_DEPTH [31:0] $end
+$var parameter 32 b Q_FORMAT [31:0] $end
+$var parameter 4 c STATE_IDLE [3:0] $end
+$var parameter 4 d STATE_CALC_BASE [3:0] $end
+$var parameter 4 e STATE_PARALLEL_INIT [3:0] $end
+$var parameter 4 f STATE_PARALLEL_GEN [3:0] $end
+$var parameter 4 g STATE_NORMALIZATION [3:0] $end
+$var parameter 4 h STATE_DONE [3:0] $end
+$scope module mod_mult_inst $end
+$var wire 1 5 clk $end
+$var wire 1 6 reset_n $end
+$var wire 1 i start $end
+$var wire 32 j a_real [31:0] $end
+$var wire 32 k a_imag [31:0] $end
+$var wire 32 l b_real [31:0] $end
+$var wire 32 m b_imag [31:0] $end
+$var wire 32 n modulus [31:0] $end
+$var reg 32 o result_real [31:0] $end
+$var reg 32 p result_imag [31:0] $end
+$var reg 1 q done $end
+$var reg 3 r state [2:0] $end
+$var parameter 32 s DATA_WIDTH [31:0] $end
+$var parameter 3 t S_IDLE [2:0] $end
+$var parameter 3 u S_CALC [2:0] $end
+$var parameter 3 v S_DONE [2:0] $end
+$upscope $end
+$scope module parallel_unit $end
+$var wire 1 5 clk $end
+$var wire 1 6 reset_n $end
+$var wire 1 w start $end
+$var wire 32 x base_real [31:0] $end
+$var wire 32 y base_imag [31:0] $end
+$var wire 32 z omega_real [31:0] $end
+$var wire 32 { omega_imag [31:0] $end
+$var wire 32 | modulus [31:0] $end
+$var wire 128 O twiddle_real_packed [127:0] $end
+$var wire 128 P twiddle_imag_packed [127:0] $end
+$var reg 1 } done $end
+$var reg 3 ~ counter [2:0] $end
+$var parameter 32 !! NUM_PARALLEL [31:0] $end
+$var parameter 32 "! DATA_WIDTH [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin Block104_10 $end
+$var reg 32 #! i $end
+$upscope $end
+$scope begin Block133_11 $end
+$var reg 32 $! i $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b100 !!
+0"
+b100000 "!
+b0 #
+b0 #!
+b0 $
+b0 $!
+0%
+0&
+b0 '
+b0 (
+0)
+0*
+0+
+0,
+b10 -
+b11000000000001 .
+b100000000 /
+b0 0
+b0 1
+b100000 2
+b10000 3
+b1010 4
+05
+06
+07
+08
+b10 9
+b11000000000001 :
+b100000000 ;
+b0 <
+b0 =
+b0 >
+b0 ?
+0@
+0A
+b0 B
+b0 C
+b0 D
+b0 E
+bx F
+bx G
+bx H
+bx I
+bx J
+bx K
+bx L
+bx M
+bx N
+bx O
+bx P
+0Q
+xR
+bx S
+b0 T
+b0 U
+0V
+0W
+bx X
+bx Y
+bx Z
+bx [
+bx \
+b100000 ]
+b10000 ^
+b11000000000001 _
+b100 `
+b11 a
+b10000 b
+b0 c
+b1 d
+b10 e
+b11 f
+b100 g
+b101 h
+0i
+bx j
+bx k
+bx l
+bx m
+bx n
+b0 o
+b0 p
+0q
+b0 r
+b100000 s
+b0 t
+b1 u
+b10 v
+0w
+bx x
+bx y
+bx z
+bx {
+bx |
+x}
+bx ~
+$end
+#5000
+1!
+15
+b0 O
+b0 P
+0R
+b100 S
+0}
+b0 ~
+#10000
+0!
+05
+#15000
+1!
+15
+#20000
+0!
+05
+#25000
+1!
+15
+#30000
+0!
+05
+#35000
+1!
+15
+#40000
+0!
+05
+#45000
+1!
+15
+#50000
+0!
+05
+#55000
+1!
+15
+#60000
+0!
+05
+#65000
+1!
+15
+#70000
+0!
+05
+#75000
+1!
+15
+#80000
+0!
+05
+#85000
+1!
+15
+#90000
+0!
+05
+#95000
+1!
+15
+#100000
+0!
+1"
+05
+16
+#105000
+1!
+b1 '
+15
+b1 B
+#110000
+0!
+05
+#115000
+1!
+b10 '
+15
+b10 B
+#120000
+0!
+1+
+b11000000000001 .
+b100000000 /
+b0 0
+b0 1
+05
+17
+#125000
+1!
+b11 '
+0+
+15
+07
+b11 B
+#130000
+0!
+05
+#135000
+1!
+b100 '
+15
+b100 B
+#140000
+0!
+05
+#145000
+1!
+b101 '
+15
+b101 B
+#150000
+0!
+05
+#155000
+1!
+b110 '
+15
+b110 B
+#160000
+0!
+05
+#165000
+1!
+b111 '
+15
+b111 B
+#170000
+0!
+05
+#175000
+1!
+b1000 '
+15
+b1000 B
+#180000
+0!
+05
+#185000
+1!
+b1001 '
+15
+b1001 B
+#190000
+0!
+05
+#195000
+1!
+b1010 '
+15
+b1010 B
+#200000
+0!
+05
+#205000
+1!
+b1011 '
+15
+b1011 B
+#210000
+0!
+05
+#215000
+1!
+b1100 '
+15
+b1100 B
+#220000
+0!
+05
+#225000
+1!
+b1101 '
+15
+b1101 B
+#230000
+0!
+05
+#235000
+1!
+b1110 '
+15
+b1110 B
+#240000
+0!
+05
+#245000
+1!
+b1111 '
+15
+b1111 B
+#250000
+0!
+05
+#255000
+1!
+b10000 '
+15
+b10000 B
+#260000
+0!
+05
+#265000
+1!
+b10001 '
+15
+b10001 B
+#270000
+0!
+05
+#275000
+1!
+b10010 '
+15
+b10010 B
+#280000
+0!
+05
+#285000
+1!
+b10011 '
+15
+b10011 B
+#290000
+0!
+05
+#295000
+1!
+b10100 '
+15
+b10100 B
+#300000
+0!
+05
+#305000
+1!
+b10101 '
+15
+b10101 B
+#310000
+0!
+05
+#315000
+1!
+b10110 '
+15
+b10110 B
+#320000
+0!
+05
+#325000
+1!
+b10111 '
+15
+b10111 B
+#330000
+0!
+05
+#335000
+1!
+b11000 '
+15
+b11000 B
+#340000
+0!
+05
+#345000
+1!
+b11001 '
+15
+b11001 B
+#350000
+0!
+05
+#355000
+1!
+b11010 '
+15
+b11010 B
+#360000
+0!
+05
+#365000
+1!
+b11011 '
+15
+b11011 B
+#370000
+0!
+05
+#375000
+1!
+b11100 '
+15
+b11100 B
+#380000
+0!
+05
+#385000
+1!
+b11101 '
+15
+b11101 B
+#390000
+0!
+05
+#395000
+1!
+b11110 '
+15
+b11110 B
+#400000
+0!
+05
+#405000
+1!
+b11111 '
+15
+b11111 B
+#410000
+0!
+05
+#415000
+1!
+b100000 '
+15
+b100000 B
+#420000
+0!
+05
+#425000
+1!
+b100001 '
+15
+b100001 B
+#430000
+0!
+05
+#435000
+1!
+b100010 '
+15
+b100010 B
+#440000
+0!
+05
+#445000
+1!
+b100011 '
+15
+b100011 B
+#450000
+0!
+05
+#455000
+1!
+b100100 '
+15
+b100100 B
+#460000
+0!
+05
+#465000
+1!
+b100101 '
+15
+b100101 B
+#470000
+0!
+05
+#475000
+1!
+b100110 '
+15
+b100110 B
+#480000
+0!
+05
+#485000
+1!
+b100111 '
+15
+b100111 B
+#490000
+0!
+05
+#495000
+1!
+b101000 '
+15
+b101000 B
+#500000
+0!
+05
+#505000
+1!
+b101001 '
+15
+b101001 B
+#510000
+0!
+05
+#515000
+1!
+b101010 '
+15
+b101010 B
+#520000
+0!
+05
+#525000
+1!
+b101011 '
+15
+b101011 B
+#530000
+0!
+05
+#535000
+1!
+b101100 '
+15
+b101100 B
+#540000
+0!
+05
+#545000
+1!
+b101101 '
+15
+b101101 B
+#550000
+0!
+05
+#555000
+1!
+b101110 '
+15
+b101110 B
+#560000
+0!
+05
+#565000
+1!
+b101111 '
+15
+b101111 B
+#570000
+0!
+05
+#575000
+1!
+b110000 '
+15
+b110000 B
+#580000
+0!
+05
+#585000
+1!
+b110001 '
+15
+b110001 B
+#590000
+0!
+05
+#595000
+1!
+b110010 '
+15
+b110010 B
+#600000
+0!
+05
+#605000
+1!
+b110011 '
+15
+b110011 B
+#610000
+0!
+05
+#615000
+1!
+b110100 '
+15
+b110100 B
+#620000
+0!
+05
+#625000
+1!
+b110101 '
+15
+b110101 B
+#630000
+0!
+05
+#635000
+1!
+b110110 '
+15
+b110110 B
+#640000
+0!
+05
+#645000
+1!
+b110111 '
+15
+b110111 B
+#650000
+0!
+05
+#655000
+1!
+b111000 '
+15
+b111000 B
+#660000
+0!
+05
+#665000
+1!
+b111001 '
+15
+b111001 B
+#670000
+0!
+05
+#675000
+1!
+b111010 '
+15
+b111010 B
+#680000
+0!
+05
+#685000
+1!
+b111011 '
+15
+b111011 B
+#690000
+0!
+05
+#695000
+1!
+b111100 '
+15
+b111100 B
+#700000
+0!
+05
+#705000
+1!
+b111101 '
+15
+b111101 B
+#710000
+0!
+05
+#715000
+1!
+b111110 '
+15
+b111110 B
+#720000
+0!
+05
+#725000
+1!
+b111111 '
+15
+b111111 B
+#730000
+0!
+05
+#735000
+1!
+b1000000 '
+15
+b1000000 B
+#740000
+0!
+05
+#745000
+1!
+b1000001 '
+15
+b1000001 B
+#750000
+0!
+05
+#755000
+1!
+b1000010 '
+15
+b1000010 B
+#760000
+0!
+05
+#765000
+1!
+b1000011 '
+15
+b1000011 B
+#770000
+0!
+05
+#775000
+1!
+b1000100 '
+15
+b1000100 B
+#780000
+0!
+05
+#785000
+1!
+b1000101 '
+15
+b1000101 B
+#790000
+0!
+05
+#795000
+1!
+b1000110 '
+15
+b1000110 B
+#800000
+0!
+05
+#805000
+1!
+b1000111 '
+15
+b1000111 B
+#810000
+0!
+05
+#815000
+1!
+b1001000 '
+15
+b1001000 B
+#820000
+0!
+05
+#825000
+1!
+b1001001 '
+15
+b1001001 B
+#830000
+0!
+05
+#835000
+1!
+b1001010 '
+15
+b1001010 B
+#840000
+0!
+05
+#845000
+1!
+b1001011 '
+15
+b1001011 B
+#850000
+0!
+05
+#855000
+1!
+b1001100 '
+15
+b1001100 B
+#860000
+0!
+05
+#865000
+1!
+b1001101 '
+15
+b1001101 B
+#870000
+0!
+05
+#875000
+1!
+b1001110 '
+15
+b1001110 B
+#880000
+0!
+05
+#885000
+1!
+b1001111 '
+15
+b1001111 B
+#890000
+0!
+05
+#895000
+1!
+b1010000 '
+15
+b1010000 B
+#900000
+0!
+05
+#905000
+1!
+b1010001 '
+15
+b1010001 B
+#910000
+0!
+05
+#915000
+1!
+b1010010 '
+15
+b1010010 B
+#920000
+0!
+05
+#925000
+1!
+b1010011 '
+15
+b1010011 B
+#930000
+0!
+05
+#935000
+1!
+b1010100 '
+15
+b1010100 B
+#940000
+0!
+05
+#945000
+1!
+b1010101 '
+15
+b1010101 B
+#950000
+0!
+05
+#955000
+1!
+b1010110 '
+15
+b1010110 B
+#960000
+0!
+05
+#965000
+1!
+b1010111 '
+15
+b1010111 B
+#970000
+0!
+05
+#975000
+1!
+b1011000 '
+15
+b1011000 B
+#980000
+0!
+05
+#985000
+1!
+b1011001 '
+15
+b1011001 B
+#990000
+0!
+05
+#995000
+1!
+b1011010 '
+15
+b1011010 B
+#1000000
+0!
+05

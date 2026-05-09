@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../sour/twiddle_dyn_gen/parallel_recurrence_unit_packed.v" \
+"../../../../../sour/twiddle_dyn_gen/simplified_mod_mult.v" \
+"../../../../../sour/twiddle_dyn_gen/twiddle_dynamic_gen.v" \
+"../../../../../sour/twiddle_dyn_gen/test_minimal.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

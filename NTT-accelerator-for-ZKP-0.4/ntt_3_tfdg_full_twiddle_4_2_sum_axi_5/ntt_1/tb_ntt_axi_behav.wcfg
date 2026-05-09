@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_ntt_axi_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_vip_pkg" />
+            <top_module name="glbl" />
+            <top_module name="std" />
+            <top_module name="tb_ntt_axi" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="255000001fs"></ZoomEndTime>
+      <Cursor1Time time="830885000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="237"></NameColumnWidth>
+      <ValueColumnWidth column_width="196"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="59" />
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ACLK" type="logic">
+      <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARESETN" type="logic">
+      <obj_property name="ElementShortName">S_AXI_ARESETN</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARESETN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWADDR" type="array">
+      <obj_property name="ElementShortName">S_AXI_AWADDR[9:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWADDR[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWPROT" type="array">
+      <obj_property name="ElementShortName">S_AXI_AWPROT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWPROT[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWVALID" type="logic">
+      <obj_property name="ElementShortName">S_AXI_AWVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWREADY" type="logic">
+      <obj_property name="ElementShortName">S_AXI_AWREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WDATA" type="array">
+      <obj_property name="ElementShortName">S_AXI_WDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WSTRB" type="array">
+      <obj_property name="ElementShortName">S_AXI_WSTRB[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WSTRB[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WVALID" type="logic">
+      <obj_property name="ElementShortName">S_AXI_WVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WREADY" type="logic">
+      <obj_property name="ElementShortName">S_AXI_WREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BRESP" type="array">
+      <obj_property name="ElementShortName">S_AXI_BRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BRESP[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BVALID" type="logic">
+      <obj_property name="ElementShortName">S_AXI_BVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BREADY" type="logic">
+      <obj_property name="ElementShortName">S_AXI_BREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARADDR" type="array">
+      <obj_property name="ElementShortName">S_AXI_ARADDR[9:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARADDR[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARPROT" type="array">
+      <obj_property name="ElementShortName">S_AXI_ARPROT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARPROT[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARVALID" type="logic">
+      <obj_property name="ElementShortName">S_AXI_ARVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARREADY" type="logic">
+      <obj_property name="ElementShortName">S_AXI_ARREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RDATA" type="array">
+      <obj_property name="ElementShortName">S_AXI_RDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RRESP" type="array">
+      <obj_property name="ElementShortName">S_AXI_RRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RRESP[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RVALID" type="logic">
+      <obj_property name="ElementShortName">S_AXI_RVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RREADY" type="logic">
+      <obj_property name="ElementShortName">S_AXI_RREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg0_o" type="array">
+      <obj_property name="ElementShortName">slv_reg0_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg0_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg2_o" type="array">
+      <obj_property name="ElementShortName">slv_reg2_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg2_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg3_o" type="array">
+      <obj_property name="ElementShortName">slv_reg3_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg3_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg4_o" type="array">
+      <obj_property name="ElementShortName">slv_reg4_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg4_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg5_o" type="array">
+      <obj_property name="ElementShortName">slv_reg5_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg5_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg6_o" type="array">
+      <obj_property name="ElementShortName">slv_reg6_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg6_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg7_o" type="array">
+      <obj_property name="ElementShortName">slv_reg7_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg7_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg8_o" type="array">
+      <obj_property name="ElementShortName">slv_reg8_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg8_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg9_o" type="array">
+      <obj_property name="ElementShortName">slv_reg9_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg9_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg10_o" type="array">
+      <obj_property name="ElementShortName">slv_reg10_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg10_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg11_o" type="array">
+      <obj_property name="ElementShortName">slv_reg11_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg11_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg12_o" type="array">
+      <obj_property name="ElementShortName">slv_reg12_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg12_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg13_o" type="array">
+      <obj_property name="ElementShortName">slv_reg13_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg13_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg14_o" type="array">
+      <obj_property name="ElementShortName">slv_reg14_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg14_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/status_in_i" type="array">
+      <obj_property name="ElementShortName">status_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">status_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_awaddr" type="array">
+      <obj_property name="ElementShortName">axi_awaddr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_awaddr[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_awready" type="logic">
+      <obj_property name="ElementShortName">axi_awready</obj_property>
+      <obj_property name="ObjectShortName">axi_awready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_wready" type="logic">
+      <obj_property name="ElementShortName">axi_wready</obj_property>
+      <obj_property name="ObjectShortName">axi_wready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_bresp" type="array">
+      <obj_property name="ElementShortName">axi_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_bvalid" type="logic">
+      <obj_property name="ElementShortName">axi_bvalid</obj_property>
+      <obj_property name="ObjectShortName">axi_bvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_araddr" type="array">
+      <obj_property name="ElementShortName">axi_araddr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_araddr[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_arready" type="logic">
+      <obj_property name="ElementShortName">axi_arready</obj_property>
+      <obj_property name="ObjectShortName">axi_arready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rdata" type="array">
+      <obj_property name="ElementShortName">axi_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rresp" type="array">
+      <obj_property name="ElementShortName">axi_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rvalid" type="logic">
+      <obj_property name="ElementShortName">axi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">axi_rvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg" type="array">
+      <obj_property name="ElementShortName">slv_reg[0:255][31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg[0:255][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg_wren" type="logic">
+      <obj_property name="ElementShortName">slv_reg_wren</obj_property>
+      <obj_property name="ObjectShortName">slv_reg_wren</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg_rden" type="logic">
+      <obj_property name="ElementShortName">slv_reg_rden</obj_property>
+      <obj_property name="ObjectShortName">slv_reg_rden</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/reg_data_out" type="array">
+      <obj_property name="ElementShortName">reg_data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_data_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/byte_index" type="array">
+      <obj_property name="ElementShortName">byte_index[31:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_index[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/aw_en" type="logic">
+      <obj_property name="ElementShortName">aw_en</obj_property>
+      <obj_property name="ObjectShortName">aw_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/wr_index" type="array">
+      <obj_property name="ElementShortName">wr_index[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_index[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/rd_index" type="array">
+      <obj_property name="ElementShortName">rd_index[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_index[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/C_S_AXI_DATA_WIDTH" type="array">
+      <obj_property name="ElementShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/C_S_AXI_ADDR_WIDTH" type="array">
+      <obj_property name="ElementShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/ADDR_LSB" type="array">
+      <obj_property name="ElementShortName">ADDR_LSB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_LSB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/OPT_MEM_ADDR_BITS" type="array">
+      <obj_property name="ElementShortName">OPT_MEM_ADDR_BITS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OPT_MEM_ADDR_BITS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/REG_COUNT" type="array">
+      <obj_property name="ElementShortName">REG_COUNT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">REG_COUNT[31:0]</obj_property>
+   </wvobject>
+</wave_config>

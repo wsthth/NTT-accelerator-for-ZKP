@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../sour/twiddle_dyn_gen_NTT/montgomery_pipeline.v" \
+"../../../../../sour/PE/sub_pe/seg_multiplier_64bit.v" \
+"../../../../../sour/PE/sub_pe/segmented_256bit_full_butterfly.v" \
+"../../../../../sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

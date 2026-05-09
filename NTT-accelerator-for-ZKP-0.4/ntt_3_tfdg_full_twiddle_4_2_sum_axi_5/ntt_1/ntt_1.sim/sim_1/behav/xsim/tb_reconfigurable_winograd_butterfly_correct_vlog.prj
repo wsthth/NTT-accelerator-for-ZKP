@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../sour/twiddle_dyn_gen_NTT/twiddle/modular_exponentiation.v" \
+"../../../../../sour/twiddle_dyn_gen_NTT/modular_multiplier_256bit_montgomery.v" \
+"../../../../../sour/twiddle_dyn_gen_NTT/montgomery_multiplier_256bit.v" \
+"../../../../../sour/twiddle_dyn_gen_NTT/montgomery_pipeline.v" \
+"../../../../../sour/PE/Reconfigurable Butterfly Unit/reconfigurable_winograd_butterfly.v" \
+"../../../../../sour/PE/sub_pe/seg_multiplier_64bit.v" \
+"../../../../../sour/PE/sub_pe/segmented_256bit_butterfly.v" \
+"../../../../../sour/PE/Reconfigurable Butterfly Unit/tb_reconfigurable_winograd_butterfly_correct.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

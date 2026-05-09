@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat May  9 12:30:51 2026
+# Process ID: 18064
+# Current directory: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim/xsim.dir/tb_montgomery_streaming_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim/xsim.dir/tb_montgomery_streaming_behav/webtalk/xsim_webtalk.tcl -notrace

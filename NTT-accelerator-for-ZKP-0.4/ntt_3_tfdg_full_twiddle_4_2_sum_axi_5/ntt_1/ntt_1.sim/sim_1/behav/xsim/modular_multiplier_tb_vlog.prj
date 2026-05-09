@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../sour/twiddle_dyn_gen_NTT/modular_multiplier_256bit.v" \
+"../../../../../sour/twiddle_dyn_gen_NTT/modular_multiplier_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sat May  2 16:23:19 2026
-# Process ID: 28780
-# Current directory: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/synth_3
-# Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
-# Log file: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/synth_3/design_1_wrapper.vds
-# Journal file: F:/experiment/NTT/1/sum/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/synth_3\vivado.jou
+# Start of session at: Sat May  9 11:45:41 2026
+# Process ID: 34704
+# Current directory: F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/synth_3
+# Command line: vivado.exe -log montgomery_pipeline.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source montgomery_pipeline.tcl
+# Log file: F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/synth_3/montgomery_pipeline.vds
+# Journal file: F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/synth_3\vivado.jou
 #-----------------------------------------------------------
-source design_1_wrapper.tcl -notrace
+source montgomery_pipeline.tcl -notrace

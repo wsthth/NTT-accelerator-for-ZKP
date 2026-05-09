@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="synth_3" LaunchDir="F:/experiment/python/trae/ntt_axi/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.runs/synth_3" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

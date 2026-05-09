@@ -1,0 +1,78 @@
+[33mcommit 347abdc85e3922ac36a22306e5603f617eb0b831[m
+Author: User <user@example.com>
+Date:   Fri May 8 17:45:58 2026 +0800
+
+    Initial commit: Full NTT accelerator project
+    
+    - Montgomery pipeline modules
+    - Twiddle factor generators
+    - NTT IP cores
+    - Testbenches and simulations
+
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6351aa7[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1,40 @@[m
+[32m+[m[32m# Vivado generated files[m
+[32m+[m[32m*.cache[m
+[32m+[m[32m*.runs[m
+[32m+[m[32m*.logs[m
+[32m+[m[32m*.jou[m
+[32m+[m[32m*.ip_user_files[m
+[32m+[m[32m*.hw[m
+[32m+[m[32m*.sim[m
+[32m+[m[32m*.ipdefs[m
+[32m+[m[32m*.coe[m
+[32m+[m[32m*.mif[m
+[32m+[m[32m*.data[m
+[32m+[m
+[32m+[m[32m# Vivado project files[m
+[32m+[m[32m*.xpr[m
+[32m+[m[32m*.xdc[m
+[32m+[m[32m*.bd[m
+[32m+[m[32m*.hwh[m
+[32m+[m
+[32m+[m[32m# Simulation[m
+[32m+[m[32m*.vcd[m
+[32m+[m[32m*.wdb[m
+[32m+[m[32m*.wcfg[m
+[32m+[m
+[32m+[m[32m# OS generated[m
+[32m+[m[32m.DS_Store[m
+[32m+[m[32mThumbs.db[m
+[32m+[m[32m*.tmp[m
+[32m+[m
+[32m+[m[32m# Log files[m
+[32m+[m[32m*.log[m
+[32m+[m[32mhs_err_*.log[m
+[32m+[m
+[32m+[m[32m# SDK[m
+[32m+[m[32m*.bsp[m
+[32m+[m[32m*.sdk[m
+[32m+[m
+[32m+[m[32m# Vitis[m
+[32m+[m[32mvitis*[m
+[32m+[m[32mvitis_*[m
+[1mdiff --git a/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/NA/ps7_summary.html b/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/NA/ps7_summary.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..73e8764[m
+[1m--- /dev/null[m
+[1m+++ b/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/NA/ps7_summary.html[m
+[36m@@ -0,0 +1,28704 @@[m
+[32m+[m[32m<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m<meta http-equiv="content-type" content="text/html;charset=UTF-8">[m
+[32m+[m[32m<title>Zynq PS configuration detail</title>[m
+[32m+[m[32m<style type="text/css">.sitename {    background-color: #EEE;border:2px ridge #FFCF01;color: #B20838;       font-size:22px;       font-style:oblique;       font-weight:bold;margin:0px 0px 10px 0px;padding:5px 0px;        text-align:center;        z-index: 3;        -moz-border-radius: 10px;        -webkit-border-radius: 10px;        -khtml-border-radius: 10px;        border-radius: 10px;}.navpath {color: #FFCF01;       font-size:8px;padding: 7px 2px 2px 11px;         text-transform: capitalize;         z-index:2;}.navbar {    background-color: #B20838;    background-color: #EE3424;color: #fff;border: 1px solid #000;        border-left: 0px solid #000;        border-right: 0px solid #000;        font-family: arial, sans-serif;        font-weight: bold;height:50px;       letter-spacing: 2px;       text-transform: uppercase;position:fixed;top:0px;left:0px;right:0px;      z-index: 0;      /*         -moz-border-radius: 10px;         -webkit-border-radius: 10px;         -khtml-border-radius: 10px;         border-radius: 10px;       */}.navlink_container {    text-align:center;position: absolute;bottom:-1px;}.navbar a {color: #FFF;}.navbar a:hover {color: #EC891D;}.navbar ul {    margin-left: 0px;height: 70px;overflow: hidden;}.navbar li {    background-color: #B20838;padding: 4px 400px 4px 400px;float: left;       font-size:24px;width: 800px;}.navbar li:hover {    background-color: #000;color: #eee;}.navbar li#last {    padding-right: 10px;    border-right: 1px solid #050505;    background-image: none;}.nav_splash {width: 80%;float:right;      z-index: 0;}.search_form {position:fixed;top:25px;right:5px;      z-index:2;}.action_tray {padding:5px;position: fixed;top: 57px;width: 210px;}.action_tray_header {    text-align: center;    background-color: #DDD;border: 2px groove #FFCF01;        margin-bottom: 10px;        -moz-border-radius: 10px;        -webkit-border-radius: 10px;        -khtml-border-radius: 10px;        border-radius: 10px;}.action_tray_header:hover {    background-color: #eee;}.action_container {padding:10px 5px;        text-align: center;}.action {    background-color: #FFF;border: 1px outset #B20838;padding: 5px 0px;         font-weight:bolder;         margin-bottom: 2px;         -moz-border-radius: 7px;         -webkit-border-radius: 7px;         -khtml-border-radius: 7px;         border-radius: 7px;         text-transform:uppercase;color: #B20838; }.action:hover {border: 1px inset #000;        background-color: #FFCF01;color: #000;}.content_container {    background-color:#fff;border: 0px solid #000;        border-left: 1px solid #000;color: #000;overflow:auto;padding: 10px;position:fixed;left: 224px;top: 52px;right: 0px;bottom:0px;       text-align: left;       padding-right:25px;       z-index:1;}.SelectButtons {    background-color:white;    border-width:1px 1px 1px 1px;    border-style:solid;    border-color:black;margin:10px 10px 10px 0px;       z-index:2;       -moz-border-radius: 5px;       -webkit-border-radius: 5px;       -khtml-border-radius: 5px;       border-radius: 5px;       font-weight:bold;}address {    margin-top: 1em;    padding-top: 1em;    border-top: thin dotted     }.viewButtons {    background-color:#F3F781;    border-width:1px 1px 1px 1px;    border-style:solid;    border-color:black;margin:10px 0px 10px 0px;       z-index:2;       -moz-border-radius: 5px;       -webkit-border-radius: 5px;       -khtml-border-radius: 5px;       border-radius: 5px;       font-weight:bold;}address {    margin-top: 1em;    padding-top: 1em;    border-top: thin dotted }.db_selector {margin:10px 0px 10px 0px;}.db_selector_title {    background-color: #00FFFF;border: 1px solid #000;        margin-bottom:5px;        font-weight:bold;padding:5px 3px;        -moz-border-radius: 5px;        -webkit-border-radius: 5px;        -khtml-border-radius: 5px;        border-radius: 5px;}select {    background-color: #FFEFC0;    font-weight:bolder;padding:3px;        -moz-border-radius: 5px;        -webkit-border-radius: 5px;        -khtml-border-radius: 5px;        border-radius: 5px;}select:hover {           background-color: #AFEFF0;       }</style>[m
+[32m+[m[32m<script type="text/javascript" language="JavaScript">function ChangeSilRegLink(id) {        var ver=document.getElementById(id).value;         if (ver == "Silicon3.0") {            document.getElementById("MIO_Registers").href="#ps7_mio_init_data_3_0";            document.getElementById("PLL_Registers").href="#ps7_pll_init_data_3_0";            document.getElementById("Clock_Registers").href="#ps7_clock_init_data_3_0";            document.getElementById("DDR_Registers").href="#ps7_ddr_init_data_3_0";            document.getElementById("Peri_Registers").href="#ps7_peripherals_init_data_3_0";            window.location = '#ps7_mio_init_data_3_0';        } else if (ver == "Silicon2.0") {            document.getElementById("MIO_Registers").href="#ps7_mio_init_data_2_0";            document.getElementById("PLL_Registers").href="#ps7_pll_init_data_2_0";            document.getElementById("Clock_Registers").href="#ps7_clock_init_data_2_0";            document.getElementById("DDR_Registers").href="#ps7_ddr_init_data_2_0";            document.getElementById("Peri_Registers").href="#ps7_peripherals_init_data_2_0";            window.location = '#ps7_mio_init_data_2_0';        } else {            document.getElementById("MIO_Registers").href="#ps7_mio_init_data_1_0";            document.getElementById("PLL_Registers").href="#ps7_pll_init_data_1_0";            document.getElementById("Clock_Registers").href="#ps7_clock_init_data_1_0";            document.getElementById("DDR_Registers").href="#ps7_ddr_init_data_1_0";            document.getElementById("Peri_Registers").href="#ps7_peripherals_init_data_1_0";            window.location = '#ps7_mio_init_data_1_0';        }}</script>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m<DIV class="navbar">[m
+[32m+[m[32m<DIV class="navlink_container">[m
+[32m+[m[32m<A id="Summary" href="#">[m
+[32m+[m[32m<li>[m
+[32m+[m[32m<DIV class="navlink">Zynq PS Register Summary Viewer[m
+[32m+[m[32m</DIV>[m
+[32

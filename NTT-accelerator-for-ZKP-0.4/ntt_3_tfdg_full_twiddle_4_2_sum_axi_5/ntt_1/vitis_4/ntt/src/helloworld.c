@@ -1,0 +1,82 @@
+#include "xil_printf.h"
+#include "xil_io.h"
+#include "xparameters.h"
+
+#define NTT_BASE  XPAR_NTT_AXI_ACCELERATOR_0_S00_AXI_BASEADDR
+
+// 寄存器地址
+#define REG_D0        0x00   // 256bit 输入 [31:0]
+#define REG_D1        0x04   // 256bit 输入 [63:32]
+#define REG_D2        0x08   // 256bit 输入 [95:64]
+#define REG_D3        0x0C   // 256bit 输入 [127:96]
+#define REG_D4        0x10   // 256bit 输入 [159:128]
+#define REG_D5        0x14   // 256bit 输入 [191:160]
+#define REG_D6        0x18   // 256bit 输入 [223:192]
+#define REG_D7        0x1C   // 256bit 输入 [255:224]
+
+#define REG_START     0x20   // 启动计算
+#define REG_RES0      0x00   // 结果 0-31
+#define REG_RES1      0x04   // 结果 32-63
+#define REG_RES2      0x08   // 结果 64-95
+#define REG_RES3      0x0C   // 结果 96-127
+#define REG_RES4      0x10   // 结果 128-159
+#define REG_RES5      0x14   // 结果 160-191
+#define REG_RES6      0x18   // 结果 192-223
+#define REG_RES7      0x1C   // 结果 224-255
+
+int main()
+{
+    xil_printf("=============================================\r\n");
+    xil_printf("        256-bit NTT Hardware Calculation      \r\n");
+    xil_printf("=============================================\r\n");
+
+    //----------------------------------------------------------------------
+    // 【关键】写入 256bit 大数
+    //----------------------------------------------------------------------
+    xil_printf("Writing 256-bit input number...\r\n");
+
+    // 例子：输入 256bit 数 = 0x123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0
+    Xil_Out32(NTT_BASE + REG_D0, 0x9ABCDEF0);
+    Xil_Out32(NTT_BASE + REG_D1, 0x12345678);
+    Xil_Out32(NTT_BASE + REG_D2, 0x9ABCDEF0);
+    Xil_Out32(NTT_BASE + REG_D3, 0x12345678);
+    Xil_Out32(NTT_BASE + REG_D4, 0x9ABCDEF0);
+    Xil_Out32(NTT_BASE + REG_D5, 0x12345678);
+    Xil_Out32(NTT_BASE + REG_D6, 0x9ABCDEF0);
+    Xil_Out32(NTT_BASE + REG_D7, 0x12345678);
+
+    //----------------------------------------------------------------------
+    // 启动 256bit NTT 计算
+    //----------------------------------------------------------------------
+    xil_printf("Start 256-bit NTT computing...\r\n");
+    Xil_Out32(NTT_BASE + REG_START, 1);
+
+    // 等待计算完成
+    for (int i = 0; i < 2000000; i++);
+
+    //----------------------------------------------------------------------
+    // 读取 256bit 计算结果
+    //----------------------------------------------------------------------
+    xil_printf("Reading 256-bit NTT result...\r\n");
+
+    u32 r0 = Xil_In32(NTT_BASE + REG_RES0);
+    u32 r1 = Xil_In32(NTT_BASE + REG_RES1);
+    u32 r2 = Xil_In32(NTT_BASE + REG_RES2);
+    u32 r3 = Xil_In32(NTT_BASE + REG_RES3);
+    u32 r4 = Xil_In32(NTT_BASE + REG_RES4);
+    u32 r5 = Xil_In32(NTT_BASE + REG_RES5);
+    u32 r6 = Xil_In32(NTT_BASE + REG_RES6);
+    u32 r7 = Xil_In32(NTT_BASE + REG_RES7);
+
+    //----------------------------------------------------------------------
+    // 打印 256bit 结果
+    //----------------------------------------------------------------------
+    xil_printf("\r\n256-bit NTT Result:\r\n");
+    xil_printf("%08x%08x%08x%08x%08x%08x%08x%08x\r\n",
+        r7, r6, r5, r4, r3, r2, r1, r0);
+
+    xil_printf("\r\n[SUCCESS] 256-bit NTT calculation completed!\r\n");
+
+    while(1);
+    return 0;
+}

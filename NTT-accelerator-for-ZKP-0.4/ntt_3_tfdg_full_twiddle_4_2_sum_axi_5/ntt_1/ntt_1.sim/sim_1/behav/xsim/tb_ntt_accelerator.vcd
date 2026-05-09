@@ -1,0 +1,2069 @@
+$date
+   Sat Apr 18 16:48:38 2026
+$end
+$version
+  2019.1
+$end
+$timescale
+  1ps
+$end
+$scope module tb_ntt_accelerator $end
+$var reg 1 ! clk $end
+$var reg 1 " rst_n $end
+$var reg 2 # radix_mode [1:0] $end
+$var reg 1 $ width_384_mode $end
+$var reg 3 % parallelism [2:0] $end
+$var reg 1 & start $end
+$var wire 1 ' done $end
+$var wire 1 ( result_valid $end
+$var reg 2048 ) data_in_flat [2047:0] $end
+$var reg 1024 * twiddle_flat [1023:0] $end
+$var reg 128 + modulus [127:0] $end
+$var reg 128 , N_prime [127:0] $end
+$var reg 128 - R2_mod_N [127:0] $end
+$var wire 2048 . data_out_flat [2047:0] $end
+$var parameter 32 / MAX_WIDTH [31:0] $end
+$var parameter 32 0 MAX_RADIX [31:0] $end
+$var parameter 32 1 NUM_CORES [31:0] $end
+$var parameter 32 2 CLK_PERIOD [31:0] $end
+$scope module u_ntt $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 2 5 radix_mode [1:0] $end
+$var wire 1 6 width_384_mode $end
+$var wire 3 7 parallelism [2:0] $end
+$var wire 1 8 start $end
+$var wire 1 ' done $end
+$var wire 1 ( result_valid $end
+$var wire 2048 9 data_in [2047:0] $end
+$var wire 1024 : twiddle_factors [1023:0] $end
+$var wire 128 ; modulus [127:0] $end
+$var wire 128 < N_prime [127:0] $end
+$var wire 128 = R2_mod_N [127:0] $end
+$var wire 2048 . data_out [2047:0] $end
+$scope module inst $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 2 5 radix_mode [1:0] $end
+$var wire 1 6 width_384_mode $end
+$var wire 3 7 parallelism [2:0] $end
+$var wire 1 8 start $end
+$var wire 1 ' done $end
+$var wire 1 ( result_valid $end
+$var wire 128 ; modulus [127:0] $end
+$var wire 128 < N_prime [127:0] $end
+$var wire 128 = R2_mod_N [127:0] $end
+$var reg 2 > radix_config [1:0] $end
+$var reg 1 ? width_config $end
+$var reg 3 @ parallelism_config [2:0] $end
+$var wire 4 A actual_radix [3:0] $end
+$var wire 1 B winograd_valid $end
+$var wire 4 C core_done [3:0] $end
+$var wire 4 D core_busy [3:0] $end
+$var wire 4 E core_result_valid_array [3:0] $end
+$var reg 4 F core_enable [3:0] $end
+$var reg 1 G all_cores_done $end
+$var reg 32 H cycle_counter [31:0] $end
+$var reg 32 I total_multiplies [31:0] $end
+$var wire 1 J post_transform_valid $end
+$var parameter 32 K MAX_WIDTH [31:0] $end
+$var parameter 32 L MAX_RADIX [31:0] $end
+$var parameter 32 M NUM_CORES [31:0] $end
+$var parameter 6 N seg_count [5:0] $end
+$var parameter 8 O seg_width [7:0] $end
+$var parameter 0 P karatsuba_enable $end
+$scope module u_winograd_pre $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 8 start $end
+$var wire 2 Q radix_mode [1:0] $end
+$var wire 128 ; modulus [127:0] $end
+$var reg 1 R valid_out $end
+$var reg 3 S state [2:0] $end
+$var parameter 32 T MAX_WIDTH [31:0] $end
+$var parameter 32 U MAX_RADIX [31:0] $end
+$var parameter 32 V NUM_CORES [31:0] $end
+$var parameter 3 W IDLE [2:0] $end
+$var parameter 3 X CALC_GROUPS [2:0] $end
+$var parameter 3 Y APPLY_TRANSFORM [2:0] $end
+$var parameter 3 Z OUTPUT_READY [2:0] $end
+$scope begin Block103_2 $end
+$var integer 32 [ i $end
+$upscope $end
+$scope begin Block142_3 $end
+$var integer 32 \ g $end
+$scope begin Block142_4 $end
+$var integer 32 ] idx1 $end
+$var integer 32 ^ idx2 $end
+$upscope $end
+$upscope $end
+$scope begin Block154_5 $end
+$var integer 32 _ g $end
+$scope begin Block154_6 $end
+$var integer 32 ` idx1 $end
+$var integer 32 a idx2 $end
+$upscope $end
+$upscope $end
+$scope begin Block170_7 $end
+$var integer 32 b i $end
+$upscope $end
+$scope function mod_add $end
+$var reg 128 c mod_add [127:0] $end
+$var reg 128 d a [127:0] $end
+$var reg 128 e b [127:0] $end
+$var reg 128 f mod [127:0] $end
+$var reg 129 g sum [128:0] $end
+$upscope $end
+$scope function mod_sub $end
+$var reg 128 c mod_sub [127:0] $end
+$var reg 128 d a [127:0] $end
+$var reg 128 e b [127:0] $end
+$var reg 128 f mod [127:0] $end
+$var reg 128 h diff [127:0] $end
+$upscope $end
+$scope function calculate_conjugate $end
+$var reg 128 c calculate_conjugate [127:0] $end
+$var reg 128 d w [127:0] $end
+$var reg 128 e modulus [127:0] $end
+$upscope $end
+$scope function modular_inverse $end
+$var reg 128 c modular_inverse [127:0] $end
+$var reg 128 d a [127:0] $end
+$var reg 128 e modulus [127:0] $end
+$var reg 128 f result [127:0] $end
+$upscope $end
+$upscope $end
+$scope module core_array[0].u_core $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 i start $end
+$var reg 1 j done $end
+$var reg 1 k busy $end
+$var wire 128 l x0 [127:0] $end
+$var wire 128 m x1 [127:0] $end
+$var wire 128 n w [127:0] $end
+$var wire 128 < N_prime [127:0] $end
+$var wire 128 ; modulus [127:0] $end
+$var reg 128 o result_add [127:0] $end
+$var reg 128 p result_sub [127:0] $end
+$var reg 1 q result_valid $end
+$var reg 256 r accumulator [255:0] $end
+$var reg 3 s accum_phase [2:0] $end
+$var reg 3 t accum_i [2:0] $end
+$var reg 3 u accum_j [2:0] $end
+$var reg 9 v weight_reg [8:0] $end
+$var wire 9 w weight_calc [8:0] $end
+$var wire 256 x full_product [255:0] $end
+$var wire 128 y add_result [127:0] $end
+$var wire 128 z sub_result [127:0] $end
+$var wire 129 { temp_sum [128:0] $end
+$var wire 129 | temp_diff_check [128:0] $end
+$var wire 128 } sub_result_raw [127:0] $end
+$var reg 4 ~ state [3:0] $end
+$var reg 4 !! next_state [3:0] $end
+$var wire 128 "! montgomery_result [127:0] $end
+$var wire 1 #! montgomery_done $end
+$var wire 1 $! montgomery_valid $end
+$var parameter 32 %! TOTAL_WIDTH [31:0] $end
+$var parameter 32 &! SEG_WIDTH [31:0] $end
+$var parameter 32 '! SEG_COUNT [31:0] $end
+$var parameter 4 (! STATE_IDLE [3:0] $end
+$var parameter 4 )! STATE_SPLIT [3:0] $end
+$var parameter 4 *! STATE_COMPUTE [3:0] $end
+$var parameter 4 +! STATE_ACCUMULATE [3:0] $end
+$var parameter 4 ,! STATE_MOD_REDUCE [3:0] $end
+$var parameter 4 -! STATE_OUTPUT [3:0] $end
+$var parameter 4 .! STATE_DONE [3:0] $end
+$scope module gen_i[0].gen_j[0].u_mult $end
+$var wire 64 /! a [63:0] $end
+$var wire 64 0! b [63:0] $end
+$var wire 128 1! result [127:0] $end
+$var parameter 32 2! WIDTH [31:0] $end
+$upscope $end
+$scope module gen_i[0].gen_j[1].u_mult $end
+$var wire 64 /! a [63:0] $end
+$var wire 64 3! b [63:0] $end
+$var wire 128 4! result [127:0] $end
+$var parameter 32 5! WIDTH [31:0] $end
+$upscope $end
+$scope module gen_i[1].gen_j[0].u_mult $end
+$var wire 64 6! a [63:0] $end
+$var wire 64 0! b [63:0] $end
+$var wire 128 7! result [127:0] $end
+$var parameter 32 8! WIDTH [31:0] $end
+$upscope $end
+$scope module gen_i[1].gen_j[1].u_mult $end
+$var wire 64 6! a [63:0] $end
+$var wire 64 3! b [63:0] $end
+$var wire 128 9! result [127:0] $end
+$var parameter 32 :! WIDTH [31:0] $end
+$upscope $end
+$scope module u_montgomery $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 ;! start $end
+$var wire 128 ; N [127:0] $end
+$var wire 128 < N_prime [127:0] $end
+$var wire 256 x t [255:0] $end
+$var wire 128 "! mont_result [127:0] $end
+$var reg 1 <! valid_out $end
+$var reg 1 =! done $end
+$var reg 4 >! valid_pipeline [3:0] $end
+$var reg 256 ?! t_reg [255:0] $end
+$var reg 128 @! N_reg [127:0] $end
+$var reg 128 A! N_prime_reg [127:0] $end
+$var reg 128 B! stage1_t_low [127:0] $end
+$var reg 128 C! stage1_m [127:0] $end
+$var reg 1 D! stage1_valid $end
+$var reg 1 E! stage2_valid $end
+$var reg 128 F! stage3_m_reg [127:0] $end
+$var reg 1 G! stage3_valid $end
+$var reg 256 H! stage4_mN [255:0] $end
+$var reg 1 I! stage4_valid $end
+$var reg 257 J! stage5_sum [256:0] $end
+$var reg 1 K! stage5_valid $end
+$var integer 32 L! i $end
+$var integer 32 M! j $end
+$var integer 32 N! pos_temp $end
+$var reg 64 O! prod_low [63:0] $end
+$var reg 64 P! prod_high [63:0] $end
+$var reg 65 Q! temp_sum [64:0] $end
+$var parameter 32 R! TOTAL_BITS [31:0] $end
+$var parameter 32 S! SEG_BITS [31:0] $end
+$var parameter 32 T! SEG_CNT [31:0] $end
+$var parameter 32 U! PIPELINE_STAGES [31:0] $end
+$upscope $end
+$upscope $end
+$scope module core_array[1].u_core $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 V! start $end
+$var reg 1 W! done $end
+$var reg 1 X! busy $end
+$var wire 128 Y! x0 [127:0] $end
+$var wire 128 Z! x1 [127:0] $end
+$var wire 128 [! w [127:0] $end
+$var wire 128 < N_prime [127:0] $end
+$var wire 128 ; modulus [127:0] $end
+$var reg 128 \! result_add [127:0] $end
+$var reg 128 ]! result_sub [127:0] $end
+$var reg 1 ^! result_valid $end
+$var reg 256 _! accumulator [255:0] $end
+$var reg 3 `! accum_phase [2:0] $end
+$var reg 3 a! accum_i [2:0] $end
+$var reg 3 b! accum_j [2:0] $end
+$var reg 9 c! weight_reg [8:0] $end
+$var wire 9 d! weight_calc [8:0] $end
+$var wire 256 e! full_product [255:0] $end
+$var wire 128 f! add_result [127:0] $end
+$var wire 128 g! sub_result [127:0] $end
+$var wire 129 h! temp_sum [128:0] $end
+$var wire 129 i! temp_diff_check [128:0] $end
+$var wire 128 j! sub_result_raw [127:0] $end
+$var reg 4 k! state [3:0] $end
+$var reg 4 l! next_state [3:0] $end
+$var wire 128 m! montgomery_result [127:0] $end
+$var wire 1 n! montgomery_done $end
+$var wire 1 o! montgomery_valid $end
+$var parameter 32 p! TOTAL_WIDTH [31:0] $end
+$var parameter 32 q! SEG_WIDTH [31:0] $end
+$var parameter 32 r! SEG_COUNT [31:0] $end
+$var parameter 4 s! STATE_IDLE [3:0] $end
+$var parameter 4 t! STATE_SPLIT [3:0] $end
+$var parameter 4 u! STATE_COMPUTE [3:0] $end
+$var parameter 4 v! STATE_ACCUMULATE [3:0] $end
+$var parameter 4 w! STATE_MOD_REDUCE [3:0] $end
+$var parameter 4 x! STATE_OUTPUT [3:0] $end
+$var parameter 4 y! STATE_DONE [3:0] $end
+$scope module gen_i[0].gen_j[0].u_mult $end
+$var wire 64 z! a [63:0] $end
+$var wire 64 {! b [63:0] $end
+$var wire 128 |! result [127:0] $end
+$var parameter 32 }! WIDTH [31:0] $end
+$upscope $end
+$scope module gen_i[0].gen_j[1].u_mult $end
+$var wire 64 z! a [63:0] $end
+$var wire 64 ~! b [63:0] $end
+$var wire 128 !" result [127:0] $end
+$var parameter 32 "" WIDTH [31:0] $end
+$upscope $end
+$scope module gen_i[1].gen_j[0].u_mult $end
+$var wire 64 #" a [63:0] $end
+$var wire 64 {! b [63:0] $end
+$var wire 128 $" result [127:0] $end
+$var parameter 32 %" WIDTH [31:0] $end
+$upscope $end
+$scope module gen_i[1].gen_j[1].u_mult $end
+$var wire 64 #" a [63:0] $end
+$var wire 64 ~! b [63:0] $end
+$var wire 128 &" result [127:0] $end
+$var parameter 32 '" WIDTH [31:0] $end
+$upscope $end
+$scope module u_montgomery $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 (" start $end
+$var wire 128 ; N [127:0] $end
+$var wire 128 < N_prime [127:0] $end
+$var wire 256 e! t [255:0] $end
+$var wire 128 m! mont_result [127:0] $end
+$var reg 1 )" valid_out $end
+$var reg 1 *" done $end
+$var reg 4 +" valid_pipeline [3:0] $end
+$var reg 256 ," t_reg [255:0] $end
+$var reg 128 -" N_reg [127:0] $end
+$var reg 128 ." N_prime_reg [127:0] $end
+$var reg 128 /" stage1_t_low [127:0] $end
+$var reg 128 0" stage1_m [127:0] $end
+$var reg 1 1" stage1_valid $end
+$var reg 1 2" stage2_valid $end
+$var reg 128 3" stage3_m_reg [127:0] $end
+$var reg 1 4" stage3_valid $end
+$var reg 256 5" stage4_mN [255:0] $end
+$var reg 1 6" stage4_valid $end
+$var reg 257 7" stage5_sum [256:0] $end
+$var reg 1 8" stage5_valid $end
+$var integer 32 9" i $end
+$var integer 32 :" j $end
+$var integer 32 ;" pos_temp $end
+$var reg 64 <" prod_low [63:0] $end
+$var reg 64 =" prod_high [63:0] $end
+$var reg 65 >" temp_sum [64:0] $end
+$var parameter 32 ?" TOTAL_BITS [31:0] $end
+$var parameter 32 @" SEG_BITS [31:0] $end
+$var parameter 32 A" SEG_CNT [31:0] $end
+$var parameter 32 B" PIPELINE_STAGES [31:0] $end
+$upscope $end
+$upscope $end
+$scope module core_array[2].u_core $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 C" start $end
+$var reg 1 D" done $end
+$var reg 1 E" busy $end
+$var wire 128 F" x0 [127:0] $end
+$var wire 128 G" x1 [127:0] $end
+$var wire 128 H" w [127:0] $end
+$var wire 128 < N_prime [127:0] $end
+$var wire 128 ; modulus [127:0] $end
+$var reg 128 I" result_add [127:0] $end
+$var reg 128 J" result_sub [127:0] $end
+$var reg 1 K" result_valid $end
+$var reg 256 L" accumulator [255:0] $end
+$var reg 3 M" accum_phase [2:0] $end
+$var reg 3 N" accum_i [2:0] $end
+$var reg 3 O" accum_j [2:0] $end
+$var reg 9 P" weight_reg [8:0] $end
+$var wire 9 Q" weight_calc [8:0] $end
+$var wire 256 R" full_product [255:0] $end
+$var wire 128 S" add_result [127:0] $end
+$var wire 128 T" sub_result [127:0] $end
+$var wire 129 U" temp_sum [128:0] $end
+$var wire 129 V" temp_diff_check [128:0] $end
+$var wire 128 W" sub_result_raw [127:0] $end
+$var reg 4 X" state [3:0] $end
+$var reg 4 Y" next_state [3:0] $end
+$var wire 128 Z" montgomery_result [127:0] $end
+$var wire 1 [" montgomery_done $end
+$var wire 1 \" montgomery_valid $end
+$var parameter 32 ]" TOTAL_WIDTH [31:0] $end
+$var parameter 32 ^" SEG_WIDTH [31:0] $end
+$var parameter 32 _" SEG_COUNT [31:0] $end
+$var parameter 4 `" STATE_IDLE [3:0] $end
+$var parameter 4 a" STATE_SPLIT [3:0] $end
+$var parameter 4 b" STATE_COMPUTE [3:0] $end
+$var parameter 4 c" STATE_ACCUMULATE [3:0] $end
+$var parameter 4 d" STATE_MOD_REDUCE [3:0] $end
+$var parameter 4 e" STATE_OUTPUT [3:0] $end
+$var parameter 4 f" STATE_DONE [3:0] $end
+$scope module gen_i[0].gen_j[0].u_mult $end
+$var wire 64 g" a [63:0] $end
+$var wire 64 h" b [63:0] $end
+$var wire 128 i" result [127:0] $end
+$var parameter 32 j" WIDTH [31:0] $end
+$upscope $end
+$scope module gen_i[0].gen_j[1].u_mult $end
+$var wire 64 g" a [63:0] $end
+$var wire 64 k" b [63:0] $end
+$var wire 128 l" result [127:0] $end
+$var parameter 32 m" WIDTH [31:0] $end
+$upscope $end
+$scope module gen_i[1].gen_j[0].u_mult $end
+$var wire 64 n" a [63:0] $end
+$var wire 64 h" b [63:0] $end
+$var wire 128 o" result [127:0] $end
+$var parameter 32 p" WIDTH [31:0] $end
+$upscope $end
+$scope module gen_i[1].gen_j[1].u_mult $end
+$var wire 64 n" a [63:0] $end
+$var wire 64 k" b [63:0] $end
+$var wire 128 q" result [127:0] $end
+$var parameter 32 r" WIDTH [31:0] $end
+$upscope $end
+$scope module u_montgomery $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 s" start $end
+$var wire 128 ; N [127:0] $end
+$var wire 128 < N_prime [127:0] $end
+$var wire 256 R" t [255:0] $end
+$var wire 128 Z" mont_result [127:0] $end
+$var reg 1 t" valid_out $end
+$var reg 1 u" done $end
+$var reg 4 v" valid_pipeline [3:0] $end
+$var reg 256 w" t_reg [255:0] $end
+$var reg 128 x" N_reg [127:0] $end
+$var reg 128 y" N_prime_reg [127:0] $end
+$var reg 128 z" stage1_t_low [127:0] $end
+$var reg 128 {" stage1_m [127:0] $end
+$var reg 1 |" stage1_valid $end
+$var reg 1 }" stage2_valid $end
+$var reg 128 ~" stage3_m_reg [127:0] $end
+$var reg 1 !# stage3_valid $end
+$var reg 256 "# stage4_mN [255:0] $end
+$var reg 1 ## stage4_valid $end
+$var reg 257 $# stage5_sum [256:0] $end
+$var reg 1 %# stage5_valid $end
+$var integer 32 &# i $end
+$var integer 32 '# j $end
+$var integer 32 (# pos_temp $end
+$var reg 64 )# prod_low [63:0] $end
+$var reg 64 *# prod_high [63:0] $end
+$var reg 65 +# temp_sum [64:0] $end
+$var parameter 32 ,# TOTAL_BITS [31:0] $end
+$var parameter 32 -# SEG_BITS [31:0] $end
+$var parameter 32 .# SEG_CNT [31:0] $end
+$var parameter 32 /# PIPELINE_STAGES [31:0] $end
+$upscope $end
+$upscope $end
+$scope module core_array[3].u_core $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 0# start $end
+$var reg 1 1# done $end
+$var reg 1 2# busy $end
+$var wire 128 3# x0 [127:0] $end
+$var wire 128 4# x1 [127:0] $end
+$var wire 128 5# w [127:0] $end
+$var wire 128 < N_prime [127:0] $end
+$var wire 128 ; modulus [127:0] $end
+$var reg 128 6# result_add [127:0] $end
+$var reg 128 7# result_sub [127:0] $end
+$var reg 1 8# result_valid $end
+$var reg 256 9# accumulator [255:0] $end
+$var reg 3 :# accum_phase [2:0] $end
+$var reg 3 ;# accum_i [2:0] $end
+$var reg 3 <# accum_j [2:0] $end
+$var reg 9 =# weight_reg [8:0] $end
+$var wire 9 ># weight_calc [8:0] $end
+$var wire 256 ?# full_product [255:0] $end
+$var wire 128 @# add_result [127:0] $end
+$var wire 128 A# sub_result [127:0] $end
+$var wire 129 B# temp_sum [128:0] $end
+$var wire 129 C# temp_diff_check [128:0] $end
+$var wire 128 D# sub_result_raw [127:0] $end
+$var reg 4 E# state [3:0] $end
+$var reg 4 F# next_state [3:0] $end
+$var wire 128 G# montgomery_result [127:0] $end
+$var wire 1 H# montgomery_done $end
+$var wire 1 I# montgomery_valid $end
+$var parameter 32 J# TOTAL_WIDTH [31:0] $end
+$var parameter 32 K# SEG_WIDTH [31:0] $end
+$var parameter 32 L# SEG_COUNT [31:0] $end
+$var parameter 4 M# STATE_IDLE [3:0] $end
+$var parameter 4 N# STATE_SPLIT [3:0] $end
+$var parameter 4 O# STATE_COMPUTE [3:0] $end
+$var parameter 4 P# STATE_ACCUMULATE [3:0] $end
+$var parameter 4 Q# STATE_MOD_REDUCE [3:0] $end
+$var parameter 4 R# STATE_OUTPUT [3:0] $end
+$var parameter 4 S# STATE_DONE [3:0] $end
+$scope module gen_i[0].gen_j[0].u_mult $end
+$var wire 64 T# a [63:0] $end
+$var wire 64 U# b [63:0] $end
+$var wire 128 V# result [127:0] $end
+$var parameter 32 W# WIDTH [31:0] $end
+$upscope $end
+$scope module gen_i[0].gen_j[1].u_mult $end
+$var wire 64 T# a [63:0] $end
+$var wire 64 X# b [63:0] $end
+$var wire 128 Y# result [127:0] $end
+$var parameter 32 Z# WIDTH [31:0] $end
+$upscope $end
+$scope module gen_i[1].gen_j[0].u_mult $end
+$var wire 64 [# a [63:0] $end
+$var wire 64 U# b [63:0] $end
+$var wire 128 \# result [127:0] $end
+$var parameter 32 ]# WIDTH [31:0] $end
+$upscope $end
+$scope module gen_i[1].gen_j[1].u_mult $end
+$var wire 64 [# a [63:0] $end
+$var wire 64 X# b [63:0] $end
+$var wire 128 ^# result [127:0] $end
+$var parameter 32 _# WIDTH [31:0] $end
+$upscope $end
+$scope module u_montgomery $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 `# start $end
+$var wire 128 ; N [127:0] $end
+$var wire 128 < N_prime [127:0] $end
+$var wire 256 ?# t [255:0] $end
+$var wire 128 G# mont_result [127:0] $end
+$var reg 1 a# valid_out $end
+$var reg 1 b# done $end
+$var reg 4 c# valid_pipeline [3:0] $end
+$var reg 256 d# t_reg [255:0] $end
+$var reg 128 e# N_reg [127:0] $end
+$var reg 128 f# N_prime_reg [127:0] $end
+$var reg 128 g# stage1_t_low [127:0] $end
+$var reg 128 h# stage1_m [127:0] $end
+$var reg 1 i# stage1_valid $end
+$var reg 1 j# stage2_valid $end
+$var reg 128 k# stage3_m_reg [127:0] $end
+$var reg 1 l# stage3_valid $end
+$var reg 256 m# stage4_mN [255:0] $end
+$var reg 1 n# stage4_valid $end
+$var reg 257 o# stage5_sum [256:0] $end
+$var reg 1 p# stage5_valid $end
+$var integer 32 q# i $end
+$var integer 32 r# j $end
+$var integer 32 s# pos_temp $end
+$var reg 64 t# prod_low [63:0] $end
+$var reg 64 u# prod_high [63:0] $end
+$var reg 65 v# temp_sum [64:0] $end
+$var parameter 32 w# TOTAL_BITS [31:0] $end
+$var parameter 32 x# SEG_BITS [31:0] $end
+$var parameter 32 y# SEG_CNT [31:0] $end
+$var parameter 32 z# PIPELINE_STAGES [31:0] $end
+$upscope $end
+$upscope $end
+$scope module u_winograd_post $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 2 {# radix_mode [1:0] $end
+$var wire 4 C core_done [3:0] $end
+$var wire 128 ; modulus [127:0] $end
+$var reg 1 |# result_valid $end
+$var reg 3 }# state [2:0] $end
+$var reg 3 ~# next_state [2:0] $end
+$var reg 3 !$ group_counter [2:0] $end
+$var reg 128 "$ temp_result [127:0] $end
+$var reg 4 #$ core_done_latched [3:0] $end
+$var wire 4 $$ post_transform_core_done [3:0] $end
+$var parameter 32 %$ MAX_WIDTH [31:0] $end
+$var parameter 32 &$ MAX_RADIX [31:0] $end
+$var parameter 32 '$ NUM_CORES [31:0] $end
+$var parameter 3 ($ IDLE [2:0] $end
+$var parameter 3 )$ WAIT_RESULTS [2:0] $end
+$var parameter 3 *$ RECONSTRUCT [2:0] $end
+$scope begin Block118_42 $end
+$var integer 32 +$ i $end
+$upscope $end
+$scope begin Block140_44 $end
+$var integer 32 ,$ i $end
+$upscope $end
+$scope begin Block218_45 $end
+$var integer 32 -$ i $end
+$upscope $end
+$scope function mod_mul $end
+$var reg 128 c mod_mul [127:0] $end
+$var reg 128 d a [127:0] $end
+$var reg 128 e b [127:0] $end
+$var reg 128 f mod [127:0] $end
+$var reg 128 h result [127:0] $end
+$var reg 128 .$ multiplicand [127:0] $end
+$var reg 128 /$ multiplier [127:0] $end
+$var integer 32 0$ i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin Block123_50 $end
+$var integer 32 1$ i $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+bx !!
+b0 !"
+0!#
+b0 !$
+0"
+b0 "!
+b1000000 ""
+b0 "#
+b0 "$
+b0 #
+0#!
+b0 #"
+0##
+b0 #$
+0$
+0$!
+b0 $"
+b0 $#
+b0 $$
+b0 %
+b10000000 %!
+b1000000 %"
+0%#
+b10000000 %$
+0&
+b1000000 &!
+b0 &"
+b100 &#
+b10000 &$
+0'
+b10 '!
+b1000000 '"
+b10 '#
+b100 '$
+0(
+b0 (!
+0("
+bx (#
+b1 ($
+b0 )
+b1 )!
+0)"
+bx )#
+b10 )$
+b0 *
+b10 *!
+0*"
+bx *#
+b100 *$
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101100001 +
+b11 +!
+b0 +"
+bx +#
+bx +$
+b10011101100011110110101000111100010111100111101100101101010011110001101000001110100011000110101101011101011111110011101000101100 ,
+b100 ,!
+b0 ,"
+b10000000 ,#
+b10000 ,$
+b10010001101000101011001111000100110101011110011011110111100001111111011011100101110101001100001110110010101000011001000010000 -
+b101 -!
+b0 -"
+b1000000 -#
+bx -$
+b0 .
+b110 .!
+b0 ."
+b10 .#
+b1101010000010100101010100000000000000000000000000000000000000000000000000000000000000000000 .$
+b10000000 /
+b0 /!
+b0 /"
+b100 /#
+b1000000000000000000000000000000000000000zzz0z0z0z0000000000000000000000000000000x00000000001000000000000000111000 /$
+b10000 0
+b0 0!
+b0 0"
+00#
+b0zz0z00000000000000000000000z 0$
+b100 1
+b0 1!
+01"
+01#
+bx 1$
+b1010 2
+b1000000 2!
+02"
+02#
+03
+b0 3!
+b0 3"
+b0 3#
+04
+b0 4!
+04"
+b0 4#
+b0 5
+b1000000 5!
+b0 5"
+b0 5#
+06
+b0 6!
+06"
+b0 6#
+b0 7
+b0 7!
+b0 7"
+b0 7#
+08
+b1000000 8!
+08"
+08#
+b0 9
+b0 9!
+b100 9"
+b0 9#
+b0 :
+b1000000 :!
+b10 :"
+b0 :#
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101100001 ;
+0;!
+bx ;"
+b0 ;#
+b10011101100011110110101000111100010111100111101100101101010011110001101000001110100011000110101101011101011111110011101000101100 <
+0<!
+bx <"
+b0 <#
+b10010001101000101011001111000100110101011110011011110111100001111111011011100101110101001100001110110010101000011001000010000 =
+0=!
+bx ="
+b0 =#
+b0 >
+b0 >!
+bx >"
+b0 >#
+0?
+b0 ?!
+b10000000 ?"
+b0 ?#
+b0 @
+b0 @!
+b1000000 @"
+b0 @#
+b10 A
+b0 A!
+b10 A"
+b0 A#
+0B
+b0 B!
+b100 B"
+b0 B#
+b0 C
+b0 C!
+0C"
+b1 C#
+b0 D
+0D!
+0D"
+b0 D#
+bz E
+0E!
+0E"
+b0 E#
+b1 F
+b0 F!
+b0 F"
+bx F#
+0G
+0G!
+b0 G"
+b0 G#
+b0 H
+b0 H!
+b0 H"
+0H#
+b0 I
+0I!
+b0 I"
+0I#
+0J
+b0 J!
+b0 J"
+b10000000 J#
+b10000000 K
+0K!
+0K"
+b1000000 K#
+b10000 L
+b100 L!
+b0 L"
+b10 L#
+b100 M
+b10 M!
+b0 M"
+b0 M#
+b100 N
+bx N!
+b0 N"
+b1 N#
+b1000000 O
+bx O!
+b0 O"
+b10 O#
+1P
+bx P!
+b0 P"
+b11 P#
+b0 Q
+bx Q!
+b0 Q"
+b100 Q#
+0R
+b10000000 R!
+b0 R"
+b101 R#
+b0 S
+b1000000 S!
+b0 S"
+b110 S#
+b10000000 T
+b10 T!
+b0 T"
+b0 T#
+b10000 U
+b100 U!
+b0 U"
+b0 U#
+b100 V
+0V!
+b1 V"
+b0 V#
+b0 W
+0W!
+b0 W"
+b1000000 W#
+b1 X
+0X!
+b0 X"
+b0 X#
+b10 Y
+b0 Y!
+bx Y"
+b0 Y#
+b11 Z
+b0 Z!
+b0 Z"
+b1000000 Z#
+b100 [
+b0 [!
+0["
+b0 [#
+bx \
+b0 \!
+0\"
+b0 \#
+bx ]
+b0 ]!
+b10000000 ]"
+b1000000 ]#
+bx ^
+0^!
+b1000000 ^"
+b0 ^#
+bx _
+b0 _!
+b10 _"
+b1000000 _#
+bx `
+b0 `!
+b0 `"
+0`#
+bx a
+b0 a!
+b1 a"
+0a#
+bx b
+b0 b!
+b10 b"
+0b#
+b11010100000101000011000100000000000000000000000000000000000 c
+b0 c!
+b11 c"
+b0 c#
+b0 d
+b0 d!
+b100 d"
+b0 d#
+b0 e
+b0 e!
+b101 e"
+b0 e#
+b0 f
+b0 f!
+b110 f"
+b0 f#
+b0 g
+b0 g!
+b0 g"
+b0 g#
+b0 h
+b0 h!
+b0 h"
+b0 h#
+0i
+b1 i!
+b0 i"
+0i#
+0j
+b0 j!
+b1000000 j"
+0j#
+0k
+b0 k!
+b0 k"
+b0 k#
+b0 l
+bx l!
+b0 l"
+0l#
+b0 m
+b0 m!
+b1000000 m"
+b0 m#
+b0 n
+0n!
+b0 n"
+0n#
+b0 o
+0o!
+b0 o"
+b0 o#
+b0 p
+b10000000 p!
+b1000000 p"
+0p#
+0q
+b1000000 q!
+b0 q"
+b100 q#
+b0 r
+b10 r!
+b1000000 r"
+b10 r#
+b0 s
+b0 s!
+0s"
+bx s#
+b0 t
+b1 t!
+0t"
+bx t#
+b0 u
+b10 u!
+0u"
+bx u#
+b0 v
+b11 v!
+b0 v"
+bx v#
+b0 w
+b100 w!
+b0 w"
+b10000000 w#
+b0 x
+b101 x!
+b0 x"
+b1000000 x#
+b0 y
+b110 y!
+b0 y"
+b10 y#
+b0 z
+b0 z!
+b0 z"
+b100 z#
+b0 {
+b0 {!
+b0 {"
+b0 {#
+b1 |
+b0 |!
+0|"
+0|#
+b0 }
+b1000000 }!
+0}"
+b1 }#
+b0 ~
+b0 ~!
+b0 ~"
+bx ~#
+$end
+#5000
+1!
+b100 &#
+b10 '#
+b10000 ,$
+13
+b100 9"
+b10 :"
+b100 L!
+b10 M!
+b100 [
+b100 q#
+b10 r#
+#10000
+0!
+03
+#15000
+1!
+b100 &#
+b10 '#
+b10000 ,$
+13
+b100 9"
+b10 :"
+b100 L!
+b10 M!
+b100 [
+b100 q#
+b10 r#
+#20000
+0!
+03
+#25000
+1!
+b100 &#
+b10 '#
+b10000 ,$
+13
+b100 9"
+b10 :"
+b100 L!
+b10 M!
+b100 [
+b100 q#
+b10 r#
+#30000
+0!
+03
+#35000
+1!
+b100 &#
+b10 '#
+b10000 ,$
+13
+b100 9"
+b10 :"
+b100 L!
+b10 M!
+b100 [
+b100 q#
+b10 r#
+#40000
+0!
+03
+#45000
+1!
+b100 &#
+b10 '#
+b10000 ,$
+13
+b100 9"
+b10 :"
+b100 L!
+b10 M!
+b100 [
+b100 q#
+b10 r#
+#50000
+0!
+1"
+03
+14
+#55000
+1!
+b0 !!
+b100 &#
+0'
+b100 +$
+13
+b100 9"
+b0 F#
+1G
+b100 L!
+b0 Y"
+b0 l!
+b100 q#
+bx }#
+b1 ~#
+#60000
+0!
+03
+#65000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+b1 }#
+#70000
+0!
+03
+#75000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#80000
+0!
+03
+#85000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#90000
+0!
+03
+#95000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#100000
+0!
+b0 #
+b0 %
+b1111111011011100101110101001100001110110010101000011001000010000000100100011010001010110011110001001101010111100110111101111000000010010001101000101011001111000100110101011110011011110111100001111111011011100101110101001100001110110010101000011001000010000 )
+b10011101100011110110101000111100010111100111101100101101010011110001101000001110100011000110101101011101011111110011101000101100 *
+03
+b1111111011011100101110101001100001110110010101000011001000010000000100100011010001010110011110001001101010111100110111101111000000010010001101000101011001111000100110101011110011011110111100001111111011011100101110101001100001110110010101000011001000010000 9
+b10011101100011110110101000111100010111100111101100101101010011110001101000001110100011000110101101011101011111110011101000101100 :
+#105000
+1!
+1&
+b100 &#
+b100 +$
+13
+18
+b100 9"
+b1 H
+b1 I
+b100 L!
+b1 S
+1i
+b100 q#
+#110000
+0!
+03
+#115000
+1!
+b1 !!
+0&
+b100 &#
+b100 +$
+13
+08
+b100 9"
+b1 D
+b100 L!
+b10 S
+0i
+1k
+b100 q#
+b1 ~
+#120000
+0!
+03
+#125000
+1!
+b10 !!
+b100 &#
+b100 +$
+13
+b100 9"
+1B
+b100 L!
+1R
+b11 S
+b100 b
+b100 q#
+b10 ~
+#130000
+0!
+03
+#135000
+1!
+b11 !!
+b100 &#
+b100 +$
+13
+b100 9"
+0B
+b100 L!
+0R
+b0 S
+b100 q#
+b11 ~
+#140000
+0!
+03
+#145000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+b1 s
+#150000
+0!
+03
+#155000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+b1 u
+b1000000 w
+#160000
+0!
+03
+#165000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+b1 t
+b0 u
+b1000000 v
+#170000
+0!
+03
+#175000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+b1 u
+b10000000 w
+#180000
+0!
+03
+#185000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+b10 s
+b0 u
+b10000000 v
+b1000000 w
+#190000
+0!
+03
+#195000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+b11 s
+#200000
+0!
+03
+#205000
+1!
+b100 !!
+b100 &#
+b100 +$
+13
+b100 9"
+1;!
+b100 L!
+b100 q#
+b100 ~
+#210000
+0!
+03
+#215000
+1!
+b0 "!
+b100 &#
+b100 +$
+13
+b100 9"
+b1 >!
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101100001 @!
+b10011101100011110110101000111100010111100111101100101101010011110001101000001110100011000110101101011101011111110011101000101100 A!
+1D!
+b100 L!
+b100 q#
+b0 s
+b0 t
+b0 w
+#220000
+0!
+03
+#225000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b11 >!
+1E!
+b100 L!
+b100 q#
+#230000
+0!
+03
+#235000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b111 >!
+1G!
+b100 L!
+b10 M!
+b100 q#
+#240000
+0!
+03
+#245000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b1111 >!
+1I!
+b100 L!
+b10 M!
+b10 N!
+b0 O!
+b0 P!
+b0 Q!
+b100 q#
+#250000
+0!
+03
+#255000
+1!
+1#!
+1$!
+b100 &#
+b100 +$
+13
+b100 9"
+1<!
+1=!
+1K!
+b100 L!
+b10 M!
+b10 N!
+b100 q#
+#260000
+0!
+03
+#265000
+1!
+b101 !!
+b100 &#
+b100 +$
+13
+b100 9"
+0;!
+b100 L!
+b10 M!
+b10 N!
+b100 q#
+b101 ~
+#270000
+0!
+03
+#275000
+1!
+b110 !!
+b100 &#
+b100 +$
+13
+b100 9"
+b1110 >!
+0D!
+b100 L!
+b10 M!
+b10 N!
+b100 q#
+b110 ~
+#280000
+0!
+03
+#285000
+1!
+b0 !!
+b100 &#
+b100 +$
+13
+b100 9"
+b1100 >!
+b1 C
+b0 D
+0E!
+b100 L!
+b10 M!
+b10 N!
+1j
+0k
+0q
+b100 q#
+b0 ~
+#290000
+0!
+03
+#295000
+1!
+b1 #$
+b1 $$
+b100 &#
+b100 +$
+13
+b100 9"
+b1000 >!
+b0 C
+0G!
+b100 L!
+b10 M!
+b10 N!
+0j
+b100 q#
+#300000
+0!
+03
+#305000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b0 >!
+0I!
+b100 L!
+b100 q#
+b10 ~#
+#310000
+0!
+03
+#315000
+1!
+0#!
+0$!
+b100 &#
+b100 +$
+13
+b100 9"
+0<!
+0=!
+0K!
+b100 L!
+b100 q#
+b10 }#
+#320000
+0!
+03
+#325000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+b100 ~#
+#330000
+0!
+03
+#335000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+b100 }#
+#340000
+0!
+03
+#345000
+1!
+b100 &#
+1'
+1(
+b100 +$
+b10 1$
+13
+b100 9"
+1J
+b100 L!
+b100 q#
+1|#
+b1 ~#
+#350000
+0!
+03
+#355000
+1!
+b0 #$
+b0 $$
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+b1 }#
+#360000
+0!
+03
+#365000
+1!
+b100 &#
+0'
+0(
+b100 +$
+13
+b100 9"
+0J
+b100 L!
+b100 q#
+0|#
+#370000
+0!
+03
+#375000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#380000
+0!
+03
+#385000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#390000
+0!
+03
+#395000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#400000
+0!
+03
+#405000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#410000
+0!
+03
+#415000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#420000
+0!
+03
+#425000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#430000
+0!
+03
+#435000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#440000
+0!
+03
+#445000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#450000
+0!
+03
+#455000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#460000
+0!
+03
+#465000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#470000
+0!
+03
+#475000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#480000
+0!
+03
+#485000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#490000
+0!
+03
+#495000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#500000
+0!
+03
+#505000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#510000
+0!
+03
+#515000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#520000
+0!
+03
+#525000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#530000
+0!
+03
+#535000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#540000
+0!
+03
+#545000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#550000
+0!
+03
+#555000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#560000
+0!
+03
+#565000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#570000
+0!
+03
+#575000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#580000
+0!
+03
+#585000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#590000
+0!
+03
+#595000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#600000
+0!
+03
+#605000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#610000
+0!
+03
+#615000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#620000
+0!
+03
+#625000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#630000
+0!
+03
+#635000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#640000
+0!
+03
+#645000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#650000
+0!
+03
+#655000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#660000
+0!
+03
+#665000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#670000
+0!
+03
+#675000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#680000
+0!
+03
+#685000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#690000
+0!
+03
+#695000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#700000
+0!
+03
+#705000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#710000
+0!
+03
+#715000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#720000
+0!
+03
+#725000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#730000
+0!
+03
+#735000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#740000
+0!
+03
+#745000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#750000
+0!
+03
+#755000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#760000
+0!
+03
+#765000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#770000
+0!
+03
+#775000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#780000
+0!
+03
+#785000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#790000
+0!
+03
+#795000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#800000
+0!
+03
+#805000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#810000
+0!
+03
+#815000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#820000
+0!
+03
+#825000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#830000
+0!
+03
+#835000
+1!
+b100 &#
+b100 +$
+13
+b100 9"
+b100 L!
+b100 q#
+#840000
+0!
+03
