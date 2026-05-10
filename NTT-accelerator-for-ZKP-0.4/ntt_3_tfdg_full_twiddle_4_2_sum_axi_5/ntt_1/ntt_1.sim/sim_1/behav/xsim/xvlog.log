@@ -1,4 +1,8 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module montgomery_pipeline
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/tb_montgomery_streaming.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_montgomery_streaming
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_multiplier_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segmented_256bit_full_butterfly
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_segmented_256bit_butterfly_1

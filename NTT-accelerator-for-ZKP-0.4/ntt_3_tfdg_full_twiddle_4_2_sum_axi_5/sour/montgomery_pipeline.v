@@ -147,25 +147,25 @@ always @(posedge clk or negedge rst_n) begin
             // 用阻塞赋值 (=) 做中间累加
             // 阻塞赋值立即生效，后续循环读到的是已更新的值
             begin : accum_block
-                reg [SEG_BITS:0]    acc [0:2*SEG_CNT-1];
-                reg [2*SEG_BITS:0]  prod_sum;
+                reg [3*SEG_BITS-1:0] acc [0:2*SEG_CNT-1];  // 192-bit, enough for all carries
                 integer ii, jj, pp;
 
                 // 清零
                 for (ii = 0; ii < 2*SEG_CNT; ii = ii + 1)
-                    acc[ii] = {(SEG_BITS+1){1'b0}};
+                    acc[ii] = {(3*SEG_BITS){1'b0}};
 
-                // 累加所有交叉乘积
+                // 第一步：累加所有交叉乘积（无进位提取）
                 for (ii = 0; ii < SEG_CNT; ii = ii + 1) begin
                     for (jj = 0; jj < SEG_CNT; jj = jj + 1) begin
                         pp = ii + jj;
-                        prod_sum = {1'b0, acc[pp]}
-                                 + {1'b0, s3_products[ii][jj][SEG_BITS-1:0]};
-                        acc[pp] = prod_sum[SEG_BITS-1:0];
-                        // 进位加到高位
-                        acc[pp+1] = acc[pp+1] + prod_sum[SEG_BITS]
-                                  + s3_products[ii][jj][2*SEG_BITS-1:SEG_BITS];
+                        acc[pp] = acc[pp] + {{(SEG_BITS+2){1'b0}}, s3_products[ii][jj]};
                     end
+                end
+
+                // 第二步：统一进位传递（从低位到高位）
+                for (ii = 0; ii < 2*SEG_CNT - 1; ii = ii + 1) begin
+                    acc[ii+1] = acc[ii+1] + {{(2*SEG_BITS){1'b0}}, acc[ii][3*SEG_BITS-1:SEG_BITS]};
+                    acc[ii]   = acc[ii] & {{(2*SEG_BITS){1'b0}}, {SEG_BITS{1'b1}}};
                 end
 
                 // 输出到 s4_mN（非阻塞赋值，时序寄存）

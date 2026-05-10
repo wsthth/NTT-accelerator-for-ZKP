@@ -3103,3 +3103,1577 @@ save_wave_config {F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 close_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1417.352 ; gain = 0.000
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -scan_for_includes F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_opt.v
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_montgomery_streaming' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_montgomery_streaming_vlog.prj"
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1417.352 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+set_property file_type SystemVerilog [get_files  F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_opt.v]
+set_property file_type Verilog [get_files  F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_opt.v]
+export_ip_user_files -of_objects  [get_files F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_opt.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_opt.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -scan_for_includes F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_opt.v
+update_compile_order -fileset sim_1
+set_property top tb_segmented_256bit_butterfly_opt [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+set_property top tb_segmented_256bit_butterfly_1 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_segmented_256bit_butterfly_1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_segmented_256bit_butterfly_1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_multiplier_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segmented_256bit_full_butterfly
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_segmented_256bit_butterfly_1
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" Line 13. Module segmented_256bit_full_butterfly_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(SEG_CNT=4) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(SEG_CNT=4)
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly_...
+Compiling module xil_defaultlib.tb_segmented_256bit_butterfly_1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_segmented_256bit_butterfly_1_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim/xsim.dir/tb_segmented_256bit_butterfly_1_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat May  9 15:59:58 2026...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 1417.352 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '13' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_segmented_256bit_butterfly_1_behav -key {Behavioral:sim_1:Functional:tb_segmented_256bit_butterfly_1} -tclbatch {tb_segmented_256bit_butterfly_1.tcl} -protoinst "protoinst_files/design_1.protoinst" -view {F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_montgomery_top_behav.wcfg} -view {F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/mod_exp_tb_behav.wcfg} -view {F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_parallel_recurrence_unit_behav.wcfg} -view {F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav.wcfg} -view {F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav1.wcfg} -view {F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav2.wcfg} -view {F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_axi_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+open_wave_config F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_montgomery_top_behav.wcfg
+WARNING: Simulation object /tb_montgomery_top/clk was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/rst_n was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/start was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/done was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/test_pass was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/CLK_PERIOD was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/mont_valid was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/A_MONT was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/B_MONT was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/stage5_sum was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/stage4_valid was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/stage5_valid was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/N_reg was not found in the design.
+WARNING: Simulation object /tb_montgomery_top/dut/u_montgomery/mont_result was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/mod_exp_tb_behav.wcfg
+WARNING: Simulation object /mod_exp_tb/clk was not found in the design.
+WARNING: Simulation object /mod_exp_tb/reset_n was not found in the design.
+WARNING: Simulation object /mod_exp_tb/start was not found in the design.
+WARNING: Simulation object /mod_exp_tb/done was not found in the design.
+WARNING: Simulation object /mod_exp_tb/base was not found in the design.
+WARNING: Simulation object /mod_exp_tb/exponent was not found in the design.
+WARNING: Simulation object /mod_exp_tb/modulus was not found in the design.
+WARNING: Simulation object /mod_exp_tb/Np was not found in the design.
+WARNING: Simulation object /mod_exp_tb/R2_mod_N was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/state was not found in the design.
+WARNING: Simulation object /mod_exp_tb/result was not found in the design.
+WARNING: Simulation object /mod_exp_tb/DATA_WIDTH was not found in the design.
+WARNING: Simulation object /mod_exp_tb/EXP_WIDTH was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/start was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/reset_n was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/clk was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/base was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/exponent was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/modulus was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/Np was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/R2_mod_N was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/result was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/done was not found in the design.
+WARNING: Simulation object /mod_exp_tb/dut/state was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_parallel_recurrence_unit_behav.wcfg
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/reset_n was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/start was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/base_value was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/step_value was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/Np was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_0 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_1 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_2 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/twiddle_3 was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/state was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/current_values was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/counter was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/step_powers was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_a was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_b was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_start was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_result was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/a was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/b was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/mont_start was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/mont_done was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/result was not found in the design.
+WARNING: Simulation object /tb_ntt_parallel_recurrence_unit/dut/mod_mult_inst/start was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav.wcfg
+WARNING: Simulation object /tb_ntt_accelerator/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/rst_n was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/radix_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/width_384_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/parallelism was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/start was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/done was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/result_valid was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_in_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/twiddle_factors_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/N_prime was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/\core_array[0].u_core /clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/\core_array[0].u_core /x0 was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/\core_array[0].u_core /x1 was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav1.wcfg
+WARNING: Simulation object /tb_ntt_accelerator/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/rst_n was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/radix_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/width_384_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/parallelism was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/start was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/done was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/result_valid was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_in_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/twiddle_factors_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/N_prime was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_RADIX was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/NUM_CORES was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/CLK_PERIOD was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/data_in was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/twiddle_in was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/x0_out was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/u_ntt/inst/u_winograd_pre/x1_out was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav2.wcfg
+WARNING: Simulation object /tb_ntt_accelerator/clk was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/rst_n was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/radix_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/width_384_mode was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/parallelism was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/start was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/done was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/result_valid was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_in_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/twiddle_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/modulus was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/N_prime was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/R2_mod_N was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out_flat was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/data_out was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/MAX_RADIX was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/NUM_CORES was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/CLK_PERIOD was not found in the design.
+WARNING: Simulation object /tb_ntt_accelerator/PIPELINE_WAIT_CYCLE was not found in the design.
+open_wave_config F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_axi_behav.wcfg
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ACLK was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARESETN was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWADDR was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWPROT was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWVALID was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_AWREADY was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WDATA was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WSTRB was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WVALID was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_WREADY was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BRESP was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BVALID was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_BREADY was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARADDR was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARPROT was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARVALID was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_ARREADY was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RDATA was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RRESP was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RVALID was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/S_AXI_RREADY was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg0_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg2_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg3_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg4_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg5_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg6_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg7_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg8_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg9_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg10_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg11_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg12_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg13_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg14_o was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/status_in_i was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_awaddr was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_awready was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_wready was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_bresp was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_bvalid was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_araddr was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_arready was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rdata was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rresp was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/axi_rvalid was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg_wren was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/slv_reg_rden was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/reg_data_out was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/byte_index was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/aw_en was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/wr_index was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/rd_index was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/C_S_AXI_DATA_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/C_S_AXI_ADDR_WIDTH was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/ADDR_LSB was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/OPT_MEM_ADDR_BITS was not found in the design.
+WARNING: Simulation object /tb_ntt_axi/u_ntt/inst/ntt_axi_accelerator_v1_0_S00_AXI_inst/REG_COUNT was not found in the design.
+source tb_segmented_256bit_butterfly_1.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+=== 测试用例1: 简单加法 ===
+输入 x0 = 0000000000000000000000000000000000000000000000000000000000000001
+输入 x1 = 2af6c90ca9c956dd6b98e311ccd63306d9d3afb7d1ae902b6da869a153471ff8
+输入 w = 25d71bdb3c5ed1475dd3a3192abc611b0e92ba5d5718e22b9fa3fab39975b753
+模数 = 30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47
+计算结果: 0d78e11613448413eb757358b09cd34f2fd5e642421128797191dff87c5bd062
+结果有效: 1
+时间 255000: 结果有效 = 0d78e11613448413eb757358b09cd34f2fd5e642421128797191dff87c5bd062
+
+=== 测试用例2: 减法模式 ===
+输入 x0 = 000000000000000a000000000000000a000000000000000a000000000000000a
+输入 x1 = 0000000000000003000000000000000300000000000000030000000000000003
+输入 w = 0000000000000002000000000000000200000000000000020000000000000002
+模数 = 0000000000000000000000000000000000000000000000000000000000000100
+计算结果: 0659c4fe80a0c649aeaeed375df9341c758d5e38f3cbd159d2bc5a08bb4c4c0e
+结果有效: 1
+
+=== 测试用例3: 随机测试 ===
+输入 x0 = 00000000000000000000000000000000b1f056638484d609c0895e8112153524
+输入 x1 = 0000000000000000000000000000000089375212b2c2846546df998d06b97b0d
+输入 w = 000000000000000000000000000000001e8dcd3d3b23f17606d7cd0d00f3e301
+模数 = ffffffff00000001000000000000000000000000000000000000000000000000
+时间 405000: 结果有效 = 0659c4fe80a0c649aeaeed375df9341c758d5e38f3cbd159d2bc5a08bb4c4c0e
+计算结果: 00000000000000000000000000000006b1f056638484d615c0895e8112153536
+结果有效: 1
+
+=== 测试用例4: 零输入测试 ===
+输入 x0 = 0000000000000000000000000000000000000000000000000000000000000000
+输入 x1 = 0000000000000000000000000000000000000000000000000000000000000000
+输入 w = 0000000000000000000000000000000000000000000000000000000000000000
+模数 = 0000000000000000000000000000000000000000000000000000000000000100
+时间 505000: 结果有效 = 00000000000000000000000000000006b1f056638484d615c0895e8112153536
+计算结果: 0000000000000000000000000000000000000000000000000000000000000000
+结果有效: 1
+
+=== 测试用例5: 边界测试 ===
+输入 x0 = ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+输入 x1 = 0000000000000000000000000000000000000000000000000000000000000001
+输入 w = 0000000000000000000000000000000000000000000000000000000000000001
+模数 = ffffffff00000001000000000000000000000000000000000000000000000000
+时间 605000: 结果有效 = 0000000000000000000000000000000000000000000000000000000000000000
+计算结果: 00000000fffffffeffffffffffffffffffffffffffffffffffffffffffffffff
+结果有效: 1
+时间 705000: 结果有效 = 00000000fffffffeffffffffffffffffffffffffffffffffffffffffffffffff
+
+=== 所有测试完成 ===
+$finish called at time : 805 ns : File "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" Line 274
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1417.352 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_segmented_256bit_butterfly_1_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:34 . Memory (MB): peak = 1417.352 ; gain = 0.000
+create_wave_config
+current_wave_config {Untitled 4}
+Untitled 4
+add_wave {{/tb_segmented_256bit_butterfly_1/clk}} {{/tb_segmented_256bit_butterfly_1/rst_n}} {{/tb_segmented_256bit_butterfly_1/start}} {{/tb_segmented_256bit_butterfly_1/done}} {{/tb_segmented_256bit_butterfly_1/busy}} {{/tb_segmented_256bit_butterfly_1/x0}} {{/tb_segmented_256bit_butterfly_1/x1}} {{/tb_segmented_256bit_butterfly_1/w}} {{/tb_segmented_256bit_butterfly_1/modulus}} {{/tb_segmented_256bit_butterfly_1/result_add}} {{/tb_segmented_256bit_butterfly_1/result_sub}} {{/tb_segmented_256bit_butterfly_1/result_valid}} {{/tb_segmented_256bit_butterfly_1/N_prime}} {{/tb_segmented_256bit_butterfly_1/TOTAL_WIDTH}} {{/tb_segmented_256bit_butterfly_1/SEG_WIDTH}} {{/tb_segmented_256bit_butterfly_1/CLK_PERIOD}} 
+add_wave: Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 1953.898 ; gain = 536.547
+run all
+relaunch_sim
+suspend_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_segmented_256bit_butterfly_1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_segmented_256bit_butterfly_1_vlog.prj"
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1953.898 ; gain = 0.000
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=== 测试用例1: 简单加法 ===
+输入 x0 = 0000000000000000000000000000000000000000000000000000000000000001
+输入 x1 = 2af6c90ca9c956dd6b98e311ccd63306d9d3afb7d1ae902b6da869a153471ff8
+输入 w = 25d71bdb3c5ed1475dd3a3192abc611b0e92ba5d5718e22b9fa3fab39975b753
+模数 = 30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd47
+计算结果: 0d78e11613448413eb757358b09cd34f2fd5e642421128797191dff87c5bd062
+结果有效: 1
+时间 255000: 结果有效 = 0d78e11613448413eb757358b09cd34f2fd5e642421128797191dff87c5bd062
+
+=== 测试用例2: 减法模式 ===
+输入 x0 = 000000000000000a000000000000000a000000000000000a000000000000000a
+输入 x1 = 0000000000000003000000000000000300000000000000030000000000000003
+输入 w = 0000000000000002000000000000000200000000000000020000000000000002
+模数 = 0000000000000000000000000000000000000000000000000000000000000100
+计算结果: 0659c4fe80a0c649aeaeed375df9341c758d5e38f3cbd159d2bc5a08bb4c4c0e
+结果有效: 1
+
+=== 测试用例3: 随机测试 ===
+输入 x0 = 00000000000000000000000000000000b1f056638484d609c0895e8112153524
+输入 x1 = 0000000000000000000000000000000089375212b2c2846546df998d06b97b0d
+输入 w = 000000000000000000000000000000001e8dcd3d3b23f17606d7cd0d00f3e301
+模数 = ffffffff00000001000000000000000000000000000000000000000000000000
+时间 405000: 结果有效 = 0659c4fe80a0c649aeaeed375df9341c758d5e38f3cbd159d2bc5a08bb4c4c0e
+计算结果: 00000000000000000000000000000006b1f056638484d615c0895e8112153536
+结果有效: 1
+
+=== 测试用例4: 零输入测试 ===
+输入 x0 = 0000000000000000000000000000000000000000000000000000000000000000
+输入 x1 = 0000000000000000000000000000000000000000000000000000000000000000
+输入 w = 0000000000000000000000000000000000000000000000000000000000000000
+模数 = 0000000000000000000000000000000000000000000000000000000000000100
+时间 505000: 结果有效 = 00000000000000000000000000000006b1f056638484d615c0895e8112153536
+计算结果: 0000000000000000000000000000000000000000000000000000000000000000
+结果有效: 1
+
+=== 测试用例5: 边界测试 ===
+输入 x0 = ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+输入 x1 = 0000000000000000000000000000000000000000000000000000000000000001
+输入 w = 0000000000000000000000000000000000000000000000000000000000000001
+模数 = ffffffff00000001000000000000000000000000000000000000000000000000
+时间 605000: 结果有效 = 0000000000000000000000000000000000000000000000000000000000000000
+计算结果: 00000000fffffffeffffffffffffffffffffffffffffffffffffffffffffffff
+结果有效: 1
+时间 705000: 结果有效 = 00000000fffffffeffffffffffffffffffffffffffffffffffffffffffffffff
+
+=== 所有测试完成 ===
+$finish called at time : 805 ns : File "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" Line 274
+relaunch_xsim_kernel: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1953.898 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:35 . Memory (MB): peak = 1953.898 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_segmented_256bit_butterfly_1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_segmented_256bit_butterfly_1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_multiplier_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segmented_256bit_full_butterfly
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_segmented_256bit_butterfly_1
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" Line 13. Module segmented_256bit_full_butterfly(SEG_COUNT=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(SEG_CNT=4) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(SEG_CNT=4)
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly(...
+Compiling module xil_defaultlib.tb_segmented_256bit_butterfly_1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_segmented_256bit_butterfly_1_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1953.898 ; gain = 0.000
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=== Butterfly Test (BN254) ===
+  Test 1: PASS
+  Test 2: FAIL
+    exp_add=0x0b22f527747e027a168808f7e71800feceadc118e00f6d3d402591f0f6008698
+    got_add=0x0b22f527747e027a168808f7e71800fcceadc118e00f6d3d402591f0f6008696
+    exp_sub=0x06b96bccfdcaab4266da6e28a5b8a3b0acfec0dd2cbec864f8dad10e51626ca2
+    got_sub=0x06b96bccfdcaab4266da6e28a5b8a3b2acfec0dd2cbec864f8dad10e51626ca4
+  Test 3: PASS
+  Test 4: FAIL
+    exp_add=0x0000000000000000000000000000000000000000000000000000000000000000
+    got_add=0x0c8df6406cd0085f153c6bd0226b2ba817710ddd6250c17cff0cd68ae32cde6c
+    exp_sub=0x0000000000000000000000000000000000000000000000000000000000000000
+    got_sub=0x23d65832746197caa313d9e65f162cb580105cb4062109103d13b58bf5501edb
+  Test 5: FAIL
+    exp_add=0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd45
+    got_add=0x2e67157159e5c639cf63e9cfb74492d9eb2022850278edf8ed84884a014afa36
+    exp_sub=0x0000000000000000000000000000000000000000000000000000000000000000
+    got_sub=0x01fd3901874bd9efe8ec5be6ca3cc583ac61480c65f8dc944e9c03ccd732030f
+
+=== Result: PASS=2  FAIL=3 ===
+$finish called at time : 845 ns : File "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" Line 126
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:21 . Memory (MB): peak = 1953.898 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_segmented_256bit_butterfly_1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_segmented_256bit_butterfly_1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_multiplier_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segmented_256bit_full_butterfly
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_segmented_256bit_butterfly_1
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" Line 13. Module segmented_256bit_full_butterfly(SEG_COUNT=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(SEG_CNT=4) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(SEG_CNT=4)
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly(...
+Compiling module xil_defaultlib.tb_segmented_256bit_butterfly_1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_segmented_256bit_butterfly_1_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1953.898 ; gain = 0.000
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=== Butterfly Test (BN254) ===
+  Test 1: PASS
+  Test 2: FAIL
+    exp_add=0x0b22f527747e027a168808f7e71800feceadc118e00f6d3d402591f0f6008698
+    got_add=0x0b22f527747e027a168808f7e71800fcceadc118e00f6d3d402591f0f6008696
+    exp_sub=0x06b96bccfdcaab4266da6e28a5b8a3b0acfec0dd2cbec864f8dad10e51626ca2
+    got_sub=0x06b96bccfdcaab4266da6e28a5b8a3b2acfec0dd2cbec864f8dad10e51626ca4
+  Test 3: PASS
+  Test 4: FAIL
+    exp_add=0x0000000000000000000000000000000000000000000000000000000000000000
+    got_add=0x0c8df6406cd0085f153c6bd0226b2ba817710ddd6250c17cff0cd68ae32cde6c
+    exp_sub=0x0000000000000000000000000000000000000000000000000000000000000000
+    got_sub=0x23d65832746197caa313d9e65f162cb580105cb4062109103d13b58bf5501edb
+  Test 5: FAIL
+    exp_add=0x30644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd45
+    got_add=0x2e67157159e5c639cf63e9cfb74492d9eb2022850278edf8ed84884a014afa36
+    exp_sub=0x0000000000000000000000000000000000000000000000000000000000000000
+    got_sub=0x01fd3901874bd9efe8ec5be6ca3cc583ac61480c65f8dc944e9c03ccd732030f
+
+=== Result: PASS=2  FAIL=3 ===
+$finish called at time : 845 ns : File "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" Line 126
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 1953.898 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_segmented_256bit_butterfly_1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_segmented_256bit_butterfly_1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_multiplier_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segmented_256bit_full_butterfly
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_segmented_256bit_butterfly_1
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" Line 13. Module segmented_256bit_full_butterfly(SEG_COUNT=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(SEG_CNT=4) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(SEG_CNT=4)
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly(...
+Compiling module xil_defaultlib.tb_segmented_256bit_butterfly_1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_segmented_256bit_butterfly_1_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1953.898 ; gain = 0.000
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=== Butterfly Test (BN254, Montgomery) ===
+  Test 1: PASS
+  Test 2: FAIL
+    exp_add=0x0b22f527747e027a168808f7e71800feceadc118e00f6d3d402591f0f6008698
+    got_add=0x0b22f527747e027a168808f7e71800fcceadc118e00f6d3d402591f0f6008696
+    exp_sub=0x06b96bccfdcaab4266da6e28a5b8a3b0acfec0dd2cbec864f8dad10e51626ca2
+    got_sub=0x06b96bccfdcaab4266da6e28a5b8a3b2acfec0dd2cbec864f8dad10e51626ca4
+  Test 3: PASS
+  Test 4: PASS
+  Test 5: PASS
+  Test 6: PASS
+
+=== Result: PASS=5  FAIL=1 ===
+$finish called at time : 985 ns : File "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" Line 134
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:27 . Memory (MB): peak = 1953.898 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_segmented_256bit_butterfly_1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_segmented_256bit_butterfly_1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_multiplier_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segmented_256bit_full_butterfly
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_segmented_256bit_butterfly_1
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" Line 13. Module segmented_256bit_full_butterfly(SEG_COUNT=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(SEG_CNT=4) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(SEG_CNT=4)
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly(...
+Compiling module xil_defaultlib.tb_segmented_256bit_butterfly_1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_segmented_256bit_butterfly_1_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1953.898 ; gain = 0.000
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=== Butterfly Test (BN254, Montgomery) ===
+  Test 1: PASS
+  Test 2: FAIL
+    exp_add=0x0b22f527747e027a168808f7e71800feceadc118e00f6d3d402591f0f6008698
+    got_add=0x0b22f527747e027a168808f7e71800fcceadc118e00f6d3d402591f0f6008696
+    exp_sub=0x06b96bccfdcaab4266da6e28a5b8a3b0acfec0dd2cbec864f8dad10e51626ca2
+    got_sub=0x06b96bccfdcaab4266da6e28a5b8a3b2acfec0dd2cbec864f8dad10e51626ca4
+  Test 3: PASS
+  Test 4: PASS
+  Test 5: PASS
+  Test 6: PASS
+
+=== Result: PASS=5  FAIL=1 ===
+$finish called at time : 985 ns : File "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" Line 134
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:17 . Memory (MB): peak = 1953.898 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_segmented_256bit_butterfly_1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_segmented_256bit_butterfly_1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_multiplier_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segmented_256bit_full_butterfly
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_segmented_256bit_butterfly_1
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" Line 13. Module segmented_256bit_full_butterfly(SEG_COUNT=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(SEG_CNT=4) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(SEG_CNT=4)
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly(...
+Compiling module xil_defaultlib.tb_segmented_256bit_butterfly_1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_segmented_256bit_butterfly_1_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1953.898 ; gain = 0.000
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=== Butterfly Test (BN254, Montgomery) ===
+  [DBG] mont_t_r  =0x0659c4fe80a0c63faeaeed375df93412758d5e38f3cbd14fd2bc5a08bb4c4e046a83a171e461c75c086f17e8cb4a320e84a61cf743d0777eb578addaac41a568
+  [DBG] full_prod =0x0659c4fe80a0c63faeaeed375df93412758d5e38f3cbd14fd2bc5a08bb4c4e046a83a171e461c75c086f17e8cb4a320e84a61cf743d0777eb578addaac41a568
+  Test 1: PASS
+  [DBG] mont_t_r  =0x05b013b715132e9904f3bdc203ff6b334a0924dad753a491fad809147af8993f7b1dfa1394f140f730187fdd3d7a5c97f79df6f74821c3fb749521933b80fe01
+  [DBG] full_prod =0x05b013b715132e9904f3bdc203ff6b334a0924dad753a491fad809147af8993f7b1dfa1394f140f730187fdd3d7a5c97f79df6f74821c3fb749521933b80fe01
+  Test 2: FAIL
+    exp_add=0x0b22f527747e027a168808f7e71800feceadc118e00f6d3d402591f0f6008698
+    got_add=0x0b22f527747e027a168808f7e71800fcceadc118e00f6d3d402591f0f6008696
+    exp_sub=0x06b96bccfdcaab4266da6e28a5b8a3b0acfec0dd2cbec864f8dad10e51626ca2
+    got_sub=0x06b96bccfdcaab4266da6e28a5b8a3b2acfec0dd2cbec864f8dad10e51626ca4
+  [DBG] mont_t_r  =0x013c97cb4df951305ccfb13234b47f28659baa103782fb22cccba4109881940c4cd3d5597152c8fd3644d9bdfe04e6a617833260bc9977278056f26d54c8ac17
+  [DBG] full_prod =0x013c97cb4df951305ccfb13234b47f28659baa103782fb22cccba4109881940c4cd3d5597152c8fd3644d9bdfe04e6a617833260bc9977278056f26d54c8ac17
+  Test 3: PASS
+  [DBG] mont_t_r  =0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005b
+  [DBG] full_prod =0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005b
+  Test 4: PASS
+  [DBG] mont_t_r  =0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+  [DBG] full_prod =0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+  Test 5: PASS
+  [DBG] mont_t_r  =0x081835a0c393a4f42d15896bc1e810c4377cfe6085620ca9cf44ca7763b1e035a71afea01f479fab300b5fcc2a279013639c341c75d04c4fef2f196a71aabd30
+  [DBG] full_prod =0x081835a0c393a4f42d15896bc1e810c4377cfe6085620ca9cf44ca7763b1e035a71afea01f479fab300b5fcc2a279013639c341c75d04c4fef2f196a71aabd30
+  Test 6: PASS
+
+=== Result: PASS=5  FAIL=1 ===
+$finish called at time : 985 ns : File "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" Line 139
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:24 . Memory (MB): peak = 1953.898 ; gain = 0.000
+relaunch_sim
+suspend_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_segmented_256bit_butterfly_1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_segmented_256bit_butterfly_1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_multiplier_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segmented_256bit_full_butterfly
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_segmented_256bit_butterfly_1
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" Line 13. Module segmented_256bit_full_butterfly(SEG_COUNT=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(SEG_CNT=4) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(SEG_CNT=4)
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly(...
+Compiling module xil_defaultlib.tb_segmented_256bit_butterfly_1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_segmented_256bit_butterfly_1_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1953.898 ; gain = 0.000
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=== Butterfly Test (BN254, Montgomery) ===
+  [DBG] mont_t_r  =0x0659c4fe80a0c63faeaeed375df93412758d5e38f3cbd14fd2bc5a08bb4c4e046a83a171e461c75c086f17e8cb4a320e84a61cf743d0777eb578addaac41a568
+  [DBG] full_prod =0x0659c4fe80a0c63faeaeed375df93412758d5e38f3cbd14fd2bc5a08bb4c4e046a83a171e461c75c086f17e8cb4a320e84a61cf743d0777eb578addaac41a568
+  Test 1: PASS
+  [DBG] mont_t_r  =0x05b013b715132e9904f3bdc203ff6b334a0924dad753a491fad809147af8993f7b1dfa1394f140f730187fdd3d7a5c97f79df6f74821c3fb749521933b80fe01
+  [DBG] full_prod =0x05b013b715132e9904f3bdc203ff6b334a0924dad753a491fad809147af8993f7b1dfa1394f140f730187fdd3d7a5c97f79df6f74821c3fb749521933b80fe01
+  Test 2: FAIL
+    exp_add=0x0b22f527747e027a168808f7e71800feceadc118e00f6d3d402591f0f6008698
+    got_add=0x0b22f527747e027a168808f7e71800fcceadc118e00f6d3d402591f0f6008696
+    exp_sub=0x06b96bccfdcaab4266da6e28a5b8a3b0acfec0dd2cbec864f8dad10e51626ca2
+    got_sub=0x06b96bccfdcaab4266da6e28a5b8a3b2acfec0dd2cbec864f8dad10e51626ca4
+  [DBG] mont_t_r  =0x013c97cb4df951305ccfb13234b47f28659baa103782fb22cccba4109881940c4cd3d5597152c8fd3644d9bdfe04e6a617833260bc9977278056f26d54c8ac17
+  [DBG] full_prod =0x013c97cb4df951305ccfb13234b47f28659baa103782fb22cccba4109881940c4cd3d5597152c8fd3644d9bdfe04e6a617833260bc9977278056f26d54c8ac17
+  Test 3: PASS
+  [DBG] mont_t_r  =0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005b
+  [DBG] full_prod =0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005b
+  Test 4: PASS
+  [DBG] mont_t_r  =0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+  [DBG] full_prod =0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+  Test 5: PASS
+  [DBG] mont_t_r  =0x081835a0c393a4f42d15896bc1e810c4377cfe6085620ca9cf44ca7763b1e035a71afea01f479fab300b5fcc2a279013639c341c75d04c4fef2f196a71aabd30
+  [DBG] full_prod =0x081835a0c393a4f42d15896bc1e810c4377cfe6085620ca9cf44ca7763b1e035a71afea01f479fab300b5fcc2a279013639c341c75d04c4fef2f196a71aabd30
+  Test 6: PASS
+
+=== Result: PASS=5  FAIL=1 ===
+$finish called at time : 985 ns : File "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" Line 139
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:23 . Memory (MB): peak = 1953.898 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_segmented_256bit_butterfly_1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_segmented_256bit_butterfly_1_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1953.898 ; gain = 0.000
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=== Butterfly Test (BN254, Montgomery) ===
+  [DBG] mont_t_r  =0x0659c4fe80a0c63faeaeed375df93412758d5e38f3cbd14fd2bc5a08bb4c4e046a83a171e461c75c086f17e8cb4a320e84a61cf743d0777eb578addaac41a568
+  [DBG] full_prod =0x0659c4fe80a0c63faeaeed375df93412758d5e38f3cbd14fd2bc5a08bb4c4e046a83a171e461c75c086f17e8cb4a320e84a61cf743d0777eb578addaac41a568
+  Test 1: PASS
+  [DBG] mont_t_r  =0x05b013b715132e9904f3bdc203ff6b334a0924dad753a491fad809147af8993f7b1dfa1394f140f730187fdd3d7a5c97f79df6f74821c3fb749521933b80fe01
+  [DBG] full_prod =0x05b013b715132e9904f3bdc203ff6b334a0924dad753a491fad809147af8993f7b1dfa1394f140f730187fdd3d7a5c97f79df6f74821c3fb749521933b80fe01
+  Test 2: FAIL
+    exp_add=0x0b22f527747e027a168808f7e71800feceadc118e00f6d3d402591f0f6008698
+    got_add=0x0b22f527747e027a168808f7e71800fcceadc118e00f6d3d402591f0f6008696
+    exp_sub=0x06b96bccfdcaab4266da6e28a5b8a3b0acfec0dd2cbec864f8dad10e51626ca2
+    got_sub=0x06b96bccfdcaab4266da6e28a5b8a3b2acfec0dd2cbec864f8dad10e51626ca4
+  [DBG] mont_t_r  =0x013c97cb4df951305ccfb13234b47f28659baa103782fb22cccba4109881940c4cd3d5597152c8fd3644d9bdfe04e6a617833260bc9977278056f26d54c8ac17
+  [DBG] full_prod =0x013c97cb4df951305ccfb13234b47f28659baa103782fb22cccba4109881940c4cd3d5597152c8fd3644d9bdfe04e6a617833260bc9977278056f26d54c8ac17
+  Test 3: PASS
+  [DBG] mont_t_r  =0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005b
+  [DBG] full_prod =0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005b
+  Test 4: PASS
+  [DBG] mont_t_r  =0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+  [DBG] full_prod =0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+  Test 5: PASS
+  [DBG] mont_t_r  =0x081835a0c393a4f42d15896bc1e810c4377cfe6085620ca9cf44ca7763b1e035a71afea01f479fab300b5fcc2a279013639c341c75d04c4fef2f196a71aabd30
+  [DBG] full_prod =0x081835a0c393a4f42d15896bc1e810c4377cfe6085620ca9cf44ca7763b1e035a71afea01f479fab300b5fcc2a279013639c341c75d04c4fef2f196a71aabd30
+  Test 6: PASS
+
+=== Result: PASS=5  FAIL=1 ===
+$finish called at time : 985 ns : File "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" Line 139
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 1953.898 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_segmented_256bit_butterfly_1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_segmented_256bit_butterfly_1_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=== Butterfly Test (BN254, Montgomery) ===
+  [DBG] mont_t_r  =0x0659c4fe80a0c63faeaeed375df93412758d5e38f3cbd14fd2bc5a08bb4c4e046a83a171e461c75c086f17e8cb4a320e84a61cf743d0777eb578addaac41a568
+  [DBG] full_prod =0x0659c4fe80a0c63faeaeed375df93412758d5e38f3cbd14fd2bc5a08bb4c4e046a83a171e461c75c086f17e8cb4a320e84a61cf743d0777eb578addaac41a568
+  Test 1: PASS
+  [DBG] mont_t_r  =0x05b013b715132e9904f3bdc203ff6b334a0924dad753a491fad809147af8993f7b1dfa1394f140f730187fdd3d7a5c97f79df6f74821c3fb749521933b80fe01
+  [DBG] full_prod =0x05b013b715132e9904f3bdc203ff6b334a0924dad753a491fad809147af8993f7b1dfa1394f140f730187fdd3d7a5c97f79df6f74821c3fb749521933b80fe01
+  Test 2: FAIL
+    exp_add=0x0b22f527747e027a168808f7e71800feceadc118e00f6d3d402591f0f6008698
+    got_add=0x0b22f527747e027a168808f7e71800fcceadc118e00f6d3d402591f0f6008696
+    exp_sub=0x06b96bccfdcaab4266da6e28a5b8a3b0acfec0dd2cbec864f8dad10e51626ca2
+    got_sub=0x06b96bccfdcaab4266da6e28a5b8a3b2acfec0dd2cbec864f8dad10e51626ca4
+  [DBG] mont_t_r  =0x013c97cb4df951305ccfb13234b47f28659baa103782fb22cccba4109881940c4cd3d5597152c8fd3644d9bdfe04e6a617833260bc9977278056f26d54c8ac17
+  [DBG] full_prod =0x013c97cb4df951305ccfb13234b47f28659baa103782fb22cccba4109881940c4cd3d5597152c8fd3644d9bdfe04e6a617833260bc9977278056f26d54c8ac17
+  Test 3: PASS
+  [DBG] mont_t_r  =0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005b
+  [DBG] full_prod =0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005b
+  Test 4: PASS
+  [DBG] mont_t_r  =0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+  [DBG] full_prod =0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+  Test 5: PASS
+  [DBG] mont_t_r  =0x081835a0c393a4f42d15896bc1e810c4377cfe6085620ca9cf44ca7763b1e035a71afea01f479fab300b5fcc2a279013639c341c75d04c4fef2f196a71aabd30
+  [DBG] full_prod =0x081835a0c393a4f42d15896bc1e810c4377cfe6085620ca9cf44ca7763b1e035a71afea01f479fab300b5fcc2a279013639c341c75d04c4fef2f196a71aabd30
+  Test 6: PASS
+
+=== Result: PASS=5  FAIL=1 ===
+$finish called at time : 985 ns : File "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" Line 139
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 1953.898 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_segmented_256bit_butterfly_1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_segmented_256bit_butterfly_1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_multiplier_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segmented_256bit_full_butterfly
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_segmented_256bit_butterfly_1
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" Line 13. Module segmented_256bit_full_butterfly(SEG_COUNT=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(SEG_CNT=4) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(SEG_CNT=4)
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly(...
+Compiling module xil_defaultlib.tb_segmented_256bit_butterfly_1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_segmented_256bit_butterfly_1_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1953.898 ; gain = 0.000
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=== Butterfly Test (BN254, Montgomery) ===
+  [DBG] mont_t_r  =0x0659c4fe80a0c63faeaeed375df93412758d5e38f3cbd14fd2bc5a08bb4c4e046a83a171e461c75c086f17e8cb4a320e84a61cf743d0777eb578addaac41a568
+  [DBG] full_prod =0x0659c4fe80a0c63faeaeed375df93412758d5e38f3cbd14fd2bc5a08bb4c4e046a83a171e461c75c086f17e8cb4a320e84a61cf743d0777eb578addaac41a568
+  [DBG] mont_res  =0x0000000000000000000000000000000000000000000000000000000000000000
+  [DBG] mont_full =0x0000000000000000000000000000000000000000000000000000000000000000
+  Test 1: PASS
+  [DBG] mont_t_r  =0x05b013b715132e9904f3bdc203ff6b334a0924dad753a491fad809147af8993f7b1dfa1394f140f730187fdd3d7a5c97f79df6f74821c3fb749521933b80fe01
+  [DBG] full_prod =0x05b013b715132e9904f3bdc203ff6b334a0924dad753a491fad809147af8993f7b1dfa1394f140f730187fdd3d7a5c97f79df6f74821c3fb749521933b80fe01
+  [DBG] mont_res  =0x0d78e11613448413eb757358b09cd34f2fd5e642421128797191dff87c5bd061
+  [DBG] mont_full =0x0d78e11613448413eb757358b09cd34f2fd5e642421128797191dff87c5bd061
+  Test 2: FAIL
+    exp_add=0x0b22f527747e027a168808f7e71800feceadc118e00f6d3d402591f0f6008698
+    got_add=0x0b22f527747e027a168808f7e71800fcceadc118e00f6d3d402591f0f6008696
+    exp_sub=0x06b96bccfdcaab4266da6e28a5b8a3b0acfec0dd2cbec864f8dad10e51626ca2
+    got_sub=0x06b96bccfdcaab4266da6e28a5b8a3b2acfec0dd2cbec864f8dad10e51626ca4
+  [DBG] mont_t_r  =0x013c97cb4df951305ccfb13234b47f28659baa103782fb22cccba4109881940c4cd3d5597152c8fd3644d9bdfe04e6a617833260bc9977278056f26d54c8ac17
+  [DBG] full_prod =0x013c97cb4df951305ccfb13234b47f28659baa103782fb22cccba4109881940c4cd3d5597152c8fd3644d9bdfe04e6a617833260bc9977278056f26d54c8ac17
+  [DBG] mont_res  =0x0234c4ad3b59ab9bd7d6cd67a0afaea510d7801dd9a8526c23a56071524f0cf9
+  [DBG] mont_full =0x0234c4ad3b59ab9bd7d6cd67a0afaea510d7801dd9a8526c23a56071524f0cf9
+  Test 3: PASS
+  [DBG] mont_t_r  =0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005b
+  [DBG] full_prod =0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005b
+  [DBG] mont_res  =0x14a5e6493dbf87656dcc167ccfee1e110162024d661ad7004318157cf05039a4
+  [DBG] mont_full =0x14a5e6493dbf87656dcc167ccfee1e110162024d661ad7004318157cf05039a4
+  Test 4: PASS
+  [DBG] mont_t_r  =0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+  [DBG] full_prod =0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+  [DBG] mont_res  =0x0c8df6406cd0085f153c6bd0226b2ba817710ddd6250c17cff0cd68ae32cde6c
+  [DBG] mont_full =0x0c8df6406cd0085f153c6bd0226b2ba817710ddd6250c17cff0cd68ae32cde6c
+  Test 5: PASS
+  [DBG] mont_t_r  =0x081835a0c393a4f42d15896bc1e810c4377cfe6085620ca9cf44ca7763b1e035a71afea01f479fab300b5fcc2a279013639c341c75d04c4fef2f196a71aabd30
+  [DBG] full_prod =0x081835a0c393a4f42d15896bc1e810c4377cfe6085620ca9cf44ca7763b1e035a71afea01f479fab300b5fcc2a279013639c341c75d04c4fef2f196a71aabd30
+  [DBG] mont_res  =0x2e67157159e5c639cf63e9cfb74492d9eb2022850278edf8ed84884a014afa37
+  [DBG] mont_full =0x2e67157159e5c639cf63e9cfb74492d9eb2022850278edf8ed84884a014afa37
+  Test 6: PASS
+
+=== Result: PASS=5  FAIL=1 ===
+$finish called at time : 985 ns : File "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" Line 141
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 1953.898 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_segmented_256bit_butterfly_1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_segmented_256bit_butterfly_1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_multiplier_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segmented_256bit_full_butterfly
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_segmented_256bit_butterfly_1
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" Line 13. Module segmented_256bit_full_butterfly(SEG_COUNT=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(SEG_CNT=4) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(SEG_CNT=4)
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly(...
+Compiling module xil_defaultlib.tb_segmented_256bit_butterfly_1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_segmented_256bit_butterfly_1_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1953.898 ; gain = 0.000
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=== Butterfly Test (BN254, Montgomery) ===
+  [DBG] mont_t_r  =0x0659c4fe80a0c63faeaeed375df93412758d5e38f3cbd14fd2bc5a08bb4c4e046a83a171e461c75c086f17e8cb4a320e84a61cf743d0777eb578addaac41a568
+  [DBG] full_prod =0x0659c4fe80a0c63faeaeed375df93412758d5e38f3cbd14fd2bc5a08bb4c4e046a83a171e461c75c086f17e8cb4a320e84a61cf743d0777eb578addaac41a568
+  [DBG] mont_res  =0x0000000000000000000000000000000000000000000000000000000000000000
+  [DBG] mont_full =0x0000000000000000000000000000000000000000000000000000000000000000
+  Test 1: PASS
+  [DBG] mont_t_r  =0x05b013b715132e9904f3bdc203ff6b334a0924dad753a491fad809147af8993f7b1dfa1394f140f730187fdd3d7a5c97f79df6f74821c3fb749521933b80fe01
+  [DBG] full_prod =0x05b013b715132e9904f3bdc203ff6b334a0924dad753a491fad809147af8993f7b1dfa1394f140f730187fdd3d7a5c97f79df6f74821c3fb749521933b80fe01
+  [DBG] mont_res  =0x0d78e11613448413eb757358b09cd34f2fd5e642421128797191dff87c5bd061
+  [DBG] mont_full =0x0d78e11613448413eb757358b09cd34f2fd5e642421128797191dff87c5bd061
+  Test 2: FAIL
+    exp_add=0x0b22f527747e027a168808f7e71800feceadc118e00f6d3d402591f0f6008698
+    got_add=0x0b22f527747e027a168808f7e71800fcceadc118e00f6d3d402591f0f6008696
+    exp_sub=0x06b96bccfdcaab4266da6e28a5b8a3b0acfec0dd2cbec864f8dad10e51626ca2
+    got_sub=0x06b96bccfdcaab4266da6e28a5b8a3b2acfec0dd2cbec864f8dad10e51626ca4
+  [DBG] mont_t_r  =0x013c97cb4df951305ccfb13234b47f28659baa103782fb22cccba4109881940c4cd3d5597152c8fd3644d9bdfe04e6a617833260bc9977278056f26d54c8ac17
+  [DBG] full_prod =0x013c97cb4df951305ccfb13234b47f28659baa103782fb22cccba4109881940c4cd3d5597152c8fd3644d9bdfe04e6a617833260bc9977278056f26d54c8ac17
+  [DBG] mont_res  =0x0234c4ad3b59ab9bd7d6cd67a0afaea510d7801dd9a8526c23a56071524f0cf9
+  [DBG] mont_full =0x0234c4ad3b59ab9bd7d6cd67a0afaea510d7801dd9a8526c23a56071524f0cf9
+  Test 3: PASS
+  [DBG] mont_t_r  =0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005b
+  [DBG] full_prod =0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005b
+  [DBG] mont_res  =0x14a5e6493dbf87656dcc167ccfee1e110162024d661ad7004318157cf05039a4
+  [DBG] mont_full =0x14a5e6493dbf87656dcc167ccfee1e110162024d661ad7004318157cf05039a4
+  Test 4: PASS
+  [DBG] mont_t_r  =0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+  [DBG] full_prod =0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+  [DBG] mont_res  =0x0c8df6406cd0085f153c6bd0226b2ba817710ddd6250c17cff0cd68ae32cde6c
+  [DBG] mont_full =0x0c8df6406cd0085f153c6bd0226b2ba817710ddd6250c17cff0cd68ae32cde6c
+  Test 5: PASS
+  [DBG] mont_t_r  =0x081835a0c393a4f42d15896bc1e810c4377cfe6085620ca9cf44ca7763b1e035a71afea01f479fab300b5fcc2a279013639c341c75d04c4fef2f196a71aabd30
+  [DBG] full_prod =0x081835a0c393a4f42d15896bc1e810c4377cfe6085620ca9cf44ca7763b1e035a71afea01f479fab300b5fcc2a279013639c341c75d04c4fef2f196a71aabd30
+  [DBG] mont_res  =0x2e67157159e5c639cf63e9cfb74492d9eb2022850278edf8ed84884a014afa37
+  [DBG] mont_full =0x2e67157159e5c639cf63e9cfb74492d9eb2022850278edf8ed84884a014afa37
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 1953.898 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_segmented_256bit_butterfly_1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_segmented_256bit_butterfly_1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_multiplier_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segmented_256bit_full_butterfly
+WARNING: [VRFC 10-3380] identifier 'state' is used before its declaration [F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v:172]
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_segmented_256bit_butterfly_1
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" Line 13. Module segmented_256bit_full_butterfly(SEG_COUNT=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(SEG_CNT=4) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(SEG_CNT=4)
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly(...
+Compiling module xil_defaultlib.tb_segmented_256bit_butterfly_1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_segmented_256bit_butterfly_1_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1953.898 ; gain = 0.000
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=== Butterfly Test (BN254, Montgomery) ===
+  [DBG] mont_t_r  =0x0659c4fe80a0c63faeaeed375df93412758d5e38f3cbd14fd2bc5a08bb4c4e046a83a171e461c75c086f17e8cb4a320e84a61cf743d0777eb578addaac41a568
+  [DBG] full_prod =0x0659c4fe80a0c63faeaeed375df93412758d5e38f3cbd14fd2bc5a08bb4c4e046a83a171e461c75c086f17e8cb4a320e84a61cf743d0777eb578addaac41a568
+  [DBG] mont_res  =0x0000000000000000000000000000000000000000000000000000000000000000
+  [DBG] mont_full =0x0000000000000000000000000000000000000000000000000000000000000000
+  [DBG] state=1 capture_cnt=0
+  Test 1: PASS
+  [DBG] mont_t_r  =0x05b013b715132e9904f3bdc203ff6b334a0924dad753a491fad809147af8993f7b1dfa1394f140f730187fdd3d7a5c97f79df6f74821c3fb749521933b80fe01
+  [DBG] full_prod =0x05b013b715132e9904f3bdc203ff6b334a0924dad753a491fad809147af8993f7b1dfa1394f140f730187fdd3d7a5c97f79df6f74821c3fb749521933b80fe01
+  [DBG] mont_res  =0x0d78e11613448413eb757358b09cd34f2fd5e642421128797191dff87c5bd061
+  [DBG] mont_full =0x0d78e11613448413eb757358b09cd34f2fd5e642421128797191dff87c5bd061
+  [DBG] state=1 capture_cnt=1
+  Test 2: FAIL
+    exp_add=0x0b22f527747e027a168808f7e71800feceadc118e00f6d3d402591f0f6008698
+    got_add=0x0b22f527747e027a168808f7e71800fcceadc118e00f6d3d402591f0f6008696
+    exp_sub=0x06b96bccfdcaab4266da6e28a5b8a3b0acfec0dd2cbec864f8dad10e51626ca2
+    got_sub=0x06b96bccfdcaab4266da6e28a5b8a3b2acfec0dd2cbec864f8dad10e51626ca4
+  [DBG] mont_t_r  =0x013c97cb4df951305ccfb13234b47f28659baa103782fb22cccba4109881940c4cd3d5597152c8fd3644d9bdfe04e6a617833260bc9977278056f26d54c8ac17
+  [DBG] full_prod =0x013c97cb4df951305ccfb13234b47f28659baa103782fb22cccba4109881940c4cd3d5597152c8fd3644d9bdfe04e6a617833260bc9977278056f26d54c8ac17
+  [DBG] mont_res  =0x0234c4ad3b59ab9bd7d6cd67a0afaea510d7801dd9a8526c23a56071524f0cf9
+  [DBG] mont_full =0x0234c4ad3b59ab9bd7d6cd67a0afaea510d7801dd9a8526c23a56071524f0cf9
+  [DBG] state=1 capture_cnt=2
+  Test 3: PASS
+  [DBG] mont_t_r  =0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005b
+  [DBG] full_prod =0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005b
+  [DBG] mont_res  =0x14a5e6493dbf87656dcc167ccfee1e110162024d661ad7004318157cf05039a4
+  [DBG] mont_full =0x14a5e6493dbf87656dcc167ccfee1e110162024d661ad7004318157cf05039a4
+  [DBG] state=1 capture_cnt=3
+  Test 4: PASS
+  [DBG] mont_t_r  =0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+  [DBG] full_prod =0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+  [DBG] mont_res  =0x0c8df6406cd0085f153c6bd0226b2ba817710ddd6250c17cff0cd68ae32cde6c
+  [DBG] mont_full =0x0c8df6406cd0085f153c6bd0226b2ba817710ddd6250c17cff0cd68ae32cde6c
+  [DBG] state=1 capture_cnt=4
+  Test 5: PASS
+  [DBG] mont_t_r  =0x081835a0c393a4f42d15896bc1e810c4377cfe6085620ca9cf44ca7763b1e035a71afea01f479fab300b5fcc2a279013639c341c75d04c4fef2f196a71aabd30
+  [DBG] full_prod =0x081835a0c393a4f42d15896bc1e810c4377cfe6085620ca9cf44ca7763b1e035a71afea01f479fab300b5fcc2a279013639c341c75d04c4fef2f196a71aabd30
+  [DBG] mont_res  =0x2e67157159e5c639cf63e9cfb74492d9eb2022850278edf8ed84884a014afa37
+  [DBG] mont_full =0x2e67157159e5c639cf63e9cfb74492d9eb2022850278edf8ed84884a014afa37
+  [DBG] state=1 capture_cnt=5
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 1953.898 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/XILINX/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_segmented_256bit_butterfly_1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip -prj tb_segmented_256bit_butterfly_1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_multiplier_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segmented_256bit_full_butterfly
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_segmented_256bit_butterfly_1
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/ntt_1.sim/sim_1/behav/xsim'
+"xelab -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto c9b512e335a643508ddee4835cd0533d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_segmented_256bit_butterfly_1_behav xil_defaultlib.tb_segmented_256bit_butterfly_1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/segmented_256bit_full_butterfly.v" Line 13. Module segmented_256bit_full_butterfly(SEG_COUNT=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/seg_multiplier_64bit.v" Line 2. Module seg_multiplier_64bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/montgomery_pipeline.v" Line 10. Module montgomery_pipeline(SEG_CNT=4) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.seg_multiplier_64bit
+Compiling module xil_defaultlib.montgomery_pipeline(SEG_CNT=4)
+Compiling module xil_defaultlib.segmented_256bit_full_butterfly(...
+Compiling module xil_defaultlib.tb_segmented_256bit_butterfly_1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_segmented_256bit_butterfly_1_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1953.898 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1953.898 ; gain = 0.000
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+=== Butterfly Test (BN254, Montgomery) ===
+  [DBG] mont_t_r  =0x0659c4fe80a0c63faeaeed375df93412758d5e38f3cbd14fd2bc5a08bb4c4e046a83a171e461c75c086f17e8cb4a320e84a61cf743d0777eb578addaac41a568
+  [DBG] full_prod =0x0659c4fe80a0c63faeaeed375df93412758d5e38f3cbd14fd2bc5a08bb4c4e046a83a171e461c75c086f17e8cb4a320e84a61cf743d0777eb578addaac41a568
+  Test 1: PASS
+  [DBG] mont_t_r  =0x05b013b715132e9904f3bdc203ff6b334a0924dad753a491fad809147af8993f7b1dfa1394f140f730187fdd3d7a5c97f79df6f74821c3fb749521933b80fe01
+  [DBG] full_prod =0x05b013b715132e9904f3bdc203ff6b334a0924dad753a491fad809147af8993f7b1dfa1394f140f730187fdd3d7a5c97f79df6f74821c3fb749521933b80fe01
+  Test 2: PASS
+  [DBG] mont_t_r  =0x013c97cb4df951305ccfb13234b47f28659baa103782fb22cccba4109881940c4cd3d5597152c8fd3644d9bdfe04e6a617833260bc9977278056f26d54c8ac17
+  [DBG] full_prod =0x013c97cb4df951305ccfb13234b47f28659baa103782fb22cccba4109881940c4cd3d5597152c8fd3644d9bdfe04e6a617833260bc9977278056f26d54c8ac17
+  Test 3: PASS
+  [DBG] mont_t_r  =0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005b
+  [DBG] full_prod =0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005b
+  Test 4: PASS
+  [DBG] mont_t_r  =0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+  [DBG] full_prod =0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+  Test 5: PASS
+  [DBG] mont_t_r  =0x081835a0c393a4f42d15896bc1e810c4377cfe6085620ca9cf44ca7763b1e035a71afea01f479fab300b5fcc2a279013639c341c75d04c4fef2f196a71aabd30
+  [DBG] full_prod =0x081835a0c393a4f42d15896bc1e810c4377cfe6085620ca9cf44ca7763b1e035a71afea01f479fab300b5fcc2a279013639c341c75d04c4fef2f196a71aabd30
+  Test 6: PASS
+
+=== Result: PASS=6  FAIL=0 ===
+  ALL TESTS PASSED
+$finish called at time : 985 ns : File "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_1.v" Line 139
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:29 . Memory (MB): peak = 1953.898 ; gain = 0.000
+save_wave_config {F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_segmented_256bit_butterfly_1_behav1.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1953.898 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat May  9 18:04:29 2026...

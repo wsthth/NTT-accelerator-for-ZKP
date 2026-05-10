@@ -88,3 +88,58 @@ relaunch_sim
 relaunch_sim
 save_wave_config {F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_montgomery_streaming_behav.wcfg}
 close_sim
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -scan_for_includes F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_opt.v
+update_compile_order -fileset sim_1
+launch_simulation
+set_property file_type SystemVerilog [get_files  F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_opt.v]
+set_property file_type Verilog [get_files  F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_opt.v]
+export_ip_user_files -of_objects  [get_files F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_opt.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_opt.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -scan_for_includes F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/sub_pe/tb_segmented_256bit_butterfly_opt.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_segmented_256bit_butterfly_opt [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_segmented_256bit_butterfly_1 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_montgomery_top_behav.wcfg
+open_wave_config F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/mod_exp_tb_behav.wcfg
+open_wave_config F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_parallel_recurrence_unit_behav.wcfg
+open_wave_config F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav.wcfg
+open_wave_config F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav1.wcfg
+open_wave_config F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_accelerator_behav2.wcfg
+open_wave_config F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_ntt_axi_behav.wcfg
+source tb_segmented_256bit_butterfly_1.tcl
+create_wave_config
+current_wave_config {Untitled 4}
+add_wave {{/tb_segmented_256bit_butterfly_1/clk}} {{/tb_segmented_256bit_butterfly_1/rst_n}} {{/tb_segmented_256bit_butterfly_1/start}} {{/tb_segmented_256bit_butterfly_1/done}} {{/tb_segmented_256bit_butterfly_1/busy}} {{/tb_segmented_256bit_butterfly_1/x0}} {{/tb_segmented_256bit_butterfly_1/x1}} {{/tb_segmented_256bit_butterfly_1/w}} {{/tb_segmented_256bit_butterfly_1/modulus}} {{/tb_segmented_256bit_butterfly_1/result_add}} {{/tb_segmented_256bit_butterfly_1/result_sub}} {{/tb_segmented_256bit_butterfly_1/result_valid}} {{/tb_segmented_256bit_butterfly_1/N_prime}} {{/tb_segmented_256bit_butterfly_1/TOTAL_WIDTH}} {{/tb_segmented_256bit_butterfly_1/SEG_WIDTH}} {{/tb_segmented_256bit_butterfly_1/CLK_PERIOD}} 
+run all
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/ntt_1/tb_segmented_256bit_butterfly_1_behav1.wcfg}
+close_sim
