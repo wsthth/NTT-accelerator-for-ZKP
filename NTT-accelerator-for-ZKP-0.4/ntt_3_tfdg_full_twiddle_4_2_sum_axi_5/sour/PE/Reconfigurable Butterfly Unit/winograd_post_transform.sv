@@ -10,9 +10,11 @@ module winograd_post_transform #(
     // 系统接口
     input wire clk,
     input wire rst_n,
-    
+    input wire start,               // 新管道调用复位
+
     // 配置
     input wire [1:0] radix_mode,
+    input wire clear,               // 强制清零（测试用）
     
     // 子核结果输入
     input wire [MAX_WIDTH-1:0] core_result0 [0:NUM_CORES-1],
@@ -67,7 +69,7 @@ function automatic [MAX_WIDTH-1:0] mod_mul;
     input [MAX_WIDTH-1:0] a;
     input [MAX_WIDTH-1:0] b;
     input [MAX_WIDTH-1:0] mod;
-    
+
     reg [MAX_WIDTH-1:0] result;
     reg [MAX_WIDTH-1:0] multiplicand;
     reg [MAX_WIDTH-1:0] multiplier;
@@ -76,23 +78,22 @@ function automatic [MAX_WIDTH-1:0] mod_mul;
         result = 0;
         multiplicand = a;
         multiplier = b;
-        
-/*         // 使用for循环，但循环次数固定，可综合
+
+        // 使用for循环，循环次数固定，可综合
         for (i = 0; i < MAX_WIDTH; i = i + 1) begin
             // 检查multiplier的最低位
             if (multiplier[0] == 1'b1) begin
                 // 调用mod_add函数（组合逻辑）
                 result = mod_add(result, multiplicand, mod);
             end
-            
+
             // multiplicand乘以2（模意义下）
             multiplicand = mod_add(multiplicand, multiplicand, mod);
-            
+
             // multiplier右移1位
             multiplier = multiplier >> 1;
         end
- */        
-        // result=multiplicand*multiplier;
+
         mod_mul = result;
     end
 endfunction
@@ -113,13 +114,14 @@ reg [NUM_CORES-1:0] core_done_latched;
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
         core_done_latched <= {NUM_CORES{1'b0}};
+    end else if (clear || start) begin
+        // 清零
+        core_done_latched <= {NUM_CORES{1'b0}};
     end else begin
-        // 当core_done脉冲到来时锁存，直到后变换完成才清除
+        // 粘性锁存：core_done 脉冲到来时置 1，只在 start 时清零
         for (integer i = 0; i < NUM_CORES; i = i + 1) begin
             if (core_done[i]) begin
                 core_done_latched[i] <= 1'b1;
-            end else if (result_valid ) begin
-                core_done_latched[i] <= 1'b0;  // 完成后清除
             end
         end
     end
@@ -140,6 +142,12 @@ always @(posedge clk or negedge rst_n) begin
         for (integer i = 0; i < MAX_RADIX; i = i + 1) begin
             data_out[i] <= {MAX_WIDTH{1'b0}};
         end
+    end else if (start || clear) begin
+        // 新管道调用或清零：复位状态机
+        state <= IDLE;
+        result_valid <= 1'b0;
+        group_counter <= 0;
+        temp_result <= 0;
     end else begin
         state <= next_state;
         

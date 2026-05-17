@@ -4,7 +4,7 @@
 // 创新点: 基数(2/4/8/16)、位宽(256/384)、并行度可配置，Winograd优化
 // ============================================================================
 module reconfigurable_3d_pe_top #(
-    parameter MAX_WIDTH = 128,      // 最大位宽（支持256/384）
+    parameter MAX_WIDTH = 256,      // 最大位宽（支持256/384）
     parameter MAX_RADIX = 16,       // 最大基数
     parameter NUM_CORES = 8         // 子核数量
 )(
@@ -19,9 +19,13 @@ module reconfigurable_3d_pe_top #(
     
     // 控制信号
     input wire start,
+    input wire clear_post,      // 清零后变换（测试/多级调用用）
     output wire done,
     output wire result_valid,
-    
+
+    // DIF级参数
+    input wire [7:0] stride,            // 当前DIF级的stride
+
     // 数据输入（根据基数动态）
     input wire [MAX_WIDTH-1:0] data_in [0:MAX_RADIX-1],
     input wire [MAX_WIDTH-1:0] twiddle_factors [0:MAX_RADIX/2-1],
@@ -81,7 +85,8 @@ winograd_pre_transform #(
     .clk(clk),
     .rst_n(rst_n),
     .start(start),
-    .radix_mode(radix_config),
+    .radix_mode(radix_mode),
+    .stride(stride),
     
     // 原始输入
     .data_in(data_in),
@@ -119,24 +124,30 @@ always @(*) begin
     endcase
 end
 
+// 调试：子核输入输出
+always @(posedge clk) begin
+    if (winograd_valid) begin
+        $display("PE_TOP: valid stride=%0d radix=%b", stride, radix_mode);
+        for (integer di = 0; di < 4; di = di + 1)
+            $display("  core[%0d] x0=0x%064h x1=0x%064h w=0x%064h",
+                     di, winograd_x0[di], winograd_x1[di], winograd_w[di]);
+    end
+end
+
 // 实例化8个子核
 genvar core_idx;
 generate
     for (core_idx = 0; core_idx < NUM_CORES; core_idx = core_idx + 1) begin : core_array
         // 每个子核都是完整的基2蝶形运算器
         segmented_256bit_full_butterfly #(
-/*             .TOTAL_WIDTH(MAX_WIDTH),
-            .SEG_WIDTH(seg_width)
- */            
-            .TOTAL_WIDTH(128),
-            .SEG_WIDTH(64),
-            .SEG_COUNT(2)
-            
+            .TOTAL_WIDTH(MAX_WIDTH),
+            .SEG_WIDTH(seg_width),
+            .SEG_COUNT(seg_count)
         ) u_core (
             .clk(clk),
             .rst_n(rst_n),
             // .start(start & core_enable[core_idx] & winograd_valid[core_idx]),
-            .start(start & core_enable[core_idx]),
+            .start(winograd_valid & core_enable[core_idx]),
             .done(core_done[core_idx]),
             .busy(core_busy[core_idx]),
             
@@ -159,7 +170,7 @@ endgenerate
 // ============================================================================
 // Winograd后变换（结果重组）
 // ============================================================================
-reg [MAX_WIDTH-1:0] transformed_result [0:MAX_RADIX-1];
+wire post_transform_valid;
 
 winograd_post_transform #(
     .MAX_WIDTH(MAX_WIDTH),
@@ -168,7 +179,9 @@ winograd_post_transform #(
 ) u_winograd_post (
     .clk(clk),
     .rst_n(rst_n),
-    
+    .start(start),         // 新管道调用复位
+    .clear(clear_post),    // 测试用清零
+
     // 配置
     .radix_mode(radix_config),
     
@@ -181,7 +194,7 @@ winograd_post_transform #(
     .modulus(modulus),
     
     // 最终输出
-    .data_out(transformed_result),
+    .data_out(data_out),
     .result_valid(post_transform_valid)
 );
 
@@ -202,8 +215,6 @@ endgenerate
 // ============================================================================
 // 输出分配
 // ============================================================================
-assign data_out = transformed_result;
-
 // 完成信号：所有激活的子核都完成且后变换完成
 reg all_cores_done;
 always @(posedge clk or negedge rst_n) begin
@@ -222,6 +233,18 @@ end
 
 assign done = all_cores_done & post_transform_valid;
 assign result_valid = done;
+
+// 调试：后变换输出
+always @(posedge clk) begin
+    if (post_transform_valid) begin
+        $display("PE_TOP: post_transform done, radix=%b", radix_mode);
+        for (integer di = 0; di < 4; di = di + 1)
+            $display("  core[%0d] result0=0x%064h result1=0x%064h",
+                     di, core_result0[di], core_result1[di]);
+        $display("  pe_out[0]=0x%064h [1]=0x%064h",
+                 data_out[0], data_out[1]);
+    end
+end
 
 // ============================================================================
 // 性能监控

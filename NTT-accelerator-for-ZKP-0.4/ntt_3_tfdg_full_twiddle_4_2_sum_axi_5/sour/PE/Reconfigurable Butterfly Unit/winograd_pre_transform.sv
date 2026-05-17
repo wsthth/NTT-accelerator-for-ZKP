@@ -11,6 +11,7 @@ module winograd_pre_transform #(
     input wire rst_n,
     input wire start,
     input wire [1:0] radix_mode,
+    input wire [7:0] stride,                    // DIF级的stride参数
     input wire [MAX_WIDTH-1:0] data_in [0:MAX_RADIX-1],
     input wire [MAX_WIDTH-1:0] twiddle_in [0:MAX_RADIX/2-1],
     input wire [MAX_WIDTH-1:0] modulus,
@@ -94,14 +95,13 @@ module winograd_pre_transform #(
                 IDLE: begin
                     valid_out <= 1'b0;
                     if (start) begin
-                        // 根据基数确定需要计算的组数
-                        case (radix_mode)
-                            2'b00: total_groups <= 1;   // 基2
-                            2'b01: total_groups <= 2;   // 基4
-                            2'b10: total_groups <= 4;   // 基8
-                            2'b11: total_groups <= 8;   // 基16
-                            default: total_groups <= 0;
-                        endcase
+                        $display("PRE_XFORM: start stride=%0d radix_mode=%b", stride, radix_mode);
+                        // 总组数 = stride（每个子核一对数据）
+                        // 受限于子核数 NUM_CORES
+                        if (stride <= NUM_CORES)
+                            total_groups <= stride;
+                        else
+                            total_groups <= NUM_CORES;
                         group_cnt <= 0;
                         mod_reg <= modulus;
                         state <= PREPARE;
@@ -110,64 +110,22 @@ module winograd_pre_transform #(
 
                 PREPARE: begin
                     // 准备当前组的输入数据索引
-                    case (radix_mode)
-                        2'b00: begin
-                            idx1 <= 0;
-                            idx2 <= 1;
-                        end
-                        2'b01: begin
-                            // 组0: (0,2), (1,3); 组1: (0,2), (1,3) 但用减法
-                            if (group_cnt == 0) begin
-                                idx1 <= 0; idx2 <= 2;
-                            end else begin
-                                idx1 <= 0; idx2 <= 2;
-                            end
-                        end
-                        2'b10, 2'b11: begin
-                            // 对称对: (g, 7-g) 或 (g, 15-g)
-                            idx1 <= group_cnt;
-                            idx2 <= (radix_mode == 2'b10) ? (7 - group_cnt) : (15 - group_cnt);
-                        end
-                    endcase
+                    // 配对: (data[group_cnt], data[group_cnt + stride])
+                    idx1 <= group_cnt;
+                    idx2 <= group_cnt + stride;
                     state <= CALC_GROUP;
                 end
 
                 CALC_GROUP: begin
-                    // 只使用一组加法器/减法器，依次计算各组
-                    case (radix_mode)
-                        2'b00: begin
-                            // 基2: 直接传递，无需运算
-                            group_x0[0] <= data_in[0];
-                            group_x1[0] <= data_in[1];
-                            group_w[0]  <= twiddle_in[0];
-                            group_conj[0] <= 0;
-                        end
-
-                        2'b01: begin
-                            if (group_cnt == 0) begin
-                                // 组0: 加法
-                                group_x0[0] <= mod_add(data_in[0], data_in[2], mod_reg);
-                                group_x1[0] <= mod_add(data_in[1], data_in[3], mod_reg);
-                                group_w[0]  <= twiddle_in[0];
-                                group_conj[0] <= twiddle_in[1];   // 简化：共轭 = 另一个 twiddle
-                            end else begin
-                                // 组1: 减法
-                                group_x0[1] <= mod_sub(data_in[0], data_in[2], mod_reg);
-                                group_x1[1] <= mod_sub(data_in[1], data_in[3], mod_reg);
-                                group_w[1]  <= twiddle_in[1];
-                                group_conj[1] <= twiddle_in[0];
-                            end
-                        end
-
-                        2'b10, 2'b11: begin
-                            // 基8/16：每组计算加法和减法，直接使用当前索引的数据
-                            group_x0[group_cnt] <= mod_add(data_in[idx1], data_in[idx2], mod_reg);
-                            group_x1[group_cnt] <= mod_sub(data_in[idx1], data_in[idx2], mod_reg);
-                            group_w[group_cnt]  <= twiddle_in[group_cnt];
-                            // 共轭系数简化（实际应为 twiddle_in[group_cnt] 的模逆）
-                            group_conj[group_cnt] <= twiddle_in[group_cnt];
-                        end
-                    endcase
+                    // 通用路由：配对 (data[idx1], data[idx2]) 送入子核 group_cnt
+                    // 子核计算 DIF 蝶形: add = x0+x1, sub = (x0-x1)*w
+                    $display("PRE_XFORM: CALC g=%0d idx1=%0d idx2=%0d data[%0d]=0x%064h data[%0d]=0x%064h",
+                             group_cnt, idx1, idx2,
+                             idx1, data_in[idx1], idx2, data_in[idx2]);
+                    group_x0[group_cnt] <= data_in[idx1];
+                    group_x1[group_cnt] <= data_in[idx2];
+                    group_w[group_cnt]  <= twiddle_in[group_cnt];
+                    group_conj[group_cnt] <= 0;
 
                     // 推进组索引
                     if (group_cnt == total_groups - 1)
@@ -179,6 +137,10 @@ module winograd_pre_transform #(
                 end
 
                 APPLY_OUTPUT: begin
+                    $display("PRE_XFORM: APPLY x0[0]=0x%064h x1[0]=0x%064h w[0]=0x%064h",
+                             group_x0[0], group_x1[0], group_w[0]);
+                    $display("PRE_XFORM: APPLY x0[1]=0x%064h x1[1]=0x%064h",
+                             group_x0[1], group_x1[1]);
                     // 将计算好的分组结果分配给各个子核
                     for (integer i = 0; i < NUM_CORES; i = i + 1) begin
                         if (i < total_groups) begin
@@ -198,10 +160,7 @@ module winograd_pre_transform #(
 
                 DONE: begin
                     valid_out <= 1'b1;
-                    if (!start) begin
-                        state <= IDLE;
-                        valid_out <= 1'b0;
-                    end
+                    state <= IDLE;
                 end
 
                 default: state <= IDLE;
