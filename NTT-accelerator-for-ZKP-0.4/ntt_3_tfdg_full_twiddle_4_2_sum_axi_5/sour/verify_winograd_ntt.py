@@ -13,11 +13,20 @@ P = 0x30644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001
 G = 5
 
 # ------------------------------------------------------------
+# Montgomery arithmetic constants
+# R = 2^256 mod P, R_inv = R^-1 mod P
+# ------------------------------------------------------------
+R = pow(2, 256, P)
+R_inv = pow(R, -1, P)
+
+# ------------------------------------------------------------
 # Modular arithmetic
+# madd/msub: standard modular addition/subtraction (mod P)
+# mmul: Montgomery multiplication = a * b * R^-1 mod P
 # ------------------------------------------------------------
 def madd(a, b): return (a + b) % P
 def msub(a, b): return (a - b) % P
-def mmul(a, b): return (a * b) % P
+def mmul(a, b): return (a * b * R_inv) % P
 
 def br(x, bits):
     r = 0
@@ -155,7 +164,7 @@ def sub_core_butterfly(x0, x1, w):
 
 def rtl_pipeline_one_level(data, N, radix, tw=None):
     """
-    Simulate one level of the RTL pipeline: pre-transform → sub-core → post-transform.
+    Simulate one level of the RTL pipeline: pre-transform ? sub-core ? post-transform.
 
     This models the DIT-based pipeline:
       Pre: route (data[g], data[g+radix/2], tw[g]) to sub-core g

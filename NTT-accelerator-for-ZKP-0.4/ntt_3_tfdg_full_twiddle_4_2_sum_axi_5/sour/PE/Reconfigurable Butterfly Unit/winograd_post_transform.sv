@@ -215,8 +215,8 @@ always @(posedge clk or negedge rst_n) begin
                     
                     2'b01: begin  // 基4
                         data_out[0] <= core_result0[0];
-                        data_out[1] <= core_result0[1];
-                        data_out[2] <= core_result1[0];
+                        data_out[1] <= core_result1[0];
+                        data_out[2] <= core_result0[1];
                         data_out[3] <= core_result1[1];
                         result_valid <= 1'b1;
                         next_state <= IDLE;

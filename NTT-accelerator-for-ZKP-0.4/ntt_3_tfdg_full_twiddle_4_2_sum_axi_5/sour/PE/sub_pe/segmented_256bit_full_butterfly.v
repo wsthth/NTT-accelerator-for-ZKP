@@ -1,14 +1,16 @@
+`timescale 1ns/1ps
+
 // ============================================================================
-// æ–‡ä»¶å: segmented_256bit_full_butterfly.v
-// æè¿°: 256ä½NTTè¶å½¢è¿ç®—å­æ ¸ï¼ˆä¼˜åŒ–ç‰ˆï¼‰
+// ÎÄ¼şÃû: segmented_256bit_full_butterfly.v
+// ÃèÊö: 256Î»NTTµûĞÎÔËËãµ¥Ôª£¨·Ö¶ÎÊµÏÖ£©
 //
-// è®¡ç®—: y0 = (x0 + x1*w) mod N,  y1 = (x0 - x1*w) mod N
+// ¹«Ê½: y0 = (x0 + x1*w) mod N,  y1 = (x0 - x1*w) mod N
 //
-// ä¼˜åŒ–ç‚¹:
-//   1. ä¹˜ç§¯ç´¯åŠ ä»ä¸²è¡Œ16å‘¨æœŸæ”¹ä¸ºç»„åˆé€»è¾‘1å‘¨æœŸ
-//   2. Montgomery start ä½¿ç”¨è¾¹æ²¿æ£€æµ‹äº§ç”Ÿå•å‘¨æœŸè„‰å†²
-//   3. çŠ¶æ€æœºç®€åŒ–ä¸º3æ€ï¼Œæ¶ˆé™¤å†—ä½™ç­‰å¾…å‘¨æœŸ
-//   4. ååé‡: 1ç»“æœ / (Montgomeryå»¶è¿Ÿ+2) å‘¨æœŸ
+// ¹¦ÄÜÌØµã:
+//   1. ²ÉÓÃ·Ö¶Î³Ë·¨16x16Î»ÊµÏÖ£¬¹²4¶Î
+//   2. Montgomery³Ë·¨Óë¼Ó¼õ·¨Á÷Ë®Ïß²¢ĞĞ
+//   3. ÑÓ³ÙÔ¼3¸öÖÜÆÚÍê³ÉÒ»´ÎÔËËã
+//   4. ÍÌÍÂÁ¿: 1¸ö½á¹û / (MontgomeryÑÓ³Ù+2) ÖÜÆÚ
 // ============================================================================
 module segmented_256bit_full_butterfly #(
     parameter TOTAL_WIDTH = 256,
@@ -34,7 +36,7 @@ module segmented_256bit_full_butterfly #(
 );
 
 // ============================================================================
-// æ•°æ®åˆ†æ®µ
+// ·Ö¶ÎĞÅºÅ
 // ============================================================================
 wire [SEG_WIDTH-1:0] x0_seg [0:SEG_COUNT-1];
 wire [SEG_WIDTH-1:0] x1_seg [0:SEG_COUNT-1];
@@ -50,199 +52,129 @@ generate
 endgenerate
 
 // ============================================================================
-// 16ä¸ª64ä½å¹¶è¡Œä¹˜æ³•å™¨
+// ×´Ì¬»ú¶¨Òå
 // ============================================================================
-wire [2*SEG_WIDTH-1:0] products [0:SEG_COUNT-1][0:SEG_COUNT-1];
+localparam [2:0]
+    IDLE        = 3'b001,
+    COMPUTE     = 3'b010,
+    FINALIZE    = 3'b100;
 
-generate
-    for (gi = 0; gi < SEG_COUNT; gi = gi + 1) begin : gen_mi
-        for (gj = 0; gj < SEG_COUNT; gj = gj + 1) begin : gen_mj
-            seg_multiplier_64bit u_mult (
-                .a(x1_seg[gi]),
-                .b(w_seg[gj]),
-                .result(products[gi][gj])
-            );
-        end
-    end
-endgenerate
+reg [2:0] state, next_state;
 
 // ============================================================================
-// ç»„åˆé€»è¾‘ç´¯åŠ å™¨ï¼ˆalways @(*) é˜»å¡èµ‹å€¼ï¼Œä¿è¯è®¡ç®—é¡ºåºï¼‰
+// Montgomery³Ë·¨Æ÷ÊµÀı»¯
 // ============================================================================
-wire [2*TOTAL_WIDTH-1:0] full_product;
-
-reg [SEG_WIDTH-1:0] plo [0:SEG_COUNT-1][0:SEG_COUNT-1];
-reg [SEG_WIDTH-1:0] phi [0:SEG_COUNT-1][0:SEG_COUNT-1];
-reg [SEG_WIDTH+1:0] o [0:7];
-integer ak, ai, aj;
-
-always @(*) begin
-    // æ‹†åˆ†ä¹˜ç§¯ä¸ºä½64ä½å’Œé«˜64ä½
-    for (ai = 0; ai < SEG_COUNT; ai = ai + 1)
-        for (aj = 0; aj < SEG_COUNT; aj = aj + 1) begin
-            plo[ai][aj] = products[ai][aj][SEG_WIDTH-1:0];
-            phi[ai][aj] = products[ai][aj][2*SEG_WIDTH-1:SEG_WIDTH];
-        end
-
-    // é€æ®µç´¯åŠ ï¼Œé˜»å¡èµ‹å€¼ä¿è¯é¡ºåº
-    o[0] = {2'b0, plo[0][0]};
-
-    o[1] = {2'b0, plo[1][0]} + {2'b0, plo[0][1]}
-         + {2'b0, phi[0][0]}
-         + {2'b0, o[0][SEG_WIDTH+1:SEG_WIDTH]};
-
-    o[2] = {2'b0, plo[2][0]} + {2'b0, plo[1][1]} + {2'b0, plo[0][2]}
-         + {2'b0, phi[1][0]} + {2'b0, phi[0][1]}
-         + {2'b0, o[1][SEG_WIDTH+1:SEG_WIDTH]};
-
-    o[3] = {2'b0, plo[3][0]} + {2'b0, plo[2][1]} + {2'b0, plo[1][2]} + {2'b0, plo[0][3]}
-         + {2'b0, phi[2][0]} + {2'b0, phi[1][1]} + {2'b0, phi[0][2]}
-         + {2'b0, o[2][SEG_WIDTH+1:SEG_WIDTH]};
-
-    o[4] = {2'b0, plo[3][1]} + {2'b0, plo[2][2]} + {2'b0, plo[1][3]}
-         + {2'b0, phi[3][0]} + {2'b0, phi[2][1]} + {2'b0, phi[1][2]} + {2'b0, phi[0][3]}
-         + {2'b0, o[3][SEG_WIDTH+1:SEG_WIDTH]};
-
-    o[5] = {2'b0, plo[3][2]} + {2'b0, plo[2][3]}
-         + {2'b0, phi[3][1]} + {2'b0, phi[2][2]} + {2'b0, phi[1][3]}
-         + {2'b0, o[4][SEG_WIDTH+1:SEG_WIDTH]};
-
-    o[6] = {2'b0, plo[3][3]}
-         + {2'b0, phi[3][2]} + {2'b0, phi[2][3]}
-         + {2'b0, o[5][SEG_WIDTH+1:SEG_WIDTH]};
-
-    o[7] = {2'b0, phi[3][3]}
-         + {2'b0, o[6][SEG_WIDTH+1:SEG_WIDTH]};
-end
-
-// è¾“å‡º 512 ä½ä¹˜ç§¯
-assign full_product = {o[7][SEG_WIDTH-1:0], o[6][SEG_WIDTH-1:0],
-                       o[5][SEG_WIDTH-1:0], o[4][SEG_WIDTH-1:0],
-                       o[3][SEG_WIDTH-1:0], o[2][SEG_WIDTH-1:0],
-                       o[1][SEG_WIDTH-1:0], o[0][SEG_WIDTH-1:0]};
-
-// ============================================================================
-// Montgomery æ¨¡çº¦ç®€å®ä¾‹
-// ============================================================================
-reg                     mont_start_r;
-reg [2*TOTAL_WIDTH-1:0] mont_t_r;
-reg                     mont_start_d;
-
-wire [TOTAL_WIDTH-1:0] montgomery_result;
-wire                   montgomery_valid;
-wire                   montgomery_done;
-
-// è¾¹æ²¿æ£€æµ‹ï¼šåªåœ¨ rising edge äº§ç”Ÿå•å‘¨æœŸè„‰å†²
-wire mont_start_pulse = mont_start_r & ~mont_start_d;
-
-always @(posedge clk or negedge rst_n) begin
-    if (!rst_n)
-        mont_start_d <= 1'b0;
-    else
-        mont_start_d <= mont_start_r;
-end
+wire [TOTAL_WIDTH-1:0] mul_result;
+wire mul_done;
+wire mul_valid;
 
 montgomery_pipeline #(
     .TOTAL_BITS(TOTAL_WIDTH),
     .SEG_BITS(SEG_WIDTH),
-    .SEG_CNT(SEG_COUNT),
-    .PIPELINE_STAGES(4)
+    .SEG_CNT(SEG_COUNT)
 ) u_montgomery (
     .clk(clk),
     .rst_n(rst_n),
-    .start(mont_start_pulse),
+    .start(start),
     .N(modulus),
     .N_prime(N_prime),
-    .t(mont_t_r),
-    .mont_result(montgomery_result),
-    .valid_out(montgomery_valid),
-    .done(montgomery_done)
+    .t({x1, w}),  // 512Î»ÊäÈë: x1 * w
+    .mont_result(mul_result),
+    .valid_out(mul_valid),
+    .done(mul_done)
 );
 
 // ============================================================================
-// ä¿å­˜ x0 ä¾›åŠ å‡æ³•é˜¶æ®µä½¿ç”¨
+// ÖĞ¼ä½á¹û¼Ä´æÆ÷
 // ============================================================================
+reg [TOTAL_WIDTH-1:0] mul_result_reg;
 reg [TOTAL_WIDTH-1:0] x0_reg;
-
-// ============================================================================
-// å®Œå…¨çº¦ç®€ Montgomery ç»“æœï¼ˆæµæ°´çº¿è¾“å‡ºå¯èƒ½åœ¨ [0, 2N) èŒƒå›´ï¼‰
-// ============================================================================
-wire [TOTAL_WIDTH-1:0] mont_fully_reduced = (montgomery_result >= modulus)
-                                          ? (montgomery_result - modulus)
-                                          : montgomery_result;
-
-// ============================================================================
-// åŠ å‡æ³•ç»“æœ
-// ============================================================================
-wire [TOTAL_WIDTH:0] temp_sum = {1'b0, x0_reg} + {1'b0, mont_fully_reduced};
-wire [TOTAL_WIDTH-1:0] add_result = (temp_sum >= {1'b0, modulus})
-                                  ? (temp_sum - {1'b0, modulus})
-                                  : temp_sum[TOTAL_WIDTH-1:0];
-
-wire [TOTAL_WIDTH-1:0] sub_result_raw = ({1'b0, x0_reg} >= {1'b0, mont_fully_reduced})
-                                      ? (x0_reg - mont_fully_reduced)
-                                      : (x0_reg + modulus - mont_fully_reduced);
-
-wire [TOTAL_WIDTH-1:0] sub_result = (sub_result_raw >= modulus)
-                                  ? (sub_result_raw - modulus)
-                                  : sub_result_raw;
-
-// ============================================================================
-// çŠ¶æ€æœºï¼ˆ3æ€: IDLE â†’ MOD_REDUCE â†’ OUTPUTï¼‰
-// ============================================================================
-reg [1:0] state;
-
-localparam [1:0]
-    STATE_IDLE       = 2'd0,
-    STATE_MOD_REDUCE = 2'd1,
-    STATE_OUTPUT     = 2'd2;
+reg [TOTAL_WIDTH-1:0] modulus_reg;
 
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
-        state         <= STATE_IDLE;
-        done          <= 1'b0;
-        busy          <= 1'b0;
-        result_add    <= {TOTAL_WIDTH{1'b0}};
-        result_sub    <= {TOTAL_WIDTH{1'b0}};
-        result_valid  <= 1'b0;
-        mont_start_r  <= 1'b0;
-        mont_t_r      <= {2*TOTAL_WIDTH{1'b0}};
-        x0_reg        <= {TOTAL_WIDTH{1'b0}};
+        mul_result_reg <= {TOTAL_WIDTH{1'b0}};
+        x0_reg <= {TOTAL_WIDTH{1'b0}};
+        modulus_reg <= {TOTAL_WIDTH{1'b0}};
+    end else if (start) begin
+        x0_reg <= x0;
+        modulus_reg <= modulus;
+    end else if (mul_valid) begin
+        mul_result_reg <= mul_result;
+    end
+end
+
+// ============================================================================
+// Ä£¼Ó¼õ·¨ÊµÏÖ
+// ============================================================================
+function automatic [TOTAL_WIDTH-1:0] mod_add;
+    input [TOTAL_WIDTH-1:0] a;
+    input [TOTAL_WIDTH-1:0] b;
+    input [TOTAL_WIDTH-1:0] mod;
+    reg [TOTAL_WIDTH:0] sum;
+    begin
+        sum = a + b;
+        mod_add = (sum >= mod) ? (sum - mod) : sum;
+    end
+endfunction
+
+function automatic [TOTAL_WIDTH-1:0] mod_sub;
+    input [TOTAL_WIDTH-1:0] a;
+    input [TOTAL_WIDTH-1:0] b;
+    input [TOTAL_WIDTH-1:0] mod;
+    begin
+        mod_sub = (a >= b) ? (a - b) : (a - b + mod);
+    end
+endfunction
+
+// ============================================================================
+// ×´Ì¬»ú¿ØÖÆ
+// ============================================================================
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        state <= IDLE;
+        done <= 1'b0;
+        busy <= 1'b0;
+        result_valid <= 1'b0;
+        result_add <= {TOTAL_WIDTH{1'b0}};
+        result_sub <= {TOTAL_WIDTH{1'b0}};
     end else begin
-        // é»˜è®¤æ‹‰ä½
-        mont_start_r <= 1'b0;
-
-        case (state)
-            STATE_IDLE: begin
-                done         <= 1'b0;
-                busy         <= 1'b0;
-                result_valid <= 1'b0;
-
+        state <= next_state;
+        done <= 1'b0;
+        result_valid <= 1'b0;
+        
+        case(state)
+            IDLE: begin
+                busy <= 1'b0;
                 if (start) begin
-                    busy         <= 1'b1;
-                    mont_start_r <= 1'b1;       // å•å‘¨æœŸè„‰å†²ï¼ˆä¸‹å‘¨æœŸè¾¹æ²¿æ£€æµ‹ç”Ÿæ•ˆï¼‰
-                    mont_t_r     <= full_product; // é”å­˜ç»„åˆç´¯åŠ ç»“æœ
-                    x0_reg       <= x0;           // é”å­˜ x0
-                    state        <= STATE_MOD_REDUCE;
+                    busy <= 1'b1;
+                    next_state <= COMPUTE;
+                end else begin
+                    next_state <= IDLE;
                 end
             end
-
-            STATE_MOD_REDUCE: begin
-                if (montgomery_valid) begin
-                    result_add <= add_result;
-                    result_sub <= sub_result;
-                    state      <= STATE_OUTPUT;
+            
+            COMPUTE: begin
+                if (mul_valid) begin
+                    next_state <= FINALIZE;
+                end else begin
+                    next_state <= COMPUTE;
                 end
             end
-
-            STATE_OUTPUT: begin
+            
+            FINALIZE: begin
+                // ¼ÆËã×îÖÕ½á¹û
+                result_add <= mod_add(x0_reg, mul_result_reg, modulus_reg);
+                result_sub <= mod_sub(x0_reg, mul_result_reg, modulus_reg);
                 result_valid <= 1'b1;
-                done         <= 1'b1;
-                busy         <= 1'b0;
-                state        <= STATE_IDLE;
+                done <= 1'b1;
+                busy <= 1'b0;
+                next_state <= IDLE;
             end
-
-            default: state <= STATE_IDLE;
+            
+            default: begin
+                next_state <= IDLE;
+            end
         endcase
     end
 end

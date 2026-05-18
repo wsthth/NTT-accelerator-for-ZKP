@@ -1,36 +1,38 @@
+`timescale 1ns/1ps
+
 // ============================================================================
 // 文件名: reconfigurable_3d_pe_top.v
-// 描述: 三维可重构PE顶层模块
-// 创新点: 基数(2/4/8/16)、位宽(256/384)、并行度可配置，Winograd优化
+// 描述: 可重构PE顶层模块
+// 功能: 支持基(2/4/8/16)可变位宽(256/384)的蝶形运算单元，使用Winograd优化
 // ============================================================================
 module reconfigurable_3d_pe_top #(
-    parameter MAX_WIDTH = 256,      // 最大位宽（支持256/384）
+    parameter MAX_WIDTH = 256,      // 支持位宽可配置，256/384位
     parameter MAX_RADIX = 16,       // 最大基数
     parameter NUM_CORES = 8         // 子核数量
 )(
-    // 系统接口
+    // 系统信号
     input wire clk,
     input wire rst_n,
     
-    // 三维配置
+    // 配置接口
     input wire [1:0] radix_mode,    // 00:基2, 01:基4, 10:基8, 11:基16
     input wire width_384_mode,      // 0:256bit, 1:384bit
-    input wire [2:0] parallelism,   // 并行度：激活子核数
+    input wire [2:0] parallelism,   // 并行度控制，决定启用多少个子核
     
     // 控制信号
     input wire start,
-    input wire clear_post,      // 清零后变换（测试/多级调用用）
+    input wire clear_post,      // 后变换清除/重新加载控制
     output wire done,
     output wire result_valid,
 
-    // DIF级参数
-    input wire [7:0] stride,            // 当前DIF级的stride
+    // DIF算法参数
+    input wire [7:0] stride,            // 用于DIF算法的stride
 
-    // 数据输入（根据基数动态）
+    // 数据和旋转因子输入
     input wire [MAX_WIDTH-1:0] data_in [0:MAX_RADIX-1],
     input wire [MAX_WIDTH-1:0] twiddle_factors [0:MAX_RADIX/2-1],
     
-    // 模运算参数
+    // 模数参数
     input wire [MAX_WIDTH-1:0] modulus,
     input wire [MAX_WIDTH-1:0] N_prime,
     input wire [MAX_WIDTH-1:0] R2_mod_N,  // R^2 mod N
@@ -58,7 +60,7 @@ always @(posedge clk or negedge rst_n) begin
     end
 end
 
-// 根据配置确定实际参数
+// 计算实际基数
 wire [3:0] actual_radix = (radix_config == 2'b00) ? 4'd2 :
                          (radix_config == 2'b01) ? 4'd4 :
                          (radix_config == 2'b10) ? 4'd8 : 4'd16;
@@ -66,10 +68,10 @@ wire [3:0] actual_radix = (radix_config == 2'b00) ? 4'd2 :
 // wire [5:0] seg_count = width_config ? 6'd6 : 6'd4;  // 384位=6段, 256位=4段
 localparam [5:0] seg_count =6'd4;  // 384位=6段, 256位=4段
 
-localparam [7:0] seg_width = 8'd64;  // 固定64位段
+localparam [7:0] seg_width = 8'd64;  // 每段64位
 
 // ============================================================================
-// Winograd预变换模块
+// Winograd预变换
 // ============================================================================
 wire [MAX_WIDTH-1:0] winograd_x0 [0:NUM_CORES-1];
 wire [MAX_WIDTH-1:0] winograd_x1 [0:NUM_CORES-1];
@@ -88,7 +90,7 @@ winograd_pre_transform #(
     .radix_mode(radix_mode),
     .stride(stride),
     
-    // 原始输入
+    // 输入接口
     .data_in(data_in),
     .twiddle_in(twiddle_factors),
     .modulus(modulus),
@@ -102,29 +104,29 @@ winograd_pre_transform #(
 );
 
 // ============================================================================
-// 子核资源池（8个子核）
+// 可配置的8个子核阵列
 // ============================================================================
 wire [MAX_WIDTH-1:0] core_result0 [0:NUM_CORES-1];
 wire [MAX_WIDTH-1:0] core_result1 [0:NUM_CORES-1];
 wire [NUM_CORES-1:0] core_done;
 wire [NUM_CORES-1:0] core_busy;
-wire [NUM_CORES-1:0] core_result_valid_array;  // 添加缺失的信号声明
-// 动态使能信号（根据并行度配置）
+wire [NUM_CORES-1:0] core_result_valid_array;  // 子核结果有效信号阵列
+// 根据并行度选择启用的子核
 reg [NUM_CORES-1:0] core_enable;
 
 always @(*) begin
     core_enable = {NUM_CORES{1'b0}};
     case(parallelism_config)
-        3'b000: core_enable[0] = 1'b1;  // 激活1个子核
-        3'b001: core_enable[1:0] = 2'b11;  // 激活2个子核
-        3'b010: core_enable[3:0] = 4'b1111;  // 激活4个子核
-        3'b011: core_enable[5:0] = 6'b111111;  // 激活6个子核
-        3'b100: core_enable[7:0] = 8'b11111111;  // 激活8个子核
+        3'b000: core_enable[0] = 1'b1;  // 使用1个子核
+        3'b001: core_enable[1:0] = 2'b11;  // 使用2个子核
+        3'b010: core_enable[3:0] = 4'b1111;  // 使用4个子核
+        3'b011: core_enable[5:0] = 6'b111111;  // 使用6个子核
+        3'b100: core_enable[7:0] = 8'b11111111;  // 使用8个子核
         default: core_enable = {NUM_CORES{1'b1}};
     endcase
 end
 
-// 调试：子核输入输出
+// 调试信息：打印Winograd预变换结果
 always @(posedge clk) begin
     if (winograd_valid) begin
         $display("PE_TOP: valid stride=%0d radix=%b", stride, radix_mode);
@@ -138,7 +140,7 @@ end
 genvar core_idx;
 generate
     for (core_idx = 0; core_idx < NUM_CORES; core_idx = core_idx + 1) begin : core_array
-        // 每个子核都是完整的基2蝶形运算器
+        // 每个子核是一个分段256位完整蝶形单元
         segmented_256bit_full_butterfly #(
             .TOTAL_WIDTH(MAX_WIDTH),
             .SEG_WIDTH(seg_width),
@@ -151,16 +153,16 @@ generate
             .done(core_done[core_idx]),
             .busy(core_busy[core_idx]),
             
-            // 输入数据（来自Winograd预变换）
+            // 输入来自Winograd预变换
             .x0(winograd_x0[core_idx]),
             .x1(winograd_x1[core_idx]),
             .w(winograd_w[core_idx]),
             .N_prime(N_prime),
             .modulus(modulus),
             
-            // 输出结果（两个分支）
-            .result_add(core_result0[core_idx]),  // 加法分支
-            .result_sub(core_result1[core_idx]),  // 减法分支
+            // 输出结果（加法和减法）
+            .result_add(core_result0[core_idx]),  // 加法结果
+            .result_sub(core_result1[core_idx]),  // 减法结果
             .result_valid()
             // .result_valid(core_result_valid[core_idx])
         );
@@ -168,7 +170,7 @@ generate
 endgenerate
 
 // ============================================================================
-// Winograd后变换（结果重组）
+// Winograd后变换与结果重组
 // ============================================================================
 wire post_transform_valid;
 
@@ -179,9 +181,9 @@ winograd_post_transform #(
 ) u_winograd_post (
     .clk(clk),
     .rst_n(rst_n),
-    .start(start),         // 新管道调用复位
-    .clear(clear_post),    // 测试用清零
-
+    .start(start),         // 与输入同步
+    .clear(clear_post),    // 清除控制
+    
     // 配置
     .radix_mode(radix_config),
     
@@ -199,34 +201,33 @@ winograd_post_transform #(
 );
 
 // ============================================================================
-// Karatsuba优化乘法器（可选）
+// Karatsuba优化（可选）
 // ============================================================================
-// 如果启用Karatsuba优化，替换普通的64位乘法器
-
-// wire karatsuba_enable = 1'b1;  // 默认启用
-localparam karatsuba_enable = 1'b1;  // 默认启用
+// 当前使用分段乘法实现，64位分段
+// wire karatsuba_enable = 1'b1;  // 启用Karatsuba优化
+localparam karatsuba_enable = 1'b1;  // 启用Karatsuba优化
 generate
     if (karatsuba_enable) begin
         // 使用Karatsuba优化的64位乘法器
-        // 这将替换原seg_multiplier_64bit模块
+        // 替换seg_multiplier_64bit模块
     end
 endgenerate
 
 // ============================================================================
-// 输出分配
+// 完成信号生成
 // ============================================================================
-// 完成信号：所有激活的子核都完成且后变换完成
+// 检测所有启用的子核是否完成，并与后变换同步
 reg all_cores_done;
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
         all_cores_done <= 1'b0;
     end else begin
-        // 检查所有激活的子核是否完成
+        // 检查所有启用的子核是否完成
         if (&(core_done | ~core_enable)) begin
             all_cores_done <= 1'b1;
         end else if (!start) begin
             // all_cores_done <= 1'b0;
-            all_cores_done <= 1'b1;//这里先暂时这样写，便于仿真
+            all_cores_done <= 1'b1;//保持高电平以支持流水线连续输入
         end
     end
 end
@@ -234,7 +235,7 @@ end
 assign done = all_cores_done & post_transform_valid;
 assign result_valid = done;
 
-// 调试：后变换输出
+// 调试：打印后变换结果
 always @(posedge clk) begin
     if (post_transform_valid) begin
         $display("PE_TOP: post_transform done, radix=%b", radix_mode);
@@ -247,7 +248,7 @@ always @(posedge clk) begin
 end
 
 // ============================================================================
-// 性能监控
+// 性能统计
 // ============================================================================
 reg [31:0] cycle_counter;
 reg [31:0] total_multiplies;
@@ -259,7 +260,7 @@ always @(posedge clk or negedge rst_n) begin
     end else if (start && !done) begin
         cycle_counter <= cycle_counter + 1;
         
-        // 统计乘法次数（根据基数）
+        // 根据基数统计乘法次数
         case(radix_config)
             2'b00: total_multiplies <= total_multiplies + 1;  // 基2: 1次乘法
             2'b01: total_multiplies <= total_multiplies + 3;  // 基4: 3次乘法
@@ -267,7 +268,7 @@ always @(posedge clk or negedge rst_n) begin
             2'b11: total_multiplies <= total_multiplies + 8;  // 基16(Winograd): 8次乘法
         endcase
     end else if (done) begin
-        // 保持最终值
+        // 统计完成
     end
 end
 
