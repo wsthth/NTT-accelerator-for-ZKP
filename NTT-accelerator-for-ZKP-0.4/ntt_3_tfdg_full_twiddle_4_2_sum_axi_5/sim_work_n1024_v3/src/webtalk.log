@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu May 21 19:31:08 2026
+# Process ID: 21120
+# Current directory: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src
+# Command line: wbtcv.exe -mode batch -source F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/xsim.dir/sim_snapshot/webtalk/xsim_webtalk.tcl -notrace
+# Log file: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/webtalk.log
+# Journal file: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src\webtalk.jou
+#-----------------------------------------------------------
+source F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/xsim.dir/sim_snapshot/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu May 21 19:31:12 2026...

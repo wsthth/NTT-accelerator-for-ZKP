@@ -1,0 +1,78 @@
+#-----------------------------------------------------------
+# xsim v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu May 21 20:12:56 2026
+# Process ID: 36072
+# Current directory: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src
+# Command line: xsim.exe -log ..\xsim.log -mode tcl -source {xsim.dir/sim_snapshot/xsim_script.tcl}
+# Log file: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/../xsim.log
+# Journal file: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/sim_snapshot/xsim_script.tcl
+# xsim {sim_snapshot} -autoloadwcfg -tclbatch {../run.tcl}
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source ../run.tcl
+## run 500000ns
+Loaded input data from ntt_input_1024.txt
+========================================
+N=1024 Quick Verification (Level 0, 4 passes)
+========================================
+
+--- Level 0 (radix-8, stride=4) ---
+
+--- Pass 0 (elements [0:7]) ---
+RTL output:
+  [0] = 0x23da8016bafd9af2ae478ee651564cb821b6df39428b5e68c7a34315efffffe1
+  [1] = 0x289ebddf5a43c395d6e5fdaf211d98017475f63a75efac7bd56b1ab6a0000016
+  [2] = 0x1a1e7b82c9e5b99f4d9465abd018280feab389ea673b780a5dbd894798aecda2
+  [3] = 0x1e0b63839e39c31e4c26281211ccf0a8f13e506c1647bc9c549b4729a751324a
+  [4] = 0x2a8060bc629e5b4dd9a2c483610141d347804f241a1777cd86cb05f1195824d7
+  [5] = 0x29be6dcd3990dfce8cf5101971d66342026a785da22d572c84ba32b8c6a7db0b
+  [6] = 0x1cd7a6125184fd4bfc08018836f08eae60bdf4ee6a5cec670d54432a82474405
+  [7] = 0x2317c9879d885c057f1cd43d0b584a662ef1d77616f00c55137b68240db8bbd2
+  PASS
+
+--- Pass 1 (elements [8:15]) ---
+RTL output:
+  [0] = 0x128c73f1f5836d187ba0694d5163f5c9c87abf28d7f8fe2d3d9cb8f73fffff8c
+  [1] = 0x289ebddf5a43c395d6e5fdaf211d98017475f63a75efac7bd56b1ab6a0000016
+  [2] = 0x270baca94a34171d115d1ecbba67230bf87d945aa4c6d27e96176b162eed3508
+  [3] = 0x303474ab39a2d7f00e068f0fa90cf71bb26c0e33e7e3727dd61cd0d05112ca90
+  [4] = 0x032c45568692364587ec90905f969397cd167ff0ffa5ffae6076f722d64f2a45
+  [5] = 0x0f602e9b6ef136d2f3b3d8bcf1cd6231fb643f37d852fe7edd25c1d469b0d547
+  [6] = 0x11108e4548c63702212a05614cc3855b4d05f3a25eca2c52453d6b9e648e87f4
+  [7] = 0x1d90d52fe0ccf4752753aacaf592fccae96db8b1b7f06c2e518bb5917b71778e
+  PASS
+
+--- Pass 2 (elements [16:23]) ---
+RTL output:
+  [0] = 0x013e67cd30093f3e48f943b451719edb6f3e9f186d669df1b3962ed88fffff37
+  [1] = 0x289ebddf5a43c395d6e5fdaf211d98017475f63a75efac7bd56b1ab6a0000016
+  [2] = 0x03948f5ce950d4711cd592352334c5aade13b6826898bc618a8f5750d52b9c6d
+  [3] = 0x11f9375ff3da4c981796b056becba5314b65e3b33fc5b7ce13bc64e30ad462d5
+  [4] = 0x0c3c78638bb7b166ee86a253dfad3db97ae099065eedf8207e04dde883462fb4
+  [5] = 0x25663ddc85832e0112c2e716f345b97f1c91ee5a8832166279734683fcb9cf84
+  [6] = 0x05497678400770b8464c093a62967c08394df25653376c3d7d26941246d5cbe3
+  [7] = 0x1809e0d824118ce4cf8a8158dfcdaf2fa3e999ed58f0cc078f9c02fee92a334a
+  PASS
+
+--- Pass 3 (elements [24:31]) ---
+RTL output:
+  [0] = 0x2054aa1b4bc0b18dcea263d1d300a04a3e3667507c8dae476d719a4dcffffee3
+  [1] = 0x289ebddf5a43c395d6e5fdaf211d98017475f63a75efac7bd56b1ab6a0000016
+  [2] = 0x1081c083699f31eee09e4b550d83c0a6ebddc0f2a62416d5c2e9391f6b6a03d3
+  [3] = 0x242248878f436169d9771754560baba40c93a17b11616daf953dee89b495fb1b
+  [4] = 0x154cab7090dd2c885520b4175fc3e7db28aab21bbe35f0929b92c4ae303d3523
+  [5] = 0x0b07feaabae385057981afba733cb86f158bb534be57bdb4d1ded59f9fc2c9c0
+  [6] = 0x29e6ad1e187a4a9823be52c9f9eacb124dc9d952c15e1cb9f8f1b21a191d0fd3
+  [7] = 0x1282ec806756255477c157e6ca0861945e657b28f9f12be0cdac506c56e2ef06
+  PASS
+
+========================================
+ALL 4 PASSES PASSED!
+========================================
+$finish called at time : 1355 ns : File "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/pe_e2e_tb_n1024_quick.sv" Line 303
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu May 21 20:13:00 2026...

@@ -1,0 +1,13 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/reconfigurable_3d_pe_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module reconfigurable_3d_pe_top
+WARNING: [VRFC 10-986] literal value truncated to fit in 4 bits [F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/reconfigurable_3d_pe_top.sv:66]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/winograd_pre_transform.sv" into library work
+INFO: [VRFC 10-311] analyzing module winograd_pre_transform
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/winograd_post_transform.sv" into library work
+INFO: [VRFC 10-311] analyzing module winograd_post_transform
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/segmented_256bit_full_butterfly.v" into library work
+INFO: [VRFC 10-311] analyzing module segmented_256bit_full_butterfly
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/montgomery_pipeline.v" into library work
+INFO: [VRFC 10-311] analyzing module montgomery_pipeline
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/pe_e2e_tb_n1024_quick.sv" into library work
+INFO: [VRFC 10-311] analyzing module pe_e2e_tb_n1024_quick

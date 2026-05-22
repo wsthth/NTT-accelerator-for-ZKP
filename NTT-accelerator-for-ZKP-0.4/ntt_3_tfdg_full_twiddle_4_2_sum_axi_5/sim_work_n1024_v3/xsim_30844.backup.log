@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# xsim v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu May 21 19:30:21 2026
+# Process ID: 30844
+# Current directory: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src
+# Command line: xsim.exe -log ..\xsim.log -mode tcl -source {xsim.dir/sim_snapshot/xsim_script.tcl}
+# Log file: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/../xsim.log
+# Journal file: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/sim_snapshot/xsim_script.tcl
+# xsim {sim_snapshot} -autoloadwcfg -tclbatch {../run.tcl}
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source ../run.tcl
+## run 5000000ns
+WARNING: File ntt_input_1024.txt referenced on F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/pe_e2e_tb_n1024.sv at line 50 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+Loaded input data from ntt_input_1024.txt
+WARNING: File ntt_expected_1024.txt referenced on F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/pe_e2e_tb_n1024.sv at line 53 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+Loaded expected output from ntt_expected_1024.txt
+========================================
+N=1024 NTT Verification
+========================================
+
+--- Level 0 (radix-8, stride=4) ---
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:43 . Memory (MB): peak = 221.844 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu May 21 19:31:12 2026...

@@ -1,0 +1,11 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/montgomery_pipeline.v,1779362868,systemVerilog,,F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/pe_e2e_tb_n1024_quick.sv,,montgomery_pipeline,,,,,,,,
+F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/pe_e2e_tb_n1024.sv,1779363728,systemVerilog,,,,pe_e2e_tb_n1024,,,,,,,,
+F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/pe_e2e_tb_n1024_quick.sv,1779365414,systemVerilog,,,,pe_e2e_tb_n1024_quick,,,,,,,,
+F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/reconfigurable_3d_pe_top.sv,1779362868,systemVerilog,,F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/winograd_pre_transform.sv,,reconfigurable_3d_pe_top,,,,,,,,
+F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/segmented_256bit_full_butterfly.v,1779362868,systemVerilog,,F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/montgomery_pipeline.v,,segmented_256bit_full_butterfly,,,,,,,,
+F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/winograd_post_transform.sv,1779364900,systemVerilog,,F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/segmented_256bit_full_butterfly.v,,winograd_post_transform,,,,,,,,
+F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/winograd_pre_transform.sv,1779362868,systemVerilog,,F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n1024_v3/src/winograd_post_transform.sv,,winograd_pre_transform,,,,,,,,

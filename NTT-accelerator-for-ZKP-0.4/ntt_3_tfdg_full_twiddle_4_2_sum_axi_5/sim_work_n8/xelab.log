@@ -1,0 +1,16 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: F:/XILINX/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -debug typical pe_e2e_tb -s sim_snapshot -log ..\xelab.log 
+Multi-threading is on. Using 6 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.winograd_pre_transform(MAX_WIDTH...
+Compiling module work.montgomery_pipeline(SEG_BITS=8'b...
+Compiling module work.segmented_256bit_full_butterfly(...
+Compiling module work.winograd_post_transform(MAX_WIDT...
+Compiling module work.reconfigurable_3d_pe_top_default
+Compiling module work.pe_e2e_tb
+Built simulation snapshot sim_snapshot

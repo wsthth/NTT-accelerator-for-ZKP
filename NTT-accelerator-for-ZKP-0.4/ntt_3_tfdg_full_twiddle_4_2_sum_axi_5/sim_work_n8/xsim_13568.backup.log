@@ -1,0 +1,321 @@
+#-----------------------------------------------------------
+# xsim v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu May 21 19:14:43 2026
+# Process ID: 13568
+# Current directory: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n8
+# Command line: xsim.exe -mode tcl -source {xsim.dir/sim_snapshot/xsim_script.tcl}
+# Log file: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n8/xsim.log
+# Journal file: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n8\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/sim_snapshot/xsim_script.tcl
+# xsim {sim_snapshot} -autoloadwcfg -tclbatch {run.tcl}
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source run.tcl
+## run 100000ns
+========================================
+End-to-End NTT Verification
+========================================
+
+--- Level 0 (stride=4) ---
+  --- Signal chain trace (first 20 cycles) ---
+  [0] tb_start=0 pre_st=1 grp=1 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [1] tb_start=0 pre_st=2 grp=1 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [2] tb_start=0 pre_st=1 grp=2 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [3] tb_start=0 pre_st=2 grp=2 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [4] tb_start=0 pre_st=1 grp=3 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [5] tb_start=0 pre_st=2 grp=3 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [6] tb_start=0 pre_st=3 grp=3 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [7] tb_start=0 pre_st=4 grp=3 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [8] tb_start=0 pre_st=0 grp=3 total=4 stride=4 pre_valid=1 bf_start=1 bf_state=1 s1=0 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  --- Pre-transform outputs (valid_out=1) ---
+  Core[0] x0=0x0e0a77c19a07df2f666ea36f7879462e36fc76959f60cd29ac96341c4ffffffb
+         x1=0x15d0085520f5bbc347d8eb76d8dd0689eaba68a3a32a913f1b0d0ef99fffffe6
+          w=0x0e0a77c19a07df2f666ea36f7879462e36fc76959f60cd29ac96341c4ffffffb
+  Core[1] x0=0x1c14ef83340fbe5eccdd46def0f28c5c6df8ed2b3ec19a53592c68389ffffff6
+         x1=0x23da8016bafd9af2ae478ee651564cb821b6df39428b5e68c7a34315efffffe1
+          w=0x30109072cf7ff4b4786ecad8a6b247a5bcfdad1300786ada6f4f7b166ec7ccf3
+  Core[2] x0=0x2a1f6744ce179d8e334bea4e696bd28aa4f563c0de22677d05c29c54effffff1
+         x1=0x0180a96573d3d9f85c65ec9f484e3a89307f6d866832bb013057819e4fffffdb
+          w=0x298866e143f4a463b5beed36493b127ecbf731de9578d0880379bd02d39ee0b4
+  Core[3] x0=0x07c5909386eddc93e16a48076063c05bb3bdf20e03c9c4156e76dadd4fffffeb
+         x1=0x0f8b21270ddbb927c2d4900ec0c780b7677be41c0793882adcedb5ba9fffffd6
+          w=0x26ed7d8602381c364d8feb78fbf29c1033c6ee92681d797726c525389a48e884
+  [9] tb_start=0 pre_st=0 grp=3 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=1 s1=1 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [10] tb_start=0 pre_st=0 grp=3 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [11] tb_start=0 pre_st=0 grp=3 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [12] tb_start=0 pre_st=0 grp=3 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [13] tb_start=0 pre_st=0 grp=3 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [14] tb_start=0 pre_st=0 grp=3 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [15] tb_start=0 pre_st=0 grp=3 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=1 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [16] tb_start=0 pre_st=0 grp=3 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [17] tb_start=0 pre_st=0 grp=3 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=4 s1=0 vo=0 core_done=00000000 latch=00000000 post_st=1 rv=0
+  [18] tb_start=0 pre_st=0 grp=3 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=4 s1=0 vo=0 core_done=11111111 latch=00000000 post_st=1 rv=0
+  --- Butterfly core results (core_done) ---
+  Core[0] result_add=0x23da8016bafd9af2ae478ee651564cb821b6df39428b5e68c7a34315efffffe1
+         result_sub=0x289ebddf5a43c395d6e5fdaf211d98017475f63a75efac7bd56b1ab6a0000016
+  Core[1] result_add=0x1a1e7b82c9e5b99f4d9465abd018280feab389ea673b780a5dbd894798aecda2
+         result_sub=0x1e0b63839e39c31e4c26281211ccf0a8f13e506c1647bc9c549b4729a751324a
+  Core[2] result_add=0x2a8060bc629e5b4dd9a2c483610141d347804f241a1777cd86cb05f1195824d7
+         result_sub=0x29be6dcd3990dfce8cf5101971d66342026a785da22d572c84ba32b8c6a7db0b
+  Core[3] result_add=0x1cd7a6125184fd4bfc08018836f08eae60bdf4ee6a5cec670d54432a82474405
+         result_sub=0x2317c9879d885c057f1cd43d0b584a662ef1d77616f00c55137b68240db8bbd2
+  [19] tb_start=0 pre_st=0 grp=3 total=4 stride=4 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=11111111 latch=11111111 post_st=1 rv=0
+Level 0 output:
+  [0] = 0x23da8016bafd9af2ae478ee651564cb821b6df39428b5e68c7a34315efffffe1
+  [1] = 0x289ebddf5a43c395d6e5fdaf211d98017475f63a75efac7bd56b1ab6a0000016
+  [2] = 0x1a1e7b82c9e5b99f4d9465abd018280feab389ea673b780a5dbd894798aecda2
+  [3] = 0x1e0b63839e39c31e4c26281211ccf0a8f13e506c1647bc9c549b4729a751324a
+  [4] = 0x2a8060bc629e5b4dd9a2c483610141d347804f241a1777cd86cb05f1195824d7
+  [5] = 0x29be6dcd3990dfce8cf5101971d66342026a785da22d572c84ba32b8c6a7db0b
+  [6] = 0x1cd7a6125184fd4bfc08018836f08eae60bdf4ee6a5cec670d54432a82474405
+  [7] = 0x2317c9879d885c057f1cd43d0b584a662ef1d77616f00c55137b68240db8bbd2
+Level 0: PASS
+
+--- Level 1 (stride=2, radix-4, 2 passes) ---
+  --- Signal chain trace (first 20 cycles) ---
+  [0] tb_start=0 pre_st=1 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [1] tb_start=0 pre_st=2 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [2] tb_start=0 pre_st=3 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [3] tb_start=0 pre_st=4 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=0
+  [4] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=1 bf_start=1 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  --- Pre-transform outputs (valid_out=1) ---
+  Core[0] x0=0x23da8016bafd9af2ae478ee651564cb821b6df39428b5e68c7a34315efffffe1
+         x1=0x1a1e7b82c9e5b99f4d9465abd018280feab389ea673b780a5dbd894798aecda2
+          w=0x0e0a77c19a07df2f666ea36f7879462e36fc76959f60cd29ac96341c4ffffffb
+  Core[1] x0=0x289ebddf5a43c395d6e5fdaf211d98017475f63a75efac7bd56b1ab6a0000016
+         x1=0x1e0b63839e39c31e4c26281211ccf0a8f13e506c1647bc9c549b4729a751324a
+          w=0x0fdef1af5fb0c3e3bbf016e34cf3960ad843f2cbb248182c588f1421e35e8209
+  Core[2] x0=0x0000000000000000000000000000000000000000000000000000000000000000
+         x1=0x0000000000000000000000000000000000000000000000000000000000000000
+          w=0x0000000000000000000000000000000000000000000000000000000000000000
+  Core[3] x0=0x0000000000000000000000000000000000000000000000000000000000000000
+         x1=0x0000000000000000000000000000000000000000000000000000000000000000
+          w=0x0000000000000000000000000000000000000000000000000000000000000000
+  [5] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=1 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [6] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [7] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [8] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [9] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=0
+  [10] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  [11] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=1 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [12] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [13] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=4 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [14] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=4 s1=0 vo=0 core_done=11111111 latch=11111111 post_st=2 rv=0
+  [15] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=11111111 latch=11111111 post_st=4 rv=0
+  [16] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  [17] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [18] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [19] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+Level 1 Pass 0 output:
+  [0] = 0x0d94ad26a3b1b468438baedb9fed1c6ae43680db300d65e1e17ed6c998aecd82
+  [1] = 0x09bc0493f117e15360b3293a813e24a83703554edb4fe65e69e5b9ce5751323f
+  [2] = 0x023de18225da1621fc12906ead95ceef41f14b106066d2ed0b5e5fdb5f5bddbd
+  [3] = 0x1e9b4bc9ad7bd0dff9692539132408b67ec6b91c11bf15795b95dffdf0a4226e
+  --- Signal chain trace (first 20 cycles) ---
+  [0] tb_start=0 pre_st=1 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [1] tb_start=0 pre_st=2 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [2] tb_start=0 pre_st=3 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [3] tb_start=0 pre_st=4 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=0
+  [4] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=1 bf_start=1 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  --- Pre-transform outputs (valid_out=1) ---
+  Core[0] x0=0x2a8060bc629e5b4dd9a2c483610141d347804f241a1777cd86cb05f1195824d7
+         x1=0x1cd7a6125184fd4bfc08018836f08eae60bdf4ee6a5cec670d54432a82474405
+          w=0x0e0a77c19a07df2f666ea36f7879462e36fc76959f60cd29ac96341c4ffffffb
+  Core[1] x0=0x29be6dcd3990dfce8cf5101971d66342026a785da22d572c84ba32b8c6a7db0b
+         x1=0x2317c9879d885c057f1cd43d0b584a662ef1d77616f00c55137b68240db8bbd2
+          w=0x0fdef1af5fb0c3e3bbf016e34cf3960ad843f2cbb248182c588f1421e35e8209
+  Core[2] x0=0x0000000000000000000000000000000000000000000000000000000000000000
+         x1=0x0000000000000000000000000000000000000000000000000000000000000000
+          w=0x0000000000000000000000000000000000000000000000000000000000000000
+  Core[3] x0=0x0000000000000000000000000000000000000000000000000000000000000000
+         x1=0x0000000000000000000000000000000000000000000000000000000000000000
+          w=0x0000000000000000000000000000000000000000000000000000000000000000
+  [5] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=1 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [6] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [7] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [8] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [9] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=0
+  [10] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  [11] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=1 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [12] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [13] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=4 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [14] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=4 s1=0 vo=0 core_done=11111111 latch=11111111 post_st=2 rv=0
+  [15] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=11111111 latch=11111111 post_st=4 rv=0
+  [16] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  [17] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [18] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [19] tb_start=0 pre_st=0 grp=1 total=2 stride=2 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+Level 1 Pass 1 output:
+  [4] = 0x16f3b85bd2f1b8701d5a805516707824800a5bca0abaf3a3503d5387ab9f68db
+  [5] = 0x0da8baaa11195e01dd9ac2fb2a10b324e6c25a35afba8b667976c2c69710e0d2
+  [6] = 0x05c4dc0dd1ad8648d302518582e25593b0016f21f83ed5089762b24d980e839b
+  [7] = 0x1d53b119c042992a8e9788f6df4918932c9f9950d26268bf2e2fbd900541327a
+Level 1: PASS
+
+--- Level 2 (stride=1, radix-2, 4 passes) ---
+  --- Signal chain trace (first 20 cycles) ---
+  [0] tb_start=0 pre_st=3 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [1] tb_start=0 pre_st=4 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [2] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=1 bf_start=1 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  --- Pre-transform outputs (valid_out=1) ---
+  Core[0] x0=0x0d94ad26a3b1b468438baedb9fed1c6ae43680db300d65e1e17ed6c998aecd82
+         x1=0x09bc0493f117e15360b3293a813e24a83703554edb4fe65e69e5b9ce5751323f
+          w=0x0e0a77c19a07df2f666ea36f7879462e36fc76959f60cd29ac96341c4ffffffb
+  Core[1] x0=0x0000000000000000000000000000000000000000000000000000000000000000
+         x1=0x0000000000000000000000000000000000000000000000000000000000000000
+          w=0x0000000000000000000000000000000000000000000000000000000000000000
+  Core[2] x0=0x0000000000000000000000000000000000000000000000000000000000000000
+         x1=0x0000000000000000000000000000000000000000000000000000000000000000
+          w=0x0000000000000000000000000000000000000000000000000000000000000000
+  Core[3] x0=0x0000000000000000000000000000000000000000000000000000000000000000
+         x1=0x0000000000000000000000000000000000000000000000000000000000000000
+          w=0x0000000000000000000000000000000000000000000000000000000000000000
+  [3] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=1 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=0
+  [4] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  [5] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [6] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [7] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [8] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [9] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=1 core_done=00000000 latch=11111111 post_st=4 rv=0
+  [10] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  [11] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=4 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [12] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=4 s1=0 vo=0 core_done=11111111 latch=11111111 post_st=1 rv=0
+  [13] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=11111111 latch=11111111 post_st=2 rv=0
+  [14] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [15] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=0
+  [16] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  [17] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [18] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [19] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  --- Signal chain trace (first 20 cycles) ---
+  [0] tb_start=0 pre_st=3 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [1] tb_start=0 pre_st=4 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [2] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=1 bf_start=1 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  --- Pre-transform outputs (valid_out=1) ---
+  Core[0] x0=0x023de18225da1621fc12906ead95ceef41f14b106066d2ed0b5e5fdb5f5bddbd
+         x1=0x1e9b4bc9ad7bd0dff9692539132408b67ec6b91c11bf15795b95dffdf0a4226e
+          w=0x0e0a77c19a07df2f666ea36f7879462e36fc76959f60cd29ac96341c4ffffffb
+  Core[1] x0=0x0000000000000000000000000000000000000000000000000000000000000000
+         x1=0x0000000000000000000000000000000000000000000000000000000000000000
+          w=0x0000000000000000000000000000000000000000000000000000000000000000
+  Core[2] x0=0x0000000000000000000000000000000000000000000000000000000000000000
+         x1=0x0000000000000000000000000000000000000000000000000000000000000000
+          w=0x0000000000000000000000000000000000000000000000000000000000000000
+  Core[3] x0=0x0000000000000000000000000000000000000000000000000000000000000000
+         x1=0x0000000000000000000000000000000000000000000000000000000000000000
+          w=0x0000000000000000000000000000000000000000000000000000000000000000
+  [3] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=1 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=0
+  [4] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  [5] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [6] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [7] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [8] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [9] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=1 core_done=00000000 latch=11111111 post_st=4 rv=0
+  [10] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  [11] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=4 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [12] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=4 s1=0 vo=0 core_done=11111111 latch=11111111 post_st=1 rv=0
+  [13] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=11111111 latch=11111111 post_st=2 rv=0
+  [14] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [15] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=0
+  [16] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  [17] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [18] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [19] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  --- Signal chain trace (first 20 cycles) ---
+  [0] tb_start=0 pre_st=3 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [1] tb_start=0 pre_st=4 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [2] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=1 bf_start=1 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  --- Pre-transform outputs (valid_out=1) ---
+  Core[0] x0=0x16f3b85bd2f1b8701d5a805516707824800a5bca0abaf3a3503d5387ab9f68db
+         x1=0x0da8baaa11195e01dd9ac2fb2a10b324e6c25a35afba8b667976c2c69710e0d2
+          w=0x0e0a77c19a07df2f666ea36f7879462e36fc76959f60cd29ac96341c4ffffffb
+  Core[1] x0=0x0000000000000000000000000000000000000000000000000000000000000000
+         x1=0x0000000000000000000000000000000000000000000000000000000000000000
+          w=0x0000000000000000000000000000000000000000000000000000000000000000
+  Core[2] x0=0x0000000000000000000000000000000000000000000000000000000000000000
+         x1=0x0000000000000000000000000000000000000000000000000000000000000000
+          w=0x0000000000000000000000000000000000000000000000000000000000000000
+  Core[3] x0=0x0000000000000000000000000000000000000000000000000000000000000000
+         x1=0x0000000000000000000000000000000000000000000000000000000000000000
+          w=0x0000000000000000000000000000000000000000000000000000000000000000
+  [3] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=1 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=0
+  [4] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  [5] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [6] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [7] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [8] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [9] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=1 core_done=00000000 latch=11111111 post_st=4 rv=0
+  [10] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  [11] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=4 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [12] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=4 s1=0 vo=0 core_done=11111111 latch=11111111 post_st=1 rv=0
+  [13] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=11111111 latch=11111111 post_st=2 rv=0
+  [14] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [15] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=0
+  [16] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  [17] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [18] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [19] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  --- Signal chain trace (first 20 cycles) ---
+  [0] tb_start=0 pre_st=3 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [1] tb_start=0 pre_st=4 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [2] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=1 bf_start=1 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  --- Pre-transform outputs (valid_out=1) ---
+  Core[0] x0=0x05c4dc0dd1ad8648d302518582e25593b0016f21f83ed5089762b24d980e839b
+         x1=0x1d53b119c042992a8e9788f6df4918932c9f9950d26268bf2e2fbd900541327a
+          w=0x0e0a77c19a07df2f666ea36f7879462e36fc76959f60cd29ac96341c4ffffffb
+  Core[1] x0=0x0000000000000000000000000000000000000000000000000000000000000000
+         x1=0x0000000000000000000000000000000000000000000000000000000000000000
+          w=0x0000000000000000000000000000000000000000000000000000000000000000
+  Core[2] x0=0x0000000000000000000000000000000000000000000000000000000000000000
+         x1=0x0000000000000000000000000000000000000000000000000000000000000000
+          w=0x0000000000000000000000000000000000000000000000000000000000000000
+  Core[3] x0=0x0000000000000000000000000000000000000000000000000000000000000000
+         x1=0x0000000000000000000000000000000000000000000000000000000000000000
+          w=0x0000000000000000000000000000000000000000000000000000000000000000
+  [3] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=1 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=0
+  [4] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  [5] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [6] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [7] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [8] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [9] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=1 core_done=00000000 latch=11111111 post_st=4 rv=0
+  [10] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=2 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  [11] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=4 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [12] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=4 s1=0 vo=0 core_done=11111111 latch=11111111 post_st=1 rv=0
+  [13] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=11111111 latch=11111111 post_st=2 rv=0
+  [14] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+  [15] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=0
+  [16] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=4 rv=1
+  [17] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=1
+  [18] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=1 rv=0
+  [19] tb_start=0 pre_st=0 grp=0 total=1 stride=1 pre_valid=0 bf_start=0 bf_state=1 s1=0 vo=0 core_done=00000000 latch=11111111 post_st=2 rv=0
+Level 2 final output (NTT result):
+  [0] = 0x1750b1ba94c995bba43ed816212b41131b39d62a0b5d4c404b649097efffffc1
+  [1] = 0x03d8a892b299d314e2d885a11eaef7c2ad332b8c54bd7f8377991cfb415d9b43
+  [2] = 0x20d92d4bd355e701f57bb5a7c0b9d7a5c0b8042c7225e86666f43fd95000002b
+  [3] = 0x1406e42b598fe56bbaf9b0ec1bf31e95eb5e7a3cc8612e04f3aa75715eb7bb50
+  [4] = 0x249c7305e40b1671faf5435040812b4966ccb5ffba757f09c9b4164e42b049ad
+  [5] = 0x094afdb1c1d85a6e3fbfbd59ec5fc4ff994801945b00683cd6c690c1148e8809
+  [6] = 0x23188d2791f01f736199da7c622b6e26dca10872caa13dc7c5926fdd9d4fb615
+  [7] = 0x18d57966f29c8d47fcbb0e45251a955dab95be199f95dcdaad14ea5182cd5122
+Level 2: PASS
+
+========================================
+Final NTT Result (Montgomery form):
+  [0] = 0x1750b1ba94c995bba43ed816212b41131b39d62a0b5d4c404b649097efffffc1
+  [1] = 0x03d8a892b299d314e2d885a11eaef7c2ad332b8c54bd7f8377991cfb415d9b43
+  [2] = 0x20d92d4bd355e701f57bb5a7c0b9d7a5c0b8042c7225e86666f43fd95000002b
+  [3] = 0x1406e42b598fe56bbaf9b0ec1bf31e95eb5e7a3cc8612e04f3aa75715eb7bb50
+  [4] = 0x249c7305e40b1671faf5435040812b4966ccb5ffba757f09c9b4164e42b049ad
+  [5] = 0x094afdb1c1d85a6e3fbfbd59ec5fc4ff994801945b00683cd6c690c1148e8809
+  [6] = 0x23188d2791f01f736199da7c622b6e26dca10872caa13dc7c5926fdd9d4fb615
+  [7] = 0x18d57966f29c8d47fcbb0e45251a955dab95be199f95dcdaad14ea5182cd5122
+========================================
+   86795978311779806840407650927742502212
+========================================
+$finish called at time : 2075 ns : File "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sour/PE/Reconfigurable Butterfly Unit/pe_e2e_tb.sv" Line 281
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu May 21 19:14:45 2026...

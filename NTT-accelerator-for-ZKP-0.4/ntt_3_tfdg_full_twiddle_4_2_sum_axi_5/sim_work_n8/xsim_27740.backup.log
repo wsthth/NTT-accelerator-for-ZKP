@@ -1,0 +1,83 @@
+#-----------------------------------------------------------
+# xsim v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu May 21 19:54:31 2026
+# Process ID: 27740
+# Current directory: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n8/src
+# Command line: xsim.exe -log ..\xsim.log -mode tcl -source {xsim.dir/sim_snapshot/xsim_script.tcl}
+# Log file: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n8/src/../xsim.log
+# Journal file: F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n8/src\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/sim_snapshot/xsim_script.tcl
+# xsim {sim_snapshot} -autoloadwcfg -tclbatch {../run.tcl}
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source ../run.tcl
+## run 100000ns
+========================================
+End-to-End NTT Verification
+========================================
+
+--- Level 0 (stride=4) ---
+Level 0 output:
+  [0] = 0x23da8016bafd9af2ae478ee651564cb821b6df39428b5e68c7a34315efffffe1
+  [1] = 0x289ebddf5a43c395d6e5fdaf211d98017475f63a75efac7bd56b1ab6a0000016
+  [2] = 0x1a1e7b82c9e5b99f4d9465abd018280feab389ea673b780a5dbd894798aecda2
+  [3] = 0x1e0b63839e39c31e4c26281211ccf0a8f13e506c1647bc9c549b4729a751324a
+  [4] = 0x2a8060bc629e5b4dd9a2c483610141d347804f241a1777cd86cb05f1195824d7
+  [5] = 0x29be6dcd3990dfce8cf5101971d66342026a785da22d572c84ba32b8c6a7db0b
+  [6] = 0x1cd7a6125184fd4bfc08018836f08eae60bdf4ee6a5cec670d54432a82474405
+  [7] = 0x2317c9879d885c057f1cd43d0b584a662ef1d77616f00c55137b68240db8bbd2
+Level 0: PASS
+
+--- Level 1 (stride=2, radix-4, 2 passes) ---
+Level 1 Pass 0 output:
+  [0] = 0x23da8016bafd9af2ae478ee651564cb821b6df39428b5e68c7a34315efffffe1
+  [1] = 0x289ebddf5a43c395d6e5fdaf211d98017475f63a75efac7bd56b1ab6a0000016
+  [2] = 0x1a1e7b82c9e5b99f4d9465abd018280feab389ea673b780a5dbd894798aecda2
+  [3] = 0x1e0b63839e39c31e4c26281211ccf0a8f13e506c1647bc9c549b4729a751324a
+Level 1 Pass 1 output:
+  [4] = 0x23da8016bafd9af2ae478ee651564cb821b6df39428b5e68c7a34315efffffe1
+  [5] = 0x289ebddf5a43c395d6e5fdaf211d98017475f63a75efac7bd56b1ab6a0000016
+  [6] = 0x1a1e7b82c9e5b99f4d9465abd018280feab389ea673b780a5dbd894798aecda2
+  [7] = 0x1e0b63839e39c31e4c26281211ccf0a8f13e506c1647bc9c549b4729a751324a
+  MISMATCH!
+    [0] RTL=0x23da8016bafd9af2ae478ee651564cb821b6df39428b5e68c7a34315efffffe1
+    [1] RTL=0x289ebddf5a43c395d6e5fdaf211d98017475f63a75efac7bd56b1ab6a0000016
+    [2] RTL=0x1a1e7b82c9e5b99f4d9465abd018280feab389ea673b780a5dbd894798aecda2
+    [3] RTL=0x1e0b63839e39c31e4c26281211ccf0a8f13e506c1647bc9c549b4729a751324a
+    [4] RTL=0x23da8016bafd9af2ae478ee651564cb821b6df39428b5e68c7a34315efffffe1
+    [5] RTL=0x289ebddf5a43c395d6e5fdaf211d98017475f63a75efac7bd56b1ab6a0000016
+    [6] RTL=0x1a1e7b82c9e5b99f4d9465abd018280feab389ea673b780a5dbd894798aecda2
+    [7] RTL=0x1e0b63839e39c31e4c26281211ccf0a8f13e506c1647bc9c549b4729a751324a
+Level 1: FAIL
+
+--- Level 2 (stride=1, radix-2, 4 passes) ---
+Level 2 final output (NTT result):
+  [0] = 0x143a8dcc4b5274c36ee6e478af98118609fff0c607997f46a0a699a4c206f278
+  [1] = 0x1061e53998b8a1ae8c0e5ed790e919c35cccc539b2dbffc3290d7ca980a95735
+  [2] = 0x143a8dcc4b5274c36ee6e478af98118609fff0c607997f46a0a699a4c206f278
+  [3] = 0x1061e53998b8a1ae8c0e5ed790e919c35cccc539b2dbffc3290d7ca980a95735
+  [4] = 0x1258eaef42f7dd0b6c2a1da46fb467b436f597dc6371b3f4ef46ae6a48aecdb7
+  [5] = 0x21e40c1650d396332efeadb3307be86b9e717bf86b053c1fcc346424e8aecd8d
+  [6] = 0x1258eaef42f7dd0b6c2a1da46fb467b436f597dc6371b3f4ef46ae6a48aecdb7
+  [7] = 0x21e40c1650d396332efeadb3307be86b9e717bf86b053c1fcc346424e8aecd8d
+Level 2: FAIL
+
+========================================
+Final NTT Result (Montgomery form):
+  [0] = 0x143a8dcc4b5274c36ee6e478af98118609fff0c607997f46a0a699a4c206f278
+  [1] = 0x1061e53998b8a1ae8c0e5ed790e919c35cccc539b2dbffc3290d7ca980a95735
+  [2] = 0x143a8dcc4b5274c36ee6e478af98118609fff0c607997f46a0a699a4c206f278
+  [3] = 0x1061e53998b8a1ae8c0e5ed790e919c35cccc539b2dbffc3290d7ca980a95735
+  [4] = 0x1258eaef42f7dd0b6c2a1da46fb467b436f597dc6371b3f4ef46ae6a48aecdb7
+  [5] = 0x21e40c1650d396332efeadb3307be86b9e717bf86b053c1fcc346424e8aecd8d
+  [6] = 0x1258eaef42f7dd0b6c2a1da46fb467b436f597dc6371b3f4ef46ae6a48aecdb7
+  [7] = 0x21e40c1650d396332efeadb3307be86b9e717bf86b053c1fcc346424e8aecd8d
+========================================
+28348846675010652405787088918478714586436
+========================================
+$finish called at time : 995 ns : File "F:/experiment/python/trae/ntt_axi/NTT-accelerator-for-ZKP-0.4/ntt_3_tfdg_full_twiddle_4_2_sum_axi_5/sim_work_n8/src/pe_e2e_tb.sv" Line 236
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu May 21 19:55:15 2026...
